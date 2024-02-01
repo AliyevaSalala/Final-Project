@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  font-family: "Lora", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1199px) {
+  .container {
+    padding: 0 5%;
+  }
+}
+
+header {
+  position: absolute;
+  width: 100%;
+}
+header #header-top .header-top {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #header-top .header-top .header-top-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header #header-top .header-top .header-top-right a {
+  font-size: 14px;
+  color: #3d3931;
+  font-weight: 500;
+  transition: all 0.6s;
+}
+header #header-top .header-top .header-top-right a:hover {
+  color: #9b804e;
+}
+header #header-top .header-top .header-top-right h5 {
+  font-size: 15px;
+  color: #3d3931;
+  font-weight: 500;
+}
+header #header-top .header-top .header-top-left {
+  display: flex;
+  gap: 10px;
+}
+header #header-top .header-top .header-top-left a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3d3931;
+  transition: all 0.6s;
+}
+header #header-top .header-top .header-top-left a:hover {
+  color: #9b804e;
+}
+header #header-top .header-top .header-top-left span {
+  color: #3d3931;
+}
+header .elementar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .elementar-section .border-bottom {
+  width: 90%;
+  height: 1px;
+  background-color: #9b804e;
+}
+header #header-bottom {
+  padding: 20px 0;
+}
+header #header-bottom .header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #header-bottom .header-bottom nav ul {
+  display: flex;
+  gap: 20px;
+}
+header #header-bottom .header-bottom nav ul li:hover ul.dropdown {
+  display: block;
+}
+header #header-bottom .header-bottom nav ul li a {
+  font-size: 14px;
+  color: #3d3931;
+  text-transform: uppercase;
+  line-height: 25px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+header #header-bottom .header-bottom nav ul li a i {
+  margin-left: 5px;
+  font-size: 13px;
+}
+header #header-bottom .header-bottom nav ul li a.active {
+  color: #9b804e;
+}
+header #header-bottom .header-bottom nav ul li a:hover {
+  color: #9b804e;
+}
+header #header-bottom .header-bottom nav ul li .drop-down {
+  padding-top: 10px;
+}
+header #header-bottom .header-bottom nav ul li .drop-down .dropdown {
+  position: absolute;
+  background-color: #fffcf2;
+  padding: 10px 30px;
+  line-height: 2;
+  display: none;
+  border-radius: 10px;
+}
+header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a {
+  color: #3d3931;
+  font-size: 10px;
+  font-weight: 400;
+  transition: all 0.6s;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f4d8a5;
+}
+header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a:hover {
+  color: #9b804e;
+}
+header #header-bottom .header-bottom .navbar-search {
+  display: flex;
+  gap: 10px;
+}
+header #header-bottom .header-bottom .navbar-search .fa-magnifying-glass {
+  font-size: 20px;
+  cursor: pointer;
+  color: #3d3931;
+}
+header #header-bottom .header-bottom .navbar-search #menu-icon {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #3d3931;
+  transition: all 0.6s;
+}
+header #header-bottom .header-bottom .navbar-search .fa-xmark {
+  font-size: 20px;
+  cursor: pointer;
+  color: #3d3931;
+  transition: all 0.6s;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  header #header-top {
+    display: none;
+  }
+  header .elementar-section {
+    display: none;
+  }
+  header #header-bottom .header-bottom nav {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    left: -800px;
+    background-color: #fffcf2;
+    transition: all 0.8s;
+    height: 100%;
+  }
+  header #header-bottom .header-bottom nav ul {
+    flex-direction: column;
+    padding: 30px;
+  }
+  header #header-bottom .header-bottom nav.show {
+    left: 0;
+  }
+  header #header-bottom .header-bottom .navbar-search #menu-icon {
+    display: block;
+  }
+}
+@media (min-width: 250px) and (max-width: 481px) {
+  header #header-top {
+    display: none;
+  }
+  header .elementar-section {
+    display: none;
+  }
+  header #header-bottom .header-bottom nav {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    left: -800px;
+    background-color: #fffcf2;
+    transition: all 0.8s;
+    height: 100%;
+  }
+  header #header-bottom .header-bottom nav ul {
+    flex-direction: column;
+    padding: 30px;
+  }
+  header #header-bottom .header-bottom nav.show {
+    left: 0;
+  }
+  header #header-bottom .header-bottom .navbar-search #menu-icon {
+    display: block;
+  }
+}
+
+#hero-banner-section {
+  background-image: url("../images/slider-image-2 (1).jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#hero-banner-section .banner {
+  padding: 200px 0;
+  background-color: rgba(251, 246, 232, 0.86);
+}
+#hero-banner-section .banner .hero-banner-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-right h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b804e;
+  letter-spacing: 4.2px;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-right h1 {
+  font-size: 70px;
+  font-family: "Forum", serif;
+  font-weight: 400;
+  color: #3d3931;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-right p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d3931;
+  max-width: 500px;
+  line-height: 25.6px;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-right a {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  color: #fff;
+  width: 180px;
+  text-align: center;
+  background-color: #9b804e;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left {
+  padding: 0 40px;
+  width: 50%;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border: 1px solid #9b804e;
+  border-radius: 5px;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form {
+  position: relative;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form img {
+  width: 100%;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul li {
+  display: flex;
+  padding: 10px 20px;
+  border: 1px solid #3d3931;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #hero-banner-section .banner .hero-banner-section {
+    flex-direction: column;
+  }
+}
+
+#elit {
+  background-image: url("../images/bg-art-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#elit .elit-section {
+  padding: 60px 0;
+  background-color: rgba(247, 245, 240, 0.945);
+}
+#elit .elit-section .divine-elite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#elit .elit-section .divine-elite .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#elit .elit-section .divine-elite .info h5 {
+  font-size: 14px;
+  color: #9b804e;
+  font-weight: 500;
+}
+#elit .elit-section .divine-elite .info h1 {
+  font-size: 70px;
+  color: #3d3931;
+  font-family: "Forum", serif;
+  font-weight: 400;
+}
+#elit .elit-section .divine-elite .info p {
+  font-size: 16px;
+  color: #3d3931;
+  font-weight: 400;
+  max-width: 700px;
+  line-height: 25px;
+}/*# sourceMappingURL=home.css.map */
