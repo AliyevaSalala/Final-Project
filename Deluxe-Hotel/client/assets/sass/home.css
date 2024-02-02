@@ -85,7 +85,7 @@ header .elementar-section .border-bottom {
   background-color: #9b804e;
 }
 header #header-bottom {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 header #header-bottom .header-bottom {
   display: flex;
@@ -93,9 +93,7 @@ header #header-bottom .header-bottom {
   align-items: center;
 }
 header #header-bottom .header-bottom .logo a img {
-  width: 100px;
-  aspect-ratio: 1/1;
-  mix-blend-mode: color-burn;
+  width: 80px;
 }
 header #header-bottom .header-bottom nav ul {
   display: flex;
@@ -151,7 +149,7 @@ header #header-bottom .header-bottom .navbar-search {
   gap: 20px;
 }
 header #header-bottom .header-bottom .navbar-search .fa-magnifying-glass {
-  font-size: 23px;
+  font-size: 20px;
   cursor: pointer;
   color: #3d3931;
 }
@@ -274,6 +272,7 @@ header.header-scroll .elementar-section {
   grid-template-rows: 50px 1fr 50px;
   transition: all 0.7s;
   z-index: 999999;
+  overflow: auto;
 }
 #about-menu .about-menu {
   display: flex;
@@ -281,8 +280,10 @@ header.header-scroll .elementar-section {
   justify-content: center;
   gap: 20px;
   padding: 50px;
-  overflow-y: scroll;
   position: relative;
+}
+#about-menu .about-menu a img {
+  width: 100px;
 }
 #about-menu .about-menu .fa-regular {
   position: absolute;
@@ -297,7 +298,7 @@ header.header-scroll .elementar-section {
   transform: scale(1.1);
 }
 #about-menu .about-menu .about {
-  padding-top: 50px;
+  padding-top: 70px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -318,7 +319,7 @@ header.header-scroll .elementar-section {
   font-size: 16px;
 }
 #about-menu .about-menu .contact {
-  padding-top: 100px;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -729,6 +730,107 @@ header.header-scroll .elementar-section {
   }
 }
 
+#elementar-section {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0;
+}
+#elementar-section::after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 58%;
+  height: 110%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  border-radius: 0% 35% 35% 0%/0% 50% 50% 0%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+#elementar-section .back-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+#elementar-section .elementar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#elementar-section .elementar-content .background-container-heading {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#elementar-section .elementar-content .background-container-heading h1 {
+  font-size: 80px;
+  z-index: 11112;
+  color: rgba(180, 180, 180, 0.5803921569);
+  font-weight: 400;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+#elementar-section .elementar-content .hotel {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+#elementar-section .elementar-content .hotel h1 {
+  font-size: 86px;
+  z-index: 11112;
+  color: #fbf6e8;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+#elementar-section .elementar-content .hotel img {
+  width: 150px;
+}
+#elementar-section .elementar-content .hotel h3 {
+  font-size: 24px;
+  color: #9b804e;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 10px;
+}
+#elementar-section .elementar-content .hotel h4 {
+  font-size: 116px;
+  color: #fbf6e8;
+  font-weight: 400;
+  font-family: "Forum", serif;
+}
+#elementar-section .elementar-content .hotel p {
+  font-size: 18px;
+  max-width: 450px;
+  letter-spacing: 1.5px;
+  line-height: 28px;
+  color: #fff;
+  font-weight: 400;
+}
+#elementar-section .elementar-content .background-section-right {
+  width: 40%;
+}
+@media (min-aspect-ration: 16/9) {
+  #elementar-section .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ration: 16/9) {
+  #elementar-section .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
 #customer {
   background-image: url("../images/bg-art-icon.png");
   background-position: center;
@@ -811,12 +913,16 @@ header.header-scroll .elementar-section {
   line-height: 25px;
 }
 
+#instagram-photos {
+  padding: 2.5rem 0;
+}
 #instagram-photos .carousel-wrap .item-content {
   overflow: hidden;
   border-radius: 20px;
   cursor: grab;
 }
 #instagram-photos .carousel-wrap .item-content img {
+  width: 100%;
   border-radius: 20px;
   transition: all 0.6s;
 }

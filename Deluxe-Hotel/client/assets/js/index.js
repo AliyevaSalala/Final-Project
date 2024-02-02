@@ -31,7 +31,7 @@ $(".owl-theme").owlCarousel({
 $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 10,
-  nav: true,
+  nav: false,
   autoplay: true,
   autoplayHoverPause: true,
   responsive: {
