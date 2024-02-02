@@ -1,6 +1,7 @@
 header {
   position: absolute;
   width: 100%;
+  transition: all 0.7s;
   #header-top {
     .header-top {
       padding: 10px 0;
@@ -58,9 +59,18 @@ header {
   }
 
   #header-bottom {
-    padding: 20px 0;
+    // padding: 20px 0;
     .header-bottom {
       @include flexbox();
+      .logo {
+        a {
+          img {
+            width: 100px;
+            aspect-ratio: 1/1;
+            mix-blend-mode: color-burn;
+          }
+        }
+      }
 
       nav {
         ul {
@@ -123,10 +133,12 @@ header {
       }
       .navbar-search {
         display: flex;
-        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
 
         .fa-magnifying-glass {
-          font-size: 20px;
+          font-size: 23px;
           cursor: pointer;
           color: $color-brown;
         }
@@ -136,15 +148,35 @@ header {
           cursor: pointer;
           color: $color-brown;
           transition: all 0.6s;
-          // &:hover {
-          //   transform: skewX(16deg);
-          // }
         }
         .fa-xmark {
           font-size: 20px;
           cursor: pointer;
           color: $color-brown;
           transition: all 0.6s;
+        }
+
+        .menu-circle {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3px;
+          cursor: pointer;
+          .circle {
+            width: 13px;
+            height: 13px;
+            border: 2px solid $color-brown;
+            border-radius: 50%;
+            transition: all 0.7s;
+          }
+
+          &:hover {
+            .circle-x {
+              transform: translateY(7.5px);
+            }
+            .circle-y {
+              transform: translateY(-7.5px);
+            }
+          }
         }
       }
     }
@@ -181,6 +213,9 @@ header {
           #menu-icon {
             display: block;
           }
+          .menu-circle {
+            display: none;
+          }
         }
       }
     }
@@ -216,8 +251,203 @@ header {
           #menu-icon {
             display: block;
           }
+          .menu-circle {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.header-scroll {
+    position: fixed;
+    width: 100%;
+    // background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 5px 5px #ddd;
+    padding: 1.5rem 0;
+    z-index: 11111;
+
+    #header-top {
+      // opacity: 0;
+      display: none;
+    }
+    .elementar-section {
+      // opacity: 0;
+      display: none;
+    }
+  }
+}
+
+#about-menu {
+  width: 500px;
+  background-color: #fffcf2;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: -550px;
+  bottom: 0;
+  z-index: 111;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  transition: all 0.7s;
+  z-index: 999999;
+
+  .about-menu {
+    // @include flexbox(center);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    overflow-y: scroll;
+    position: relative;
+
+    .fa-regular {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      font-size: 25px;
+      color: #9b804e;
+      cursor: pointer;
+      transition: all 0.7s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .about {
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      a {
+        font-size: 16px;
+        color: #9b804e;
+      }
+      p {
+        font-size: 16px;
+        color: $color-brown;
+      }
+      .icons {
+        display: flex;
+        gap: 10px;
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+    .contact {
+      padding-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 20px;
+      h5 {
+        font-size: 26px;
+        color: #9b804e;
+        font-family: "Forum", serif;
+      }
+      a {
+        font-size: 16px;
+        color: $color-brown;
+        transition: all 0.6s;
+        i {
+          margin-right: 9px;
+          color: #9b804e;
+          font-size: 16px;
+        }
+
+        &:hover {
+          color: #9b804e;
+        }
+      }
+      p {
+        font-size: 16px;
+        color: $color-brown;
+      }
+    }
+
+    .menu-btn {
+      display: flex;
+      gap: 20px;
+      button {
+        padding: 10px 30px;
+        cursor: pointer;
+        transition: all 0.7s;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid transparent;
+        color: #fff;
+
+        &:nth-child(1) {
+          background-color: #9b804e;
+
+          &:hover {
+            box-shadow: inset -6.5em 0 0 0 #fff, inset 6.5em 0 0 0 #fff;
+            color: #9b804e;
+          }
+        }
+        &:nth-child(2) {
+          background-color: #413d31;
+          &:hover {
+            box-shadow: inset -6.5em 0 0 0 #fff, inset 6.5em 0 0 0 #fff;
+            color: #413d31;
+          }
         }
       }
     }
   }
 }
+
+// #header-search {
+//   background-color: #413c34;
+//   position: fixed;
+//   width: 100%;
+//   z-index: 1111;
+//   // opacity: 0;
+//   display: none;
+
+//   .header-search {
+//     @include flexbox(center);
+//     height: 100vh;
+//     position: relative;
+//     .fa-x {
+//       position: absolute;
+//       top: 50px;
+//       right: 10px;
+//       font-size: 25px;
+//       cursor: pointer;
+//       color: #fff;
+//     }
+
+//     .header-form {
+//       @include flexbox(center);
+//       position: relative;
+
+//       input {
+//         width: 400px;
+//         padding: 20px 15px;
+//         border: 1px solid #d8ad5e;
+//         background-color: transparent;
+//         color: #fff;
+//         font-style: italic;
+
+//         &::placeholder {
+//           color: #d1d0d0;
+//           font-size: 15px;
+//           font-weight: 400;
+//         }
+//       }
+//       a {
+//         position: absolute;
+//         right: -3px;
+//         padding: 19px 30px;
+//         background-color: #9b804e;
+//         color: #fff;
+//         border: 1px solid transparent;
+//       }
+//     }
+//   }
+// }

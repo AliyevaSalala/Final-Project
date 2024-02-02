@@ -16,6 +16,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,7 +63,10 @@
         <div class="container">
           <div class="header-bottom">
             <div class="logo">
-              <h1>Logo</h1>
+              <a href="./index.html">
+                <!-- <img src="./assets/images/deluxe (2).png" alt="" /> -->
+                deluxe
+              </a>
             </div>
 
             <nav id="nav">
@@ -80,13 +91,79 @@
             </nav>
 
             <div class="navbar-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-magnifying-glass" id="navbar-search"></i>
+              <div class="menu-circle">
+                <div class="circle circle-x"></div>
+                <div class="circle circle-x"></div>
+                <div class="circle circle-y"></div>
+                <div class="circle circle-y"></div>
+              </div>
               <i class="fa-bars fa-solid" id="menu-icon"></i>
             </div>
           </div>
         </div>
       </div>
     </header>
+
+    <!-- about the hotel -->
+    <div id="about-menu">
+      <div class="container">
+        <div class="about-menu">
+          <i class="fa-regular fa-circle-xmark close-icon"></i>
+          <div class="about">
+            <a href="#">Deluxe</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="icons">
+              <a href="https://www.facebook.com/" target="_blank">Fb</a>
+              <span>-</span>
+              <a href="https://www.linkedin.com/feed/" target="_blank">In</a>
+              <span>-</span>
+              <a href="https://twitter.com/" target="_blank">Tw</a>
+              <span>-</span>
+              <a href="https://www.youtube.com/" target="_blank">Yt</a>
+            </div>
+            <p>-----------------------------------------------</p>
+          </div>
+
+          <div class="contact">
+            <h5>Contact Us</h5>
+            <a href="tel:+994 55 796 26 07"
+              ><i class="fa-solid fa-phone"></i> +994 55 796 26 07</a
+            >
+            <a href="mailto:deluxe@gmail.com"
+              ><i class="fa-solid fa-envelope"></i> deluxe@gmail.com</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-location-dot"></i>254 Nizami Gəncəvi
+              prospekti, Gəncə</a
+            >
+            <p>----------------------------------------------</p>
+          </div>
+          <div class="menu-btn">
+            <button>Book Now</button>
+            <button>Call Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER-SEARCH -->
+    <!-- <div id="header-search">
+      <div class="container">
+        <div class="header-search">
+          <i class="fa-solid fa-x navbar-search"></i>
+          <div class="header-form">
+            <form action="">
+              <input type="search" placeholder="Enter Keyword" />
+              <a href="#">Search</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
     <!-- BANNER-SECTION -->
     <section id="hero-banner-section">
@@ -162,6 +239,157 @@
       </div>
     </section>
 
+    <!-- CUSTOMER-SECTION -->
+
+    <section id="customer">
+      <div class="customer">
+        <div class="container">
+          <div class="customer-section">
+            <div class="customer-info">
+              <h5>TESTIMONIAL</h5>
+              <h1>Happy Customer Thoughts</h1>
+              <p>
+                Nunc nec magna aculis metus libero vehiculaNullam iaculis metus
+                nehicula. Aenean sed rutrum purus. Nunc nec magna laoreet,
+                sodales nisi at, co rutrum viverra.
+              </p>
+            </div>
+
+            <div class="customer-carousel">
+              <div class="owl-carousel owl-theme">
+                <div class="item">
+                  <div class="item-content">
+                    <p>
+                      Tellus integer feugiat scelerisque varius morbi enim nunc
+                      faucibus a. Sit amet justo donec enim diam vulputate ut
+                      pharetra sit.
+                    </p>
+                    <div class="card-bottom">
+                      <img
+                        src="./assets/images/home-testimonial-4.webp"
+                        alt=""
+                      />
+                      <div class="info">
+                        <div class="star-icons">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h5>TAD ARMSTRONG <span>-CEO</span></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-content">
+                    <p>
+                      Vestibulum sed arcu non odio euismod lacinia at. Diam
+                      volutpat commodo sed egestas egestas fringilla phasellus.
+                    </p>
+                    <div class="card-bottom">
+                      <img
+                        src="./assets/images/home-testimonial-2.webp"
+                        alt=""
+                      />
+                      <div class="info">
+                        <div class="star-icons">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h5>LAWRANCE<span>-TEACHER</span></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-content">
+                    <p>
+                      Cellentesq ue ullamcorper eros a lecticitur. Sed imperdiet
+                      dignissim nissim bibe ndum. Praesent tempus risgue, eget
+                      bortis.
+                    </p>
+                    <div class="card-bottom">
+                      <img
+                        src="./assets/images/home-testimonial-1.webp"
+                        alt=""
+                      />
+                      <div class="info">
+                        <div class="star-icons">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h5>JESSI PINKMAN<span>-RACER</span></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-content">
+                    <p>
+                      Tellus integer feugiat scelerisque varius morbi enim nunc
+                      faucibus a. Sit amet justo donec enim diam vulputate ut
+                      pharetra sit.
+                    </p>
+                    <div class="card-bottom">
+                      <img
+                        src="./assets/images/home-testimonial-3.webp"
+                        alt=""
+                      />
+                      <div class="info">
+                        <div class="star-icons">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h5>VICTORIA <span>-LAWYER</span></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-content">
+                    <p>
+                      Tellus integer feugiat scelerisque varius morbi enim nunc
+                      faucibus a. Sit amet justo donec enim diam vulputate ut
+                      pharetra sit.
+                    </p>
+                    <div class="card-bottom">
+                      <img
+                        src="./assets/images/testiminial-thumb-1.webp"
+                        alt=""
+                      />
+                      <div class="info">
+                        <div class="star-icons">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h5>SACHA STEVEON <span>-DESIGNER</span></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/common.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
