@@ -84,6 +84,9 @@ header .elementar-section .border-bottom {
   height: 1px;
   background-color: #9b804e;
 }
+header #header-bottom {
+  padding: 20px 0;
+}
 header #header-bottom .header-bottom {
   display: flex;
   justify-content: space-between;
@@ -97,6 +100,9 @@ header #header-bottom .header-bottom .logo a img {
 header #header-bottom .header-bottom nav ul {
   display: flex;
   gap: 20px;
+}
+header #header-bottom .header-bottom nav ul:hover ul.drop-down {
+  padding-top: 10px;
 }
 header #header-bottom .header-bottom nav ul li:hover ul.dropdown {
   display: block;
@@ -118,9 +124,6 @@ header #header-bottom .header-bottom nav ul li a.active {
 }
 header #header-bottom .header-bottom nav ul li a:hover {
   color: #9b804e;
-}
-header #header-bottom .header-bottom nav ul li .drop-down {
-  padding-top: 10px;
 }
 header #header-bottom .header-bottom nav ul li .drop-down .dropdown {
   position: absolute;
@@ -176,7 +179,7 @@ header #header-bottom .header-bottom .navbar-search .menu-circle .circle {
   height: 13px;
   border: 2px solid #3d3931;
   border-radius: 50%;
-  transition: all 0.7s;
+  transition: all 0.5s;
 }
 header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-x {
   transform: translateY(7.5px);
@@ -249,7 +252,6 @@ header.header-scroll {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 5px 5px 5px #ddd;
-  padding: 1.5rem 0;
   z-index: 11111;
 }
 header.header-scroll #header-top {
@@ -423,7 +425,7 @@ header.header-scroll .elementar-section {
   background-color: #9b804e;
 }
 #hero-banner-section .banner .hero-banner-section .hero-banner-section-left {
-  padding: 0 40px;
+  padding: 0 30px;
   width: 50%;
 }
 #hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table {
@@ -445,21 +447,67 @@ header.header-scroll .elementar-section {
 #hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info {
   position: absolute;
   top: 40px;
-  left: 40px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
 }
 #hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul li {
   display: flex;
+  align-items: center;
   padding: 10px 20px;
+  width: 100%;
   border: 1px solid #3d3931;
+  gap: 50px;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul li input {
+  padding: 5px 15px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  display: flex;
+  color: #9b804e;
+  gap: 20px;
+  width: 100%;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul li input::after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  vertical-align: middle;
+  height: -moz-min-content;
+  height: min-content;
+  border-color: #9b804e transparent transparent transparent;
+  content: "";
+  border-width: 9px 5px 0 5px;
+  border-style: solid;
+}
+#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid transparent;
+  background-color: #9b804e;
+  cursor: pointer;
+  color: #fff;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #hero-banner-section .banner .hero-banner-section {
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #hero-banner-section .banner .hero-banner-section .hero-banner-section-right {
+    width: 100%;
+  }
+  #hero-banner-section .banner .hero-banner-section .hero-banner-section-left {
+    width: 100%;
   }
 }
 
@@ -585,4 +633,17 @@ header.header-scroll .elementar-section {
   color: #9b804e;
   font-weight: 400;
   line-height: 25px;
+}
+
+#instagram-photos .carousel-wrap .item-content {
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: grab;
+}
+#instagram-photos .carousel-wrap .item-content img {
+  border-radius: 20px;
+  transition: all 0.6s;
+}
+#instagram-photos .carousel-wrap .item-content:hover img {
+  transform: scale(1.1);
 }/*# sourceMappingURL=home.css.map */

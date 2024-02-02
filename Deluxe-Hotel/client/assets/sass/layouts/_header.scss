@@ -59,7 +59,7 @@ header {
   }
 
   #header-bottom {
-    // padding: 20px 0;
+    padding: 20px 0;
     .header-bottom {
       @include flexbox();
       .logo {
@@ -77,6 +77,9 @@ header {
           display: flex;
           // align-items: center;
           gap: 20px;
+          &:hover ul.drop-down {
+            padding-top: 10px;
+          }
           li {
             &:hover ul.dropdown {
               display: block;
@@ -103,7 +106,7 @@ header {
             }
 
             .drop-down {
-              padding-top: 10px;
+              // padding-top: 10px;
               .dropdown {
                 // width: 30%;
                 position: absolute;
@@ -166,7 +169,7 @@ header {
             height: 13px;
             border: 2px solid $color-brown;
             border-radius: 50%;
-            transition: all 0.7s;
+            transition: all 0.5s;
           }
 
           &:hover {
@@ -265,7 +268,7 @@ header {
     // background-color: #fff;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 5px 5px 5px #ddd;
-    padding: 1.5rem 0;
+    // padding: 1.5rem 0;
     z-index: 11111;
 
     #header-top {
