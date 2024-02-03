@@ -581,7 +581,7 @@ footer .footer .footer-section .footer-bottom p:hover {
     gap: 20px;
   }
 }
-@media (min-width: 250px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   footer .footer .footer-section .footer-info .footer-btn {
     flex-direction: column;
     font-size: 13px;
@@ -1152,7 +1152,7 @@ footer .footer .footer-section .footer-bottom p:hover {
     top: 60%;
   }
 }
-@media (min-width: 250px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #luxury-section .luxury-section .luxury-info h1 span {
     font-size: 25px;
   }
@@ -1497,7 +1497,7 @@ footer .footer .footer-section .footer-bottom p:hover {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (min-width: 250px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #come-enjoy .amenities-intro .info h1 {
     font-size: 35px;
   }
@@ -1663,7 +1663,7 @@ footer .footer .footer-section .footer-bottom p:hover {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (min-width: 250px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #blog .blog-section .blog-info h5 {
     font-size: 10px;
   }
@@ -1841,7 +1841,7 @@ footer .footer .footer-section .footer-bottom p:hover {
     width: 100%;
   }
 }
-@media (min-width: 250px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #home-contact .home-contact {
     flex-direction: column;
   }

@@ -581,7 +581,7 @@ footer .footer .footer-section .footer-bottom p:hover {
     gap: 20px;
   }
 }
-@media (min-width: 250px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   footer .footer .footer-section .footer-info .footer-btn {
     flex-direction: column;
     font-size: 13px;
@@ -594,6 +594,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 
 #about {
   position: relative;
+  height: 100vh;
 }
 #about .about-section {
   position: absolute;
@@ -626,4 +627,200 @@ footer .footer .footer-section .footer-bottom p:hover {
   color: #000;
   line-height: 100vh;
   mix-blend-mode: screen;
+}
+
+#about-section {
+  background-color: #fbf6e8;
+  padding: 3rem 0;
+}
+#about-section .about-banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+#about-section .about-banner .hero-banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+#about-section .about-banner .hero-banner-left p {
+  font-size: 14px;
+  color: #9b804e;
+  letter-spacing: 6px;
+}
+#about-section .about-banner .hero-banner-left h1 {
+  font-size: 50px;
+  max-width: 700px;
+  font-weight: 400;
+  font-family: "Forum", serif;
+  color: #3d3931;
+}
+#about-section .about-banner .hero-banner-left a {
+  text-align: center;
+  padding: 15px 25px;
+  background-color: #9b804e;
+  color: #fff;
+  font-size: 16px;
+  width: 200px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  transition: all 0.7s;
+}
+#about-section .about-banner .hero-banner-left a:hover {
+  box-shadow: inset 0 -5em 0 0 #fff, inset 0 5em 0 0 #fff;
+  color: #9b804e;
+  border: 1px solid #9b804e;
+}
+#about-section .about-banner .hero-banner-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 30px;
+}
+#about-section .about-banner .hero-banner-right .info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about-section .about-banner .hero-banner-right .info-card .card-right img {
+  width: 150px;
+}
+#about-section .about-banner .hero-banner-right .info-card .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+#about-section .about-banner .hero-banner-right .info-card .texts h3 {
+  font-weight: 400;
+  font-family: "Forum", serif;
+  color: #3d3931;
+  font-size: 30px;
+}
+#about-section .about-banner .hero-banner-right .info-card .texts p {
+  color: #9b804e;
+  font-size: 15px;
+  font-weight: 400;
+}
+@media (max-width: 1024px) {
+  #about-section .about-banner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  #about-section .about-banner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #about-section .about-banner .hero-banner-left {
+    text-align: center;
+    align-items: center;
+  }
+  #about-section .about-banner .hero-banner-left h1 {
+    font-size: 30px;
+  }
+  #about-section .about-banner .hero-banner-right {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+#know {
+  padding: 3rem 0;
+  background-color: #fbf6e8;
+}
+#know .know-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 1024px) {
+  #know .know-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  #know .know-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#know .know-section .know-section-right {
+  background-image: url("../images/Specification-block-image-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#know .know-section .know-section-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+#know .know-section .know-section-texts h3 {
+  color: #9b804e;
+}
+#know .know-section .know-section-texts h1 {
+  color: #3d3931;
+  max-width: 400px;
+  font-weight: 400;
+  font-family: "Forum", serif;
+  font-size: 50px;
+}
+@media screen and (max-width: 767px) {
+  #know .know-section .know-section-texts h1 {
+    font-size: 30px;
+  }
+}
+#know .know-section .know-section-texts .boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  #know .know-section .know-section-texts .boxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#know .know-section .know-section-texts .boxes .box {
+  padding: 30px 50px;
+  text-align: center;
+}
+#know .know-section .know-section-texts .boxes .box h1 {
+  font-size: 60px;
+  color: #9b804e;
+  font-weight: 400;
+  font-family: "Forum", serif;
+}
+#know .know-section .know-section-texts .boxes .box h3 {
+  font-weight: 400;
+  color: #3d3931;
+  letter-spacing: 2px;
+}
+#know .know-section .know-section-texts .boxes .box-1 {
+  background-color: #f2ede0;
+}
+#know .know-section .know-section-texts .boxes .box-1:hover {
+  background-color: #fff;
+}
+#know .know-section .know-section-texts .boxes .box-2:hover {
+  background-color: #f2ede0;
+}
+#know .know-section .know-section-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30px;
+  gap: 20px;
+}
+#know .know-section .know-section-left .img img {
+  width: 100%;
+}
+#know .know-section .know-section-left p {
+  font-size: 16px;
+  color: #9b804e;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 20px;
 }/*# sourceMappingURL=about.css.map */
