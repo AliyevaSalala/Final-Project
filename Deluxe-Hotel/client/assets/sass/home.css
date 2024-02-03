@@ -1395,6 +1395,117 @@ footer .footer .footer-section .footer-bottom p:hover {
   filter: grayscale(50%) opacity(100%);
 }
 
+#come-enjoy {
+  padding: 2rem 0;
+  background-color: #fcf9ef;
+}
+#come-enjoy .amenities-intro .info {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+#come-enjoy .amenities-intro .info h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b804e;
+  letter-spacing: 5px;
+}
+#come-enjoy .amenities-intro .info h1 {
+  color: #3d3931;
+  font-weight: 400;
+  font-family: "Forum", serif;
+  font-size: 50px;
+}
+#come-enjoy .amenities-intro .info p {
+  max-width: 700px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #3d3931;
+}
+#come-enjoy .amenities-intro .intro-cards {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 50px;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card .card-right img {
+  width: 100px;
+  transition: all 0.6s;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card .texts h3 {
+  font-size: 30px;
+  color: #3d3931;
+  font-weight: 400;
+  font-family: "Forum", serif;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card .texts p {
+  font-size: 16px;
+  color: #3d3931;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.3px;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card:hover img {
+  transform: scale(1.1);
+}
+#come-enjoy .amenities-intro .intro-cards .info-card:hover h3 {
+  color: #9b804e;
+}
+#come-enjoy .amenities-intro .btn {
+  padding-top: 20px 0;
+  text-align: center;
+}
+#come-enjoy .amenities-intro .btn a {
+  padding: 10px 25px;
+  border: 1px solid transparent;
+  background-color: #9b804e;
+  color: #fff;
+  transition: all 0.6s;
+  font-weight: 400;
+}
+#come-enjoy .amenities-intro .btn a:hover {
+  box-shadow: inset 6em 0 0 0 #fff, inset -6em 0 0 0 #fff;
+  color: #9b804e;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #come-enjoy .amenities-intro .intro-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #come-enjoy .amenities-intro .intro-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 250px) and (max-width: 480px) {
+  #come-enjoy .amenities-intro .info h1 {
+    font-size: 35px;
+  }
+  #come-enjoy .amenities-intro .intro-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 #blog {
   padding: 2rem 0;
   background-color: #fcf9ef;
@@ -1591,4 +1702,159 @@ footer .footer .footer-section .footer-bottom p:hover {
 }
 #instagram-photos .carousel-wrap .item .item-content:hover img {
   transform: scale(1.1);
+}
+
+#home-contact {
+  padding: 3rem 0;
+}
+#home-contact .home-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#home-contact .home-contact .contact-info {
+  width: 40%;
+  border: 3px solid #9b804e;
+  padding: 10px;
+}
+#home-contact .home-contact .contact-info .border {
+  border: 3px solid #9b804e;
+}
+#home-contact .home-contact .contact-info .border .contact-img {
+  background-image: url("../images/contact-form-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#home-contact .home-contact .contact-info .border .contact-img .empty {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 200px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+#home-contact .home-contact .contact-info .border .contact-img .empty h1 {
+  font-size: 40px;
+  color: #fff;
+  font-family: "Forum", serif;
+  font-weight: 400;
+}
+#home-contact .home-contact .contact-info .border .contact-img .empty a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 15px 30px;
+  background-color: #9b804e;
+}
+#home-contact .home-contact .contact-from {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#home-contact .home-contact .contact-from p {
+  font-weight: 500;
+  color: #9b804e;
+  font-size: 14px;
+}
+#home-contact .home-contact .contact-from h1 {
+  font-weight: 400;
+  color: #3d3931;
+  font-family: "Forum", serif;
+  font-size: 70px;
+}
+#home-contact .home-contact .contact-from h5 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #3d3931;
+  max-width: 600px;
+  line-height: 20px;
+}
+#home-contact .home-contact .contact-from .grid-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#home-contact .home-contact .contact-from .grid-form .text-input {
+  display: flex;
+  gap: 10px;
+}
+#home-contact .home-contact .contact-from .grid-form .text-input input {
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid #9b804e;
+}
+#home-contact .home-contact .contact-from .grid-form .text-input input::-moz-placeholder {
+  color: #3d3931;
+}
+#home-contact .home-contact .contact-from .grid-form .text-input input::placeholder {
+  color: #3d3931;
+}
+#home-contact .home-contact .contact-from .grid-form .email-input {
+  display: flex;
+  gap: 10px;
+}
+#home-contact .home-contact .contact-from .grid-form .email-input input {
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid #9b804e;
+  color: #3d3931;
+}
+#home-contact .home-contact .contact-from .grid-form .email-input input::-moz-placeholder {
+  color: #3d3931;
+}
+#home-contact .home-contact .contact-from .grid-form .email-input input::placeholder {
+  color: #3d3931;
+}
+#home-contact .home-contact .contact-from .grid-form textarea {
+  width: 100%;
+}
+#home-contact .home-contact .contact-from .grid-form #submit {
+  padding: 10px 10px;
+  background-color: #9b804e;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #home-contact .home-contact {
+    flex-direction: column;
+  }
+  #home-contact .home-contact .contact-info {
+    width: 100%;
+  }
+  #home-contact .home-contact .contact-from {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #home-contact .home-contact {
+    flex-direction: column;
+  }
+  #home-contact .home-contact .contact-info {
+    width: 100%;
+  }
+  #home-contact .home-contact .contact-from {
+    width: 100%;
+  }
+}
+@media (min-width: 250px) and (max-width: 480px) {
+  #home-contact .home-contact {
+    flex-direction: column;
+  }
+  #home-contact .home-contact .contact-info {
+    width: 100%;
+  }
+  #home-contact .home-contact .contact-info .contact-img .empty h1 {
+    font-size: 30px;
+  }
+  #home-contact .home-contact .contact-from {
+    width: 100%;
+  }
+  #home-contact .home-contact .contact-from h1 {
+    font-size: 40px;
+  }
 }/*# sourceMappingURL=home.css.map */
