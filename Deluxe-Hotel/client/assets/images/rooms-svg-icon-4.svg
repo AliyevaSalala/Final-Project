@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.379" height="18.633" viewBox="0 0 13.379 18.633">
+  <g data-name="Group 127729" transform="translate(0.5 0.5)">
+    <line data-name="Line 331" y2="3.283" transform="translate(10.786 7.175)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line data-name="Line 332" x1="3.054" y1="1.763" transform="translate(9.141 7.935)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line data-name="Line 333" y1="1.763" x2="3.054" transform="translate(9.141 7.935)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path data-name="Path 2879" d="M1000.831,18.556v3.527a1.175,1.175,0,0,1-1.176,1.176h-8.229a1.175,1.175,0,0,1-1.176-1.176V6.8a1.175,1.175,0,0,1,1.176-1.176h8.229a1.175,1.175,0,0,1,1.176,1.176v3.527" transform="translate(-990.162 -5.625)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line data-name="Line 334" y2="3.283" transform="translate(2.345 9.52)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line data-name="Line 335" y1="2.345" transform="translate(2.345 2.485)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line data-name="Line 336" x2="7.034" transform="translate(0 7.175)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

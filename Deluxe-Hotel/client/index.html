@@ -31,7 +31,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/sass/home.css" />
-    <title>Document</title>
+    <title>Deluxe Hotel</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.pinimg.com/originals/b3/26/bc/b326bcc3f37c99970d8b0224f0154006.png"
+    />
   </head>
   <body>
     <!--======= Cursor -->
@@ -79,8 +84,8 @@
 
             <nav id="nav">
               <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html">About</a></li>
                 <li>
                   <a href="#"
                     >Rooms <i class="fa-solid fa-chevron-down down"></i>
@@ -92,8 +97,34 @@
                     </div>
                   </a>
                 </li>
-                <li><a href="#">Hotel</a></li>
-                <li><a href="#">Pages</a></li>
+                <li>
+                  <a href="#"
+                    >Hotel <i class="fa-solid fa-chevron-down down"></i>
+                    <div class="drop-down">
+                      <ul class="dropdown">
+                        <li><a href="#">HOTEL ACCOUNT</a></li>
+                        <li><a href="#">HOTEL CART</a></li>
+                        <li><a href="#">HOTEL CHECKOUT</a></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    >Pages<i class="fa-solid fa-chevron-down down"></i>
+                    <div class="drop-down">
+                      <ul class="dropdown">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">AMENITIES</a></li>
+                        <li><a href="#">LATEST BLOGS</a></li>
+                        <li><a href="#">OUR STAFES</a></li>
+                        <li><a href="#">DETAILS</a></li>
+                        <li><a href="#">PRICING PLANS</a></li>
+                        <li><a href="#">404 PAGE</a></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
                 <li><a href="#">Contact Us</a></li>
               </ul>
             </nav>
@@ -237,8 +268,52 @@
                 finibus nunc in eleifend hendrerit.
               </p>
             </div>
+
+            <div class="choose-room">
+              <div class="text">
+                <h1>Book Your Rooms</h1>
+              </div>
+              <div class="form">
+                <form action="" class="grid">
+                  <input
+                    type="date"
+                    placeholder="Araival Date"
+                    value="2024-07-22"
+                  />
+                  <input
+                    type="date"
+                    placeholder="Departure Date"
+                    value="2024-08-22"
+                  />
+                  <input type="number" placeholder="Adults" min="1" />
+                  <input type="number" placeholder="Children" min="1" />
+                  <input
+                    type="submit"
+                    value="CHECK AVAILIABILITY"
+                    id="submit"
+                  />
+                </form>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE-SECTION -->
+    <section id="marque">
+      <div class="marquee-section">
+        <h1>
+          <marquee
+            ><span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+          </marquee>
+        </h1>
       </div>
     </section>
 
@@ -249,7 +324,13 @@
         <div class="luxury-section">
           <div class="luxury-info">
             <img src="./assets/images/luxury-img.png" alt="" />
-            <h1>Showing Luxury Hotels</h1>
+            <h1>
+              <span>S</span> <span>h</span> <span>o</span> <span>w</span>
+              <span>i</span> <span>n</span> <span>g </span> <span>L</span>
+              <span>u</span> <span>x</span> <span>u</span> <span>r</span>
+              <span>y </span> <span>H</span> <span>o</span><span>t</span>
+              <span>e</span> <span>l</span> <span>s</span>
+            </h1>
             <p>
               Mauris nec risus congue dui suscipit interdum id ac felis. Cras
               venete finibus quis. Phasellus tempor at turpis quis ultrices.
@@ -501,6 +582,55 @@
       </div>
     </section>
 
+    <!-- Highlighted Amenities -->
+
+    <section id="highlighted-amenities">
+      <div class="carousel-wrap">
+        <div class="owl-carousel">
+          <div class="item">
+            <div class="item-content">
+              <img src="./assets/images/home-2-carousel-img-5.webp" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="./assets/images/home-2-carousel-img-1.webp" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="./assets/images/home-2-carousel-img-3.webp" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="./assets/images/home-2-carousel-img-5.webp" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="./assets/images/home-2-carousel-img-1.webp" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="./assets/images/home-2-carousel-img-2.webp" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="./assets/images/home-2-carousel-img-5.webp" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="./assets/images/home-2-carousel-img-2.webp" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- BLOG-SECTION -->
 
     <section id="blog">
@@ -508,7 +638,11 @@
         <div class="blog-section">
           <div class="blog-info">
             <h5>TRENDING TOPICS</h5>
-            <h1>Hotel Blog</h1>
+            <h1>
+              <span>H</span> <span>o</span> <span>t</span> <span>e</span>
+              <span>l </span> <span>B</span> <span>l</span> <span>o</span>
+              <span>g</span>
+            </h1>
             <p>
               Zinean sed rutrum purus. Nunc nec magna laoreet, sodales nisi at,
               co rutrum viverra. Nunc nec magna aculis metus libero
@@ -620,6 +754,17 @@
         </div>
       </div>
     </section>
+
+    <!-- CONTACCT -->
+
+    <!-- <section id="home-contact">
+      <div class="container">
+        <div class="home-contact">
+          <div class="contact-info"></div>
+          <div class="contact-from"></div>
+        </div>
+      </div>
+    </section> -->
 
     <!-- FOOTER-SECTION -->
 

@@ -19,7 +19,7 @@ menuIcon.addEventListener("click", function () {
 menuCircle.addEventListener("click", function () {
   document.body.classList.toggle("show-menu");
 });
-closeIcon.addEventListener("click", function () {
+closeIcon?.addEventListener("click", function () {
   document.body.classList.toggle("show-menu");
 });
 
@@ -41,7 +41,7 @@ window.addEventListener("scroll", function () {
 
 window.addEventListener("mousemove", function (e) {
   const posX = e.clientX;
-  const posY = e.clientY; 
+  const posY = e.clientY;
 
   cursorDot.style.left = `${posX}px`;
   cursorDot.style.top = `${posY}px`;
