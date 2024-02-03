@@ -180,7 +180,7 @@
       position: relative;
       width: 50px;
       height: 50px;
-      background-color: #111;
+      background-color: transparent;
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -192,8 +192,8 @@
         position: absolute;
         width: 15px;
         height: 15px;
-        border-top: 4px solid #fff;
-        border-left: 4px solid #fff;
+        border-top: 4px solid #9b804e;
+        border-left: 4px solid #9b804e;
         transform: rotate(315deg) translate(2px, 2px);
       }
 
@@ -693,6 +693,138 @@
                   line-height: 25px;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// BLOG-SECTION
+
+#blog {
+  padding: 2rem 0;
+  background-color: #fcf9ef;
+
+  .blog-section {
+    .blog-info {
+      padding: 30px 0;
+      @include flexbox(center);
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      h5 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #9b804e;
+        letter-spacing: 5px;
+      }
+      h1 {
+        font-size: 70px;
+        color: #3d3931;
+        font-weight: 400;
+        font-family: "Forum", serif;
+      }
+
+      p {
+        max-width: 700px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        color: #3d3931;
+      }
+    }
+    .blog-boxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      .blog-box {
+        box-shadow: 5px 5px 20px #fdd;
+        img {
+          width: 100%;
+        }
+
+        .intro {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+          padding: 30px 10px;
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            h3 {
+              color: #3d3931;
+              font-family: "Forum", serif;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+            }
+            span {
+              color: #9b804e;
+              letter-spacing: 3px;
+            }
+          }
+          h1 {
+            font-size: 40px;
+            color: #3d3931;
+            font-weight: 400;
+            font-family: "Forum", serif;
+          }
+          p {
+            font-size: 16px;
+            color: #3d3931;
+            font-weight: 400;
+            max-width: 500px;
+            line-height: 20px;
+          }
+          .read-more {
+            font-size: 16px;
+            color: #3d3931;
+            font-weight: 500;
+            transition: all 0.6s;
+
+            &:hover {
+              color: #9b804e;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+      .blog-boxes {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    @media (min-width: 250px) and (max-width: 480px) {
+      .blog-info {
+        h5 {
+          font-size: 10px;
+        }
+        h1 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+      .blog-boxes {
+        grid-template-columns: repeat(1, 1fr);
+        .blog-box {
+          .intro {
+            a {
+              font-size: 10px;
+            }
+            h1 {
+              font-size: 25px;
+            }
+            p {
+              font-size: 15px;
             }
           }
         }

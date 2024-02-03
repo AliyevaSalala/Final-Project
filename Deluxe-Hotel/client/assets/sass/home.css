@@ -30,7 +30,7 @@ body.show-menu #about-menu {
 .cursor .cursor-dot {
   width: 6px;
   height: 6px;
-  background-color: rgba(91, 13, 13, 0.985);
+  background-color: rgb(195, 161, 109);
   position: fixed;
   top: 0;
   left: 0;
@@ -42,7 +42,8 @@ body.show-menu #about-menu {
 .cursor .cursor-outline {
   width: 40px;
   height: 40px;
-  border: 3px solid hsla(8, 93%, 43%, 0.177);
+  border: 3px solid rgb(195, 161, 109);
+  box-shadow: 1px 1px 1px #c19d68;
   position: fixed;
   top: 0;
   left: 0;
@@ -441,6 +442,7 @@ footer .footer .footer-section .footer-info .footer-btn {
 footer .footer .footer-section .footer-info .footer-btn a {
   padding: 13px 30px;
   color: #fff;
+  transition: all 0.6s;
 }
 footer .footer .footer-section .footer-info .footer-btn a i {
   margin-right: 8px;
@@ -448,8 +450,14 @@ footer .footer .footer-section .footer-info .footer-btn a i {
 footer .footer .footer-section .footer-info .footer-btn a:nth-child(1) {
   background-color: #9b804e;
 }
+footer .footer .footer-section .footer-info .footer-btn a:nth-child(1):hover {
+  box-shadow: inset -7.5em 0 0 0 #3d3931, inset 7.5em 0 0 0 #3d3931;
+}
 footer .footer .footer-section .footer-info .footer-btn a:nth-child(2) {
   background-color: #3d3931;
+}
+footer .footer .footer-section .footer-info .footer-btn a:nth-child(2):hover {
+  box-shadow: inset 10em 0 0 0 #9b804e, inset -10em 0 0 0 #9b804e;
 }
 footer .footer .footer-section .footer-top {
   padding: 40px 0;
@@ -762,7 +770,7 @@ footer .footer .footer-section .footer-bottom p:hover {
   position: relative;
   width: 50px;
   height: 50px;
-  background-color: #111;
+  background-color: transparent;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -774,8 +782,8 @@ footer .footer .footer-section .footer-bottom p:hover {
   position: absolute;
   width: 15px;
   height: 15px;
-  border-top: 4px solid #fff;
-  border-left: 4px solid #fff;
+  border-top: 4px solid #9b804e;
+  border-left: 4px solid #9b804e;
   transform: rotate(315deg) translate(2px, 2px);
 }
 #banner-section .buttons span:nth-child(2)::before {
@@ -1178,6 +1186,124 @@ footer .footer .footer-section .footer-bottom p:hover {
   color: #9b804e;
   font-weight: 400;
   line-height: 25px;
+}
+
+#blog {
+  padding: 2rem 0;
+  background-color: #fcf9ef;
+}
+#blog .blog-section .blog-info {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+#blog .blog-section .blog-info h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b804e;
+  letter-spacing: 5px;
+}
+#blog .blog-section .blog-info h1 {
+  font-size: 70px;
+  color: #3d3931;
+  font-weight: 400;
+  font-family: "Forum", serif;
+}
+#blog .blog-section .blog-info p {
+  max-width: 700px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #3d3931;
+}
+#blog .blog-section .blog-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+#blog .blog-section .blog-boxes .blog-box {
+  box-shadow: 5px 5px 20px #fdd;
+}
+#blog .blog-section .blog-boxes .blog-box img {
+  width: 100%;
+}
+#blog .blog-section .blog-boxes .blog-box .intro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 30px 10px;
+}
+#blog .blog-section .blog-boxes .blog-box .intro a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+#blog .blog-section .blog-boxes .blog-box .intro a h3 {
+  color: #3d3931;
+  font-family: "Forum", serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#blog .blog-section .blog-boxes .blog-box .intro a span {
+  color: #9b804e;
+  letter-spacing: 3px;
+}
+#blog .blog-section .blog-boxes .blog-box .intro h1 {
+  font-size: 40px;
+  color: #3d3931;
+  font-weight: 400;
+  font-family: "Forum", serif;
+}
+#blog .blog-section .blog-boxes .blog-box .intro p {
+  font-size: 16px;
+  color: #3d3931;
+  font-weight: 400;
+  max-width: 500px;
+  line-height: 20px;
+}
+#blog .blog-section .blog-boxes .blog-box .intro .read-more {
+  font-size: 16px;
+  color: #3d3931;
+  font-weight: 500;
+  transition: all 0.6s;
+}
+#blog .blog-section .blog-boxes .blog-box .intro .read-more:hover {
+  color: #9b804e;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #blog .blog-section .blog-boxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 250px) and (max-width: 480px) {
+  #blog .blog-section .blog-info h5 {
+    font-size: 10px;
+  }
+  #blog .blog-section .blog-info h1 {
+    font-size: 40px;
+  }
+  #blog .blog-section .blog-info p {
+    font-size: 15px;
+  }
+  #blog .blog-section .blog-boxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #blog .blog-section .blog-boxes .blog-box .intro a {
+    font-size: 10px;
+  }
+  #blog .blog-section .blog-boxes .blog-box .intro h1 {
+    font-size: 25px;
+  }
+  #blog .blog-section .blog-boxes .blog-box .intro p {
+    font-size: 15px;
+  }
 }
 
 #instagram-photos {

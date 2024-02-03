@@ -33,15 +33,24 @@ footer {
           a {
             padding: 13px 30px;
             color: #fff;
+            transition: all 0.6s;
             i {
               margin-right: 8px;
             }
 
             &:nth-child(1) {
               background-color: #9b804e;
+
+              &:hover {
+                box-shadow: inset -7.5em 0 0 0 #3d3931,
+                  inset 7.5em 0 0 0 #3d3931;
+              }
             }
             &:nth-child(2) {
               background-color: #3d3931;
+              &:hover {
+                box-shadow: inset 10em 0 0 0 #9b804e, inset -10em 0 0 0 #9b804e;
+              }
             }
           }
         }

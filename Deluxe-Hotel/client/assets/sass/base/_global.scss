@@ -26,7 +26,9 @@ body {
   .cursor-dot {
     width: 6px;
     height: 6px;
-    background-color: rgba(91, 13, 13, 0.985);
+    // background-color: hsla(8, 93%, 43%, 0.145);
+    background-color: rgb(195, 161, 109);
+
     position: fixed;
     top: 0;
     left: 0;
@@ -38,7 +40,8 @@ body {
   .cursor-outline {
     width: 40px;
     height: 40px;
-    border: 3px solid hsla(8, 93%, 43%, 0.177);
+    border: 3px solid rgb(195, 161, 109);
+    box-shadow: 1px 1px 1px #c19d68;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,8 +51,3 @@ body {
     pointer-events: none;
   }
 }
-
-// .cursor-dot,
-// .cursor-outline {
-
-// }
