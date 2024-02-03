@@ -34,6 +34,12 @@
     <title>Document</title>
   </head>
   <body>
+    <!--======= Cursor -->
+    <div class="cursor">
+      <div class="cursor-dot" data-cursor-dot></div>
+      <div class="cursor-outline" data-cursor-outline></div>
+    </div>
+
     <!-- HEADER-SECTION -->
 
     <header>
@@ -170,65 +176,49 @@
     </div> -->
 
     <!-- BANNER-SECTION -->
-    <section id="hero-banner-section">
-      <div class="banner">
-        <div class="container">
-          <div class="hero-banner-section">
-            <div class="hero-banner-section-right">
-              <h5>MAJESTIC ROOMS</h5>
-              <h1>Discover Your Paradise Where You Are</h1>
-              <p>
-                Sed imperdiet dignissim odio dignissim bibendum. Praesent
-                porttitor tristique velit. efficitur, a pulvinar sem hasellus .
-              </p>
-              <a href="#">Explore Now</a>
-            </div>
-            <div class="hero-banner-section-left">
-              <div class="form-table">
-                <div class="banner-form">
-                  <img src="./assets/images/form-border-image (1).png" alt="" />
-                  <div class="info">
-                    <ul>
-                      <li>
-                        <label for="">Check In</label>
-                        <div>
-                          <input
-                            type="date"
-                            name="trip-start"
-                            value="2024-02-22"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <label for="">Check Out</label>
-                        <div>
-                          <input
-                            type="date"
-                            name="trip-start"
-                            value="2024-02-23"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <label for="">Check In</label>
-                        <div>
-                          <input type="date" />
-                        </div>
-                      </li>
-                      <li>
-                        <label for="">Check In</label>
-                        <div>
-                          <input type="date" />
-                        </div>
-                      </li>
-                    </ul>
-                    <button>Check Availability</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <section id="banner-section">
+      <div class="slider">
+        <div class="slides slides">
+          <div class="content">
+            <p>LUXURY</p>
+            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
           </div>
         </div>
+        <div class="slides">
+          <div class="content">
+            <p>LUXURY</p>
+            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
+          </div>
+        </div>
+        <div class="slides slides-3">
+          <div class="content">
+            <p>LUXURY</p>
+            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
+          </div>
+        </div>
+        <div class="slides slides-4">
+          <div class="content">
+            <p>LUXURY</p>
+            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
+          </div>
+        </div>
+        <div class="slides slides-5">
+          <div class="content">
+            <p>LUXURY</p>
+            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
+          </div>
+        </div>
+        <div class="slides slides-6">
+          <div class="content">
+            <p>LUXURY</p>
+            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <span class="prev"></span>
+        <span class="next"></span>
       </div>
     </section>
 
@@ -581,21 +571,102 @@
 
     <!-- FOOTER-SECTION -->
 
-    <!-- <footer>
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-map">
-            <div class="logo">
-              <h1>Deluxe</h1>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="footer-section">
+            <div class="footer-info">
+              <img
+                src="./assets/images/Deluxe-Bozzali-Hotel-Logo.png"
+                alt="logo"
+              />
+              <p>
+                Nisi quis eleifend quam adipiscing vitae proin sagittis.
+                Pharetra et ultrices neque ornare llamcorpe.
+              </p>
+              <div class="footer-btn">
+                <a href="tel:+000 123 456789"
+                  ><i class="fa-solid fa-phone"></i> +000 123 456789</a
+                >
+                <a href="#"
+                  ><i class="fa-solid fa-location-dot"></i>361 Mireles Barrio,
+                  Spain</a
+                >
+              </div>
+            </div>
+            <div class="footer-top">
+              <div class="footer-contact">
+                <h1>Contact Us</h1>
+                <nav>
+                  <ul>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Hotel Facilities</a></li>
+                    <li><a href="#">News & Blogs</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Personal Information</a></li>
+                    <li><a href="#">Data Tracking</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="footer-help">
+                <h1>HELP</h1>
+                <nav>
+                  <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Website Feedback</a></li>
+                    <li><a href="#">Service Guarantee</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="services-footer">
+                <h1>OUR SERVICES</h1>
+                <nav>
+                  <ul>
+                    <li><a href="#"> Store Directory</a></li>
+                    <li><a href="#">Top Hotels</a></li>
+                    <li><a href="#">Quick Links </a></li>
+                    <li><a href="#">Important Links </a></li>
+                    <li><a href="#"> Insights</a></li>
+                    <li><a href="#"> KnowledgeCenter</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="about-footer">
+                <h1>ABOUT US</h1>
+                <nav>
+                  <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Pricing</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="event-footer">
+                <h1>EVENT</h1>
+                <nav>
+                  <ul>
+                    <li><a href="#">nvestor Relations</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Managment</a></li>
+                    <li><a href="#">Site Review</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>
+                © 2023 Deluxe Hotel Ganja, 254 Nizami Gəncəvi prospekti, Gəncə
+              </p>
             </div>
           </div>
-          <div class="footer-contact">
-            <h1>Contact Us</h1>
-          </div>
         </div>
-        <div class="footer-bottom"></div>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

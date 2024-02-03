@@ -27,9 +27,35 @@ body.show-menu #about-menu {
   transition: all 0.8s;
 }
 
+.cursor .cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(91, 13, 13, 0.985);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+.cursor .cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 3px solid hsla(8, 93%, 43%, 0.177);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
 header {
   position: absolute;
   width: 100%;
+  z-index: 11111;
   transition: all 0.7s;
 }
 header #header-top .header-top {
@@ -85,7 +111,7 @@ header .elementar-section .border-bottom {
   background-color: #9b804e;
 }
 header #header-bottom {
-  padding: 10px 0;
+  padding: 30px 0;
 }
 header #header-bottom .header-bottom {
   display: flex;
@@ -255,6 +281,9 @@ header.header-scroll {
 header.header-scroll #header-top {
   display: none;
 }
+header.header-scroll #header-bottom {
+  padding: 1rem 0;
+}
 header.header-scroll .elementar-section {
   display: none;
 }
@@ -375,141 +404,270 @@ header.header-scroll .elementar-section {
   color: #413d31;
 }
 
-#hero-banner-section {
-  background-image: url("../images/slider-image-2 (1).jpg");
+footer {
+  background-image: url("../images/Footer-image-1b.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#hero-banner-section .banner {
-  padding: 200px 0;
-  background-color: rgba(250, 240, 232, 0.86);
+footer .footer {
+  padding: 3rem 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-#hero-banner-section .banner .hero-banner-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-right {
-  width: 50%;
+footer .footer .footer-section .footer-info {
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
+  gap: 15px;
   justify-content: center;
-  gap: 20px;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-right h5 {
-  font-size: 14px;
-  font-weight: 500;
-  color: #9b804e;
-  letter-spacing: 4.2px;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-right h1 {
-  font-size: 70px;
-  font-family: "Forum", serif;
-  font-weight: 400;
-  color: #3d3931;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-right p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #3d3931;
-  max-width: 500px;
-  line-height: 25.6px;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-right a {
-  font-size: 16px;
-  font-weight: 400;
-  padding: 10px;
-  color: #fff;
-  width: 180px;
+  align-items: center;
   text-align: center;
-  background-color: #9b804e;
 }
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left {
-  padding: 0 30px;
-  width: 50%;
+footer .footer .footer-section .footer-info img {
+  width: 100px;
 }
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table {
-  width: 100%;
-  background-color: #fff;
+footer .footer .footer-section .footer-info p {
+  font-size: 16px;
+  max-width: 500px;
+  color: #b5b5b5;
+  line-height: 26px;
+  font-weight: 400;
+}
+footer .footer .footer-section .footer-info .footer-btn {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  border: 1px solid #9b804e;
-  border-radius: 5px;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form {
-  position: relative;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form img {
-  width: 100%;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info {
-  position: absolute;
-  top: 40px;
-  left: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul li {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  width: 100%;
-  border: 1px solid #3d3931;
-  gap: 50px;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul li input {
-  padding: 5px 15px;
-  border: 1px solid transparent;
-  background-color: transparent;
-  display: flex;
-  color: #9b804e;
   gap: 20px;
-  width: 100%;
+  align-items: center;
 }
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info ul li input::after {
-  content: "";
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  vertical-align: middle;
-  height: -moz-min-content;
-  height: min-content;
-  border-color: #9b804e transparent transparent transparent;
-  content: "";
-  border-width: 9px 5px 0 5px;
-  border-style: solid;
-}
-#hero-banner-section .banner .hero-banner-section .hero-banner-section-left .form-table .banner-form .info button {
-  margin-top: 25px;
-  width: 100%;
-  padding: 15px 20px;
-  border: 1px solid transparent;
-  background-color: #9b804e;
-  cursor: pointer;
+footer .footer .footer-section .footer-info .footer-btn a {
+  padding: 13px 30px;
   color: #fff;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  #hero-banner-section .banner .hero-banner-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+footer .footer .footer-section .footer-info .footer-btn a i {
+  margin-right: 8px;
+}
+footer .footer .footer-section .footer-info .footer-btn a:nth-child(1) {
+  background-color: #9b804e;
+}
+footer .footer .footer-section .footer-info .footer-btn a:nth-child(2) {
+  background-color: #3d3931;
+}
+footer .footer .footer-section .footer-top {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+footer .footer .footer-section .footer-top .footer-contact h1 {
+  font-size: 24px;
+  color: #b5b5b5;
+  padding: 10px 0;
+  font-weight: 400;
+}
+footer .footer .footer-section .footer-top .footer-help h1 {
+  font-size: 24px;
+  color: #b5b5b5;
+  padding: 10px 0;
+  font-weight: 400;
+}
+footer .footer .footer-section .footer-top .services-footer h1 {
+  font-size: 24px;
+  color: #b5b5b5;
+  padding: 10px 0;
+  font-weight: 400;
+}
+footer .footer .footer-section .footer-top .about-footer h1 {
+  font-size: 24px;
+  color: #b5b5b5;
+  padding: 10px 0;
+  font-weight: 400;
+}
+footer .footer .footer-section .footer-top .event-footer h1 {
+  font-size: 24px;
+  color: #b5b5b5;
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+#banner-section {
+  padding: 3rem 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banner-section .slider {
+  position: absolute;
+  inset: 80px 50px 80px 80px;
+  background-color: #ccc;
+}
+#banner-section .slider .slides {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 240px;
+  height: 320px;
+  transition: all 0.5s;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#banner-section .slider .slides:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
+  background-image: url("../images/Herittage-home-3-slider-1.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner-section .slider .slides:nth-child(1) .content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1ms;
+}
+#banner-section .slider .slides:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
+  background-image: url("../images/Herittage-home-3-slider-2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner-section .slider .slides:nth-child(2) .content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+#banner-section .slider .slides:nth-child(3) {
+  left: calc(50% + 240px);
+  background-image: url("../images/Herittage-home-3-slider-3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner-section .slider .slides:nth-child(4) {
+  left: calc(50% + 500px);
+  background-image: url("../images/Herittage-home-3-slider-1.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner-section .slider .slides:nth-child(5) {
+  left: calc(50% + 760px);
+  background-image: url("../images/Herittage-home-3-slider-3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner-section .slider .slides:nth-child(6) {
+  left: calc(50% + 1020px);
+  background-image: url("../images/Herittage-home-3-slider-2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+#banner-section .slider .content {
+  position: relative;
+  padding: 40px;
+  max-width: 600px;
+  transition: all 0.3s;
+  transition-delay: 0s;
+  transform: translateY(50px);
+  z-index: 11100000;
+  opacity: 0;
+}
+#banner-section .slider .content h1 {
+  font-size: 70px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Forum", serif;
+}
+#banner-section .slider .content p {
+  padding: 10px 0;
+  font-weight: 500;
+  letter-spacing: 5px;
+  font-size: 14px;
+  color: #3d3931;
+}
+@media (max-width: 900px) {
+  #banner-section .slider {
+    position: absolute;
+    inset: 40px 40px 200px 40px;
   }
-  #hero-banner-section .banner .hero-banner-section .hero-banner-section-right {
-    width: 100%;
+  #banner-section .slider .slides {
+    width: 100px;
+    height: 100px;
+    bottom: -200px;
+    top: initial;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   }
-  #hero-banner-section .banner .hero-banner-section .hero-banner-section-left {
-    width: 100%;
+  #banner-section .slider .slides:nth-child(1) {
+    top: initial;
+    bottom: 0px;
   }
+  #banner-section .slider .slides:nth-child(2) {
+    top: initial;
+    bottom: 0px;
+  }
+  #banner-section .slider .slides:nth-child(3) {
+    left: 0;
+  }
+  #banner-section .slider .slides:nth-child(4) {
+    left: 120px;
+  }
+  #banner-section .slider .slides:nth-child(5) {
+    left: 240px;
+  }
+  #banner-section .slider .slides:nth-child(6) {
+    left: 360px;
+  }
+}
+#banner-section .buttons {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  gap: 20px;
+}
+#banner-section .buttons span {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #111;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#banner-section .buttons span::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  transform: rotate(315deg) translate(2px, 2px);
+}
+#banner-section .buttons span:nth-child(2)::before {
+  transform: rotate(135deg) translate(2px, 2px);
+}
+#banner-section .buttons span.active {
+  opacity: 0.5;
 }
 
 #elit {
@@ -916,16 +1074,16 @@ header.header-scroll .elementar-section {
 #instagram-photos {
   padding: 2.5rem 0;
 }
-#instagram-photos .carousel-wrap .item-content {
+#instagram-photos .carousel-wrap .item .item-content {
   overflow: hidden;
   border-radius: 20px;
   cursor: grab;
 }
-#instagram-photos .carousel-wrap .item-content img {
+#instagram-photos .carousel-wrap .item .item-content img {
   width: 100%;
   border-radius: 20px;
   transition: all 0.6s;
 }
-#instagram-photos .carousel-wrap .item-content:hover img {
+#instagram-photos .carousel-wrap .item .item-content:hover img {
   transform: scale(1.1);
 }/*# sourceMappingURL=home.css.map */

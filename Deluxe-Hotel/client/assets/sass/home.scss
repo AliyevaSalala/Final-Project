@@ -7,147 +7,203 @@
 
 // BANNER-SECTION
 
-#hero-banner-section {
-  background-image: url("../images/slider-image-2\ \(1\).jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  .banner {
-    padding: 200px 0;
-    background-color: rgb(250 240 232 / 86%);
-    // background-color: rgba(251, 246, 232, 0.56);
+#banner-section {
+  padding: 3rem 0;
+  // position: absolute;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  // padding: 300px 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .hero-banner-section {
-      @include flexbox();
+  .slider {
+    position: absolute;
+    inset: 80px 50px 80px 80px;
+    background-color: #ccc;
 
-      .hero-banner-section-right {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
+    .slides {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 240px;
+      height: 320px;
+      // background: var(---img);
+      // background-image: url("../images/Herittage-home-3-slider-1.webp");
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      transition: all 0.5s;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
 
-        h5 {
-          font-size: 14px;
-          font-weight: 500;
-          color: #9b804e;
-          letter-spacing: 4.2px;
+      &:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(0);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
+        background-image: url("../images/Herittage-home-3-slider-1.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .content {
+          opacity: 1;
+          transform: translateY(0);
+          transition-delay: 1ms;
         }
-        h1 {
-          font-size: 70px;
-          font-family: "Forum", serif;
-          font-weight: 400;
-          color: #3d3931;
-        }
-        p {
-          font-size: 16px;
-          font-weight: 400;
-          color: #3d3931;
-          max-width: 500px;
-          line-height: 25.6px;
-        }
-        a {
-          font-size: 16px;
-          font-weight: 400;
-          padding: 10px;
-          color: #fff;
-          width: 180px;
-          text-align: center;
-          background-color: #9b804e;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(0);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
+        background-image: url("../images/Herittage-home-3-slider-2.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .content {
+          opacity: 1;
+          transform: translateY(0);
+          transition-delay: 0.5s;
         }
       }
 
-      .hero-banner-section-left {
-        padding: 0 30px;
-        width: 50%;
-        .form-table {
-          width: 100%;
-          background-color: #fff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 30px;
-          border: 1px solid #9b804e;
-          border-radius: 5px;
-          .banner-form {
-            // width: 80%;
-            position: relative;
-            img {
-              width: 100%;
-            }
-            .info {
-              position: absolute;
-              top: 40px;
-              left: 60px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              // gap: 10px;
-
-              ul {
-                display: flex;
-                flex-direction: column;
-                gap: 35px;
-                li {
-                  display: flex;
-                  align-items: center;
-                  padding: 10px 20px;
-                  width: 100%;
-                  // width: 370px;
-                  border: 1px solid #3d3931;
-                  gap: 50px;
-                  input {
-                    padding: 5px 15px;
-                    border: 1px solid transparent;
-                    background-color: transparent;
-                    display: flex;
-                    color: #9b804e;
-                    gap: 20px;
-                    width: 100%;
-                    &::after {
-                      content: "";
-                      top: 0;
-                      bottom: 0;
-                      margin: auto;
-                      vertical-align: middle;
-                      height: min-content;
-                      border-color: #9b804e transparent transparent transparent;
-                      content: "";
-                      border-width: 9px 5px 0 5px;
-                      border-style: solid;
-                    }
-                  }
-                }
-              }
-              button {
-                // margin: 25px;
-                margin-top: 25px;
-                width: 100%;
-                padding: 15px 20px;
-                border: 1px solid transparent;
-                background-color: #9b804e;
-                cursor: pointer;
-                color: #fff;
-              }
-            }
-          }
-        }
+      &:nth-child(3) {
+        left: calc(50% + 240px);
+        background-image: url("../images/Herittage-home-3-slider-3.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      &:nth-child(4) {
+        left: calc(50% + 500px);
+        background-image: url("../images/Herittage-home-3-slider-1.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      &:nth-child(5) {
+        left: calc(50% + 760px);
+        background-image: url("../images/Herittage-home-3-slider-3.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      &:nth-child(6) {
+        left: calc(50% + 1020px);
+        background-image: url("../images/Herittage-home-3-slider-2.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0;
       }
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
-      .hero-banner-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+    .content {
+      position: relative;
+      padding: 40px;
+      max-width: 600px;
+      transition: all 0.3s;
+      transition-delay: 0s;
+      transform: translateY(50px);
+      z-index: 11100000;
+      opacity: 0;
+      h1 {
+        font-size: 70px;
+        color: #fff;
+        font-weight: 400;
+        font-family: "Forum", serif;
+      }
+      p {
+        padding: 10px 0;
+        font-weight: 500;
+        letter-spacing: 5px;
+        font-size: 14px;
+        color: #3d3931;
+      }
+    }
 
-        .hero-banner-section-right {
-          width: 100%;
+    @media (max-width: 900px) {
+      position: absolute;
+      inset: 40px 40px 200px 40px;
+
+      .slides {
+        width: 100px;
+        height: 100px;
+        bottom: -200px;
+        top: initial;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+
+        &:nth-child(1) {
+          top: initial;
+          bottom: 0px;
         }
-        .hero-banner-section-left {
-          width: 100%;
+        &:nth-child(2) {
+          top: initial;
+          bottom: 0px;
         }
+        &:nth-child(3) {
+          left: 0;
+        }
+        &:nth-child(4) {
+          left: 120px;
+        }
+        &:nth-child(5) {
+          left: 240px;
+        }
+        &:nth-child(6) {
+          left: 360px;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    gap: 20px;
+
+    span {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      background-color: #111;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-top: 4px solid #fff;
+        border-left: 4px solid #fff;
+        transform: rotate(315deg) translate(2px, 2px);
+      }
+
+      &:nth-child(2) {
+        &::before {
+          transform: rotate(135deg) translate(2px, 2px);
+        }
+      }
+      &.active {
+        opacity: 0.5;
       }
     }
   }
@@ -650,19 +706,27 @@
 #instagram-photos {
   padding: 2.5rem 0;
   .carousel-wrap {
-    .item-content {
-      overflow: hidden;
-      border-radius: 20px;
-      cursor: grab;
-      img {
-        width: 100%;
-        border-radius: 20px;
-        transition: all 0.6s;
-      }
+    // &:hover {
+    //   &.item-content {
+    //     filter: grayscale(100%) opacity(100%);
+    //   }
+    // }
 
-      &:hover {
+    .item {
+      .item-content {
+        overflow: hidden;
+        border-radius: 20px;
+        cursor: grab;
         img {
-          transform: scale(1.1);
+          width: 100%;
+          border-radius: 20px;
+          transition: all 0.6s;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
         }
       }
     }

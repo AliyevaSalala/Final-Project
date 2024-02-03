@@ -21,3 +21,35 @@ body {
   //   }
   // }
 }
+
+.cursor {
+  .cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(91, 13, 13, 0.985);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 3px solid hsla(8, 93%, 43%, 0.177);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+// .cursor-dot,
+// .cursor-outline {
+
+// }
