@@ -452,7 +452,7 @@ footer .footer .footer-section .footer-info .footer-btn a:nth-child(2) {
   background-color: #3d3931;
 }
 footer .footer .footer-section .footer-top {
-  padding: 30px 0;
+  padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -460,32 +460,147 @@ footer .footer .footer-section .footer-top {
 footer .footer .footer-section .footer-top .footer-contact h1 {
   font-size: 24px;
   color: #b5b5b5;
-  padding: 10px 0;
+  padding: 20px 0;
   font-weight: 400;
+}
+footer .footer .footer-section .footer-top .footer-contact nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer .footer-section .footer-top .footer-contact nav ul li a {
+  font-size: 16px;
+  color: #b5b5b5;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+footer .footer .footer-section .footer-top .footer-contact nav ul li a:hover {
+  color: #9b804e;
 }
 footer .footer .footer-section .footer-top .footer-help h1 {
   font-size: 24px;
   color: #b5b5b5;
-  padding: 10px 0;
+  padding: 20px 0;
   font-weight: 400;
+}
+footer .footer .footer-section .footer-top .footer-help nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer .footer-section .footer-top .footer-help nav ul li a {
+  font-size: 16px;
+  color: #b5b5b5;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+footer .footer .footer-section .footer-top .footer-help nav ul li a:hover {
+  color: #9b804e;
 }
 footer .footer .footer-section .footer-top .services-footer h1 {
   font-size: 24px;
   color: #b5b5b5;
-  padding: 10px 0;
+  padding: 20px 0;
   font-weight: 400;
+}
+footer .footer .footer-section .footer-top .services-footer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer .footer-section .footer-top .services-footer nav ul li a {
+  font-size: 16px;
+  color: #b5b5b5;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+footer .footer .footer-section .footer-top .services-footer nav ul li a:hover {
+  color: #9b804e;
 }
 footer .footer .footer-section .footer-top .about-footer h1 {
   font-size: 24px;
   color: #b5b5b5;
-  padding: 10px 0;
+  padding: 20px 0;
   font-weight: 400;
+}
+footer .footer .footer-section .footer-top .about-footer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer .footer-section .footer-top .about-footer nav ul li a {
+  font-size: 16px;
+  color: #b5b5b5;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+footer .footer .footer-section .footer-top .about-footer nav ul li a:hover {
+  color: #9b804e;
 }
 footer .footer .footer-section .footer-top .event-footer h1 {
   font-size: 24px;
   color: #b5b5b5;
-  padding: 10px 0;
+  padding: 20px 0;
   font-weight: 400;
+}
+footer .footer .footer-section .footer-top .event-footer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer .footer-section .footer-top .event-footer nav ul li a {
+  font-size: 16px;
+  color: #b5b5b5;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+footer .footer .footer-section .footer-top .event-footer nav ul li a:hover {
+  color: #9b804e;
+}
+footer .footer .footer-section .footer-bottom {
+  border-top: 1px solid #9b804e;
+  text-align: center;
+  padding-top: 40px;
+}
+footer .footer .footer-section .footer-bottom p {
+  font-size: 16px;
+  color: #b5b5b5;
+  transition: all 0.5s;
+}
+footer .footer .footer-section .footer-bottom p a {
+  color: #b5b5b5;
+  transition: all 0.5s;
+}
+footer .footer .footer-section .footer-bottom p a:hover {
+  color: #9b804e;
+}
+footer .footer .footer-section .footer-bottom p:hover {
+  color: #9b804e;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer .footer .footer-section .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  footer .footer .footer-section .footer-info .footer-btn {
+    flex-direction: column;
+  }
+  footer .footer .footer-section .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 250px) and (max-width: 480px) {
+  footer .footer .footer-section .footer-info .footer-btn {
+    flex-direction: column;
+    font-size: 13px;
+  }
+  footer .footer .footer-section .footer-top {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }
 
 #banner-section {
@@ -989,12 +1104,6 @@ footer .footer .footer-section .footer-top .event-footer h1 {
   }
 }
 
-#customer {
-  background-image: url("../images/bg-art-icon.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 #customer .customer {
   padding: 60px 0;
   background-color: rgba(247, 245, 240, 0.945);
