@@ -8,6 +8,14 @@ const header = document.querySelector("header");
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
 
+// const liElemes = document.querySelectorAll("li");
+// liElemes.forEach((item) => {
+//   item.addEventListener("click", function () {
+//     document.querySelector(".active")?.classList.remove("active");
+//     item.classList.add("active");
+//   });
+// });
+
 menuIcon.addEventListener("click", function () {
   nav.classList.toggle("show");
 
