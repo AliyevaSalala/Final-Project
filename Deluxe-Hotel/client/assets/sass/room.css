@@ -76,7 +76,7 @@ header #header-top .header-top .header-top-right a {
   color: #3d3931;
   font-weight: 500;
   transition: all 0.6s;
-  color: #413d31;
+  color: #7e7351;
 }
 header #header-top .header-top .header-top-right a:hover {
   color: #9b804e;
@@ -85,7 +85,7 @@ header #header-top .header-top .header-top-right h5 {
   font-size: 15px;
   color: #3d3931;
   font-weight: 500;
-  color: #413d31;
+  color: #8a7c52;
 }
 header #header-top .header-top .header-top-left {
   display: flex;
@@ -96,6 +96,7 @@ header #header-top .header-top .header-top-left a {
   font-weight: 500;
   color: #3d3931;
   transition: all 0.6s;
+  color: #a28f57;
 }
 header #header-top .header-top .header-top-left a:hover {
   color: #9b804e;
@@ -149,6 +150,9 @@ header #header-bottom .header-bottom nav ul li a.active {
 header #header-bottom .header-bottom nav ul li a:hover {
   color: #9b804e;
 }
+header #header-bottom .header-bottom nav ul li .drop-down {
+  padding-top: 20px;
+}
 header #header-bottom .header-bottom nav ul li .drop-down .dropdown {
   position: absolute;
   background-color: #fffcf2;
@@ -160,11 +164,10 @@ header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a {
   color: #3d3931;
   font-size: 13px;
   font-weight: bold;
-  transition: all 0.6s;
-  padding: 30px 0;
+  margin: 50px 0;
 }
 header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a:hover {
-  color: #9b804e;
+  color: #efa824;
 }
 header #header-bottom .header-bottom .navbar-search {
   display: flex;
@@ -268,6 +271,22 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
   header #header-bottom .header-bottom .navbar-search .menu-circle {
     display: none;
   }
+}
+header.header-scroll {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 5px 5px #ddd;
+  z-index: 11111;
+}
+header.header-scroll #header-top {
+  display: none;
+}
+header.header-scroll #header-bottom {
+  padding: 1rem 0;
+}
+header.header-scroll .elementar-section {
+  display: none;
 }
 
 #about-menu {

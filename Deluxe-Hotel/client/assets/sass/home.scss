@@ -7,208 +7,88 @@
 
 // BANNER-SECTION
 
-#banner-section {
-  padding: 3rem 0;
-  // position: absolute;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  // padding: 300px 0;
+#hero-banner-sec {
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 300px 0;
+  background-color: rgba(0, 0, 0, 0.5);
 
-  .slider {
-    position: absolute;
-    inset: 80px 50px 80px 80px;
-    background-color: #ccc;
-
-    .slides {
+  @media screen and (max-width: 1100px) {
+    padding: 150px 0;
+  }
+  .empty {
+    .back-video {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 240px;
-      height: 320px;
-      // background: var(---img);
-      // background-image: url("../images/Herittage-home-3-slider-1.webp");
-      // background-position: center;
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      transition: all 0.5s;
-      border-radius: 20px;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .banner-section {
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-end;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
 
-      &:nth-child(1) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: translateY(0);
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
-        background-image: url("../images/Herittage-home-3-slider-1.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        .content {
-          opacity: 1;
-          transform: translateY(0);
-          transition-delay: 1ms;
-        }
-      }
-      &:nth-child(2) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: translateY(0);
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
-        background-image: url("../images/Herittage-home-3-slider-2.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        .content {
-          opacity: 1;
-          transform: translateY(0);
-          transition-delay: 0.5s;
-        }
-      }
-
-      &:nth-child(3) {
-        left: calc(50% + 240px);
-        background-image: url("../images/Herittage-home-3-slider-3.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      &:nth-child(4) {
-        left: calc(50% + 500px);
-        background-image: url("../images/Herittage-home-3-slider-1.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      &:nth-child(5) {
-        left: calc(50% + 760px);
-        background-image: url("../images/Herittage-home-3-slider-3.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      &:nth-child(6) {
-        left: calc(50% + 1020px);
-        background-image: url("../images/Herittage-home-3-slider-2.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0;
-      }
-    }
-
-    .content {
-      position: relative;
-      padding: 40px;
-      max-width: 600px;
-      transition: all 0.3s;
-      transition-delay: 0s;
-      transform: translateY(50px);
-      z-index: 11100000;
-      opacity: 0;
-      h1 {
-        font-size: 70px;
-        color: #fff;
-        font-weight: 400;
-        font-family: "Forum", serif;
-      }
-      p {
+      .star-icons {
         padding: 10px 0;
-        font-weight: 500;
-        letter-spacing: 5px;
-        font-size: 14px;
-        color: #3d3931;
+        i {
+          padding: 5px;
+          font-size: 15px;
+          color: #e4a853;
+        }
       }
-    }
+      .texts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        h5 {
+          font-size: 15px;
+          font-weight: 400;
+          color: #fff;
+          @media screen and (max-width: 767px) {
+            font-size: 12px;
+          }
+        }
+        h1 {
+          font-size: 70px;
+          color: #fff;
+          font-weight: 400;
+          font-family: "Forum", serif;
 
-    @media (max-width: 900px) {
-      position: absolute;
-      inset: 40px 40px 200px 40px;
+          @media screen and (max-width: 767px) {
+            font-size: 35px;
+          }
+        }
+        a {
+          font-size: 15px;
+          color: #fff;
+          padding: 10px 30px;
+          border: 1px solid #fff;
+          background-color: transparent;
+          transition: all 0.7s;
 
-      .slides {
-        width: 100px;
-        height: 100px;
-        bottom: -200px;
-        top: initial;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-
-        &:nth-child(1) {
-          top: initial;
-          bottom: 0px;
-        }
-        &:nth-child(2) {
-          top: initial;
-          bottom: 0px;
-        }
-        &:nth-child(3) {
-          left: 0;
-        }
-        &:nth-child(4) {
-          left: 120px;
-        }
-        &:nth-child(5) {
-          left: 240px;
-        }
-        &:nth-child(6) {
-          left: 360px;
-        }
-        .content {
-          h1 {
-            font-size: 40px;
+          &:hover {
+            box-shadow: inset 15em 0 0 0 #fff;
+            color: #e4a853;
           }
         }
       }
     }
-  }
 
-  .buttons {
-    position: absolute;
-    bottom: 15px;
-    display: flex;
-    gap: 20px;
-
-    span {
-      position: relative;
-      width: 50px;
-      height: 50px;
-      background-color: transparent;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        border-top: 4px solid #9b804e;
-        border-left: 4px solid #9b804e;
-        transform: rotate(315deg) translate(2px, 2px);
+    @media (min-aspect-ratio: 16/9) {
+      .back-video {
+        width: 100%;
+        height: auto;
       }
-
-      &:nth-child(2) {
-        &::before {
-          transform: rotate(135deg) translate(2px, 2px);
-        }
-      }
-      &.active {
-        opacity: 0.5;
+    }
+    @media (max-aspect-ratio: 16/9) {
+      .back-video {
+        // width: auto;
+        height: 100%;
       }
     }
   }
@@ -1229,12 +1109,12 @@
         transition: all 0.7s;
         // transition-delay: 0.5s;
 
-        &:nth-child(1) {
-          transform: translateX(-40%);
-        }
-        &:nth-child(2) {
-          transform: translateX(40%);
-        }
+        // &:nth-child(1) {
+        //   transform: translateX(-40%);
+        // }
+        // &:nth-child(2) {
+        //   transform: translateX(40%);
+        // }
         img {
           width: 100%;
         }
@@ -1328,15 +1208,15 @@
     }
   }
 
-  &.show-animate {
-    .blog-section {
-      .blog-boxes {
-        .blog-box {
-          transform: translateX(0);
-        }
-      }
-    }
-  }
+  // &.show-animate {
+  //   .blog-section {
+  //     .blog-boxes {
+  //       .blog-box {
+  //         transform: translateX(0);
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 // INSTAGRAM-CAROUSEL
