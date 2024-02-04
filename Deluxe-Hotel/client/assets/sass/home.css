@@ -239,7 +239,7 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
     display: none;
   }
 }
-@media (min-width: 250px) and (max-width: 481px) {
+@media screen and (max-width: 480px) {
   header #header-top {
     display: none;
   }
@@ -1386,13 +1386,36 @@ footer .footer .footer-section .footer-bottom p:hover {
   width: 100%;
   border-radius: 20px;
   transition: all 0.6s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#highlighted-amenities .carousel-wrap .item .item-content .card-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  transition: all 0.7s;
+}
+#highlighted-amenities .carousel-wrap .item .item-content .card-body h1 {
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Forum", serif;
 }
 #highlighted-amenities .carousel-wrap .item .item-content:hover img {
   transform: scale(1.3);
-  filter: grayscale(0) opacity(100%);
 }
-#highlighted-amenities .carousel-wrap:hover .item {
-  filter: grayscale(50%) opacity(100%);
+#highlighted-amenities .carousel-wrap .item .item-content:hover .card-body {
+  right: 0;
 }
 
 #come-enjoy {
@@ -1509,6 +1532,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 #blog {
   padding: 2rem 0;
   background-color: #fcf9ef;
+  overflow: hidden;
 }
 #blog .blog-section .blog-info {
   padding: 30px 0;
@@ -1608,6 +1632,13 @@ footer .footer .footer-section .footer-bottom p:hover {
 }
 #blog .blog-section .blog-boxes .blog-box {
   box-shadow: 5px 5px 20px #fdd;
+  transition: all 0.7s;
+}
+#blog .blog-section .blog-boxes .blog-box:nth-child(1) {
+  transform: translateX(-40%);
+}
+#blog .blog-section .blog-boxes .blog-box:nth-child(2) {
+  transform: translateX(40%);
 }
 #blog .blog-section .blog-boxes .blog-box img {
   width: 100%;
@@ -1685,6 +1716,9 @@ footer .footer .footer-section .footer-bottom p:hover {
   #blog .blog-section .blog-boxes .blog-box .intro p {
     font-size: 15px;
   }
+}
+#blog.show-animate .blog-section .blog-boxes .blog-box {
+  transform: translateX(0);
 }
 
 #instagram-photos {

@@ -239,7 +239,7 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
     display: none;
   }
 }
-@media (min-width: 250px) and (max-width: 481px) {
+@media screen and (max-width: 480px) {
   header #header-top {
     display: none;
   }
