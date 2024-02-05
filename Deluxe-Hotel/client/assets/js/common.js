@@ -16,6 +16,8 @@ const cursorOutline = document.querySelector("[data-cursor-outline]");
 //   });
 // });
 
+const BASE_URL = "http://localhost:8080";
+
 menuIcon.addEventListener("click", function () {
   nav.classList.toggle("show");
 
@@ -66,8 +68,8 @@ window.addEventListener("mousemove", function (e) {
   );
 });
 
-window.addEventListener("load", fg_load);
+// window.addEventListener("load", fg_load);
 
-function fg_load() {
-  document.getElementById("loading").style.display = "none";
-}
+// function fg_load() {
+//   document.getElementById("loading").style.display = "none";
+// }

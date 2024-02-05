@@ -370,136 +370,14 @@
         // mix-blend-mode: color-burn;
       }
       h1 {
-        // font-size: 70px;
+        font-size: 60px;
         color: #3d3931;
         font-family: "Forum", serif;
         font-weight: 400;
-        // line-height: 70px;
+        line-height: 70px;
         overflow: hidden;
-        span {
-          font-size: 50px;
-          &:nth-child(1) {
-            position: relative;
-            animation: animate 2s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(2) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 0.15s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(3) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 0.3s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(4) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 0.45s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(5) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 0.6s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(6) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 0.75s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(7) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 0.9s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(8) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 1s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(9) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 1.25s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(10) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 1.35s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(11) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 1.45s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(12) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 1.65s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(13) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 1.85s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(14) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 2s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(15) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 2.15s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(16) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 2.25s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(17) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 2.35s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(18) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 2.45s;
-            animation-fill-mode: backwards;
-          }
-          &:nth-child(19) {
-            position: relative;
-            animation: animate 2s;
-            animation-delay: 2.55s;
-            animation-fill-mode: backwards;
-          }
-
-          @keyframes animate {
-            0% {
-              bottom: -100px;
-            }
-            100% {
-              bottom: 0;
-            }
-          }
+        @media screen and (max-width: 767px) {
+          font-size: 35px;
         }
       }
       p {

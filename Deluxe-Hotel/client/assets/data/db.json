@@ -49,5 +49,62 @@
       "guestName": "Gulnar",
       "guestEmail": "gulnar@gmail.com"
     }
+  ],
+
+  "rooms": [
+    {
+      "room_id": "1",
+      "room_number": "101",
+      "image": "./assets/images/home-2-tab-5.webp",
+      "room_type": "Standard Room",
+      "price": 100,
+      "availability": true,
+      "reservation": false
+    },
+    {
+      "room_id": "2",
+      "room_number": "201",
+      "image": "./assets/images/home-2-tab-3.webp",
+      "room_type": "Suite Room",
+      "price": 90,
+      "availability": true,
+      "reservation": true
+    },
+    {
+      "room_id": "3",
+      "room_number": "301",
+      "image": "./assets/images/home-2-tab-2.webp",
+      "room_type": "King Suite",
+      "price": 270,
+      "availability": false,
+      "reservation": false
+    },
+    {
+      "room_id": "4",
+      "room_number": "301",
+      "image": "./assets/images/home-2-tab-1.webp",
+      "room_type": "Superior Suite",
+      "price": 150,
+      "availability": false,
+      "reservation": false
+    },
+    {
+      "room_id": "5",
+      "room_number": "301",
+      "image": "./assets/images/home-2-tab-4.webp",
+      "room_type": "King Suite",
+      "price": 60,
+      "availability": false,
+      "reservation": false
+    },
+    {
+      "room_id": "6",
+      "room_number": "301",
+      "image": "./assets/images/home-2-tab-5.webp",
+      "room_type": "Family Suite",
+      "price": 300,
+      "availability": false,
+      "reservation": false
+    }
   ]
 }

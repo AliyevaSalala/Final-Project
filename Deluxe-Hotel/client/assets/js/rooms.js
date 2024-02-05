@@ -1,4 +1,6 @@
 const categoryBtn = document.querySelectorAll(".categorybtn");
+const productSection = document.querySelector(".products-cards");
+const loadMoreBtn = document.querySelector(".load-more-btn");
 
 categoryBtn.forEach((item) =>
   item.addEventListener("click", function () {
@@ -50,43 +52,61 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
-//material contact form animation
-$(".contact-form")
-  .find(".form-control")
-  .each(function () {
-    var targetItem = $(this).parent();
-    if ($(this).val()) {
-      $(targetItem).find("label").css({
-        top: "-6px",
-        fontSize: "16px",
-        color: "#ff512f",
-      });
-    }
+let limit = 3;
+let array = [];
+let productCopy = [];
+
+async function getAllData(endpoint) {
+  const res = await axios(`${BASE_URL}/${endpoint}`);
+  // console.log(res.data);
+  array = res.data;
+  productCopy = structuredClone(array);
+  // drawCards(res.data);
+  drawCards(array.slice(0, limit));
+  // let filtered = array.filter(
+  //   (item) => item.room_type.toLocaleLowerCase() === "family"
+  // );
+  // drawCards(filtered);
+}
+
+getAllData("rooms");
+
+function drawCards(data) {
+  productSection.innerHTML = "";
+  data.forEach((item) => {
+    productSection.innerHTML += `  <div class="product-card">
+    <img src="${item.image}" alt="rooms" />
+    <button>$${item.price}/Night</button>
+    <div class="card-info">
+      <a href="#"><h3>1 DOUBLE BED - 2 GUEST</h3></a>
+      <a href="#"><h1>${item.room_type}</h1></a>
+    </div>
+    <div class="card-details">
+      <div class="icons">
+        <i class="fa-solid fa-bath"></i>
+        <i class="fa-solid fa-bell-concierge"></i>
+        <i class="fa-solid fa-tv"></i>
+        <i class="fa-solid fa-camera"></i>
+        <i class="fa-solid fa-utensils"></i>
+      </div>
+      <a href="#"> View Details</a>
+    </div>
+  </div>
+    
+    `;
   });
-$(".contact-form")
-  .find(".form-control")
-  .focus(function () {
-    $(this).parent(".input-block").addClass("focus");
-    $(this).parent().find("label").animate(
-      {
-        top: "-6px",
-        fontSize: "16px",
-        color: "#ff512f",
-      },
-      300
-    );
-  });
-$(".contact-form")
-  .find(".form-control")
-  .blur(function () {
-    if ($(this).val().length == 0) {
-      $(this).parent(".input-block").removeClass("focus");
-      $(this).parent().find("label").animate(
-        {
-          top: "20px",
-          fontSize: "18px",
-        },
-        300
-      );
-    }
-  });
+}
+
+// let typeName = "family";
+loadMoreBtn.addEventListener("click", function () {
+  limit += 3;
+  drawCards(array.slice(0, limit));
+});
+
+// categoryBtn.forEach((room) => {
+//   room.addEventListener("click", function () {
+//     typeName = this.innerText;
+//     let filtered = array.filter((item) => (item.room_type = typeName));
+//     drawCards(filtered);
+//   });
+// });

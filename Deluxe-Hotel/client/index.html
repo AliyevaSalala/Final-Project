@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -40,9 +41,9 @@
     />
   </head>
   <body>
-    <div id="loading">
+    <!-- <div id="loading">
       <img src="./assets/images/Dual Ring-1s-200px.svg" alt="Yükleniyor..." />
-    </div>
+    </div> -->
     <!--======= Cursor -->
     <div class="cursor">
       <div class="cursor-dot" data-cursor-dot></div>
@@ -412,12 +413,13 @@
         <div class="luxury-section">
           <div class="luxury-info">
             <img src="./assets/images/luxury-img.png" alt="" />
-            <h1>
-              <span>S</span> <span>h</span> <span>o</span> <span>w</span>
-              <span>i</span> <span>n</span> <span>g </span> <span>L</span>
-              <span>u</span> <span>x</span> <span>u</span> <span>r</span>
-              <span>y </span> <span>H</span> <span>o</span><span>t</span>
-              <span>e</span> <span>l</span> <span>s</span>
+            <h1
+              class="product-card"
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              Showing Luxury Hotel
             </h1>
             <p>
               Mauris nec risus congue dui suscipit interdum id ac felis. Cras
@@ -429,9 +431,9 @@
           <div class="products-section">
             <div
               class="product-card"
-              data-aos="fade-right"
+              data-aos="zoom-in"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1000"
+              data-aos-duration="1500"
             >
               <img src="./assets/images/home-2-tab-5.webp" alt="" />
               <button>$49.5/Night</button>
@@ -452,9 +454,9 @@
             </div>
             <div
               class="product-card"
-              data-aos="fade-right"
+              data-aos="zoom-in"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="2000"
+              data-aos-duration="1500"
             >
               <img src="./assets/images/home-2-tab-3.webp" alt="" />
               <button>$55.0/Night</button>
@@ -475,9 +477,9 @@
             </div>
             <div
               class="product-card"
-              data-aos="fade-right"
+              data-aos="zoom-in"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="3000"
+              data-aos-duration="1500"
             >
               <img src="./assets/images/home-2-tab-1.webp" alt="" />
               <button>$104.5/Night</button>
@@ -543,9 +545,25 @@
         <div class="container">
           <div class="customer-section">
             <div class="customer-info">
-              <h5>TESTIMONIAL</h5>
-              <h1>Happy Customer Thoughts</h1>
-              <p>
+              <h5
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                TESTIMONIAL
+              </h5>
+              <h1
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                Happy Customer Thoughts
+              </h1>
+              <p
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
                 Nunc nec magna aculis metus libero vehiculaNullam iaculis metus
                 nehicula. Aenean sed rutrum purus. Nunc nec magna laoreet,
                 sodales nisi at, co rutrum viverra.
@@ -1046,6 +1064,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/js/common.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
