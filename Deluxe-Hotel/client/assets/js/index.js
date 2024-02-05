@@ -26,9 +26,41 @@ $(".owl-theme").owlCarousel({
 });
 
 // OWL-CAROUSEL-TWO
+const firstName = document.querySelector("#fist-name");
+const lastName = document.querySelector("#last-name");
+const email = document.querySelector("#email");
+const phone = document.querySelector("#phone");
 
+// function submitForm() {
+//   Toastify({
+//     text: "Succefuly!",
+//     duration: 5000,
+//     gravity: "bottom",
+//     position: "right",
+//     backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+//   }).showToast();
+// }
 
+function submitForm() {
+  if (firstName && lastName && email && phone) {
+    showToast("The form was sent successfully");
+  } else {
+    showToast("Please fill in the form", "red");
+  }
+}
 
+function showToast(
+  message,
+  backgroundColor = "linear-gradient(to right, #00b09b, #96c93d)"
+) {
+  Toastify({
+    text: message,
+    duration: 3000,
+    gravity: "bottom",
+    position: "right",
+    backgroundColor: backgroundColor,
+  }).showToast();
+}
 // window.onscroll = () => {
 //   sections.forEach((sec) => {
 //     let top = window.scrollY;

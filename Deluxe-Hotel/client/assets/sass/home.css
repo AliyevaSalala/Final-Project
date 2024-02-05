@@ -692,6 +692,7 @@ footer .footer .footer-section .footer-bottom p:hover {
   border: 1px solid #fff;
   background-color: transparent;
   transition: all 0.7s;
+  position: relative;
 }
 #hero-banner-sec .empty .banner-section .texts a:hover {
   box-shadow: inset 15em 0 0 0 #fff;
@@ -902,6 +903,51 @@ footer .footer .footer-section .footer-bottom p:hover {
   #luxury-section .luxury-section .products-section .product-card:hover .card-details {
     opacity: 0;
   }
+}
+
+#check-availibality {
+  padding: 5rem 0;
+}
+#check-availibality .check-sec h1 {
+  text-align: center;
+  padding: 30px 0;
+}
+#check-availibality .check-sec .check-aval {
+  border-top: 5px solid #e4a853;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 50px 20px;
+}
+#check-availibality .check-sec .check-aval .check-availibaility .grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+}
+#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input label {
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 14px;
+  color: #acacac;
+}
+#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input input {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  gap: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input input[type=date]::-webkit-calendar-picker-indicator {
+  padding: 5px;
+  background-color: white; /* Arka plan rengini beyaz yap */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
 }
 
 #elementar-section {
@@ -1239,6 +1285,35 @@ footer .footer .footer-section .footer-bottom p:hover {
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.5s;
+  position: relative;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card:after, #come-enjoy .amenities-intro .intro-cards .info-card:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid #fff;
+  transition: all 1s;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card:after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid #efbc74;
+  border-left: 5px solid #efbc74;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid #efbc74;
+  border-right: 5px solid #efbc74;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+#come-enjoy .amenities-intro .intro-cards .info-card:hover:before, #come-enjoy .amenities-intro .intro-cards .info-card:hover:after {
+  width: 100%;
+  height: 100%;
 }
 #come-enjoy .amenities-intro .intro-cards .info-card .card-right img {
   width: 100px;
@@ -1261,10 +1336,6 @@ footer .footer .footer-section .footer-bottom p:hover {
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 1.3px;
-}
-#come-enjoy .amenities-intro .intro-cards .info-card:hover {
-  border-top: 2px solid #e6b97b;
-  border-bottom: 2px solid #e6b97b;
 }
 #come-enjoy .amenities-intro .intro-cards .info-card:hover img {
   transform: scale(1.1);
@@ -1572,12 +1643,16 @@ footer .footer .footer-section .footer-bottom p:hover {
   padding: 10px 10px;
   width: 100%;
   border: 1px solid #9b804e;
+  border-radius: 5px;
 }
 #home-contact .home-contact .contact-from .grid-form .text-input input::-moz-placeholder {
   color: #3d3931;
 }
 #home-contact .home-contact .contact-from .grid-form .text-input input::placeholder {
   color: #3d3931;
+}
+#home-contact .home-contact .contact-from .grid-form .text-input input:focus {
+  box-shadow: inset 0 0 0 1px #e4a853, 0 0 1px 1px #e4a853;
 }
 #home-contact .home-contact .contact-from .grid-form .email-input {
   display: flex;
@@ -1595,8 +1670,16 @@ footer .footer .footer-section .footer-bottom p:hover {
 #home-contact .home-contact .contact-from .grid-form .email-input input::placeholder {
   color: #3d3931;
 }
+#home-contact .home-contact .contact-from .grid-form .email-input input:focus {
+  box-shadow: inset 0 0 0 1px #e4a853, 0 0 1px 1px #e4a853;
+}
 #home-contact .home-contact .contact-from .grid-form textarea {
   width: 100%;
+  border: 1px solid #9b804e;
+  border-radius: 5px;
+}
+#home-contact .home-contact .contact-from .grid-form textarea:focus {
+  box-shadow: inset 0 0 0 1px #e4a853, 0 0 1px 1px #e4a853;
 }
 #home-contact .home-contact .contact-from .grid-form #submit {
   padding: 10px 10px;

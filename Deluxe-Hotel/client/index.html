@@ -26,6 +26,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -502,6 +507,48 @@
         </div>
       </div>
     </section>
+    <!-- CHECK Availability -->
+    <section id="check-availibality">
+      <div class="container">
+        <div class="check-sec">
+          <h1>Check Availability</h1>
+          <div class="check-aval">
+            <div class="check-availibaility">
+              <form action="" class="grid">
+                <div class="check-input">
+                  <label for=""> Check In</label> <br />
+                  <input type="date" />
+                </div>
+                <div class="border-left"></div>
+                <div class="check-input">
+                  <label for=""> Check Out</label> <br />
+                  <input type="date" />
+                </div>
+                <div class="border-left"></div>
+                <div class="check-input">
+                  <label for=""> Rooms</label> <br />
+                  <input type="number" min="1" placeholder="01Rooms#22222" id="number" />
+                </div>
+                <div class="border-left"></div>
+                <div class="check-input">
+                  <label for="">Guests</label> <br />
+                  <select name="" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <div class="border-left"></div>
+                <div>
+                  <button>Book Now</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Summer-Offer-Section-Video -->
     <section id="elementar-section">
@@ -782,7 +829,12 @@
     <section id="come-enjoy">
       <div class="container">
         <div class="amenities-intro">
-          <div class="info">
+          <div
+            class="info"
+            data-aos="zoom-in"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <h5>COME AND ENJOY</h5>
             <h1>Amenities At Hotel</h1>
             <p>
@@ -947,15 +999,20 @@
             </h5>
             <form action="" class="grid-form">
               <div class="text-input">
-                <input type="text" placeholder="First Name*" required />
-                <input type="text" placeholder="Last Name*" required />
+                <input type="text" placeholder="First Name*" id="first-name" />
+                <input type="text" placeholder="Last Name*" id="last-name" />
               </div>
               <div class="email-input">
-                <input type="email" placeholder="Email Address*" required />
-                <input type="tel" placeholder="Mobile Number*" required />
+                <input type="email" placeholder="Email Address*" id="email" />
+                <input type="tel" placeholder="Mobile Number*" id="phone" />
               </div>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-              <input type="submit" value="Send" id="submit" />
+              <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+              <input
+                type="submit"
+                value="Send"
+                id="submit"
+                onclick="submitForm()"
+              />
             </form>
           </div>
         </div>
@@ -1061,6 +1118,10 @@
         </div>
       </div>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
