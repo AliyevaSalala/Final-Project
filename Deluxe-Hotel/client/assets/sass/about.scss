@@ -7,39 +7,64 @@
 
 // ABOUT-SECTION-VIDEO
 
-#about {
-  position: relative;
-  height: 100vh;
-  .about-section {
-    position: absolute;
-    width: 100%;
-    padding: 300px 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// #about {
+//   position: relative;
+//   height: 100vh;
+//   .about-section {
+//     position: absolute;
+//     width: 100%;
+//     padding: 300px 0;
+//     overflow: hidden;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
-    .video-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    h1 {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      font-size: 20vw;
+//     .video-bg {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//     h1 {
+//       position: absolute;
+//       left: 0;
+//       top: 0;
+//       width: 100%;
+//       height: 100%;
+//       background-color: #fff;
+//       font-size: 20vw;
+//       text-align: center;
+//       text-transform: uppercase;
+//       color: #000;
+//       line-height: 100vh;
+//       mix-blend-mode: screen;
+//     }
+//   }
+// }
+#about {
+  background-image: url("../images/about-breadcrumb-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .empty {
+    padding: 150px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .about-section {
       text-align: center;
-      text-transform: uppercase;
-      color: #000;
-      line-height: 100vh;
-      mix-blend-mode: screen;
+      h1 {
+        font-size: 70px;
+        font-weight: 400;
+        font-family: "Forum", serif;
+        color: #3d3931;
+
+        @media screen and (max-width: 767px) {
+          font-size: 40px;
+        }
+      }
     }
   }
 }
@@ -570,3 +595,5 @@
     }
   }
 }
+
+

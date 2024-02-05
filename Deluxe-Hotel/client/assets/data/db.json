@@ -1,0 +1,53 @@
+{
+  "staff": [
+    {
+      "id": "1",
+      "firstName": "Shalala",
+      "lastName": "Aliyeva",
+      "position": "Receptionist",
+      "contact": {
+        "email": "selale58@mail.com",
+        "phone": "0557962607"
+      }
+    },
+    {
+      "id": "1",
+      "firstName": "Shabnam",
+      "lastName": "Ibrahimova",
+      "position": "Assistant",
+      "contact": {
+        "email": "shabnam122@mail.com",
+        "phone": "1234567"
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "Spa Services",
+      "description": "Relax with our spa services.",
+      "fee": 50
+    }
+  ],
+
+  "reservations": [
+    {
+      "id": "1",
+      "hotelId": "1",
+      "roomId": "101",
+      "checkInDate": "2024-02-15",
+      "checkOutDate": "2024-02-20",
+      "guestName": "Shalala Aliyeva",
+      "guestEmail": "shalal@gmail.com"
+    },
+    {
+      "id": "2",
+      "hotelId": "2",
+      "roomId": "201",
+      "checkInDate": "2024-03-10",
+      "checkOutDate": "2024-03-15",
+      "guestName": "Gulnar",
+      "guestEmail": "gulnar@gmail.com"
+    }
+  ]
+}

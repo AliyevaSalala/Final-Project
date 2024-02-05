@@ -45,8 +45,6 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
-
-
 // window.onscroll = () => {
 //   sections.forEach((sec) => {
 //     let top = window.scrollY;
