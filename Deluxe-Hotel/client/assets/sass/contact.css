@@ -66,6 +66,26 @@ body.show-menu #about-menu {
   z-index: 999;
 }
 
+.arrow-up {
+  position: fixed;
+  bottom: 10px;
+  right: 16px;
+  opacity: 0;
+  transition: all 0.7s;
+  z-index: 11211212;
+}
+.arrow-up a {
+  padding: 15px 20px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #c19d68;
+  border-radius: 50%;
+}
+.arrow-up.active {
+  opacity: 1;
+  bottom: 35px;
+}
+
 header {
   position: absolute;
   width: 100%;
@@ -630,19 +650,20 @@ footer .footer .footer-section .footer-bottom p:hover {
 }
 
 #contact-section {
-  background-image: url("../images/about-breadcrumb-1.jpg");
+  background-image: url("../images/home-1-interactive-gallery-4.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #contact-section .empty {
-  padding: 150px 0;
+  padding: 100px 0;
   background-color: rgba(255, 255, 255, 0.8);
 }
 #contact-section .empty .rooms-section {
   text-align: center;
 }
 #contact-section .empty .rooms-section h1 {
+  padding-top: 70px;
   font-size: 70px;
   font-weight: 400;
   font-family: "Forum", serif;
@@ -652,4 +673,158 @@ footer .footer .footer-section .footer-bottom p:hover {
   #contact-section .empty .rooms-section h1 {
     font-size: 40px;
   }
+}
+
+.contact-about {
+  padding: 3rem 0;
+}
+.contact-about .contact-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .contact-about .contact-boxes {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+}
+.contact-about .contact-boxes .contact-box {
+  box-shadow: 5px 5px 5px #ddd;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  transition: all 0.7s;
+}
+@media screen and (max-width: 767px) {
+  .contact-about .contact-boxes .contact-box {
+    flex-direction: column;
+  }
+}
+.contact-about .contact-boxes .contact-box::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  border-top: solid 2px rgba(231, 141, 31, 0.75);
+  border-bottom: solid 2px rgba(231, 141, 31, 0.75);
+  transition: 0.2s;
+  transform: scaleX(0);
+}
+.contact-about .contact-boxes .contact-box::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  border-left: solid 2px rgba(231, 141, 31, 0.75);
+  border-right: solid 2px rgba(231, 141, 31, 0.75);
+  transition: 0.2s;
+  transform: scaleY(0);
+}
+.contact-about .contact-boxes .contact-box h3 {
+  font-weight: 400;
+  color: #3d3931;
+  padding: 10px 0;
+  font-size: 30px;
+}
+@media screen and (max-width: 767px) {
+  .contact-about .contact-boxes .contact-box h3 {
+    font-size: 20px;
+  }
+}
+.contact-about .contact-boxes .contact-box p {
+  font-size: 15px;
+  font-style: italic;
+  max-width: 300px;
+}
+.contact-about .contact-boxes .contact-box img {
+  width: 100px;
+  border-radius: 50%;
+}
+.contact-about .contact-boxes .contact-box:hover::before, .contact-about .contact-boxes .contact-box:hover::after {
+  transform: scale(1);
+}
+
+#touch-sec {
+  padding: 3rem 0;
+}
+#touch-sec .touch-sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+@media screen and (max-width: 1024px) {
+  #touch-sec .touch-sec {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#touch-sec .touch-sec .tocuh-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+#touch-sec .touch-sec .tocuh-right h5 {
+  color: rgba(165, 99, 18, 0.75);
+  font-size: 15px;
+}
+#touch-sec .touch-sec .tocuh-right h2 {
+  color: #3d3931;
+  font-size: 45px;
+  font-weight: 400;
+}
+#touch-sec .touch-sec .tocuh-right p {
+  max-width: 500px;
+  line-height: 25px;
+  color: #939393;
+}
+#touch-sec .touch-sec .tocuh-right button {
+  width: 150px;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  background-color: rgba(165, 99, 18, 0.75);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#touch-sec .touch-sec .tocuh-right button:hover {
+  box-shadow: inset 6em 0 0 0 #fff, inset -6em 0 0 0 #fff;
+  color: rgba(165, 99, 18, 0.75);
+}
+#touch-sec .touch-sec .tocuh-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#touch-sec .touch-sec .tocuh-left form input {
+  width: 100%;
+  padding: 13px 20px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 5px;
+}
+#touch-sec .touch-sec .tocuh-left form input:focus {
+  border: 1px solid rgba(240, 157, 56, 0.75);
+  box-shadow: 0px 0px 5px rgba(240, 157, 56, 0.75);
+}
+#touch-sec .touch-sec .tocuh-left form textarea {
+  width: 100%;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 5px;
+}
+#touch-sec .touch-sec .tocuh-left form textarea:focus {
+  border: 1px solid rgba(240, 157, 56, 0.75);
+  box-shadow: 0px 0px 5px rgba(240, 157, 56, 0.75);
+}
+#touch-sec .touch-sec .tocuh-left form #submit {
+  background-color: rgba(165, 99, 18, 0.75);
+  color: #fff;
+  cursor: pointer;
 }/*# sourceMappingURL=contact.css.map */

@@ -7,16 +7,13 @@ const navbarSearch = document.querySelector(".navbar-search");
 const header = document.querySelector("header");
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
-
-// const liElemes = document.querySelectorAll("li");
-// liElemes.forEach((item) => {
-//   item.addEventListener("click", function () {
-//     document.querySelector(".active")?.classList.remove("active");
-//     item.classList.add("active");
-//   });
-// });
+const toTop = document.querySelector(".arrow-up");
 
 const BASE_URL = "http://localhost:8080";
+
+window.addEventListener("scroll", function () {
+  toTop.classList.toggle("active", window.scrollY > 0);
+});
 
 menuIcon.addEventListener("click", function () {
   nav.classList.toggle("show");
