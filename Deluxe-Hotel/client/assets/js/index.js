@@ -1,4 +1,5 @@
 // Owl Carousel
+AOS.init();
 
 $(".owl-theme").owlCarousel({
   loop: true,
@@ -26,24 +27,7 @@ $(".owl-theme").owlCarousel({
 
 // OWL-CAROUSEL-TWO
 
-$(".owl-carousel").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: false,
-  autoplay: true,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
-});
+
 
 // window.onscroll = () => {
 //   sections.forEach((sec) => {

@@ -65,3 +65,9 @@ window.addEventListener("mousemove", function (e) {
     { duration: 700, fill: "forwards" }
   );
 });
+
+window.addEventListener("load", fg_load);
+
+function fg_load() {
+  document.getElementById("loading").style.display = "none";
+}

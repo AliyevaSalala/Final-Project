@@ -1119,7 +1119,12 @@
         // text-align: center;
         gap: 10px;
         overflow: hidden;
+        border: 1px solid transparent;
+        padding: 30px;
+        border-radius: 10px;
         cursor: pointer;
+        transition: all 0.5s;
+        // position: relative;
         .card-right {
           img {
             width: 100px;
@@ -1152,6 +1157,8 @@
           h3 {
             color: #9b804e;
           }
+          border-top: 2px solid #e6b97b;
+          border-bottom: 2px solid #e6b97b;
         }
       }
     }
@@ -1412,38 +1419,6 @@
   //     }
   //   }
   // }
-}
-
-// INSTAGRAM-CAROUSEL
-
-#instagram-photos {
-  padding: 2.5rem 0;
-  .carousel-wrap {
-    // &:hover {
-    //   &.item-content {
-    //     filter: grayscale(100%) opacity(100%);
-    //   }
-    // }
-
-    .item {
-      .item-content {
-        overflow: hidden;
-        border-radius: 20px;
-        cursor: grab;
-        img {
-          width: 100%;
-          border-radius: 20px;
-          transition: all 0.6s;
-        }
-
-        &:hover {
-          img {
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
-  }
 }
 
 // HOME-CONTACT

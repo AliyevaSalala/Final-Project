@@ -1,0 +1,32 @@
+@import "./base/reset";
+@import "./base/global";
+@import "./utilits/mixin";
+@import "./utilits/variables";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+#contact-section {
+  background-image: url("../images/about-breadcrumb-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .empty {
+    padding: 150px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .rooms-section {
+      text-align: center;
+      h1 {
+        font-size: 70px;
+        font-weight: 400;
+        font-family: "Forum", serif;
+        color: #3d3931;
+
+        @media screen and (max-width: 767px) {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
