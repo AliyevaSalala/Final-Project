@@ -45,6 +45,14 @@ header {
             color: #9b804e;
           }
         }
+        #account {
+          font-size: 20px;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+
         span {
           color: $color-brown;
         }

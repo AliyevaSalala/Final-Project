@@ -114,6 +114,12 @@ header #header-top .header-top .header-top-left a {
 header #header-top .header-top .header-top-left a:hover {
   color: #9b804e;
 }
+header #header-top .header-top .header-top-left #account {
+  font-size: 20px;
+}
+header #header-top .header-top .header-top-left #account:hover {
+  color: #fff;
+}
 header #header-top .header-top .header-top-left span {
   color: #3d3931;
 }
