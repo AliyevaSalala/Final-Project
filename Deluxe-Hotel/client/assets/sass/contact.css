@@ -266,6 +266,8 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
     background-color: #fffcf2;
     transition: all 0.8s;
     height: 100%;
+    border-right: 5px solid #d59d33;
+    border-radius: 10px;
   }
   header #header-bottom .header-bottom nav ul {
     flex-direction: column;
@@ -296,6 +298,8 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
     background-color: #fffcf2;
     transition: all 0.8s;
     height: 100%;
+    border-right: 5px solid #d59d33;
+    border-radius: 10px;
   }
   header #header-bottom .header-bottom nav ul {
     flex-direction: column;
@@ -603,6 +607,21 @@ footer .footer .footer-section .footer-top .event-footer nav ul li a {
 footer .footer .footer-section .footer-top .event-footer nav ul li a:hover {
   color: #9b804e;
 }
+footer .footer .footer-section .footer-top .event-footer form input {
+  margin-top: 15px;
+  padding: 10px 20px;
+  width: 200px;
+  border: 1px solid transparent;
+  font-style: italic;
+}
+footer .footer .footer-section .footer-top .event-footer form #submit {
+  background-color: #9b804e;
+  color: #fff;
+  cursor: pointer;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+}
 footer .footer .footer-section .footer-bottom {
   border-top: 1px solid #9b804e;
   text-align: center;
@@ -823,8 +842,11 @@ footer .footer .footer-section .footer-bottom p:hover {
   border: 1px solid rgba(240, 157, 56, 0.75);
   box-shadow: 0px 0px 5px rgba(240, 157, 56, 0.75);
 }
-#touch-sec .touch-sec .tocuh-left form #submit {
+#touch-sec .touch-sec .tocuh-left form button {
   background-color: rgba(165, 99, 18, 0.75);
   color: #fff;
   cursor: pointer;
+  padding: 13px 20px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 5px;
 }/*# sourceMappingURL=contact.css.map */

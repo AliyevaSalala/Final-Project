@@ -266,6 +266,8 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
     background-color: #fffcf2;
     transition: all 0.8s;
     height: 100%;
+    border-right: 5px solid #d59d33;
+    border-radius: 10px;
   }
   header #header-bottom .header-bottom nav ul {
     flex-direction: column;
@@ -296,6 +298,8 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
     background-color: #fffcf2;
     transition: all 0.8s;
     height: 100%;
+    border-right: 5px solid #d59d33;
+    border-radius: 10px;
   }
   header #header-bottom .header-bottom nav ul {
     flex-direction: column;
@@ -602,6 +606,21 @@ footer .footer .footer-section .footer-top .event-footer nav ul li a {
 }
 footer .footer .footer-section .footer-top .event-footer nav ul li a:hover {
   color: #9b804e;
+}
+footer .footer .footer-section .footer-top .event-footer form input {
+  margin-top: 15px;
+  padding: 10px 20px;
+  width: 200px;
+  border: 1px solid transparent;
+  font-style: italic;
+}
+footer .footer .footer-section .footer-top .event-footer form #submit {
+  background-color: #9b804e;
+  color: #fff;
+  cursor: pointer;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 footer .footer .footer-section .footer-bottom {
   border-top: 1px solid #9b804e;
@@ -943,6 +962,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 }
 #check-availibality .check-sec .check-aval {
   border-top: 5px solid #e4a853;
+  border-bottom: 5px solid #e4a853;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -953,6 +973,21 @@ footer .footer .footer-section .footer-bottom p:hover {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  #check-availibality .check-sec .check-aval .check-availibaility .grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  #check-availibality .check-sec .check-aval .check-availibaility .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  #check-availibality .check-sec .check-aval .check-availibaility .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 #check-availibality .check-sec .check-aval .check-availibaility .grid .check-input label {
   padding: 15px 20px;
@@ -979,11 +1014,17 @@ footer .footer .footer-section .footer-bottom p:hover {
   cursor: pointer;
 }
 #check-availibality .check-sec .check-aval .check-availibaility .grid .check-input select {
+  margin-top: 10px;
   padding: 5px 10px;
-  width: 100%;
+  width: 150px;
   background-color: transparent;
+  color: #fff;
+}
+#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input select:hover {
+  color: #5d3b0b;
 }
 #check-availibality .check-sec .check-aval .check-availibaility .grid button {
+  margin-top: 20px;
   padding: 10px 30px;
   width: 150px;
   border: 1px solid transparent;

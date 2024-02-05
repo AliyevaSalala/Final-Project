@@ -76,10 +76,11 @@ function drawCards(data) {
   data.forEach((item) => {
     productSection.innerHTML += `  <div class="product-card">
     <img src="${item.image}" alt="rooms" />
-    <button>$${item.price}/Night</button>
+    <button class="price">$${item.price}/Night</button>
     <div class="card-info">
       <a href="#"><h3>1 DOUBLE BED - 2 GUEST</h3></a>
       <a href="#"><h1>${item.room_type}</h1></a>
+      <button>Select Options</button>
     </div>
     <div class="card-details">
       <div class="icons">
@@ -89,7 +90,7 @@ function drawCards(data) {
         <i class="fa-solid fa-camera"></i>
         <i class="fa-solid fa-utensils"></i>
       </div>
-      <a href="#"> View Details</a>
+      <a href="room-details.html?id=${item.room_id}"> View Details</a>
     </div>
   </div>
     

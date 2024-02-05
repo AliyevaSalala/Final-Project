@@ -246,6 +246,21 @@ footer .footer .footer-section .footer-top .event-footer nav ul li a {
 footer .footer .footer-section .footer-top .event-footer nav ul li a:hover {
   color: #9b804e;
 }
+footer .footer .footer-section .footer-top .event-footer form input {
+  margin-top: 15px;
+  padding: 10px 20px;
+  width: 200px;
+  border: 1px solid transparent;
+  font-style: italic;
+}
+footer .footer .footer-section .footer-top .event-footer form #submit {
+  background-color: #9b804e;
+  color: #fff;
+  cursor: pointer;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+}
 footer .footer .footer-section .footer-bottom {
   border-top: 1px solid #9b804e;
   text-align: center;
@@ -781,14 +796,27 @@ header.header-scroll .elementar-section {
   font-weight: 400;
   font-family: "Forum", serif;
 }
+#starters-sec .starters-sec .sec-left .menu-content .item-menu .item-right .texts h6 {
+  display: none;
+}
 #starters-sec .starters-sec .sec-left .menu-content .item-menu .item-right .texts p {
   font-size: 15px;
   font-style: italic;
   color: #404044;
 }
-#starters-sec .starters-sec .sec-left .menu-content .item-menu .item-left p {
+#starters-sec .starters-sec .sec-left .menu-content .item-menu .item-left .basket {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#starters-sec .starters-sec .sec-left .menu-content .item-menu .item-left .basket p {
   font-size: 16px;
   color: #c19d60;
+}
+#starters-sec .starters-sec .sec-left .menu-content .item-menu .item-left .basket .fa-cart-shopping {
+  font-size: 16px;
+  color: #c19d60;
+  cursor: pointer;
 }
 
 #our-chef-sec {

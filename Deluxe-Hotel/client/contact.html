@@ -9,7 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -103,9 +107,8 @@
                     >Hotel <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="#">HOTEL ACCOUNT</a></li>
-                        <li><a href="#">HOTEL CART</a></li>
-                        <li><a href="#">HOTEL CHECKOUT</a></li>
+                        <li><a href="./menu.html">Restaurant</a></li>
+                        <li><a href="./room-details.html">DETAILS</a></li>
                       </ul>
                     </div>
                   </a>
@@ -118,8 +121,7 @@
                         <li><a href="#">FAQ</a></li>
                         <li><a href="./amenities.html">AMENITIES</a></li>
                         <li><a href="./blog.html">LATEST BLOGS</a></li>
-                        <li><a href="./menu.html">Restaurant</a></li>
-                        <li><a href="./room-details.html">DETAILS</a></li>
+
                         <li><a href="#">PRICING PLANS</a></li>
                         <li><a href="#">404 PAGE</a></li>
                       </ul>
@@ -245,10 +247,10 @@
           </div>
           <div class="tocuh-left">
             <form action="">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-              <input type="submit" value="Send" id="submit" />
+              <input type="text" placeholder="Name" required />
+              <input type="email" placeholder="Email" required />
+              <textarea name="" id="" cols="30" rows="10" required></textarea>
+              <button>Submit</button>
             </form>
           </div>
         </div>
@@ -263,7 +265,8 @@
         style="border: 0"
         allowfullscreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" class="map"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="map"
       ></iframe>
     </section>
 
@@ -369,10 +372,14 @@
     <div class="arrow-up">
       <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <!-- <script src="./assets/js/rooms.js"></script> -->
+    <script src="./assets/js/contact.js"></script>
   </body>
 </html>

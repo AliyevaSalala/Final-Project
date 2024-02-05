@@ -106,5 +106,39 @@
       "availability": false,
       "reservation": false
     }
+  ],
+  "menu": [
+    {
+      "id": "1",
+      "image": "https://duruthemes.com/demo/html/candore/demo3/img/menu/starters/1.jpg",
+      "name": "Mozarella Dippers",
+      "desc": "Fried mozzarella sticks, marinara sauce",
+      "price": 72,
+      "category": "starters"
+    },
+    {
+      "id": "2",
+      "image": "https://duruthemes.com/demo/html/candore/demo3/img/menu/starters/2.jpg",
+      "name": "Buffalo Wings",
+      "desc": "Spicy chicken wings, blue cheese sauce, carrot, celery",
+      "price": 22,
+      "category": "starters"
+    },
+    {
+      "id": "3",
+      "image": "https://duruthemes.com/demo/html/candore/demo3/img/menu/starters/3.jpg",
+      "name": "Onion Rings",
+      "desc": "Spicy chicken wings, blue cheese sauce, carrot, celery",
+      "price": 22,
+      "category": "starters"
+    },
+    {
+      "id": "4",
+      "image": "https://duruthemes.com/demo/html/candore/demo3/img/menu/starters/4.jpg",
+      "name": "Chilli Con Carne",
+      "desc": "Spicy ground beef, bacon, kidney beans",
+      "price": 72,
+      "category": "starters"
+    }
   ]
 }

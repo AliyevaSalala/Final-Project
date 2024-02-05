@@ -591,6 +591,9 @@ header {
                 font-weight: 400;
                 font-family: "Forum", serif;
               }
+              h6 {
+                display: none;
+              }
               p {
                 font-size: 15px;
                 font-style: italic;
@@ -599,9 +602,20 @@ header {
             }
           }
           .item-left {
-            p {
-              font-size: 16px;
-              color: #c19d60;
+            .basket {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+
+              p {
+                font-size: 16px;
+                color: #c19d60;
+              }
+              .fa-cart-shopping {
+                font-size: 16px;
+                color: #c19d60;
+                cursor: pointer;
+              }
             }
           }
         }

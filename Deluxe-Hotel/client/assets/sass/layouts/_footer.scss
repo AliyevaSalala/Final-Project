@@ -196,6 +196,24 @@ footer {
               }
             }
           }
+          form {
+            input {
+              margin-top: 15px;
+              padding: 10px 20px;
+              width: 200px;
+              // border-radius: 5px;
+              border: 1px solid transparent;
+              font-style: italic;
+            }
+            #submit {
+              background-color: #9b804e;
+              color: #fff;
+              cursor: pointer;
+              font-style: normal;
+              text-transform: uppercase;
+              font-weight: 400;
+            }
+          }
         }
       }
 

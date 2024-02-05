@@ -186,10 +186,13 @@
           }
         }
 
-        #submit {
+        button {
           background-color: rgba(165, 99, 18, 0.75);
           color: #fff;
           cursor: pointer;
+          padding: 13px 20px;
+          border: 1px solid rgb(217, 217, 217);
+          border-radius: 5px;
         }
       }
     }

@@ -1,0 +1,114 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  min-height: 100px;
+  margin: auto;
+  background: white;
+}
+#main #container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 50px;
+  margin: auto;
+}
+#main #container #left-div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+}
+#main #container #left-div img {
+  width: 90%;
+  margin: auto;
+}
+#main #container #left-div img:hover {
+  animation: rotate 4s infinite 0s, background 4s infinite 0s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes background {
+  0% {
+    background: rebeccapurple;
+  }
+  25% {
+    background: blueviolet;
+  }
+  50% {
+    background: greenyellow;
+  }
+  75% {
+    background: darkorange;
+  }
+  100% {
+    background: dimgrey;
+  }
+}
+#main #container #right-div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 55%;
+}
+#main #container #right-div h1 {
+  font-family: "Space Mono", monospace;
+  padding-top: 95px;
+  min-width: 60%;
+  min-height: 50px;
+  padding-left: 10px;
+  opacity: 0.8;
+  margin-top: -35px;
+}
+#main #container #right-div p {
+  margin-left: 10px;
+}
+#main #container #right-div a {
+  font-family: "Space Mono", monospace;
+  width: 70%;
+  min-height: 50px;
+  text-align: center;
+  background: black;
+  margin-top: 30px;
+  margin-left: 10px;
+  color: white;
+  font-size: 1.9vw;
+  line-height: 50px;
+  text-decoration: none;
+  border-radius: 5px;
+  opacity: 0.8;
+  transition: background 2s ease-in-out 1000ms;
+}
+#main #container #right-div a:hover {
+  background: orange;
+}
+@media (max-width: 768px) {
+  #main div a {
+    font-size: 1.8vw;
+    width: 25vw;
+  }
+  #main #footer {
+    width: 70vw;
+  }
+  #main #right-div h1 {
+    width: 40vw;
+  }
+  #main #right-div p {
+    margin-left: 0px;
+  }
+}
+
+/* MEDIA QUERY STARTS HERE *//*# sourceMappingURL=not-found.css.map */
