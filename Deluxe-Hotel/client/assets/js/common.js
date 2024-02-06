@@ -8,6 +8,7 @@ const header = document.querySelector("header");
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
 const toTop = document.querySelector(".arrow-up");
+const faUser = document.querySelector(".fa-user");
 
 const BASE_URL = "http://localhost:8080";
 
@@ -26,6 +27,12 @@ menuIcon.addEventListener("click", function () {
 menuCircle.addEventListener("click", function () {
   document.body.classList.toggle("show-menu");
 });
+
+faUser.addEventListener("click", function () {
+  document.body.classList.toggle("show-account");
+});
+
+
 closeIcon?.addEventListener("click", function () {
   document.body.classList.toggle("show-menu");
 });
@@ -64,8 +71,6 @@ window.addEventListener("mousemove", function (e) {
     { duration: 700, fill: "forwards" }
   );
 });
-
-
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   document.querySelector("#content").style.display = "none";

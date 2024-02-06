@@ -26,6 +26,10 @@ body.show-menu #about-menu {
   right: 0;
   transition: all 0.8s;
 }
+body.show-account .acoount {
+  left: 0;
+  transition: all 0.8s;
+}
 
 .cursor .cursor-dot {
   width: 6px;

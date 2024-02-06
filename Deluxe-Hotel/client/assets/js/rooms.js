@@ -62,7 +62,7 @@ async function getAllData(endpoint) {
   array = res.data;
   productCopy = structuredClone(array);
   // drawCards(res.data);
-  drawCards(array.slice(0, limit));
+  // drawCards(array.slice(0, limit));
   // let filtered = array.filter(
   //   (item) => item.room_type.toLocaleLowerCase() === "family"
   // );

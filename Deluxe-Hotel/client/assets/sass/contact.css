@@ -26,6 +26,10 @@ body.show-menu #about-menu {
   right: 0;
   transition: all 0.8s;
 }
+body.show-account .acoount {
+  left: 0;
+  transition: all 0.8s;
+}
 
 .cursor .cursor-dot {
   width: 6px;
@@ -103,7 +107,7 @@ header {
   transition: all 0.7s;
 }
 header #header-top .header-top {
-  padding: 10px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,12 +147,6 @@ header #header-top .header-top .header-top-left a {
 }
 header #header-top .header-top .header-top-left a:hover {
   color: #9b804e;
-}
-header #header-top .header-top .header-top-left #account {
-  font-size: 20px;
-}
-header #header-top .header-top .header-top-left #account:hover {
-  color: #fff;
 }
 header #header-top .header-top .header-top-left span {
   color: #3d3931;
@@ -224,10 +222,13 @@ header #header-bottom .header-bottom .navbar-search {
   justify-content: center;
   gap: 20px;
 }
-header #header-bottom .header-bottom .navbar-search .fa-magnifying-glass {
+header #header-bottom .header-bottom .navbar-search .fa-user {
   font-size: 20px;
-  cursor: pointer;
   color: #3d3931;
+  cursor: pointer;
+}
+header #header-bottom .header-bottom .navbar-search .fa-user:hover {
+  color: #fff;
 }
 header #header-bottom .header-bottom .navbar-search #menu-icon {
   display: none;
@@ -339,6 +340,41 @@ header.header-scroll #header-bottom {
 }
 header.header-scroll .elementar-section {
   display: none;
+}
+
+.acoount {
+  width: 200px;
+  background-color: #fffcf2;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -800px;
+  z-index: 111;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  transition: all 0.7s;
+  z-index: 999999;
+  overflow: auto;
+}
+.acoount .home-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  position: relative;
+}
+.acoount .home-account a i {
+  color: #000;
+  font-size: 30px;
+  transition: all 0.7s;
+}
+.acoount .home-account a i:hover {
+  color: #8a7c52;
+  transform: scale(1.1);
 }
 
 #about-menu {
