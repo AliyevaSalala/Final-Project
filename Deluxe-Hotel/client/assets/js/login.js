@@ -1,13 +1,11 @@
-$(".email-signup").hide();
-$("#signup-box-link").click(function () {
-  $(".email-login").fadeOut(100);
-  $(".email-signup").delay(100).fadeIn(100);
-  $("#login-box-link").removeClass("active");
-  $("#signup-box-link").addClass("active");
+const content = document.querySelector(".content");
+const registerBtn = document.getElementById("register");
+const loginBtn = document.getElementById("login");
+
+registerBtn.addEventListener("click", () => {
+  content.classList.add("active");
 });
-$("#login-box-link").click(function () {
-  $(".email-login").delay(100).fadeIn(100);
-  $(".email-signup").fadeOut(100);
-  $("#login-box-link").addClass("active");
-  $("#signup-box-link").removeClass("active");
+
+loginBtn.addEventListener("click", () => {
+  content.classList.remove("active");
 });
