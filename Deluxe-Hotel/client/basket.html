@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -30,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/sass/amenities.css" />
+    <link rel="stylesheet" href="./assets/sass/basket.css" />
     <title>Deluxe Hotel</title>
     <link
       rel="icon"
@@ -93,7 +94,6 @@
                       <ul class="dropdown">
                         <li><a href="./rooms.html">ROOMS LISTING</a></li>
                         <li><a href="./room-details.html">ROOM DETAILS</a></li>
-                        <li><a href="./service.html">Service</a></li>
                       </ul>
                     </div>
                   </a>
@@ -103,9 +103,9 @@
                     >Hotel <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="#">HOTEL ACCOUNT</a></li>
-                        <li><a href="#">HOTEL CART</a></li>
-                        <li><a href="#">HOTEL CHECKOUT</a></li>
+                        <li><a href="./menu.html">Restaurant</a></li>
+                        <li><a href="./room-details.html">DETAILS</a></li>
+                        <li><a href="./service.html">Service</a></li>
                       </ul>
                     </div>
                   </a>
@@ -115,13 +115,12 @@
                     >Pages<i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="./staffs.html">OUR STAFFS</a></li>
                         <li><a href="./amenities.html">AMENITIES</a></li>
                         <li><a href="./blog.html">LATEST BLOGS</a></li>
-                        <li><a href="./menu.html">Restaurant</a></li>
-                        <li><a href="./room-details.html">DETAILS</a></li>
+
                         <li><a href="#">PRICING PLANS</a></li>
-                        <li><a href="#">404 PAGE</a></li>
+                        <li><a href="./not-found.html">404 PAGE</a></li>
                       </ul>
                     </div>
                   </a>
@@ -191,52 +190,108 @@
       </div>
     </div>
 
-    <!-- <section id="banner-section">
-      <div class="slider">
-        <div class="slides slides">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides slides-3">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides slides-4">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides slides-5">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides slides-6">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
+    <!-- Hero-Banner-section- -->
+
+    <section id="shopping-cart-sec">
+      <div class="empty">
+        <div class="container">
+          <div class="shopping-cart-section">
+            <h1>Shopping Cart.</h1>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="buttons">
-        <span class="prev"></span>
-        <span class="next"></span>
+    <section id="basket-sec">
+      <div class="container">
+        <div class="basket-sec">
+          <div class="input-btn">
+            <form action="">
+              <input type="search" id="search" placeholder="Search...." />
+            </form>
+            <button class="sort-btn">Ascending</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantify</th>
+                <th>Subtotal</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="./assets/images/14.jpg" alt="product" /></td>
+                <td>
+                  <div class="texts">
+                    <h3>Standard room - 2 Adults, 1 Children</h3>
+                    <p>Check In:</p>
+                    <h4>February 9, 2024</h4>
+                    <p>Check out:</p>
+                    <h4>February 15, 2024</h4>
+                  </div>
+                </td>
+                <td><p>$15.00</p></td>
+                <td>
+                  <div class="btn">
+                    <button>+</button> <span>1</span> <button>-</button>
+                  </div>
+                </td>
+                <td><p>$6.00</p></td>
+                <td>
+                  <div class="icon">
+                    <i class="fa-solid fa-x"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="./assets/images/14.jpg" alt="product" /></td>
+                <td>
+                  <div class="texts">
+                    <h3>Standard room - 2 Adults, 1 Children</h3>
+                    <p>Check In:</p>
+                    <h4>February 9, 2024</h4>
+                    <p>Check out:</p>
+                    <h4>February 15, 2024</h4>
+                  </div>
+                </td>
+                <td><p>$15.00</p></td>
+                <td>
+                  <div class="btn">
+                    <button>+</button> <span>1</span> <button>-</button>
+                  </div>
+                </td>
+                <td><p>$6.00</p></td>
+                <td>
+                  <div class="icon">
+                    <i class="fa-solid fa-x"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="basket-box">
+            <h3>Cart Totals:</h3>
+            <div class="texts">
+              <div class="info">
+                <h4>Subtotal:</h4>
+                <p>$6.00</p>
+              </div>
+              <div class="info">
+                <h4>Total:</h4>
+                <p>$6.00</p>
+              </div>
+            </div>
+
+            <a href="#">Proceed To Checkout</a>
+          </div>
+        </div>
       </div>
-    </section> -->
-
+    </section>
     <!-- FOOTER-SECTION -->
 
     <footer>
@@ -339,10 +394,10 @@
     <div class="arrow-up">
       <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/amenities.js"></script>
+    <script src="./assets/js/basket.js"></script>
   </body>
 </html>
