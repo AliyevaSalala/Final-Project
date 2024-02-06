@@ -65,8 +65,14 @@ window.addEventListener("mousemove", function (e) {
   );
 });
 
-// window.addEventListener("load", fg_load);
 
-// function fg_load() {
-//   document.getElementById("loading").style.display = "none";
-// }
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.querySelector("#content").style.display = "none";
+
+//   setTimeout(function () {
+//     document.querySelector(".loading-container").style.display = "none";
+
+//     document.querySelector("#content").style.display = "block";
+//   }, 2500);
+// });

@@ -53,17 +53,27 @@ body.show-menu #about-menu {
   pointer-events: none;
 }
 
-#loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.loading-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #fff;
-  z-index: 999;
+  align-items: center;
+  height: 100vh;
+}
+.loading-container .loading {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #c19d68;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .arrow-up {
@@ -668,145 +678,87 @@ footer .footer .footer-section .footer-bottom p:hover {
   }
 }
 
-#account-section {
-  background-image: url("../images/about-breadcrumb-1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#signup-sec {
+  padding: 200px 0;
+  background-color: #fbf6e8;
 }
-#account-section .empty {
-  padding: 150px 0;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-#account-section .empty .account-section {
-  text-align: center;
-}
-#account-section .empty .account-section h1 {
-  font-size: 70px;
-  font-weight: 400;
-  font-family: "Forum", serif;
-  color: #3d3931;
-}
-@media screen and (max-width: 767px) {
-  #account-section .empty .account-section h1 {
-    font-size: 40px;
-  }
-}
-
-#login {
-  padding: 4rem 0;
-}
-#login .login .login-box {
-  position: relative;
-  margin: 10px auto;
-  width: 600px;
-  height: 380px;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 3px;
-  box-shadow: 5px 5px 3px 5px rgba(0, 0, 0, 0.33);
-}
-#login .login .lb-header {
-  position: relative;
-  color: #00415d;
-  margin: 5px 5px 10px 5px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-  height: 28px;
-}
-#login .login .lb-header a {
-  margin: 0 25px;
-  padding: 0 20px;
-  text-decoration: none;
-  color: #666;
-  font-weight: bold;
-  font-size: 15px;
-  transition: all 0.1s linear;
-}
-#login .login .lb-header .active {
-  color: #029f5b;
-  font-size: 18px;
-}
-#login .login .social-login {
-  position: relative;
+#signup-sec .login-sec {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  width: 100%;
-  padding: 5px 20px;
-  border-bottom: 1px solid #eee;
 }
-#login .login .social-login a {
+#signup-sec .login-sec .content {
+  width: 500px;
+  height: 420px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 30px 30px 0 rgba(0, 0, 0, 0.6);
+}
+#signup-sec .login-sec .content .form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+#signup-sec .login-sec .content .form-box .logo img {
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+}
+#signup-sec .login-sec .content .form-box .input-box {
   position: relative;
-  float: left;
-  width: calc(40% - 8px);
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 12px;
-  border-radius: 2px;
-  font-size: 12px;
-  text-transform: uppercase;
-  margin: 0 3%;
-  text-align: center;
 }
-#login .login .social-login a i {
-  position: relative;
-  float: left;
-  width: 20px;
-  top: 2px;
+#signup-sec .login-sec .content .form-box .input-box input {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #000;
+  font-size: 15px;
 }
-#login .login .social-login a:first-child {
-  background-color: #49639f;
+#signup-sec .login-sec .content .form-box .input-box input::-moz-placeholder {
+  color: #acacac;
+  font-size: 15px;
+  font-style: italic;
 }
-#login .login .social-login a:last-child {
-  background-color: #df4a32;
+#signup-sec .login-sec .content .form-box .input-box input::placeholder {
+  color: #acacac;
+  font-size: 15px;
+  font-style: italic;
 }
-#login .login .email-login,
-#login .login .email-signup {
-  position: relative;
-  float: left;
+#signup-sec .login-sec .content .form-box .input-box i {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#signup-sec .login-sec .content .form-box .forgot {
+  display: flex;
+  gap: 35px;
+}
+#signup-sec .login-sec .content .form-box .forgot a {
+  font-size: 15px;
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+#signup-sec .login-sec .content .form-box button {
+  padding: 10px 20px;
   width: 100%;
-  height: auto;
-  margin-top: 20px;
-  text-align: center;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: #000;
+  font-size: 15px;
+  background-color: #a1751d;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.7s;
 }
-#login .login .u-form-group {
-  width: 100%;
-  margin-bottom: 10px;
-}
-#login .login .u-form-group input[type=email],
-#login .login .u-form-group input[type=password] {
-  width: calc(50% - 22px);
-  height: 45px;
-  outline: none;
-  border: 1px solid #ddd;
-  padding: 0 10px;
-  border-radius: 2px;
-  color: #333;
-  font-size: 0.8rem;
-  transition: all 0.1s linear;
-}
-#login .login .u-form-group input:focus {
-  border-color: #358efb;
-}
-#login .login .u-form-group button {
-  width: 50%;
-  background-color: #1cb94e;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 14px;
-  font-weight: normal;
-  padding: 14px 0;
-  border-radius: 2px;
-  text-transform: uppercase;
-}
-#login .login .forgot-password {
-  width: 50%;
-  text-align: left;
-  text-decoration: underline;
-  color: #888;
-  font-size: 0.75rem;
+#signup-sec .login-sec .content .form-box button:hover {
+  box-shadow: inset 15em 0 0 0 #fff, inset -15em 0 0 0 #fff;
 }/*# sourceMappingURL=login.css.map */

@@ -46,554 +46,566 @@
     />
   </head>
   <body>
-    <!-- <div id="loading">
-      <img src="./assets/images/Dual Ring-1s-200px.svg" alt="Yükleniyor..." />
+    <!-- <div class="loading-container">
+      <div class="loading"></div>
     </div> -->
-    <!--======= Cursor -->
-    <div class="cursor">
-      <div class="cursor-dot" data-cursor-dot></div>
-      <div class="cursor-outline" data-cursor-outline></div>
-    </div>
 
-    <!-- HEADER-SECTION -->
+    <div id="content">
+      <!--======= Cursor -->
+      <div class="cursor">
+        <div class="cursor-dot" data-cursor-dot></div>
+        <div class="cursor-outline" data-cursor-outline></div>
+      </div>
 
-    <header>
-      <div id="header-top">
-        <div class="container">
-          <div class="header-top">
-            <div class="header-top-right">
-              <a href="tel:+000 123 456 789">+000 123 456 789</a>
-              <h5>361 Mireles Barrio, Spain</h5>
-            </div>
-            <div class="header-top-left">
-              <a href="https://www.facebook.com/" target="_blank">Fb</a>
-              <span>-</span>
-              <a href="https://www.linkedin.com/feed/" target="_blank">In</a>
-              <span>-</span>
-              <a href="https://twitter.com/" target="_blank">Tw</a>
-              <span>-</span>
-              <a href="https://www.youtube.com/" target="_blank">Yt</a>
-              <a href="./login.html" id="account"
-                ><i class="fa-solid fa-user"></i
-              ></a>
+      <!-- HEADER-SECTION -->
+
+      <header>
+        <div id="header-top">
+          <div class="container">
+            <div class="header-top">
+              <div class="header-top-right">
+                <a href="tel:+000 123 456 789">+000 123 456 789</a>
+                <h5>361 Mireles Barrio, Spain</h5>
+              </div>
+              <div class="header-top-left">
+                <a href="https://www.facebook.com/" target="_blank">Fb</a>
+                <span>-</span>
+                <a href="https://www.linkedin.com/feed/" target="_blank">In</a>
+                <span>-</span>
+                <a href="https://twitter.com/" target="_blank">Tw</a>
+                <span>-</span>
+                <a href="https://www.youtube.com/" target="_blank">Yt</a>
+                <a href="./login.html" id="account"
+                  ><i class="fa-solid fa-user"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="elementar-section">
-        <div class="border-bottom"></div>
-      </div>
-      <div id="header-bottom">
+        <div class="elementar-section">
+          <div class="border-bottom"></div>
+        </div>
+        <div id="header-bottom">
+          <div class="container">
+            <div class="header-bottom">
+              <div class="logo">
+                <a href="./index.html">
+                  <img
+                    src="./assets/images/Deluxe-Bozzali-Hotel-Logo.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <nav id="nav">
+                <ul>
+                  <li><a href="./index.html" class="active">Home</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li>
+                    <a href="./rooms.html"
+                      >Rooms <i class="fa-solid fa-chevron-down down"></i>
+                      <div class="drop-down">
+                        <ul class="dropdown">
+                          <li><a href="./rooms.html">ROOMS LISTING</a></li>
+                          <li>
+                            <a href="./room-details.html">ROOM DETAILS</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >Hotel <i class="fa-solid fa-chevron-down down"></i>
+                      <div class="drop-down">
+                        <ul class="dropdown">
+                          <li><a href="./menu.html">Restaurant</a></li>
+                          <li><a href="./room-details.html">DETAILS</a></li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >Pages<i class="fa-solid fa-chevron-down down"></i>
+                      <div class="drop-down">
+                        <ul class="dropdown">
+                          <li><a href="./staffs.html">OUR STAFFS</a></li>
+                          <li><a href="./amenities.html">AMENITIES</a></li>
+                          <li><a href="./blog.html">LATEST BLOGS</a></li>
+                          <li><a href="#">PRICING PLANS</a></li>
+                          <li><a href="./not-found.html">404 PAGE</a></li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li>
+                  <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+              </nav>
+
+              <div class="navbar-search">
+                <i class="fa-solid fa-magnifying-glass" id="navbar-search"></i>
+                <div class="menu-circle">
+                  <div class="circle circle-x"></div>
+                  <div class="circle circle-x"></div>
+                  <div class="circle circle-y"></div>
+                  <div class="circle circle-y"></div>
+                </div>
+                <i class="fa-bars fa-solid" id="menu-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- about the hotel -->
+      <div id="about-menu">
         <div class="container">
-          <div class="header-bottom">
-            <div class="logo">
-              <a href="./index.html">
-                <img
+          <div class="about-menu">
+            <i class="fa-regular fa-circle-xmark close-icon"></i>
+            <div class="about">
+              <a href="#"
+                ><img
                   src="./assets/images/Deluxe-Bozzali-Hotel-Logo.png"
                   alt=""
-                />
-              </a>
+              /></a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="icons">
+                <a href="https://www.facebook.com/" target="_blank">Fb</a>
+                <span>-</span>
+                <a href="https://www.linkedin.com/feed/" target="_blank">In</a>
+                <span>-</span>
+                <a href="https://twitter.com/" target="_blank">Tw</a>
+                <span>-</span>
+                <a href="https://www.youtube.com/" target="_blank">Yt</a>
+              </div>
+              <p>-----------------------------------------------</p>
             </div>
 
-            <nav id="nav">
-              <ul>
-                <li><a href="./index.html" class="active">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li>
-                  <a href="./rooms.html"
-                    >Rooms <i class="fa-solid fa-chevron-down down"></i>
-                    <div class="drop-down">
-                      <ul class="dropdown">
-                        <li><a href="./rooms.html">ROOMS LISTING</a></li>
-                        <li><a href="./room-details.html">ROOM DETAILS</a></li>
-                      </ul>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"
-                    >Hotel <i class="fa-solid fa-chevron-down down"></i>
-                    <div class="drop-down">
-                      <ul class="dropdown">
-                        <li><a href="./menu.html">Restaurant</a></li>
-                        <li><a href="./room-details.html">DETAILS</a></li>
-                      </ul>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"
-                    >Pages<i class="fa-solid fa-chevron-down down"></i>
-                    <div class="drop-down">
-                      <ul class="dropdown">
-                        <li><a href="./staffs.html">OUR STAFFS</a></li>
-                        <li><a href="./amenities.html">AMENITIES</a></li>
-                        <li><a href="./blog.html">LATEST BLOGS</a></li>
-                        <li><a href="#">PRICING PLANS</a></li>
-                        <li><a href="./not-found.html">404 PAGE</a></li>
-                      </ul>
-                    </div>
-                  </a>
-                </li>
-                <li><a href="./contact.html">Contact Us</a></li>
-              </ul>
-            </nav>
-
-            <div class="navbar-search">
-              <i class="fa-solid fa-magnifying-glass" id="navbar-search"></i>
-              <div class="menu-circle">
-                <div class="circle circle-x"></div>
-                <div class="circle circle-x"></div>
-                <div class="circle circle-y"></div>
-                <div class="circle circle-y"></div>
-              </div>
-              <i class="fa-bars fa-solid" id="menu-icon"></i>
+            <div class="contact">
+              <h5>Contact Us</h5>
+              <a href="tel:+994 55 796 26 07"
+                ><i class="fa-solid fa-phone"></i> +994 55 796 26 07</a
+              >
+              <a href="mailto:deluxe@gmail.com"
+                ><i class="fa-solid fa-envelope"></i> deluxe@gmail.com</a
+              >
+              <a href="#"
+                ><i class="fa-solid fa-location-dot"></i>254 Nizami Gəncəvi
+                prospekti, Gəncə</a
+              >
+              <p>----------------------------------------------</p>
+            </div>
+            <div class="menu-btn">
+              <button>Book Now</button>
+              <button>Call Us</button>
             </div>
           </div>
         </div>
       </div>
-    </header>
 
-    <!-- about the hotel -->
-    <div id="about-menu">
-      <div class="container">
-        <div class="about-menu">
-          <i class="fa-regular fa-circle-xmark close-icon"></i>
-          <div class="about">
-            <a href="#"
-              ><img src="./assets/images/Deluxe-Bozzali-Hotel-Logo.png" alt=""
-            /></a>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="icons">
-              <a href="https://www.facebook.com/" target="_blank">Fb</a>
-              <span>-</span>
-              <a href="https://www.linkedin.com/feed/" target="_blank">In</a>
-              <span>-</span>
-              <a href="https://twitter.com/" target="_blank">Tw</a>
-              <span>-</span>
-              <a href="https://www.youtube.com/" target="_blank">Yt</a>
-            </div>
-            <p>-----------------------------------------------</p>
-          </div>
-
-          <div class="contact">
-            <h5>Contact Us</h5>
-            <a href="tel:+994 55 796 26 07"
-              ><i class="fa-solid fa-phone"></i> +994 55 796 26 07</a
-            >
-            <a href="mailto:deluxe@gmail.com"
-              ><i class="fa-solid fa-envelope"></i> deluxe@gmail.com</a
-            >
-            <a href="#"
-              ><i class="fa-solid fa-location-dot"></i>254 Nizami Gəncəvi
-              prospekti, Gəncə</a
-            >
-            <p>----------------------------------------------</p>
-          </div>
-          <div class="menu-btn">
-            <button>Book Now</button>
-            <button>Call Us</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HEADER-SEARCH -->
-    <!-- <div id="header-search">
-      <div class="container">
-        <div class="header-search">
-          <i class="fa-solid fa-x navbar-search"></i>
-          <div class="header-form">
-            <form action="">
-              <input type="search" placeholder="Enter Keyword" />
-              <a href="#">Search</a>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- BANNER-SECTION -->
-
-    <!-- Banner-section -->
-    <section id="hero-banner-sec">
-      <div class="empty">
-        <video
-          playsinline=""
-          autoplay=""
-          loop=""
-          muted=""
-          poster="https://webredox.net/demo/wp/patara/wp-content/uploads/2023/10/18.jpg"
-          class="back-video"
-        >
-          <source
-            src="https://webredox.net/demo/wp/patara/videos/hotel.mp4"
-            type="video/mp4"
-            autoplay=""
-            loop=""
-            muted=""
-          />
-        </video>
-        <div class="banner-section">
-          <div
-            class="intro"
-            data-aos="zoom-in"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
-            <div class="star-icons">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <div class="texts">
-              <h5>BEST FIVE-STAR HOTEL</h5>
-              <h1>Deluxe Luxury Hotel</h1>
-              <a href="./rooms.html">Rooms & Suites</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MARQUEE-SECTION -->
-    <section id="marque">
-      <div class="marquee-section">
-        <h1>
-          <marquee
-            ><span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
-            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
-            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
-            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
-            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
-            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
-            <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
-          </marquee>
-        </h1>
-      </div>
-    </section>
-
-    <!-- Showing Luxury Hotels Section -->
-
-    <section id="luxury-section">
-      <div class="container">
-        <div class="luxury-section">
-          <div class="luxury-info">
-            <img src="./assets/images/luxury-img.png" alt="" />
-            <h1
-              class="product-card"
-              data-aos="zoom-in"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="2000"
-            >
-              Showing Luxury Hotel
-            </h1>
-            <p>
-              Mauris nec risus congue dui suscipit interdum id ac felis. Cras
-              venete finibus quis. Phasellus tempor at turpis quis ultrices.
-              Vivamus.
-            </p>
-          </div>
-
-          <div class="products-section">
-            <div
-              class="product-card"
-              data-aos="zoom-in"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="1500"
-            >
-              <img src="./assets/images/home-2-tab-5.webp" alt="" />
-              <button>$49.5/Night</button>
-              <div class="card-info">
-                <a href="#"><h3>1 DOUBLE BED - 2 GUEST</h3></a>
-                <a href="#"><h1>Suit Room</h1></a>
-              </div>
-              <div class="card-details">
-                <div class="icons">
-                  <i class="fa-solid fa-bath"></i>
-                  <i class="fa-solid fa-bell-concierge"></i>
-                  <i class="fa-solid fa-tv"></i>
-                  <i class="fa-solid fa-camera"></i>
-                  <i class="fa-solid fa-utensils"></i>
-                </div>
-                <a href="./room-details.html"> View Details</a>
-              </div>
-            </div>
-            <div
-              class="product-card"
-              data-aos="zoom-in"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="1500"
-            >
-              <img src="./assets/images/home-2-tab-3.webp" alt="" />
-              <button>$55.0/Night</button>
-              <div class="card-info">
-                <a href="#"><h3>1 DOUBLE BED - 2 GUEST</h3></a>
-                <a href="#"><h1>Superior Suite</h1></a>
-              </div>
-              <div class="card-details">
-                <div class="icons">
-                  <i class="fa-solid fa-bath"></i>
-                  <i class="fa-solid fa-bell-concierge"></i>
-                  <i class="fa-solid fa-tv"></i>
-                  <i class="fa-solid fa-camera"></i>
-                  <i class="fa-solid fa-utensils"></i>
-                </div>
-                <a href="./room-details.html"> View Details</a>
-              </div>
-            </div>
-            <div
-              class="product-card"
-              data-aos="zoom-in"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="1500"
-            >
-              <img src="./assets/images/home-2-tab-1.webp" alt="" />
-              <button>$104.5/Night</button>
-              <div class="card-info">
-                <a href="#"><h3>1 DOUBLE BED - 2 GUEST</h3></a>
-                <a href="#"><h1>Queen Room</h1></a>
-              </div>
-              <div class="card-details">
-                <div class="icons">
-                  <i class="fa-solid fa-bath"></i>
-                  <i class="fa-solid fa-bell-concierge"></i>
-                  <i class="fa-solid fa-tv"></i>
-                  <i class="fa-solid fa-camera"></i>
-                  <i class="fa-solid fa-utensils"></i>
-                </div>
-                <a href="./room-details.html"> View Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- CHECK Availability -->
-    <section id="check-availibality">
-      <div class="container">
-        <div class="check-sec">
-          <h1>Check Availability</h1>
-          <div class="check-aval">
-            <div class="check-availibaility">
-              <form action="" class="grid">
-                <div class="check-input">
-                  <label for=""> Check In</label> <br />
-                  <input type="date" value="2024-03-24" required />
-                </div>
-                <div class="border-left"></div>
-                <div class="check-input">
-                  <label for=""> Check Out</label> <br />
-                  <input type="date" value="2024-03-25" required />
-                </div>
-                <div class="border-left"></div>
-                <div class="check-input">
-                  <label for=""> Rooms</label> <br />
-                  <input
-                    type="number"
-                    min="1"
-                    placeholder="01Rooms#22222"
-                    id="number"
-                    required
-                  />
-                </div>
-                <div class="border-left"></div>
-                <div class="check-input">
-                  <label for="">Guests</label> <br />
-                  <select name="" id="">
-                    <option value="1">01 Adult, 0 Child</option>
-                    <option value="2">02 Adult, 1 Child</option>
-                    <option value="3">02 Adult, 2 Child</option>
-                    <option value="4">02 Adult, 3 Child</option>
-                  </select>
-                </div>
-                <div class="border-left"></div>
-                <div>
-                  <button>Book Now</button>
-                </div>
+      <!-- HEADER-SEARCH -->
+      <!-- <div id="header-search">
+        <div class="container">
+          <div class="header-search">
+            <i class="fa-solid fa-x navbar-search"></i>
+            <div class="header-form">
+              <form action="">
+                <input type="search" placeholder="Enter Keyword" />
+                <a href="#">Search</a>
               </form>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </div> -->
 
-    <!-- Summer-Offer-Section-Video -->
-    <section id="elementar-section">
-      <video
-        class="elementor-background-video-hosted elementor-html5-video back-video"
-        autoplay=""
-        muted=""
-        playsinline=""
-        loop=""
-        src="https://herittage.wpengine.com/wp-content/uploads/2023/06/bg-video-banner.mp4"
-      ></video>
-      <div class="elementar-content">
-        <div class="background-container-heading">
-          <h1>
-            <marquee behavior="scroll" direction="up" scrollamount="10"
-              >BOOK NOW</marquee
+      <!-- BANNER-SECTION -->
+
+      <!-- Banner-section -->
+      <section id="hero-banner-sec">
+        <div class="empty">
+          <video
+            playsinline=""
+            autoplay=""
+            loop=""
+            muted=""
+            poster="https://webredox.net/demo/wp/patara/wp-content/uploads/2023/10/18.jpg"
+            class="back-video"
+          >
+            <source
+              src="https://webredox.net/demo/wp/patara/videos/hotel.mp4"
+              type="video/mp4"
+              autoplay=""
+              loop=""
+              muted=""
+            />
+          </video>
+          <div class="banner-section">
+            <div
+              class="intro"
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
             >
-          </h1>
+              <div class="star-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="texts">
+                <h5>BEST FIVE-STAR HOTEL</h5>
+                <h1>Deluxe Luxury Hotel</h1>
+                <a href="./rooms.html">Rooms & Suites</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hotel">
-          <img src="./assets/images/Deluxe-Bozzali-Hotel-Logo.png" alt="logo" />
+      </section>
+
+      <!-- MARQUEE-SECTION -->
+      <section id="marque">
+        <div class="marquee-section">
           <h1>
-            Summer <br />
-            Offer
+            <marquee
+              ><span
+                ><i class="fa-regular fa-star"></i> 40% Off On Booking</span
+              >
+              <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+              <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+              <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+              <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+              <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+              <span><i class="fa-regular fa-star"></i> 40% Off On Booking</span>
+            </marquee>
           </h1>
-          <h3>STARTS FROM</h3>
-          <h4>$100</h4>
-          <p>
-            Rinean sedm purus. Nunc nec magna laoreet,ongue tellus. Vivamus et
-            erosum viverra. Nullaiaculis mcipit felis.
-          </p>
         </div>
-        <div class="background-section-right"></div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CUSTOMER-SECTION -->
+      <!-- Showing Luxury Hotels Section -->
 
-    <section id="customer">
-      <div class="customer">
+      <section id="luxury-section">
         <div class="container">
-          <div class="customer-section">
-            <div class="customer-info">
-              <h5
-                data-aos="zoom-in"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-              >
-                TESTIMONIAL
-              </h5>
+          <div class="luxury-section">
+            <div class="luxury-info">
+              <img src="./assets/images/luxury-img.png" alt="" />
               <h1
+                class="product-card"
                 data-aos="zoom-in"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
               >
-                Happy Customer Thoughts
+                Showing Luxury Hotel
               </h1>
-              <p
-                data-aos="zoom-in"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-              >
-                Nunc nec magna aculis metus libero vehiculaNullam iaculis metus
-                nehicula. Aenean sed rutrum purus. Nunc nec magna laoreet,
-                sodales nisi at, co rutrum viverra.
+              <p>
+                Mauris nec risus congue dui suscipit interdum id ac felis. Cras
+                venete finibus quis. Phasellus tempor at turpis quis ultrices.
+                Vivamus.
               </p>
             </div>
-            <div id="customer-sec">
-              <div class="container">
-                <div class="customer-carousel">
-                  <div class="owl-carousel owl-theme">
-                    <div class="item">
-                      <div class="item-content">
-                        <div class="card">
-                          <div class="slide slide1">
-                            <div class="content">
-                              <div class="img">
-                                <img
-                                  src="https://media.istockphoto.com/id/891418898/photo/smart-businessman-with-glasses-posing.webp?b=1&s=170667a&w=0&k=20&c=2MepZSIt6Wj1mEBfmWF6o3o3I8AgaVifcGczyMZ7xbI="
-                                  alt=""
-                                />
+
+            <div class="products-section">
+              <div
+                class="product-card"
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500"
+              >
+                <img src="./assets/images/home-2-tab-5.webp" alt="" />
+                <button>$49.5/Night</button>
+                <div class="card-info">
+                  <a href="#"><h3>1 DOUBLE BED - 2 GUEST</h3></a>
+                  <a href="#"><h1>Suit Room</h1></a>
+                </div>
+                <div class="card-details">
+                  <div class="icons">
+                    <i class="fa-solid fa-bath"></i>
+                    <i class="fa-solid fa-bell-concierge"></i>
+                    <i class="fa-solid fa-tv"></i>
+                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-utensils"></i>
+                  </div>
+                  <a href="./room-details.html"> View Details</a>
+                </div>
+              </div>
+              <div
+                class="product-card"
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500"
+              >
+                <img src="./assets/images/home-2-tab-3.webp" alt="" />
+                <button>$55.0/Night</button>
+                <div class="card-info">
+                  <a href="#"><h3>1 DOUBLE BED - 2 GUEST</h3></a>
+                  <a href="#"><h1>Superior Suite</h1></a>
+                </div>
+                <div class="card-details">
+                  <div class="icons">
+                    <i class="fa-solid fa-bath"></i>
+                    <i class="fa-solid fa-bell-concierge"></i>
+                    <i class="fa-solid fa-tv"></i>
+                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-utensils"></i>
+                  </div>
+                  <a href="./room-details.html"> View Details</a>
+                </div>
+              </div>
+              <div
+                class="product-card"
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500"
+              >
+                <img src="./assets/images/home-2-tab-1.webp" alt="" />
+                <button>$104.5/Night</button>
+                <div class="card-info">
+                  <a href="#"><h3>1 DOUBLE BED - 2 GUEST</h3></a>
+                  <a href="#"><h1>Queen Room</h1></a>
+                </div>
+                <div class="card-details">
+                  <div class="icons">
+                    <i class="fa-solid fa-bath"></i>
+                    <i class="fa-solid fa-bell-concierge"></i>
+                    <i class="fa-solid fa-tv"></i>
+                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-utensils"></i>
+                  </div>
+                  <a href="./room-details.html"> View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CHECK Availability -->
+      <section id="check-availibality">
+        <div class="container">
+          <div class="check-sec">
+            <h1>Check Availability</h1>
+            <div class="check-aval">
+              <div class="check-availibaility">
+                <form action="" class="grid">
+                  <div class="check-input">
+                    <label for=""> Check In</label> <br />
+                    <input type="date" value="2024-03-24" required />
+                  </div>
+                  <div class="border-left"></div>
+                  <div class="check-input">
+                    <label for=""> Check Out</label> <br />
+                    <input type="date" value="2024-03-25" required />
+                  </div>
+                  <div class="border-left"></div>
+                  <div class="check-input">
+                    <label for=""> Rooms</label> <br />
+                    <input
+                      type="number"
+                      min="1"
+                      placeholder="01Rooms#22222"
+                      id="number"
+                      required
+                    />
+                  </div>
+                  <div class="border-left"></div>
+                  <div class="check-input">
+                    <label for="">Guests</label> <br />
+                    <select name="" id="">
+                      <option value="1">01 Adult, 0 Child</option>
+                      <option value="2">02 Adult, 1 Child</option>
+                      <option value="3">02 Adult, 2 Child</option>
+                      <option value="4">02 Adult, 3 Child</option>
+                    </select>
+                  </div>
+                  <div class="border-left"></div>
+                  <div>
+                    <button>Book Now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Summer-Offer-Section-Video -->
+      <section id="elementar-section">
+        <video
+          class="elementor-background-video-hosted elementor-html5-video back-video"
+          autoplay=""
+          muted=""
+          playsinline=""
+          loop=""
+          src="https://herittage.wpengine.com/wp-content/uploads/2023/06/bg-video-banner.mp4"
+        ></video>
+        <div class="elementar-content">
+          <div class="background-container-heading">
+            <h1>
+              <marquee behavior="scroll" direction="up" scrollamount="10"
+                >BOOK NOW</marquee
+              >
+            </h1>
+          </div>
+          <div class="hotel">
+            <img
+              src="./assets/images/Deluxe-Bozzali-Hotel-Logo.png"
+              alt="logo"
+            />
+            <h1>
+              Summer <br />
+              Offer
+            </h1>
+            <h3>STARTS FROM</h3>
+            <h4>$100</h4>
+            <p>
+              Rinean sedm purus. Nunc nec magna laoreet,ongue tellus. Vivamus et
+              erosum viverra. Nullaiaculis mcipit felis.
+            </p>
+          </div>
+          <div class="background-section-right"></div>
+        </div>
+      </section>
+
+      <!-- CUSTOMER-SECTION -->
+
+      <section id="customer">
+        <div class="customer">
+          <div class="container">
+            <div class="customer-section">
+              <div class="customer-info">
+                <h5
+                  data-aos="zoom-in"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000"
+                >
+                  TESTIMONIAL
+                </h5>
+                <h1
+                  data-aos="zoom-in"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000"
+                >
+                  Happy Customer Thoughts
+                </h1>
+                <p
+                  data-aos="zoom-in"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000"
+                >
+                  Nunc nec magna aculis metus libero vehiculaNullam iaculis
+                  metus nehicula. Aenean sed rutrum purus. Nunc nec magna
+                  laoreet, sodales nisi at, co rutrum viverra.
+                </p>
+              </div>
+              <div id="customer-sec">
+                <div class="container">
+                  <div class="customer-carousel">
+                    <div class="owl-carousel owl-theme">
+                      <div class="item">
+                        <div class="item-content">
+                          <div class="card">
+                            <div class="slide slide1">
+                              <div class="content">
+                                <div class="img">
+                                  <img
+                                    src="https://media.istockphoto.com/id/891418898/photo/smart-businessman-with-glasses-posing.webp?b=1&s=170667a&w=0&k=20&c=2MepZSIt6Wj1mEBfmWF6o3o3I8AgaVifcGczyMZ7xbI="
+                                    alt=""
+                                  />
+                                </div>
                               </div>
                             </div>
-                          </div>
 
-                          <div class="slide slide2">
-                            <div class="content">
-                              <h3>Lawrance</h3>
-                              <p>
-                                Mauris commodo quis imperdiet massa tincidunt
-                                nunc purus pulvinar.
-                              </p>
+                            <div class="slide slide2">
+                              <div class="content">
+                                <h3>Lawrance</h3>
+                                <p>
+                                  Mauris commodo quis imperdiet massa tincidunt
+                                  nunc purus pulvinar.
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="item">
-                      <div class="item-content">
-                        <div class="card">
-                          <div class="slide slide1">
-                            <div class="content">
-                              <div class="img">
-                                <img
-                                  src="https://media.istockphoto.com/id/1289220949/photo/successful-smiling-woman-wearing-eyeglasses-on-grey-wall.webp?b=1&s=170667a&w=0&k=20&c=tx5bq_Hh7GwyMVRS3KlKY4lNm5V6LbZqkwNWyXgVyp4="
-                                  alt=""
-                                />
+                      <div class="item">
+                        <div class="item-content">
+                          <div class="card">
+                            <div class="slide slide1">
+                              <div class="content">
+                                <div class="img">
+                                  <img
+                                    src="https://media.istockphoto.com/id/1289220949/photo/successful-smiling-woman-wearing-eyeglasses-on-grey-wall.webp?b=1&s=170667a&w=0&k=20&c=tx5bq_Hh7GwyMVRS3KlKY4lNm5V6LbZqkwNWyXgVyp4="
+                                    alt=""
+                                  />
+                                </div>
                               </div>
                             </div>
-                          </div>
 
-                          <div class="slide slide2">
-                            <div class="content">
-                              <h3>Tad Armtrang</h3>
-                              <p>
-                                Maxime dolor sit amet consectetur adipisicing
-                                elit., maxime reiciendis magni modi.
-                              </p>
+                            <div class="slide slide2">
+                              <div class="content">
+                                <h3>Tad Armtrang</h3>
+                                <p>
+                                  Maxime dolor sit amet consectetur adipisicing
+                                  elit., maxime reiciendis magni modi.
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="item">
-                      <div class="item-content">
-                        <div class="card">
-                          <div class="slide slide1">
-                            <div class="content">
-                              <div class="img">
-                                <img
-                                  src="https://media.istockphoto.com/id/912337826/photo/thoughtful-woman-working-at-a-creative-office.webp?b=1&s=170667a&w=0&k=20&c=v84u9k4H6HzOZW3BPWNAjuyt4fAB-FO0EnkozYwQdnM="
-                                  alt=""
-                                />
+                      <div class="item">
+                        <div class="item-content">
+                          <div class="card">
+                            <div class="slide slide1">
+                              <div class="content">
+                                <div class="img">
+                                  <img
+                                    src="https://media.istockphoto.com/id/912337826/photo/thoughtful-woman-working-at-a-creative-office.webp?b=1&s=170667a&w=0&k=20&c=v84u9k4H6HzOZW3BPWNAjuyt4fAB-FO0EnkozYwQdnM="
+                                    alt=""
+                                  />
+                                </div>
                               </div>
                             </div>
-                          </div>
 
-                          <div class="slide slide2">
-                            <div class="content">
-                              <h3>Sacha Stevon</h3>
-                              <p>
-                                Vestibulum sed arcu non odio euismod lacinia at.
-                                Diam volutpat commodo sed egestas egestas
-                                fringilla phasellus.
-                              </p>
+                            <div class="slide slide2">
+                              <div class="content">
+                                <h3>Sacha Stevon</h3>
+                                <p>
+                                  Vestibulum sed arcu non odio euismod lacinia
+                                  at. Diam volutpat commodo sed egestas egestas
+                                  fringilla phasellus.
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="item">
-                      <div class="item-content">
-                        <div class="card">
-                          <div class="slide slide1">
-                            <div class="content">
-                              <div class="img">
-                                <img
-                                  src="https://media.istockphoto.com/id/1126648986/photo/smiling-african-millennial-man-looking-at-camera-isolated-on-background.webp?b=1&s=170667a&w=0&k=20&c=ZDqXqVuYvriVVquvMX0A5Yw8O01b7f9JdFiENcxlcwQ="
-                                  alt=""
-                                />
+                      <div class="item">
+                        <div class="item-content">
+                          <div class="card">
+                            <div class="slide slide1">
+                              <div class="content">
+                                <div class="img">
+                                  <img
+                                    src="https://media.istockphoto.com/id/1126648986/photo/smiling-african-millennial-man-looking-at-camera-isolated-on-background.webp?b=1&s=170667a&w=0&k=20&c=ZDqXqVuYvriVVquvMX0A5Yw8O01b7f9JdFiENcxlcwQ="
+                                    alt=""
+                                  />
+                                </div>
                               </div>
                             </div>
-                          </div>
 
-                          <div class="slide slide2">
-                            <div class="content">
-                              <h3>Jesii Pekman</h3>
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Non dolorum, cumque deleniti
-                                iusto error quas praesentium eligendi aliquid!
-                              </p>
+                            <div class="slide slide2">
+                              <div class="content">
+                                <h3>Jesii Pekman</h3>
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur
+                                  adipisicing elit. Non dolorum, cumque deleniti
+                                  iusto error quas praesentium eligendi aliquid!
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -605,400 +617,404 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Highlighted Amenities -->
+      <!-- Highlighted Amenities -->
 
-    <section id="highlighted-amenities">
-      <div class="carousel-wrap">
-        <div class="owl-carousel">
-          <div class="item">
-            <div class="item-content">
-              <a href="./amenities.html">
-                <img src="./assets/images/home-2-carousel-img-5.webp" />
-                <div class="card-body">
-                  <h1>Fitness Center</h1>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-content">
-              <a href="./amenities.html">
-                <img src="./assets/images/home-2-carousel-img-1.webp" />
-                <div class="card-body">
-                  <h1>Dining Halll</h1>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-content">
-              <a href="./amenities.html">
-                <img src="./assets/images/home-2-carousel-img-3.webp" />
-                <div class="card-body">
-                  <h1>Master Bedroom</h1>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-content">
-              <a href="./amenities.html">
-                <img src="./assets/images/home-2-carousel-img-5.webp" />
-                <div class="card-body">
-                  <h1>Fitness Center</h1>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-content">
-              <a href="./amenities.html">
-                <img src="./assets/images/home-2-carousel-img-1.webp" />
-                <div class="card-body">
-                  <h1>Dining Halll</h1>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-content">
-              <a href="./amenities.html">
-                <img src="./assets/images/home-2-carousel-img-2.webp" />
-                <div class="card-body">
-                  <h1>Steam Shower</h1>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-content">
-              <a href="./amenities.html">
-                <img src="./assets/images/home-2-carousel-img-5.webp" />
-                <div class="card-body">
-                  <h1>Fitness Center</h1>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-content">
-              <a href="./amenities.html">
-                <img src="./assets/images/home-2-carousel-img-2.webp" />
-                <div class="card-body">
-                  <h1>Steam Shower</h1>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Amenities At Hotel -->
-
-    <section id="come-enjoy">
-      <div class="container">
-        <div class="amenities-intro">
-          <div
-            class="info"
-            data-aos="zoom-in"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
-            <h5>COME AND ENJOY</h5>
-            <h1>Amenities At Hotel</h1>
-            <p>
-              Aenean sed rutrum purus. Nunc nec magna laoreet, sodales nisi at,
-              co rutrum viverra. Nunc nec magna aculis metus libero
-              vehiculaNullam iaculis metus nehicula
-            </p>
-          </div>
-
-          <div class="intro-cards">
-            <div class="info-card">
-              <div class="card-right">
-                <img src="./assets/images/cards-1.png" alt="" />
-              </div>
-              <div class="texts">
-                <h3>Multiple Cuisines 01</h3>
-                <p>Vitae tempus quam pellentesque nec nam aliquam sem.</p>
+      <section id="highlighted-amenities">
+        <div class="carousel-wrap">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="item-content">
+                <a href="./amenities.html">
+                  <img src="./assets/images/home-2-carousel-img-5.webp" />
+                  <div class="card-body">
+                    <h1>Fitness Center</h1>
+                  </div>
+                </a>
               </div>
             </div>
-            <div class="info-card">
-              <div class="card-right">
-                <img src="./assets/images/cards-2.png" alt="" />
-              </div>
-              <div class="texts">
-                <h3>Fine Double Beds 02</h3>
-                <p>Mauris nec risus congue duium id ac felis. Cras venen..</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="card-right">
-                <img src="./assets/images/cards-3.png" alt="" />
-              </div>
-              <div class="texts">
-                <h3>Swimming Pool 0</h3>
-                <p>Cras venen mauris nec risus congue duium id ac felis..</p>
+            <div class="item">
+              <div class="item-content">
+                <a href="./amenities.html">
+                  <img src="./assets/images/home-2-carousel-img-1.webp" />
+                  <div class="card-body">
+                    <h1>Dining Halll</h1>
+                  </div>
+                </a>
               </div>
             </div>
-            <div class="info-card">
-              <div class="card-right">
-                <img src="./assets/images/cards-4.png" alt="" />
-              </div>
-              <div class="texts">
-                <h3>Kid's Playground 04</h3>
-                <p>Feugiat in ante metus dictum at tempor commodo.</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="card-right">
-                <img src="./assets/images/cards-5.png" alt="" />
-              </div>
-              <div class="texts">
-                <h3>Hot Beverages</h3>
-                <p>Pellentesque adipiscing commodo elit at imperdiet dui..</p>
+            <div class="item">
+              <div class="item-content">
+                <a href="./amenities.html">
+                  <img src="./assets/images/home-2-carousel-img-3.webp" />
+                  <div class="card-body">
+                    <h1>Master Bedroom</h1>
+                  </div>
+                </a>
               </div>
             </div>
-            <div class="info-card">
-              <div class="card-right">
-                <img src="./assets/images/cards-6.png" alt="" />
-              </div>
-              <div class="texts">
-                <h3>Sun Beds</h3>
-                <p>Non consectetur a erat nam at lectus nec tincidunt.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="btn">
-            <a href="./amenities.html">View All</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOG-SECTION -->
-
-    <section id="blog">
-      <div class="container">
-        <div class="blog-section">
-          <div class="blog-info">
-            <h5>TRENDING TOPICS</h5>
-            <h1>
-              <span>H</span> <span>o</span> <span>t</span> <span>e</span>
-              <span>l </span> <span>B</span> <span>l</span> <span>o</span>
-              <span>g</span>
-            </h1>
-            <p>
-              Zinean sed rutrum purus. Nunc nec magna laoreet, sodales nisi at,
-              co rutrum viverra. Nunc nec magna aculis metus libero
-              vehiculaNullam iaculis metus nehicula
-            </p>
-          </div>
-          <div class="blog-boxes">
-            <div
-              class="blog-box"
-              data-aos="fade-right"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="2000"
-            >
-              <img src="./assets/images/blog-1-1.webp" alt="" />
-              <div class="intro">
-                <a href="./comment.html">
-                  <h3>13 June2023</h3>
-                  <span>1 COMMENTS</span></a
-                >
-                <h1>The Best Hotels For Business Vacations</h1>
-                <p>
-                  Morbi tristique senectus et netus et malesuada. Libero
-                  volutpat sed cras ornare arcu dui. Neque volutpat ac tincidunt
-                  vitae.elementum tempus egestas sed sed.
-                </p>
-                <a href="./blog.html" class="read-more">Read More</a>
+            <div class="item">
+              <div class="item-content">
+                <a href="./amenities.html">
+                  <img src="./assets/images/home-2-carousel-img-5.webp" />
+                  <div class="card-body">
+                    <h1>Fitness Center</h1>
+                  </div>
+                </a>
               </div>
             </div>
-            <div
-              class="blog-box"
-              data-aos="fade-left"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="2000"
-            >
-              <img src="./assets/images/blog-2.webp " alt="" />
-              <div class="intro">
-                <a href="./comment.html">
-                  <h3>13 June2023</h3>
-                  <span>1 COMMENTS</span></a
-                >
-                <h1>Explore Interior Design Of Hotel Lobbies</h1>
-                <p>
-                  Etiam erat velit scelerisque in. Curabitur vitae nunc sed
-                  velit dignissim sodales ut eu sem. Penatibus et magnis dis
-                  parturient montes nascetur.
-                </p>
-                <a href="./blog.html" class="read-more">Read More</a>
+            <div class="item">
+              <div class="item-content">
+                <a href="./amenities.html">
+                  <img src="./assets/images/home-2-carousel-img-1.webp" />
+                  <div class="card-body">
+                    <h1>Dining Halll</h1>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <a href="./amenities.html">
+                  <img src="./assets/images/home-2-carousel-img-2.webp" />
+                  <div class="card-body">
+                    <h1>Steam Shower</h1>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <a href="./amenities.html">
+                  <img src="./assets/images/home-2-carousel-img-5.webp" />
+                  <div class="card-body">
+                    <h1>Fitness Center</h1>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <a href="./amenities.html">
+                  <img src="./assets/images/home-2-carousel-img-2.webp" />
+                  <div class="card-body">
+                    <h1>Steam Shower</h1>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACCT -->
+      <!-- Amenities At Hotel -->
 
-    <section id="home-contact">
-      <div class="container">
-        <div class="home-contact">
-          <div class="contact-info">
-            <div class="border">
-              <div class="contact-img">
-                <div class="empty">
-                  <h1>Discover The Hotel Of Your Choice</h1>
-                  <a href="#">Make Reservation</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="contact-from">
-            <p>REACH US</p>
-            <h1>Contact Form</h1>
-            <h5>
-              Aenean sed rutrum purus. Nunc nec magna laoreet, sodales ni
-              viverra. Nunc nec magna aculis metus libero vehiculaNullam iabero
-              vehicula
-            </h5>
-            <form action="" class="grid-form">
-              <div class="text-input">
-                <input type="text" placeholder="First Name*" id="first-name" />
-                <input type="text" placeholder="Last Name*" id="last-name" />
-              </div>
-              <div class="email-input">
-                <input type="email" placeholder="Email Address*" id="email" />
-                <input type="tel" placeholder="Mobile Number*" id="phone" />
-              </div>
-              <textarea name="" id="textarea" cols="30" rows="10"></textarea>
-              <input
-                type="submit"
-                value="Send"
-                id="submit"
-                onclick="submitForm()"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER-SECTION -->
-
-    <footer>
-      <div class="footer">
+      <section id="come-enjoy">
         <div class="container">
-          <div class="footer-section">
-            <div class="footer-info">
-              <img
-                src="./assets/images/Deluxe-Bozzali-Hotel-Logo.png"
-                alt="logo"
-              />
+          <div class="amenities-intro">
+            <div
+              class="info"
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <h5>COME AND ENJOY</h5>
+              <h1>Amenities At Hotel</h1>
               <p>
-                Nisi quis eleifend quam adipiscing vitae proin sagittis.
-                Pharetra et ultrices neque ornare llamcorpe.
+                Aenean sed rutrum purus. Nunc nec magna laoreet, sodales nisi
+                at, co rutrum viverra. Nunc nec magna aculis metus libero
+                vehiculaNullam iaculis metus nehicula
               </p>
-              <div class="footer-btn">
-                <a href="tel:+000 123 456789"
-                  ><i class="fa-solid fa-phone"></i> +000 123 456789</a
-                >
-                <a href="#"
-                  ><i class="fa-solid fa-location-dot"></i>361 Mireles Barrio,
-                  Spain</a
-                >
+            </div>
+
+            <div class="intro-cards">
+              <div class="info-card">
+                <div class="card-right">
+                  <img src="./assets/images/cards-1.png" alt="" />
+                </div>
+                <div class="texts">
+                  <h3>Multiple Cuisines 01</h3>
+                  <p>Vitae tempus quam pellentesque nec nam aliquam sem.</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="card-right">
+                  <img src="./assets/images/cards-2.png" alt="" />
+                </div>
+                <div class="texts">
+                  <h3>Fine Double Beds 02</h3>
+                  <p>Mauris nec risus congue duium id ac felis. Cras venen..</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="card-right">
+                  <img src="./assets/images/cards-3.png" alt="" />
+                </div>
+                <div class="texts">
+                  <h3>Swimming Pool 0</h3>
+                  <p>Cras venen mauris nec risus congue duium id ac felis..</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="card-right">
+                  <img src="./assets/images/cards-4.png" alt="" />
+                </div>
+                <div class="texts">
+                  <h3>Kid's Playground 04</h3>
+                  <p>Feugiat in ante metus dictum at tempor commodo.</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="card-right">
+                  <img src="./assets/images/cards-5.png" alt="" />
+                </div>
+                <div class="texts">
+                  <h3>Hot Beverages</h3>
+                  <p>Pellentesque adipiscing commodo elit at imperdiet dui..</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="card-right">
+                  <img src="./assets/images/cards-6.png" alt="" />
+                </div>
+                <div class="texts">
+                  <h3>Sun Beds</h3>
+                  <p>Non consectetur a erat nam at lectus nec tincidunt.</p>
+                </div>
               </div>
             </div>
-            <div class="footer-top">
-              <div class="footer-contact">
-                <h1>Contact Us</h1>
-                <nav>
-                  <ul>
-                    <li><a href="#">Reservation</a></li>
-                    <li><a href="#">Mission & Vision</a></li>
-                    <li><a href="#">Hotel Facilities</a></li>
-                    <li><a href="#">News & Blogs</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Personal Information</a></li>
-                    <li><a href="#">Data Tracking</a></li>
-                  </ul>
-                </nav>
-              </div>
 
-              <div class="footer-help">
-                <h1>HELP</h1>
-                <nav>
-                  <ul>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Website Feedback</a></li>
-                    <li><a href="#">Service Guarantee</a></li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div class="services-footer">
-                <h1>OUR SERVICES</h1>
-                <nav>
-                  <ul>
-                    <li><a href="#"> Store Directory</a></li>
-                    <li><a href="#">Top Hotels</a></li>
-                    <li><a href="#">Quick Links </a></li>
-                    <li><a href="#">Important Links </a></li>
-                    <li><a href="#"> Insights</a></li>
-                    <li><a href="#"> KnowledgeCenter</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="about-footer">
-                <h1>ABOUT US</h1>
-                <nav>
-                  <ul>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">Pricing</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="event-footer">
-                <h1>EVENT</h1>
-                <nav>
-                  <ul>
-                    <li><a href="#">nvestor Relations</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Managment</a></li>
-                    <li><a href="#">Site Review</a></li>
-                  </ul>
-                </nav>
-                <form action="">
-                  <input type="email" placeholder="Enter E-mail" required />
-                  <input type="submit" value="Subscribe now" id="submit" />
-                </form>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <p>
-                © 2023 Deluxe Hotel Ganja,
-                <a href="#">254 Nizami Gəncəvi prospekti, Gəncə</a>
-              </p>
+            <div class="btn">
+              <a href="./amenities.html">View All</a>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </section>
 
-    <div class="arrow-up">
-      <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      <!-- BLOG-SECTION -->
+
+      <section id="blog">
+        <div class="container">
+          <div class="blog-section">
+            <div class="blog-info">
+              <h5>TRENDING TOPICS</h5>
+              <h1>
+                <span>H</span> <span>o</span> <span>t</span> <span>e</span>
+                <span>l </span> <span>B</span> <span>l</span> <span>o</span>
+                <span>g</span>
+              </h1>
+              <p>
+                Zinean sed rutrum purus. Nunc nec magna laoreet, sodales nisi
+                at, co rutrum viverra. Nunc nec magna aculis metus libero
+                vehiculaNullam iaculis metus nehicula
+              </p>
+            </div>
+            <div class="blog-boxes">
+              <div
+                class="blog-box"
+                data-aos="fade-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <img src="./assets/images/blog-1-1.webp" alt="" />
+                <div class="intro">
+                  <a href="./comment.html">
+                    <h3>13 June2023</h3>
+                    <span>1 COMMENTS</span></a
+                  >
+                  <h1>The Best Hotels For Business Vacations</h1>
+                  <p>
+                    Morbi tristique senectus et netus et malesuada. Libero
+                    volutpat sed cras ornare arcu dui. Neque volutpat ac
+                    tincidunt vitae.elementum tempus egestas sed sed.
+                  </p>
+                  <a href="./blog.html" class="read-more">Read More</a>
+                </div>
+              </div>
+              <div
+                class="blog-box"
+                data-aos="fade-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <img src="./assets/images/blog-2.webp " alt="" />
+                <div class="intro">
+                  <a href="./comment.html">
+                    <h3>13 June2023</h3>
+                    <span>1 COMMENTS</span></a
+                  >
+                  <h1>Explore Interior Design Of Hotel Lobbies</h1>
+                  <p>
+                    Etiam erat velit scelerisque in. Curabitur vitae nunc sed
+                    velit dignissim sodales ut eu sem. Penatibus et magnis dis
+                    parturient montes nascetur.
+                  </p>
+                  <a href="./blog.html" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACCT -->
+
+      <section id="home-contact">
+        <div class="container">
+          <div class="home-contact">
+            <div class="contact-info">
+              <div class="border">
+                <div class="contact-img">
+                  <div class="empty">
+                    <h1>Discover The Hotel Of Your Choice</h1>
+                    <a href="#">Make Reservation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-from">
+              <p>REACH US</p>
+              <h1>Contact Form</h1>
+              <h5>
+                Aenean sed rutrum purus. Nunc nec magna laoreet, sodales ni
+                viverra. Nunc nec magna aculis metus libero vehiculaNullam
+                iabero vehicula
+              </h5>
+              <form action="" class="grid-form">
+                <div class="text-input">
+                  <input
+                    type="text"
+                    placeholder="First Name*"
+                    id="first-name"
+                  />
+                  <input type="text" placeholder="Last Name*" id="last-name" />
+                </div>
+                <div class="email-input">
+                  <input type="email" placeholder="Email Address*" id="email" />
+                  <input type="tel" placeholder="Mobile Number*" id="phone" />
+                </div>
+                <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                <input
+                  type="submit"
+                  value="Send"
+                  id="submit"
+                  onclick="submitForm()"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER-SECTION -->
+
+      <footer>
+        <div class="footer">
+          <div class="container">
+            <div class="footer-section">
+              <div class="footer-info">
+                <img
+                  src="./assets/images/Deluxe-Bozzali-Hotel-Logo.png"
+                  alt="logo"
+                />
+                <p>
+                  Nisi quis eleifend quam adipiscing vitae proin sagittis.
+                  Pharetra et ultrices neque ornare llamcorpe.
+                </p>
+                <div class="footer-btn">
+                  <a href="tel:+000 123 456789"
+                    ><i class="fa-solid fa-phone"></i> +000 123 456789</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-location-dot"></i>361 Mireles Barrio,
+                    Spain</a
+                  >
+                </div>
+              </div>
+              <div class="footer-top">
+                <div class="footer-contact">
+                  <h1>Contact Us</h1>
+                  <nav>
+                    <ul>
+                      <li><a href="#">Reservation</a></li>
+                      <li><a href="#">Mission & Vision</a></li>
+                      <li><a href="#">Hotel Facilities</a></li>
+                      <li><a href="#">News & Blogs</a></li>
+                      <li><a href="#">Terms of Use</a></li>
+                      <li><a href="#">Personal Information</a></li>
+                      <li><a href="#">Data Tracking</a></li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <div class="footer-help">
+                  <h1>HELP</h1>
+                  <nav>
+                    <ul>
+                      <li><a href="#">Careers</a></li>
+                      <li><a href="#">Cookie Policy</a></li>
+                      <li><a href="#">Website Feedback</a></li>
+                      <li><a href="#">Service Guarantee</a></li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <div class="services-footer">
+                  <h1>OUR SERVICES</h1>
+                  <nav>
+                    <ul>
+                      <li><a href="#"> Store Directory</a></li>
+                      <li><a href="#">Top Hotels</a></li>
+                      <li><a href="#">Quick Links </a></li>
+                      <li><a href="#">Important Links </a></li>
+                      <li><a href="#"> Insights</a></li>
+                      <li><a href="#"> KnowledgeCenter</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="about-footer">
+                  <h1>ABOUT US</h1>
+                  <nav>
+                    <ul>
+                      <li><a href="#">Company</a></li>
+                      <li><a href="#">Partners</a></li>
+                      <li><a href="#">Customers</a></li>
+                      <li><a href="#">Pricing</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="event-footer">
+                  <h1>EVENT</h1>
+                  <nav>
+                    <ul>
+                      <li><a href="#">nvestor Relations</a></li>
+                      <li><a href="#">Support</a></li>
+                      <li><a href="#">Managment</a></li>
+                      <li><a href="#">Site Review</a></li>
+                    </ul>
+                  </nav>
+                  <form action="">
+                    <input type="email" placeholder="Enter E-mail" required />
+                    <input type="submit" value="Subscribe now" id="submit" />
+                  </form>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <p>
+                  © 2023 Deluxe Hotel Ganja,
+                  <a href="#">254 Nizami Gəncəvi prospekti, Gəncə</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="arrow-up">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
     </div>
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
