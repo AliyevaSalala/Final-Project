@@ -28,10 +28,9 @@ menuCircle.addEventListener("click", function () {
   document.body.classList.toggle("show-menu");
 });
 
-faUser.addEventListener("click", function () {
+faUser?.addEventListener("click", function () {
   document.body.classList.toggle("show-account");
 });
-
 
 closeIcon?.addEventListener("click", function () {
   document.body.classList.toggle("show-menu");
