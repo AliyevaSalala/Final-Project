@@ -678,525 +678,126 @@ footer .footer .footer-section .footer-bottom p:hover {
   }
 }
 
-#about {
-  background-image: url("../images/about-breadcrumb-1.jpg");
+#services-home {
+  background-image: url("../images/Herittage-home-3-slider-3.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#about .empty {
+#services-home .empty {
   padding: 150px 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
 }
-#about .empty .about-section {
+#services-home .empty .service-section {
   text-align: center;
 }
-#about .empty .about-section h1 {
-  font-size: 70px;
-  font-weight: 400;
-  font-family: "Forum", serif;
-  color: #3d3931;
-}
-@media screen and (max-width: 767px) {
-  #about .empty .about-section h1 {
-    font-size: 40px;
-  }
-}
-
-#about-section {
-  background-color: #fbf6e8;
-  padding: 3rem 0;
-}
-#about-section .about-banner {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-#about-section .about-banner .hero-banner-left {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-}
-#about-section .about-banner .hero-banner-left p {
-  font-size: 14px;
-  color: #9b804e;
-  letter-spacing: 6px;
-}
-#about-section .about-banner .hero-banner-left h1 {
-  font-size: 50px;
-  max-width: 700px;
-  font-weight: 500;
+#services-home .empty .service-section h1 {
+  font-size: 80px;
+  font-weight: 600;
   font-family: "Cormorant Garamond", serif;
   color: #3d3931;
 }
-#about-section .about-banner .hero-banner-left a {
-  text-align: center;
-  padding: 15px 25px;
-  background-color: #9b804e;
-  color: #fff;
-  font-size: 16px;
-  width: 200px;
-  font-weight: 400;
-  border: 1px solid transparent;
-  transition: all 0.7s;
-}
-#about-section .about-banner .hero-banner-left a:hover {
-  box-shadow: inset 0 -5em 0 0 #fff, inset 0 5em 0 0 #fff;
-  color: #9b804e;
-  border: 1px solid #9b804e;
-}
-#about-section .about-banner .hero-banner-right {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  row-gap: 30px;
-}
-#about-section .about-banner .hero-banner-right .info-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#about-section .about-banner .hero-banner-right .info-card .card-right img {
-  width: 150px;
-}
-#about-section .about-banner .hero-banner-right .info-card .texts {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: center;
-}
-#about-section .about-banner .hero-banner-right .info-card .texts h3 {
-  font-weight: 400;
-  font-family: "Forum", serif;
-  color: #3d3931;
-  font-size: 30px;
-}
-#about-section .about-banner .hero-banner-right .info-card .texts p {
-  color: #9b804e;
-  font-size: 15px;
-  font-weight: 400;
-}
-@media (max-width: 1024px) {
-  #about-section .about-banner {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media (max-width: 767px) {
-  #about-section .about-banner {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  #about-section .about-banner .hero-banner-left {
-    text-align: center;
-    align-items: center;
-  }
-  #about-section .about-banner .hero-banner-left h1 {
-    font-size: 30px;
-  }
-  #about-section .about-banner .hero-banner-right {
-    grid-template-columns: repeat(1, 1fr);
+@media screen and (max-width: 767px) {
+  #services-home .empty .service-section h1 {
+    font-size: 40px;
   }
 }
 
-#elementar-section {
-  position: relative;
-  overflow: hidden;
-  padding: 150px 0;
+#facilites {
+  padding: 3rem 0;
 }
-#elementar-section::after {
-  content: "";
-  position: absolute;
-  top: -5%;
-  left: 0;
-  width: 58%;
-  height: 110%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-  border-radius: 0% 35% 35% 0%/0% 50% 50% 0%;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
-#elementar-section .back-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1;
-}
-#elementar-section .elementar-content {
+#facilites .facilites-about .service-top {
+  padding: 50px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#elementar-section .elementar-content .background-container-heading {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 767px) {
+  #facilites .facilites-about .service-top {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
-#elementar-section .elementar-content .background-container-heading h1 {
-  font-size: 80px;
-  z-index: 11112;
-  color: rgba(180, 180, 180, 0.5803921569);
-  font-weight: 400;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+#facilites .facilites-about .service-top .top-right h5 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  color: #c19d68;
+  padding: 10px 0;
 }
-#elementar-section .elementar-content .hotel {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  justify-content: center;
-}
-#elementar-section .elementar-content .hotel h1 {
-  font-size: 86px;
-  z-index: 11112;
-  color: #fbf6e8;
-  font-weight: 400;
-  letter-spacing: 10px;
-}
-#elementar-section .elementar-content .hotel img {
-  width: 150px;
-}
-#elementar-section .elementar-content .hotel h3 {
-  font-size: 24px;
-  color: #9b804e;
+#facilites .facilites-about .service-top .top-right h1 {
+  font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 10px;
-}
-#elementar-section .elementar-content .hotel h4 {
-  font-size: 116px;
-  color: #fbf6e8;
-  font-weight: 400;
-  font-family: "Forum", serif;
-}
-#elementar-section .elementar-content .hotel p {
-  font-size: 18px;
-  max-width: 450px;
-  letter-spacing: 1.5px;
-  line-height: 28px;
-  color: #fff;
-  font-weight: 400;
-}
-#elementar-section .elementar-content .background-section-right {
-  width: 40%;
-}
-@media (min-aspect-ration: 16/9) {
-  #elementar-section .back-video {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-aspect-ration: 16/9) {
-  #elementar-section .back-video {
-    width: auto;
-    height: 100%;
-  }
-}
-@media (max-width: 1024px) {
-  #elementar-section::after {
-    display: none;
-  }
-  #elementar-section .elementar-content .hotel h1 {
-    font-size: 70px;
-  }
-}
-@media (max-width: 767px) {
-  #elementar-section::after {
-    display: none;
-  }
-  #elementar-section .elementar-content .background-container-heading h1 {
-    font-size: 40px;
-  }
-  #elementar-section .elementar-content .hotel h1 {
-    font-size: 30px;
-  }
-  #elementar-section .elementar-content .hotel h3 {
-    font-size: 20px;
-  }
-  #elementar-section .elementar-content .hotel h4 {
-    font-size: 30px;
-  }
-}
-
-#know {
-  padding: 3rem 0;
-  background-color: #fbf6e8;
-}
-#know .know-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  font-size: 40px;
+  max-width: 500px;
 }
 @media screen and (max-width: 1024px) {
-  #know .know-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 767px) {
-  #know .know-section {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-#know .know-section .know-section-right {
-  background-image: url("../images/Specification-block-image-1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#know .know-section .know-section-texts {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-}
-#know .know-section .know-section-texts h3 {
-  color: #9b804e;
-}
-#know .know-section .know-section-texts h1 {
-  color: #3d3931;
-  max-width: 400px;
-  font-weight: 400;
-  font-family: "Forum", serif;
-  font-size: 50px;
-}
-@media screen and (max-width: 767px) {
-  #know .know-section .know-section-texts h1 {
+  #facilites .facilites-about .service-top .top-right h1 {
     font-size: 30px;
   }
 }
-#know .know-section .know-section-texts .boxes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  row-gap: 30px;
-}
-@media screen and (max-width: 767px) {
-  #know .know-section .know-section-texts .boxes {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-#know .know-section .know-section-texts .boxes .box {
-  padding: 30px 50px;
-  text-align: center;
-}
-#know .know-section .know-section-texts .boxes .box h1 {
-  font-size: 60px;
-  color: #9b804e;
-  font-weight: 400;
-  font-family: "Forum", serif;
-}
-#know .know-section .know-section-texts .boxes .box h3 {
-  font-weight: 400;
-  color: #3d3931;
-  letter-spacing: 2px;
-}
-#know .know-section .know-section-texts .boxes .box-1 {
-  background-color: #f2ede0;
-}
-#know .know-section .know-section-texts .boxes .box-1:hover {
-  background-color: #fff;
-}
-#know .know-section .know-section-texts .boxes .box-2:hover {
-  background-color: #f2ede0;
-}
-#know .know-section .know-section-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 30px;
-  gap: 20px;
-}
-#know .know-section .know-section-left .img img {
-  width: 100%;
-}
-#know .know-section .know-section-left p {
-  font-size: 16px;
-  color: #9b804e;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  line-height: 20px;
-}
-
-#excellence {
-  padding: 3rem 0;
-}
-#excellence .exellence-section .info {
-  padding: 50px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-}
-#excellence .exellence-section .info h3 {
-  font-size: 14px;
-  font-weight: 500;
-  color: #9b804e;
-  letter-spacing: 5px;
-}
-#excellence .exellence-section .info h1 {
-  font-size: 50px;
-  color: #3d3931;
-  font-weight: 400;
-  font-family: "Forum", serif;
-}
-@media screen and (max-width: 767px) {
-  #excellence .exellence-section .info h1 {
+@media screen and (max-width: 481px) {
+  #facilites .facilites-about .service-top .top-right h1 {
     font-size: 25px;
   }
 }
-#excellence .exellence-section .info p {
-  max-width: 700px;
-  font-size: 16px;
-  font-weight: 400;
+#facilites .facilites-about .service-top .top-left a {
+  padding: 13px 20px;
+  border: 1px solid #c19d68;
+  color: #3d3931;
+  transition: all 0.7s;
+  border-radius: 5px;
+}
+#facilites .facilites-about .service-top .top-left a:hover {
+  box-shadow: inset 0 -3em 0 0 #000, inset 0 4em 0 0 #000;
+  color: #fff;
+}
+#facilites .facilites-about .service-bottom .bottom-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding-bottom: 30px;
+  margin: 50px 0;
+}
+@media screen and (max-width: 1024px) {
+  #facilites .facilites-about .service-bottom .bottom-one {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#facilites .facilites-about .service-bottom .bottom-one .bottom-right img {
+  width: 100%;
+}
+#facilites .facilites-about .service-bottom .bottom-one .bottom-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 50px;
+}
+#facilites .facilites-about .service-bottom .bottom-one .bottom-left h5 {
+  color: #c19d68;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Cormorant Garamond", serif;
+}
+#facilites .facilites-about .service-bottom .bottom-one .bottom-left h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 40px;
+  max-width: 500px;
+}
+#facilites .facilites-about .service-bottom .bottom-one .bottom-left p {
+  font-size: 15px;
+  max-width: 500px;
   line-height: 25px;
   color: #3d3931;
 }
-#excellence .exellence-section .intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-#excellence .exellence-section .intro .intro-right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#excellence .exellence-section .intro .intro-right .intro-box {
-  padding: 20px;
-  background-color: #fbf6e8;
-  width: 100%;
-  border-radius: 5px;
-  position: relative;
-}
-#excellence .exellence-section .intro .intro-right .intro-box:after, #excellence .exellence-section .intro .intro-right .intro-box:before {
-  content: " ";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 0px solid #fff;
-  transition: all 1s;
-}
-#excellence .exellence-section .intro .intro-right .intro-box:after {
-  top: -1px;
-  left: -1px;
-  border-top: 2px solid #9b804e;
-  border-left: 2px solid #9b804e;
-}
-#excellence .exellence-section .intro .intro-right .intro-box:before {
-  bottom: -1px;
-  right: -1px;
-  border-bottom: 2px solid #9b804e;
-  border-right: 2px solid #9b804e;
-}
-#excellence .exellence-section .intro .intro-right .intro-box:hover {
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-#excellence .exellence-section .intro .intro-right .intro-box:hover:before, #excellence .exellence-section .intro .intro-right .intro-box:hover:after {
-  width: 100%;
-  height: 100%;
-}
-#excellence .exellence-section .intro .intro-right .intro-box .empty {
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #9b804e;
-}
-#excellence .exellence-section .intro .intro-right .intro-box .empty img {
-  width: 130px;
-}
-#excellence .exellence-section .intro .intro-right .intro-box .empty h2 {
+#facilites .facilites-about .service-bottom .bottom-one .bottom-left a {
   font-size: 20px;
-  color: #9b804e;
-  font-weight: 400;
-  padding-left: 40px;
+  color: #c19d68;
 }
-#excellence .exellence-section .intro .intro-right .intro-box .empty .texts {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  padding-left: 50px;
+#facilites .facilites-about .service-bottom .bottom-one .bottom-left a i {
+  transition: all 0.6s;
 }
-#excellence .exellence-section .intro .intro-right .intro-box .empty .texts h3 {
-  font-size: 25px;
-  color: #9b804e;
-  font-weight: 400;
-  font-family: "Forum", serif;
-}
-#excellence .exellence-section .intro .intro-right .intro-box .empty .texts p {
-  font-size: 15px;
-  color: #3d3931;
-}
-#excellence .exellence-section .intro .intro-left {
-  padding: 0 30px;
-  width: 50%;
-}
-#excellence .exellence-section .intro .intro-left .form-table {
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  border: 1px solid #9b804e;
-  border-radius: 5px;
-}
-#excellence .exellence-section .intro .intro-left .form-table .banner-form {
-  position: relative;
-}
-#excellence .exellence-section .intro .intro-left .form-table .banner-form img {
-  width: 100%;
-}
-#excellence .exellence-section .intro .intro-left .form-table .banner-form .info {
-  position: absolute;
-  top: 40px;
-  left: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#excellence .exellence-section .intro .intro-left .form-table .banner-form .info img {
-  width: 200px;
-}
-#excellence .exellence-section .intro .intro-left .form-table .banner-form .info h1 {
-  font-size: 40px;
-  color: #9b804e;
-  font-weight: 400;
-  font-family: "Forum", serif;
-}
-#excellence .exellence-section .intro .intro-left .form-table .banner-form .info p {
-  color: #3d3931;
-  font-size: 20px;
-  line-height: 30px;
-}
-@media screen and (max-width: 1024px) {
-  #excellence .exellence-section .intro {
-    flex-direction: column;
-  }
-  #excellence .exellence-section .intro .intro-right {
-    width: 100%;
-  }
-  #excellence .exellence-section .intro .intro-left {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 767px) {
-  #excellence .exellence-section .intro {
-    display: none;
-  }
-}/*# sourceMappingURL=about.css.map */
+#facilites .facilites-about .service-bottom .bottom-one .bottom-left a i:hover {
+  transform: scale(1.5);
+}/*# sourceMappingURL=service.css.map */

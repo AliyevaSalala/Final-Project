@@ -1,5 +1,6 @@
 const slider = document.querySelector(".slider");
 
+AOS.init();
 function activate(e) {
   const items = document.querySelectorAll(".item");
   e.target.matches(".next") && slider.append(items[0]);

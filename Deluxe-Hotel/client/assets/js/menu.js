@@ -3,7 +3,7 @@ const menuSection = document.querySelector(".menu-content");
 async function getAlData(endpoint) {
   const res = await axios(`${BASE_URL}/menu`);
   console.log(res.data);
-  drawMenu(res.data);
+  // drawMenu(res.data);
 }
 
 getAlData();

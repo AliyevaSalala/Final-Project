@@ -17,4 +17,6 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
+AOS.init();
+
 const id = new URLSearchParams(window.location.search).get("id");

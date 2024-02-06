@@ -9,6 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -30,7 +37,7 @@
       href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/sass/amenities.css" />
+    <link rel="stylesheet" href="./assets/sass/service.css" />
     <title>Deluxe Hotel</title>
     <link
       rel="icon"
@@ -87,13 +94,12 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li>
-                  <a href="./rooms.html"
+                  <a href="./rooms.html" class="active"
                     >Rooms <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
                         <li><a href="./rooms.html">ROOMS LISTING</a></li>
                         <li><a href="./room-details.html">ROOM DETAILS</a></li>
-                        <li><a href="./service.html">Service</a></li>
                       </ul>
                     </div>
                   </a>
@@ -111,11 +117,11 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="active"
+                  <a href="#"
                     >Pages<i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="./staffs.html">OUR STAFFS</a></li>
                         <li><a href="./amenities.html">AMENITIES</a></li>
                         <li><a href="./blog.html">LATEST BLOGS</a></li>
                         <li><a href="./menu.html">Restaurant</a></li>
@@ -191,52 +197,155 @@
       </div>
     </div>
 
-    <!-- <section id="banner-section">
-      <div class="slider">
-        <div class="slides slides">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides slides-3">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides slides-4">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides slides-5">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
-          </div>
-        </div>
-        <div class="slides slides-6">
-          <div class="content">
-            <p>LUXURY</p>
-            <h1>Find Your Luxury Rooms & Enjoy Your Vacation</h1>
+    <!-- SERVICES-HOME -->
+
+    <section id="services-home">
+      <div class="empty">
+        <div class="container">
+          <div class="service-section">
+            <h1
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              Service
+            </h1>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="buttons">
-        <span class="prev"></span>
-        <span class="next"></span>
+    <!-- SERVICE-ABOUT -->
+
+    <section id="facilites">
+      <div class="container">
+        <div class="facilites-about">
+          <div class="service-top">
+            <div
+              class="top-right"
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <h5>FACILITIES</h5>
+              <h1>ENJOY COMPLETE & BEST QUALITY FACILITIES</h1>
+            </div>
+            <div
+              class="top-left"
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <a href="#"> View More Item</a>
+            </div>
+          </div>
+          <div class="service-bottom">
+            <div class="bottom-one">
+              <div
+                class="bottom-right"
+                data-aos="fade-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <img src="./assets/images/facilities-thumb-3.jpg" alt="" />
+              </div>
+              <div
+                class="bottom-left"
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <h5>FITNESS</h5>
+                <h1>The Restaurent Center</h1>
+                <p>
+                  Rapidiously myocardinate cross-platform intellectual capital
+                  after model. Appropriately create interactive infrastructures
+                  after are Holisticly facilitate stand-alone
+                </p>
+                <a href="./menu.html"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="bottom-one">
+              <div
+                class="bottom-left"
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <h5>FITNESS</h5>
+                <h1>Gym Training Grounds</h1>
+                <p>
+                  Rapidiously myocardinate cross-platform intellectual capital
+                  after model. Appropriately create interactive infrastructures
+                  after are Holisticly facilitate stand-alone
+                </p>
+                <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div
+                class="bottom-right"
+                data-aos="fade-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <img src="./assets/images/facilities-thumb-1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="bottom-one">
+              <div
+                class="bottom-right"
+                data-aos="fade-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <img src="./assets/images/facilities-thumb-4.jpg" alt="" />
+              </div>
+              <div
+                class="bottom-left"
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <h5>FITNESS</h5>
+                <h1>SPA and Parlor Center</h1>
+                <p>
+                  Rapidiously myocardinate cross-platform intellectual capital
+                  after model. Appropriately create interactive infrastructures
+                  after are Holisticly facilitate stand-alone
+                </p>
+                <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="bottom-one">
+              <div
+                class="bottom-left"
+                data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <h5>FITNESS</h5>
+                <h1>Indoor Swimming Pool</h1>
+                <p>
+                  Rapidiously myocardinate cross-platform intellectual capital
+                  after model. Appropriately create interactive infrastructures
+                  after are Holisticly facilitate stand-alone
+                </p>
+                <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div
+                class="bottom-right"
+                data-aos="fade-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <img src="./assets/images/facilities-thumb-2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section> -->
-
+    </section>
     <!-- FOOTER-SECTION -->
 
     <footer>
@@ -339,10 +448,13 @@
     <div class="arrow-up">
       <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/amenities.js"></script>
+    <!-- <script src="./assets/js/login.js"></script> -->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
