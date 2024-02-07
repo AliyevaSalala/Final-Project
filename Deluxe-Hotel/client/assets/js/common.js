@@ -10,7 +10,7 @@ const cursorOutline = document.querySelector("[data-cursor-outline]");
 const toTop = document.querySelector(".arrow-up");
 const faUser = document.querySelector(".fa-user");
 
-const BASE_URL = "http://localhost:8080";
+const DB_URL = "http://localhost:8080";
 
 window.addEventListener("scroll", function () {
   toTop.classList.toggle("active", window.scrollY > 0);

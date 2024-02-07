@@ -463,8 +463,10 @@ header {
     }
 
     h4 {
-      font-size: 28px;
+      font-size: 40px;
       color: #fff;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
     }
 
     p {
@@ -474,7 +476,10 @@ header {
       color: #fff;
       max-width: 500px;
       line-height: 30px;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
       padding: 20px 0;
+      font-size: 20px;
     }
 
     .owl-item {

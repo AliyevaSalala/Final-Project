@@ -634,6 +634,8 @@ header {
           img {
             width: 100%;
             transition: all 0.7s;
+            aspect-ratio: 2/1;
+            object-fit: cover;
           }
           .card-body {
             display: flex;

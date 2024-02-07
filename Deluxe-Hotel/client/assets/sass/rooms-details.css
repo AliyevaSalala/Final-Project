@@ -687,8 +687,10 @@ header.header-scroll .elementar-section {
   animation-delay: 0ms;
 }
 #details-carusel .details-carousel h4 {
-  font-size: 28px;
+  font-size: 40px;
   color: #fff;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
 }
 #details-carusel .details-carousel p {
   width: 50%;
@@ -697,7 +699,10 @@ header.header-scroll .elementar-section {
   color: #fff;
   max-width: 500px;
   line-height: 30px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
   padding: 20px 0;
+  font-size: 20px;
 }
 #details-carusel .details-carousel .owl-item {
   display: table;

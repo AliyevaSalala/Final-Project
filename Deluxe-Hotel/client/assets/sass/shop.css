@@ -884,6 +884,9 @@ header.header-scroll .elementar-section {
 #cart-about-sec .cart-about .card-about-right .product-cards .product-card img {
   width: 100%;
   transition: all 0.7s;
+  aspect-ratio: 2/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #cart-about-sec .cart-about .card-about-right .product-cards .product-card .card-body {
   display: flex;

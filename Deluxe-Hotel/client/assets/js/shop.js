@@ -11,16 +11,20 @@ categoryBtn.forEach((item) =>
   })
 );
 
+
+
+// let base64;
+
 let limit = 3;
 let array = [];
 let productCopy = [];
 
 async function getAllData(endpoint) {
-  const res = await axios(`${BASE_URL}/${endpoint}`);
-  //   console.log(res.data);
+  const res = await axios(`${DB_URL}/${endpoint}`);
+  console.log(res.data);
   array = res.data;
   productCopy = structuredClone(array);
-  //   drawCards(res.data);
+  // drawCards(res.data);
   //   drawCards(array.slice(0, limit));
   let filtered = array.filter(
     (item) => item.room_type.toLocaleLowerCase() === "deluxe"
@@ -28,7 +32,7 @@ async function getAllData(endpoint) {
   drawCards(filtered);
 }
 
-getAllData("rooms");
+getAllData("products");
 
 function drawCards(data) {
   productSection.innerHTML = "";
@@ -49,7 +53,7 @@ function drawCards(data) {
                     ${item.desc}
                   </p>
                   <p class="price">$${item.price}.0</p>
-                  <a href="#">Book</a>
+                  <a href="room-details.html?id=${item._id}">Book</a>
                 </div>
               </div>
 
