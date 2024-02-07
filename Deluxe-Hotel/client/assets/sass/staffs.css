@@ -136,20 +136,34 @@ header #header-top .header-top .header-top-right h5 {
 }
 header #header-top .header-top .header-top-left {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
-header #header-top .header-top .header-top-left a {
-  font-size: 14px;
-  font-weight: 500;
-  color: #3d3931;
-  transition: all 0.6s;
-  color: #a28f57;
+header #header-top .header-top .header-top-left .navbar-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-header #header-top .header-top .header-top-left a:hover {
-  color: #9b804e;
+header #header-top .header-top .header-top-left .navbar-search .menu-circle {
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  cursor: pointer;
 }
-header #header-top .header-top .header-top-left span {
-  color: #3d3931;
+header #header-top .header-top .header-top-left .navbar-search .menu-circle .circle {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255, 255, 255, 0.6666666667);
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+header #header-top .header-top .header-top-left .navbar-search .menu-circle:hover .circle-x {
+  transform: translateY(7.5px);
+}
+header #header-top .header-top .header-top-left .navbar-search .menu-circle:hover .circle-y {
+  transform: translateY(-7.5px);
 }
 header .elementar-section {
   display: flex;
@@ -181,7 +195,7 @@ header #header-bottom .header-bottom nav ul li:hover ul.dropdown {
 }
 header #header-bottom .header-bottom nav ul li a {
   font-size: 14px;
-  color: #3d3931;
+  color: rgba(255, 255, 255, 0.5725490196);
   text-transform: uppercase;
   line-height: 25px;
   font-weight: bold;
@@ -216,51 +230,21 @@ header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a {
 header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a:hover {
   color: #efa824;
 }
-header #header-bottom .header-bottom .navbar-search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-header #header-bottom .header-bottom .navbar-search .fa-user {
-  font-size: 20px;
-  color: #3d3931;
-  cursor: pointer;
-}
-header #header-bottom .header-bottom .navbar-search .fa-user:hover {
-  color: #fff;
-}
-header #header-bottom .header-bottom .navbar-search #menu-icon {
+header #header-bottom .header-bottom #menu-icon {
   display: none;
   font-size: 20px;
   cursor: pointer;
   color: #3d3931;
   transition: all 0.6s;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7098039216);
+  box-shadow: 3px 2px 5px rgba(221, 221, 221, 0.2);
 }
-header #header-bottom .header-bottom .navbar-search .fa-xmark {
+header #header-bottom .header-bottom .fa-xmark {
   font-size: 20px;
   cursor: pointer;
   color: #3d3931;
   transition: all 0.6s;
-}
-header #header-bottom .header-bottom .navbar-search .menu-circle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3px;
-  cursor: pointer;
-}
-header #header-bottom .header-bottom .navbar-search .menu-circle .circle {
-  width: 13px;
-  height: 13px;
-  border: 2px solid #3d3931;
-  border-radius: 50%;
-  transition: all 0.5s;
-}
-header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-x {
-  transform: translateY(7.5px);
-}
-header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y {
-  transform: translateY(-7.5px);
 }
 @media (min-width: 481px) and (max-width: 767px) {
   header #header-top {
@@ -284,13 +268,16 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
     flex-direction: column;
     padding: 30px;
   }
+  header #header-bottom .header-bottom nav ul li a {
+    color: #3d3931;
+  }
   header #header-bottom .header-bottom nav.show {
     left: 0;
   }
-  header #header-bottom .header-bottom .navbar-search #menu-icon {
+  header #header-bottom .header-bottom #menu-icon {
     display: block;
   }
-  header #header-bottom .header-bottom .navbar-search .menu-circle {
+  header #header-bottom .header-bottom .menu-circle {
     display: none;
   }
 }
@@ -316,13 +303,16 @@ header #header-bottom .header-bottom .navbar-search .menu-circle:hover .circle-y
     flex-direction: column;
     padding: 30px;
   }
+  header #header-bottom .header-bottom nav ul li a {
+    color: #3d3931;
+  }
   header #header-bottom .header-bottom nav.show {
     left: 0;
   }
-  header #header-bottom .header-bottom .navbar-search #menu-icon {
+  header #header-bottom .header-bottom #menu-icon {
     display: block;
   }
-  header #header-bottom .header-bottom .navbar-search .menu-circle {
+  header #header-bottom .header-bottom .menu-circle {
     display: none;
   }
 }

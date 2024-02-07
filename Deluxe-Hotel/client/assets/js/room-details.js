@@ -89,6 +89,7 @@ const desSecBtn = document.querySelector(".desc-sec-btn");
 const reviwSecBtn = document.querySelector(".review-sec-btn");
 const reviewSec = document.querySelector(".review-sec");
 const descBottom = document.querySelector(".desc-bottom");
+// const faRegularStar = document.querySelectorAll(".fa-star");
 
 const id = new URLSearchParams(window.location.search).get("id");
 
@@ -108,3 +109,5 @@ desSecBtn.addEventListener("click", function () {
   desSecBtn.classList.add("border-bottom");
   reviwSecBtn.classList.remove("brown-color");
 });
+
+

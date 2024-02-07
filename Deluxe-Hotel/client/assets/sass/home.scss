@@ -343,7 +343,58 @@
     }
   }
 }
+// COUNTER
+#about-counter {
+  padding: 5rem 0;
 
+  .about-counter {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .counter-waiters {
+      box-shadow: 30px 15px 25px #ddd;
+      padding: 50px;
+      // width: 60%;
+      // aspect-ratio: 2/1;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      @media screen and (max-width: 480px) {
+        flex-direction: column;
+      }
+      .counter {
+        font-size: 50px;
+        color: #9a783a;
+        font-family: "Protest Riot", sans-serif;
+      }
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h3 {
+          font-style: italic;
+          font-weight: 400;
+          font-size: 20px;
+        }
+        p {
+          color: #6a6969;
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
 // check-availibaility
 
 #check-availibality {
