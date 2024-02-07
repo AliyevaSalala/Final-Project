@@ -420,45 +420,6 @@ header {
   }
 }
 
-// DINING-BAR-SECTION
-
-// #dining-bar-section {
-//   background-image: url("https://duruthemes.com/demo/html/candore/demo3/img/menu/3.jpg");
-//   background-position: center;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-
-//   .empty {
-//     padding: 150px 0;
-//     background-color: rgba(255, 255, 255, 0.3);
-//     .dining-bar-section {
-//       display: flex;
-//       flex-direction: column;
-//       gap: 20px;
-//       align-items: center;
-//       justify-content: center;
-
-//       h5 {
-//         font-size: 30px;
-//         font-weight: 400;
-//         color: #fff;
-//         font-family: "Forum", serif;
-//       }
-//       h1 {
-//         font-size: 70px;
-//         font-weight: 400;
-//         color: #3d3931;
-//         font-family: "Forum", serif;
-//       }
-//       h4 {
-//         font-size: 25px;
-//         font-style: italic;
-//         color: #fff;
-//         font-weight: 300;
-//       }
-//     }
-//   }
-// }
 #hero-banner-sec {
   overflow: hidden;
   padding: 300px 0;
@@ -560,6 +521,43 @@ header {
       }
     }
     .sec-left {
+      .menu-btn {
+        display: flex;
+        // justify-content: center;
+        gap: 20px;
+        padding-bottom: 10px;
+
+        @media screen and (max-width: 767px) {
+          flex-direction: column;
+          button {
+            width: 200px;
+          }
+        }
+        button {
+          padding: 10px 20px;
+          border: 1px solid transparent;
+          background-color: #9b804e;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: all 0.6s;
+          // text-align: center;
+
+          &:hover {
+            box-shadow: inset 10em 0 0 0 #fff;
+            color: #9b804e;
+          }
+
+          &.active {
+            background-color: transparent;
+            border: 1px solid #9b804e;
+            color: #fff;
+            &:hover {
+              box-shadow: inset 10em 0 0 0 #fff;
+              color: #9b804e;
+            }
+          }
+        }
+      }
       .menu-content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -572,6 +570,24 @@ header {
           padding: 20px;
           transition: all 0.7s;
           position: relative;
+          cursor: pointer;
+          .hover-image {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            opacity: 0;
+            transition: opacity 0.7s ease, transform 0.7s ease;
+            width: 100px;
+            border-radius: 50%;
+          }
+
+          &:hover {
+            .hover-image {
+              opacity: 1;
+              left: 20%;
+              transform: translateX(-100%);
+            }
+          }
 
           .item-right {
             display: flex;
