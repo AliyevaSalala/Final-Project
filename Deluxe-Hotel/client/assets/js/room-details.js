@@ -85,4 +85,26 @@ $(document).ready(function () {
 
 AOS.init();
 
+const desSecBtn = document.querySelector(".desc-sec-btn");
+const reviwSecBtn = document.querySelector(".review-sec-btn");
+const reviewSec = document.querySelector(".review-sec");
+const descBottom = document.querySelector(".desc-bottom");
+
 const id = new URLSearchParams(window.location.search).get("id");
+
+// desSecBtn.addEventListener("click", function () {
+//   reviwSecBt.style.display = "none";
+// });
+
+reviwSecBtn.addEventListener("click", function () {
+  reviewSec.style.display = "block";
+  descBottom.style.display = "none";
+  reviwSecBtn.classList.add("brown-color");
+  desSecBtn.classList.remove("border-bottom");
+});
+desSecBtn.addEventListener("click", function () {
+  reviewSec.style.display = "none";
+  descBottom.style.display = "flex";
+  desSecBtn.classList.add("border-bottom");
+  reviwSecBtn.classList.remove("brown-color");
+});

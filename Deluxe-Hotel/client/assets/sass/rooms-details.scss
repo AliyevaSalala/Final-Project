@@ -566,10 +566,78 @@ header {
         border: 1px solid transparent;
         background-color: transparent;
         cursor: pointer;
-        color: #3d3931;
 
-        &.border-bottom {
-          color: #9b804e;
+        &.brown-color {
+          color: #f0a84a;
+        }
+      }
+      .border-bottom {
+        color: #f0a84a;
+      }
+    }
+
+    .review-sec {
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      display: none;
+
+      .review-info {
+        width: 60%;
+
+        // @media screen and (max-width: 767px) {
+        //   width: 400px;
+        // }
+        // @media screen and (max-width: 430px) {
+        //   width: 300px;
+        // }
+        h3 {
+          font-size: 20px;
+        }
+        h1 {
+          // font-weight: 400;
+          font-size: 30px;
+          color: #1a1a1a;
+        }
+        h5 {
+          font-size: 15px;
+          color: #676769;
+          padding: 15px 0;
+        }
+        .icons {
+          display: flex;
+          gap: 5px;
+          i {
+            font-size: 20px;
+            color: #f0a84a;
+            cursor: pointer;
+            transition: all 0.7s;
+
+            &:hover {
+              color: #f0a84a;
+            }
+          }
+        }
+        form {
+          padding-top: 15px;
+          textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #acacaa;
+          }
+          input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px 15px;
+            border: 1px solid #acacaa;
+          }
+          #review-submit {
+            background-color: #b3721e;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+          }
         }
       }
     }

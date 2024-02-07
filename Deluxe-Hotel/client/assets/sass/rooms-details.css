@@ -771,10 +771,67 @@ header.header-scroll .elementar-section {
   border: 1px solid transparent;
   background-color: transparent;
   cursor: pointer;
-  color: #3d3931;
 }
-#desc-sec .description-sec .desc-top button.border-bottom {
-  color: #9b804e;
+#desc-sec .description-sec .desc-top button.brown-color {
+  color: #f0a84a;
+}
+#desc-sec .description-sec .desc-top .border-bottom {
+  color: #f0a84a;
+}
+#desc-sec .description-sec .review-sec {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: none;
+}
+#desc-sec .description-sec .review-sec .review-info {
+  width: 60%;
+}
+#desc-sec .description-sec .review-sec .review-info h3 {
+  font-size: 20px;
+}
+#desc-sec .description-sec .review-sec .review-info h1 {
+  font-size: 30px;
+  color: #1a1a1a;
+}
+#desc-sec .description-sec .review-sec .review-info h5 {
+  font-size: 15px;
+  color: #676769;
+  padding: 15px 0;
+}
+#desc-sec .description-sec .review-sec .review-info .icons {
+  display: flex;
+  gap: 5px;
+}
+#desc-sec .description-sec .review-sec .review-info .icons i {
+  font-size: 20px;
+  color: #f0a84a;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+#desc-sec .description-sec .review-sec .review-info .icons i:hover {
+  color: #f0a84a;
+}
+#desc-sec .description-sec .review-sec .review-info form {
+  padding-top: 15px;
+}
+#desc-sec .description-sec .review-sec .review-info form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #acacaa;
+}
+#desc-sec .description-sec .review-sec .review-info form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: 1px solid #acacaa;
+}
+#desc-sec .description-sec .review-sec .review-info form #review-submit {
+  background-color: #b3721e;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
 }
 #desc-sec .description-sec .desc-bottom {
   padding: 50px 0;
