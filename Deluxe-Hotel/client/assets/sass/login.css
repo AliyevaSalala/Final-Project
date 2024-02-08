@@ -824,10 +824,14 @@ footer .footer .footer-section .footer-bottom p:hover {
 }
 #sign-up #sign-up-form-sec .content form .custome-input i {
   position: absolute;
-  font-size: 28px;
+  font-size: 20px;
   right: 10px;
-  top: 14px;
+  top: 17px;
   transition: all 0.3s ease;
+  cursor: pointer;
+}
+#sign-up #sign-up-form-sec .content form .custome-input .fa-eye {
+  display: none;
 }
 #sign-up #sign-up-form-sec .content form .login {
   width: 100%;

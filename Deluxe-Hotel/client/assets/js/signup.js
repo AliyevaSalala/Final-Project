@@ -3,6 +3,20 @@ const userName = document.querySelector("#user-name");
 const userEmail = document.querySelector("#user-email");
 const userPassword = document.querySelector("#password");
 
+const eyeSlash = document.querySelector(".fa-eye-slash");
+const faEye = document.querySelector(".fa-eye");
+
+eyeSlash.addEventListener("click", function () {
+  userPassword.type = "text";
+  faEye.style.display = "block";
+  eyeSlash.style.display = "none";
+});
+faEye.addEventListener("click", function () {
+  userPassword.type = "password";
+  faEye.style.display = "none";
+  eyeSlash.style.display = "block";
+});
+
 signUpForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
