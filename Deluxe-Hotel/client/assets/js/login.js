@@ -41,7 +41,7 @@ signInForm.addEventListener("submit", function (e) {
       position: "right",
       backgroundColor: "linear-gradient(to right, #50C9C3, #96DEDA)",
     }).showToast();
-    window.location.href = "index.html";
+    // window.location.href = "shop.html";
   } else {
     Toastify({
       text: "Wrong username or password!",
@@ -52,4 +52,7 @@ signInForm.addEventListener("submit", function (e) {
       backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
     }).showToast();
   }
+
+  userEmail.value = "";
+  userPassword.value = "";
 });

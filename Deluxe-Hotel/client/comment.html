@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otel Rezervasyonu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Otel Rezervasyonu</h1>
+    <form id="reservationForm">
+      <label for="name">Adınız:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="email">E-posta:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="checkin">Giriş Tarihi:</label><br />
+      <input type="date" id="checkin" name="checkin" required /><br />
+
+      <label for="checkout">Çıkış Tarihi:</label><br />
+      <input type="date" id="checkout" name="checkout" required /><br />
+
+      <label for="roomtype">Oda Tipi:</label><br />
+      <select id="roomtype" name="roomtype" required>
+        <option value="">Oda tipini seçin</option>
+        <option value="single">Tek Kişilik</option>
+        <option value="double">Çift Kişilik</option>
+        <option value="suite">Süit</option></select
+      ><br />
+
+      <input type="submit" value="Rezervasyon Yap" />
+    </form>
+
+    <script>
+      const BASE_URL = "http://localhost:3000"; // Sunucu adresi
+
+      document
+        .getElementById("reservationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var checkin = document.getElementById("checkin").value;
+          var checkout = document.getElementById("checkout").value;
+          var roomtype = document.getElementById("roomtype").value;
+
+          var reservation = {
+            name: name,
+            email: email,
+            checkin: checkin,
+            checkout: checkout,
+            roomtype: roomtype,
+          };
+
+          // API'ye POST isteği yapma
+          fetch(`${BASE_URL}/reservations`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(reservation),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Reservation created:", data);
+              alert("Rezervasyonunuz alınmıştır. Teşekkür ederiz!");
+              document.getElementById("reservationForm").reset(); // Formu sıfırla
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert(
+                "Rezervasyon yaparken bir hata oluştu. Lütfen tekrar deneyin."
+              );
+            });
+        });
+    </script>
+  </body>
+</html>
+
+
+
