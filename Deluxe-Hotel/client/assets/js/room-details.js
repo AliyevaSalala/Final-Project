@@ -1,22 +1,3 @@
-// $(".owl-carousel").owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav: false,
-//   autoplay: true,
-//   autoplayHoverPause: true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     600: {
-//       items: 1,
-//     },
-//     1000: {
-//       items: 1,
-//     },
-//   },
-// });
-
 $(document).ready(function () {
   // Declare Carousel jquery object
   var owl = $(".owl-carousel");
@@ -89,13 +70,10 @@ const desSecBtn = document.querySelector(".desc-sec-btn");
 const reviwSecBtn = document.querySelector(".review-sec-btn");
 const reviewSec = document.querySelector(".review-sec");
 const descBottom = document.querySelector(".desc-bottom");
-// const faRegularStar = document.querySelectorAll(".fa-star");
+const detailsSection = document.querySelector(".details-section");
+const detailsPrice = document.querySelector(".price-box");
 
 const id = new URLSearchParams(window.location.search).get("id");
-
-// desSecBtn.addEventListener("click", function () {
-//   reviwSecBt.style.display = "none";
-// });
 
 reviwSecBtn.addEventListener("click", function () {
   reviewSec.style.display = "block";
@@ -110,4 +88,26 @@ desSecBtn.addEventListener("click", function () {
   reviwSecBtn.classList.remove("brown-color");
 });
 
+async function getDetailsData(endpoint) {
+  const res = await axios(`${DB_URL}/${endpoint}/${id}`);
+  // console.log(res.data);
+  detailsSection.innerHTML = `
+    <div class="texts">
+      <div class="icons">
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <h1>${res.data.title}</h1>
+    </div>
+    <div class="details-img">
+      <img src="${res.data.image}" alt="" />
+    </div>
+    `;
+  detailsPrice.innerHTML = `
+    <p>$ ${res.data.price}.0 <span>per Night</span></p>`;
+}
 
+getDetailsData("products");

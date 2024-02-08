@@ -903,6 +903,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 }
 #desc-sec .description-sec .desc-bottom .bottom-right .details-section .details-img img {
   width: 400px;
+  aspect-ratio: 2/1;
 }
 @media screen and (max-width: 440px) {
   #desc-sec .description-sec .desc-bottom .bottom-right .details-section .details-img img {

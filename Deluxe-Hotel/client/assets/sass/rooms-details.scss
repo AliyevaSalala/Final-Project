@@ -284,6 +284,7 @@
             }
             img {
               width: 400px;
+              aspect-ratio: 2/1;
               @media screen and (max-width: 440px) {
                 width: 300px;
               }
