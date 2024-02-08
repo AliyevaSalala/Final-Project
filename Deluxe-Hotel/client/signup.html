@@ -19,6 +19,11 @@
     />
     <link
       rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
     <link
@@ -237,7 +242,7 @@
               <div class="line"></div>
             </div>
 
-            <form>
+            <form class="sign-up-form">
               <label for="email">User name</label>
               <div class="custome-input">
                 <input
@@ -245,6 +250,7 @@
                   name="texts"
                   placeholder="Your Name"
                   autocomplete="off"
+                  id="user-name"
                 />
                 <i class="bx bx-at"></i>
               </div>
@@ -255,6 +261,7 @@
                   name="email"
                   placeholder="Your Email"
                   autocomplete="off"
+                  id="user-email"
                 />
                 <i class="bx bx-at"></i>
               </div>
@@ -264,34 +271,13 @@
                   type="password"
                   name="password"
                   placeholder="Your Password"
+                  id="password"
                 />
                 <i class="bx bx-lock-alt"></i>
               </div>
               <button class="login">Sign Up</button>
             </form>
           </div>
-          <!-- <div class="sign-up-form-sec">
-            <div class="signup-section">
-              <div class="social-buttons">
-                <button><i class="bx bxl-google"></i> Use Google</button>
-                <button><i class="bx bxl-apple"></i> Use Apple</button>
-              </div>
-
-              <div class="separator">
-                <div class="line"></div>
-                <p>Or</p>
-                <div class="line"></div>
-              </div>
-
-              <form>
-                <input type="text" placeholder="Full name" required />
-                <input type="email" placeholder="Email address" required />
-                <input type="password" placeholder="Password" required />
-                <a href="#">Forget Password?</a>
-                <button type="submit" class="btn">Signup</button>
-              </form>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
@@ -398,10 +384,14 @@
     <div class="arrow-up">
       <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/blog.js"></script>
+    <script src="./assets/js/signup.js"></script>
   </body>
 </html>
