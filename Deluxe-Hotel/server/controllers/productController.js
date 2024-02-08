@@ -40,21 +40,22 @@ const deleteProductById = async (req, res) => {
 
 // POST
 
-// const newProduct = async (req, res) => {
-//   const newProduct = new Products({ ...req.body });
-//   try {
-//     await newProduct.save();
-//     res.status(201).send({
-//       message: "created succesfully!",
-//       data: newProduct,
-//     });
-//   } catch (error) {
-//     res.status(500).send({ message: error.message });
-//   }
-// };
+const addNewProductById = async (req, res) => {
+  const newProduct = new Products({ ...req.body });
+  try {
+    await newProduct.save();
+    res.status(201).send({
+      message: "created succesfully!",
+      data: newProduct,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
 
 module.exports = {
   getAllProducts,
   getProductById,
   deleteProductById,
+  addNewProductById,
 };

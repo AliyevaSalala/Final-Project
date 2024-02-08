@@ -7,95 +7,96 @@
 
 // HERO-BANNER-SECTION-ROOMS
 
-// #rooms-section {
-//   background-image: url("../images/about-breadcrumb-1.jpg");
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
+#rooms-section {
+  background-image: url("../images/about-breadcrumb-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-//   .empty {
-//     padding: 150px 0;
-//     background-color: rgba(255, 255, 255, 0.8);
+  .empty {
+    padding: 100px 0;
+    background-color: rgba(0, 0, 0, 0.7);
 
-//     .rooms-section {
-//       text-align: center;
-//       h1 {
-//         font-size: 70px;
-//         font-weight: 400;
-//         font-family: "Forum", serif;
-//         color: #3d3931;
-
-//         @media screen and (max-width: 767px) {
-//           font-size: 40px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-#details-carusel {
-  .details-carousel {
-    .animated {
-      -webkit-animation-duration: 3s;
-      animation-duration: 3s;
-      -webkit-animation-delay: 500ms;
-      animation-delay: 500ms;
-    }
-
-    .animate-out {
-      -webkit-animation-delay: 0ms;
-      animation-delay: 0ms;
-    }
-
-    h4 {
-      font-size: 40px;
-      color: #fff;
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 600;
-    }
-
-    p {
-      width: 50%;
+    .rooms-section {
       text-align: center;
-      margin: 0 auto 20px;
-      color: #fff;
-      max-width: 500px;
-      line-height: 30px;
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 400;
-      padding: 20px 0;
-      font-size: 20px;
-    }
+      h1 {
+        padding-top: 70px;
+        font-size: 70px;
+        font-weight: 400;
+        font-family: "Forum", serif;
+        color: #e8e6e2;
 
-    .owl-item {
-      display: table;
-    }
-
-    .owl-carousel {
-      .item {
-        // height: 80vh;
-        background-image: url("../images/14.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-
-        .content {
-          background-color: rgba(0, 0, 0, 0.7);
-          padding: 250px 0;
+        @media screen and (max-width: 767px) {
+          font-size: 40px;
         }
-      }
-      .item-2 {
-        background-image: url("../images/home-1-interactive-gallery-4.webp");
-      }
-      .item-3 {
-        background-image: url("../images/room-detail-5-900x560.jpg");
       }
     }
   }
 }
+
+// #details-carusel {
+//   .details-carousel {
+//     .animated {
+//       -webkit-animation-duration: 3s;
+//       animation-duration: 3s;
+//       -webkit-animation-delay: 500ms;
+//       animation-delay: 500ms;
+//     }
+
+//     .animate-out {
+//       -webkit-animation-delay: 0ms;
+//       animation-delay: 0ms;
+//     }
+
+//     h4 {
+//       font-size: 40px;
+//       color: #fff;
+//       font-family: "Cormorant Garamond", serif;
+//       font-weight: 600;
+//     }
+
+//     p {
+//       width: 50%;
+//       text-align: center;
+//       margin: 0 auto 20px;
+//       color: #fff;
+//       max-width: 500px;
+//       line-height: 30px;
+//       font-family: "Cormorant Garamond", serif;
+//       font-weight: 400;
+//       padding: 20px 0;
+//       font-size: 20px;
+//     }
+
+//     .owl-item {
+//       display: table;
+//     }
+
+//     .owl-carousel {
+//       .item {
+//         // height: 80vh;
+//         background-image: url("../images/14.jpg");
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         display: table-cell;
+//         vertical-align: middle;
+//         text-align: center;
+
+//         .content {
+//           background-color: rgba(0, 0, 0, 0.7);
+//           padding: 250px 0;
+//         }
+//       }
+//       .item-2 {
+//         background-image: url("../images/home-1-interactive-gallery-4.webp");
+//       }
+//       .item-3 {
+//         background-image: url("../images/room-detail-5-900x560.jpg");
+//       }
+//     }
+//   }
+// }
 
 // DSECRIPTION-SECTION
 
@@ -245,6 +246,53 @@
           width: 100%;
         }
 
+        .details-section {
+          display: flex;
+          gap: 50px;
+
+          @media screen and (max-width: 767px) {
+            flex-direction: column;
+          }
+          .texts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .icons {
+              display: flex;
+              gap: 5px;
+              i {
+                font-size: 20px;
+                cursor: pointer;
+                color: #b3721e;
+              }
+            }
+            h1 {
+              font-size: 40px;
+              font-weight: 400;
+              color: #3d3931;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            p {
+              font-size: 20px;
+              color: #575755;
+            }
+          }
+          .details-img {
+            padding-left: 50px;
+            @media screen and (max-width: 767px) {
+              padding-left: 0;
+            }
+            img {
+              width: 400px;
+              @media screen and (max-width: 440px) {
+                width: 300px;
+              }
+              @media screen and (max-width: 340px) {
+                width: 200px;
+              }
+            }
+          }
+        }
         .lorem {
           max-width: 700px;
           // letter-spacing: 1px;
@@ -392,43 +440,61 @@
           width: 100%;
         }
 
+        .price-box {
+          margin-bottom: 30px;
+          padding: 50px;
+          text-align: center;
+          width: 100%;
+          box-shadow: 10px 25px 40px #dfdddf;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            text-align: center;
+            font-size: 30px;
+            color: #b3721e;
+            font-family: "Protest Riot", sans-serif;
+            font-weight: 400;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            span {
+              font-size: 20px;
+              color: #575755;
+            }
+          }
+        }
         .left-boxes {
-          border: 2px solid #9b804e;
+          padding-top: 30px;
+          // border: 2px solid #9b804e;
+          box-shadow: 10px 25px 40px #dfdddf;
+
           border-radius: 5px;
           padding: 10px;
           .empty {
             padding: 20px;
-            border: 2px solid #9b804e;
+            // border: 2px solid #9b804e;
             display: flex;
             flex-direction: column;
             row-gap: 30px;
             .top {
               width: 100%;
-              .book {
-                // width: 100%;
-                text-align: center;
-                padding: 10px 20px;
-                background-color: #8f7646;
-                border-radius: 5px;
-                border: 1px solid transparent;
-                color: #fff;
-                cursor: pointer;
-                margin-bottom: 10px;
-              }
+
               .grid {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
                 input {
-                  padding: 5px 5px;
+                  padding: 10px 15px;
                   border: 1px solid #9b804e;
                   border-radius: 3px;
                   background-color: transparent;
+                  cursor: pointer;
                 }
                 #submit {
                   background-color: #9b804e;
                   color: #fff;
-                  padding: 10px;
+                  padding: 15px;
                   border: 1px solid transparent;
                   font-style: normal;
                   font-size: 13px;
