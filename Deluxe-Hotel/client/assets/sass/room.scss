@@ -15,7 +15,7 @@
 
   .empty {
     padding: 200px 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 
     .rooms-section {
       text-align: center;
@@ -23,7 +23,7 @@
         font-size: 70px;
         font-weight: 400;
         font-family: "Forum", serif;
-        color: #3d3931;
+        color: #d1d0cd;
 
         @media screen and (max-width: 767px) {
           font-size: 40px;
@@ -32,8 +32,6 @@
     }
   }
 }
-
-
 
 // PRODUCTS-SECTION
 

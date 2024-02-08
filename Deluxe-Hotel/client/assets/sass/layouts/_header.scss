@@ -5,11 +5,9 @@ header {
   transition: all 0.7s;
 
   #header-top {
-    // background-color: #343434;
-    // border-bottom: 1px solid #c19b77;
     .header-top {
       padding: 15px 0;
-      //   border-bottom: 1px solid #9b804e;
+
       @include flexbox();
 
       .header-top-right {
@@ -67,6 +65,11 @@ header {
                 transform: translateY(-7.5px);
               }
             }
+          }
+        }
+        .my-account {
+          img {
+            width: 40px;
           }
         }
       }
@@ -264,8 +267,8 @@ header {
   &.header-scroll {
     position: fixed;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    // box-shadow: 5px 5px 5px #ddd;
+    background-color: rgba(0, 0, 0, 0.7);
+    // box-shadow: 5px 5px 5px #ddd
     z-index: 11111;
     #header-top {
       display: none;

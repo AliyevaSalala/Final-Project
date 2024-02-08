@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -88,13 +88,12 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li>
-                  <a href="./rooms.html" class="active"
+                  <a href="./rooms.html"
                     >Rooms <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
                         <li><a href="./rooms.html">ROOMS LISTING</a></li>
                         <li><a href="./room-details.html">ROOM DETAILS</a></li>
-                        <li><a href="./service.html">Service</a></li>
                       </ul>
                     </div>
                   </a>
@@ -104,25 +103,24 @@
                     >Hotel <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="#">HOTEL ACCOUNT</a></li>
-                        <li><a href="#">HOTEL CART</a></li>
-                        <li><a href="#">HOTEL CHECKOUT</a></li>
+                        <li><a href="./menu.html">Restaurant</a></li>
+                        <li><a href="./room-details.html">DETAILS</a></li>
+                        <li><a href="./service.html">Service</a></li>
                       </ul>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#" class="active"
                     >Pages<i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
                         <li><a href="./staffs.html">OUR STAFFS</a></li>
                         <li><a href="./amenities.html">AMENITIES</a></li>
                         <li><a href="./blog.html">LATEST BLOGS</a></li>
-                        <li><a href="./menu.html">Restaurant</a></li>
-                        <li><a href="./room-details.html">DETAILS</a></li>
+
                         <li><a href="#">PRICING PLANS</a></li>
-                        <li><a href="#">404 PAGE</a></li>
+                        <li><a href="./not-found.html">404 PAGE</a></li>
                       </ul>
                     </div>
                   </a>
@@ -192,40 +190,45 @@
       </div>
     </div>
 
-    <!-- Hero-Banner-section- -->
-
-    <!-- <section id="account-section">
+    <section id="rooms-section">
       <div class="empty">
         <div class="container">
-          <div class="account-section">
-            <h1>Account</h1>
+          <div class="rooms-section">
+            <h1
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              Sign Up
+            </h1>
           </div>
         </div>
       </div>
-    </section> -->
-
-    <section id="signup-sec">
+    </section>
+    <section id="sign-up">
       <div class="container">
-        <div class="login-sec">
-          <div class="content">
-            <form action="#" class="form-box">
-              <div class="logo">
-                <img src="./assets/images/user-images.png" alt="" />
+        <div id="sign-up-form-sec">
+          <div class="sign-up-form-sec">
+            <div class="signup-section">
+              <div class="social-buttons">
+                <button><i class="bx bxl-google"></i> Use Google</button>
+                <button><i class="bx bxl-apple"></i> Use Apple</button>
               </div>
-              <div class="input-box">
-                <input type="text" placeholder="User Name" />
-                <i class="fa-regular fa-user"></i>
+
+              <div class="separator">
+                <div class="line"></div>
+                <p>Or</p>
+                <div class="line"></div>
               </div>
-              <div class="input-box">
-                <input type="email" placeholder="Email" />
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="input-box">
-                <input type="password" placeholder="Password" />
-                <i class="fa-solid fa-eye"></i>
-              </div>
-              <button>Register</button>
-            </form>
+
+              <form>
+                <input type="text" placeholder="Full name" required />
+                <input type="email" placeholder="Email address" required />
+                <input type="password" placeholder="Password" required />
+                <a href="#">Forget Password?</a>
+                <button type="submit" class="btn">Signup</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -333,10 +336,10 @@
     <div class="arrow-up">
       <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/blog.js"></script>
   </body>
 </html>

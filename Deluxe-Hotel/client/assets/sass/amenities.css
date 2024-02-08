@@ -165,6 +165,9 @@ header #header-top .header-top .header-top-left .navbar-search .menu-circle:hove
 header #header-top .header-top .header-top-left .navbar-search .menu-circle:hover .circle-y {
   transform: translateY(-7.5px);
 }
+header #header-top .header-top .header-top-left .my-account img {
+  width: 40px;
+}
 header .elementar-section {
   display: flex;
   justify-content: center;
@@ -319,7 +322,7 @@ header #header-bottom .header-bottom .fa-xmark {
 header.header-scroll {
   position: fixed;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 11111;
 }
 header.header-scroll #header-top {

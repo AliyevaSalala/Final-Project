@@ -13,7 +13,7 @@
 
   .empty {
     padding: 100px 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
 
     .rooms-section {
       text-align: center;
@@ -22,7 +22,7 @@
         font-size: 70px;
         font-weight: 400;
         font-family: "Forum", serif;
-        color: #3d3931;
+        color: #e0ded9;
 
         @media screen and (max-width: 767px) {
           font-size: 40px;
