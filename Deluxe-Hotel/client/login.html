@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -47,7 +47,6 @@
     </div>
 
     <!-- HEADER-SECTION -->
-
     <header>
       <div id="header-top">
         <div class="container">
@@ -57,13 +56,18 @@
               <h5>361 Mireles Barrio, Spain</h5>
             </div>
             <div class="header-top-left">
-              <a href="https://www.facebook.com/" target="_blank">Fb</a>
-              <span>-</span>
-              <a href="https://www.linkedin.com/feed/" target="_blank">In</a>
-              <span>-</span>
-              <a href="https://twitter.com/" target="_blank">Tw</a>
-              <span>-</span>
-              <a href="https://www.youtube.com/" target="_blank">Yt</a>
+              <div class="navbar-search">
+                <!-- <i class="fa-solid fa-user"></i> -->
+                <div class="menu-circle">
+                  <div class="circle circle-x"></div>
+                  <div class="circle circle-x"></div>
+                  <div class="circle circle-y"></div>
+                  <div class="circle circle-y"></div>
+                </div>
+              </div>
+              <div class="my-account">
+                <a href="./login.html"> <img src="./assets/images/avatar.jpg" alt="" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -85,15 +89,29 @@
 
             <nav id="nav">
               <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html" class="active">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li>
-                  <a href="./rooms.html" class="active"
+                  <a href="./rooms.html"
                     >Rooms <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="./rooms.html">ROOMS LISTING</a></li>
-                        <li><a href="./room-details.html">ROOM DETAILS</a></li>
+                        <li><a href="./shop.html">ROOMS GRID STYLE</a></li>
+                        <li><a href="./rooms.html">ROOMS LIST STYLE</a></li>
+                        <li>
+                          <a href="./room-details.html">ROOM DETAILS</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    >Shop <i class="fa-solid fa-chevron-down down"></i>
+                    <div class="drop-down">
+                      <ul class="dropdown">
+                        <li><a href="./basket.html">CART</a></li>
+                        <li><a href="./login.html">My Account</a></li>
                       </ul>
                     </div>
                   </a>
@@ -103,9 +121,9 @@
                     >Hotel <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="#">HOTEL ACCOUNT</a></li>
-                        <li><a href="#">HOTEL CART</a></li>
-                        <li><a href="#">HOTEL CHECKOUT</a></li>
+                        <li><a href="./menu.html">Restaurant</a></li>
+                        <li><a href="./room-details.html">DETAILS</a></li>
+                        <li><a href="./service.html">Service</a></li>
                       </ul>
                     </div>
                   </a>
@@ -118,28 +136,17 @@
                         <li><a href="./staffs.html">OUR STAFFS</a></li>
                         <li><a href="./amenities.html">AMENITIES</a></li>
                         <li><a href="./blog.html">LATEST BLOGS</a></li>
-                        <li><a href="./menu.html">Restaurant</a></li>
-                        <li><a href="./room-details.html">DETAILS</a></li>
                         <li><a href="#">PRICING PLANS</a></li>
-                        <li><a href="#">404 PAGE</a></li>
+                        <li><a href="./not-found.html">404 PAGE</a></li>
                       </ul>
                     </div>
                   </a>
                 </li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
               </ul>
             </nav>
 
-            <div class="navbar-search">
-              <i class="fa-solid fa-magnifying-glass" id="navbar-search"></i>
-              <div class="menu-circle">
-                <div class="circle circle-x"></div>
-                <div class="circle circle-x"></div>
-                <div class="circle circle-y"></div>
-                <div class="circle circle-y"></div>
-              </div>
-              <i class="fa-bars fa-solid" id="menu-icon"></i>
-            </div>
+            <i class="fa-bars fa-solid" id="menu-icon"></i>
           </div>
         </div>
       </div>
@@ -191,69 +198,62 @@
       </div>
     </div>
 
-    <section class="signup-login">
+    <section id="rooms-section">
+      <div class="empty">
+        <div class="container">
+          <div class="rooms-section">
+            <h1>Sign In</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sign-up">
       <div class="container">
-        <div class="content">
-          <div class="form-container sign-up">
-            <form id="sign-up-form">
-              <h1>Create Account</h1>
-              <div class="social-icons">
-                <a href="#" class="icon"
-                  ><i class="fa-brands fa-google-plus-g"></i
-                ></a>
-                <a href="#" class="icon"
-                  ><i class="fa-brands fa-facebook-f"></i
-                ></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"
-                  ><i class="fa-brands fa-linkedin-in"></i
-                ></a>
-              </div>
-              <span>or use your email for registeration</span>
-              <input type="text" placeholder="Name" id="sign-up-name" />
-              <input type="email" placeholder="Email" id="sign-up-email" />
-              <input type="password" placeholder="Password"  id="sign-up-password"/>
-              <button>Sign Up</button>
-            </form>
-          </div>
-          <div class="form-container sign-in">
-            <form id="sign-in-form">
-              <h1>Sign In</h1>
-              <div class="social-icons">
-                <a href="#" class="icon"
-                  ><i class="fa-brands fa-google-plus-g"></i
-                ></a>
-                <a href="#" class="icon"
-                  ><i class="fa-brands fa-facebook-f"></i
-                ></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"
-                  ><i class="fa-brands fa-linkedin-in"></i
-                ></a>
-              </div>
-              <span>or use your email password</span>
-              <input type="email" placeholder="Email" id="sign-in-email" />
-              <input type="password" placeholder="Password"  id="sign-in-password"/>
-              <a href="#">Forget Your Password?</a>
-              <button>Sign In</button>
-            </form>
-          </div>
-          <div class="toggle-container">
-            <div class="toggle">
-              <div class="toggle-panel toggle-left">
-                <h1>Welcome Back!</h1>
-                <p>Enter your personal details to use all of site features</p>
-                <button class="hidden" id="login">Sign In</button>
-              </div>
-              <div class="toggle-panel toggle-right">
-                <h1>Hello, Friend!</h1>
-                <p>
-                  Register with your personal details to use all of site
-                  features
-                </p>
-                <button class="hidden" id="register">Sign Up</button>
-              </div>
+        <div id="sign-up-form-sec">
+          <div class="content">
+            <h1>Login to your account 👏</h1>
+            <div class="social-login">
+              <button class="google">
+                <i class="bx bxl-google"></i>
+                Use Google
+              </button>
+              <button class="google">
+                <i class="bx bxl-apple"></i>
+                Use Apple
+              </button>
             </div>
+            <div class="divider">
+              <div class="line"></div>
+              <p>Or</p>
+              <div class="line"></div>
+            </div>
+
+            <form>
+              <label for="email">Email:</label>
+              <div class="custome-input">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  autocomplete="off"
+                />
+                <i class="bx bx-at"></i>
+              </div>
+              <label for="password">Password:</label>
+              <div class="custome-input">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Your Password"
+                />
+                <i class="bx bx-lock-alt"></i>
+              </div>
+              <button class="login">Login</button>
+              <div class="links">
+                <a href="#">Reset Password</a>
+                <a href="./signup.html">Don't have an account?</a>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -361,7 +361,7 @@
     <div class="arrow-up">
       <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/common.js"></script>

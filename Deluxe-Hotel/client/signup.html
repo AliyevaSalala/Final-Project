@@ -57,13 +57,20 @@
               <h5>361 Mireles Barrio, Spain</h5>
             </div>
             <div class="header-top-left">
-              <a href="https://www.facebook.com/" target="_blank">Fb</a>
-              <span>-</span>
-              <a href="https://www.linkedin.com/feed/" target="_blank">In</a>
-              <span>-</span>
-              <a href="https://twitter.com/" target="_blank">Tw</a>
-              <span>-</span>
-              <a href="https://www.youtube.com/" target="_blank">Yt</a>
+              <div class="navbar-search">
+                <!-- <i class="fa-solid fa-user"></i> -->
+                <div class="menu-circle">
+                  <div class="circle circle-x"></div>
+                  <div class="circle circle-x"></div>
+                  <div class="circle circle-y"></div>
+                  <div class="circle circle-y"></div>
+                </div>
+              </div>
+              <div class="my-account">
+                <a href="./login.html">
+                  <img src="./assets/images/avatar.jpg" alt=""
+                /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -85,15 +92,29 @@
 
             <nav id="nav">
               <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html" class="active">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li>
                   <a href="./rooms.html"
                     >Rooms <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="./rooms.html">ROOMS LISTING</a></li>
-                        <li><a href="./room-details.html">ROOM DETAILS</a></li>
+                        <li><a href="./shop.html">ROOMS GRID STYLE</a></li>
+                        <li><a href="./rooms.html">ROOMS LIST STYLE</a></li>
+                        <li>
+                          <a href="./room-details.html">ROOM DETAILS</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    >Shop <i class="fa-solid fa-chevron-down down"></i>
+                    <div class="drop-down">
+                      <ul class="dropdown">
+                        <li><a href="./basket.html">CART</a></li>
+                        <li><a href="./login.html">My Account</a></li>
                       </ul>
                     </div>
                   </a>
@@ -111,34 +132,24 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="active"
+                  <a href="#"
                     >Pages<i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
                         <li><a href="./staffs.html">OUR STAFFS</a></li>
                         <li><a href="./amenities.html">AMENITIES</a></li>
                         <li><a href="./blog.html">LATEST BLOGS</a></li>
-
                         <li><a href="#">PRICING PLANS</a></li>
                         <li><a href="./not-found.html">404 PAGE</a></li>
                       </ul>
                     </div>
                   </a>
                 </li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
               </ul>
             </nav>
 
-            <div class="navbar-search">
-              <i class="fa-solid fa-magnifying-glass" id="navbar-search"></i>
-              <div class="menu-circle">
-                <div class="circle circle-x"></div>
-                <div class="circle circle-x"></div>
-                <div class="circle circle-y"></div>
-                <div class="circle circle-y"></div>
-              </div>
-              <i class="fa-bars fa-solid" id="menu-icon"></i>
-            </div>
+            <i class="fa-bars fa-solid" id="menu-icon"></i>
           </div>
         </div>
       </div>
@@ -199,7 +210,7 @@
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
             >
-              Sign Up
+              SignUp
             </h1>
           </div>
         </div>
@@ -208,7 +219,58 @@
     <section id="sign-up">
       <div class="container">
         <div id="sign-up-form-sec">
-          <div class="sign-up-form-sec">
+          <div class="content">
+            <h1>Create new account 👏</h1>
+            <div class="social-login">
+              <button class="google">
+                <i class="bx bxl-google"></i>
+                Use Google
+              </button>
+              <button class="google">
+                <i class="bx bxl-apple"></i>
+                Use Apple
+              </button>
+            </div>
+            <div class="divider">
+              <div class="line"></div>
+              <p>Or</p>
+              <div class="line"></div>
+            </div>
+
+            <form>
+              <label for="email">User name</label>
+              <div class="custome-input">
+                <input
+                  type="texts"
+                  name="texts"
+                  placeholder="Your Name"
+                  autocomplete="off"
+                />
+                <i class="bx bx-at"></i>
+              </div>
+              <label for="email">Email:</label>
+              <div class="custome-input">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  autocomplete="off"
+                />
+                <i class="bx bx-at"></i>
+              </div>
+              <label for="password">Password:</label>
+              <div class="custome-input">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Your Password"
+                />
+                <i class="bx bx-lock-alt"></i>
+              </div>
+              <button class="login">Sign Up</button>
+            </form>
+          </div>
+          <!-- <div class="sign-up-form-sec">
             <div class="signup-section">
               <div class="social-buttons">
                 <button><i class="bx bxl-google"></i> Use Google</button>
@@ -229,7 +291,7 @@
                 <button type="submit" class="btn">Signup</button>
               </form>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
