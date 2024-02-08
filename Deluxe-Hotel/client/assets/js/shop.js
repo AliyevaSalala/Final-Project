@@ -11,8 +11,6 @@ categoryBtn.forEach((item) =>
   })
 );
 
-
-
 // let base64;
 
 let limit = 3;
@@ -53,7 +51,10 @@ function drawCards(data) {
                     ${item.desc}
                   </p>
                   <p class="price">$${item.price}.0</p>
+                  <div class="body-bottom">
                   <a href="room-details.html?id=${item._id}">Book</a>
+                  <i class="fa-solid fa-cart-shopping" onclick=addToBasket("${item._id}")></i>
+                  </div>
                 </div>
               </div>
 
@@ -83,3 +84,29 @@ inputSearch.addEventListener("input", function (e) {
   );
   drawCards(filtered);
 });
+
+// ADD-TO-BASKET
+
+let basket = getItemLocalStorage();
+
+function addToBasket(id) {
+  let basketProduct = array.find((item) => item._id === id);
+
+  let index = basket.findIndex((item) => item._id === id);
+
+  if (index > -1) {
+    basket[index].count = basket[index].count + 1;
+  } else {
+    basket.push({ count: 1, ...basketProduct });
+  }
+
+  setItemLocalStorage(basket);
+}
+
+function setItemLocalStorage(item) {
+  localStorage.setItem("product", JSON.stringify(item));
+}
+
+function getItemLocalStorage() {
+  return JSON.parse(localStorage.getItem("product")) || [];
+}

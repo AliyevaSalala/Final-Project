@@ -93,6 +93,7 @@ async function getDetailsData(endpoint) {
   // console.log(res.data);
   detailsSection.innerHTML = `
     <div class="texts">
+    <img src="${res.data.image}" alt=""  class="hover-image"/>
       <div class="icons">
         <i class="fa-regular fa-star"></i>
         <i class="fa-regular fa-star"></i>
