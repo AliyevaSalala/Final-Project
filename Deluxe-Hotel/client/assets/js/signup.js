@@ -24,7 +24,7 @@ signUpForm.addEventListener("submit", function (e) {
   let useremail = userEmail.value;
   let password = userPassword.value;
 
-  if (!userName || !userEmail || !userPassword) {
+  if (!username || !useremail || !password) {
     Toastify({
       text: "Please fill in all fields..",
       duration: 3000,
@@ -35,10 +35,12 @@ signUpForm.addEventListener("submit", function (e) {
     }).showToast();
     return;
   }
+
   const users = JSON.parse(localStorage.getItem("users")) || {};
-  if (users.hasOwnProperty(username)) {
+
+  if (users.hasOwnProperty(useremail)) {
     Toastify({
-      text: "This username already exists. Please choose another username.",
+      text: "This email is already registered. Please use another email.",
       duration: 3000,
       close: true,
       gravity: "top",
