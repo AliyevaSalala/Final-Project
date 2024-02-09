@@ -1059,6 +1059,93 @@ footer .footer .footer-section .footer-bottom p:hover {
   font-weight: 400;
 }
 
+#client-say {
+  padding: 5rem 0;
+  background-image: url("https://webredox.net/demo/wp/patara/wp-content/uploads/2023/10/18.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#client-say .client-say {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  #client-say .client-say {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+#client-say .client-say .client-left {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  #client-say .client-say .client-left {
+    width: 100%;
+  }
+}
+#client-say .client-say .client-left h2 {
+  color: #fff;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+#client-say .client-say .client-left h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #8e8e8e;
+}
+#client-say .client-say .client-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  #client-say .client-say .client-right {
+    width: 100%;
+  }
+}
+#client-say .client-say .client-right h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+}
+#client-say .client-say .client-right .icons {
+  display: flex;
+  gap: 8px;
+}
+#client-say .client-say .client-right .icons i {
+  color: #fbbb43;
+  font-size: 20px;
+}
+#client-say .client-say .client-right p {
+  color: #dedede;
+  max-width: 500px;
+  line-height: 20px;
+}
+#client-say .client-say .client-right .card-body {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#client-say .client-say .client-right .card-body img {
+  width: 100px;
+  border-radius: 50%;
+}
+#client-say .client-say .client-right .card-body .card-texts h3 {
+  padding: 5px 0;
+  color: #c7c7c7;
+  font-size: 20px;
+}
+#client-say .client-say .client-right .card-body .card-texts h4 {
+  color: #c7c7c7;
+  font-size: 15px;
+}
+
 #check-availibality {
   padding: 5rem 0;
 }
