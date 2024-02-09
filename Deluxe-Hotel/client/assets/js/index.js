@@ -48,52 +48,73 @@ $(".counter").each(function () {
   );
 });
 
-// OWL-CAROUSEL-TWO
-const firstName = document.querySelector("#fist-name");
-const lastName = document.querySelector("#last-name");
-const email = document.querySelector("#email");
-const phone = document.querySelector("#phone");
+// contact-form
+const firstNameInput = document.querySelector("#first-name");
+const lastNameInput = document.querySelector("#last-name");
+const emailInput = document.querySelector("#email");
+const phoneInput = document.querySelector("#phone");
+const textareaInput = document.querySelector("#textarea");
+const myForm = document.querySelector("#my-form");
 
-// function submitForm() {
-//   Toastify({
-//     text: "Succefuly!",
-//     duration: 5000,
-//     gravity: "bottom",
-//     position: "right",
-//     backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-//   }).showToast();
-// }
+function saveFormData() {
+  const formData = {
+    firstName: firstNameInput.value.trim(),
+    lastName: lastNameInput.value.trim(),
+    email: emailInput.value.trim(),
+    phone: phoneInput.value.trim(),
+    textarea: textareaInput.value.trim(),
+  };
+  localStorage.setItem("formData", JSON.stringify(formData));
+}
 
-function submitForm() {
-  if (firstName && lastName && email && phone) {
-    showToast("The form was sent successfully");
-  } else {
-    showToast("Please fill in the form", "red");
+function loadFormData() {
+  const savedData = localStorage.getItem("formData");
+  if (savedData) {
+    const formData = JSON.parse(savedData);
+    firstNameInput.value = formData.firstName;
+    lastNameInput.value = formData.lastName;
+    emailInput.value = formData.email;
+    phoneInput.value = formData.phone;
+    textareaInput.value = formData.textarea;
   }
 }
 
-function showToast(
-  message,
-  backgroundColor = "linear-gradient(to right, #00b09b, #96c93d)"
-) {
-  Toastify({
-    text: message,
-    duration: 3000,
-    gravity: "bottom",
-    position: "right",
-    backgroundColor: backgroundColor,
-  }).showToast();
-}
-// window.onscroll = () => {
-//   sections.forEach((sec) => {
-//     let top = window.scrollY;
-//     let offset = sec.offsetTop;
-//     let height = sec.offsetHeight;
+document.addEventListener("DOMContentLoaded", function () {
+  loadFormData();
+});
 
-//     if (top >= offset && top < offset + height) {
-//       sec.classList.add("show-animate");
-//     } else {
-//       sec.classList.remove("show-animate");
-//     }
-//   });
-// };
+myForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // Form validation
+  let firstName = firstNameInput.value.trim();
+  let lastName = lastNameInput.value.trim();
+  let email = emailInput.value.trim();
+  let phone = phoneInput.value.trim();
+  let textarea = textareaInput.value.trim();
+
+  if (
+    firstName === "" ||
+    lastName === "" ||
+    email === "" ||
+    phone === "" ||
+    textarea === ""
+  ) {
+    Toastify({
+      text: "Please fill in all fields",
+      backgroundColor: "linear-gradient(to right, #FF6E14, #FFB42A)",
+    }).showToast();
+    return;
+  }
+
+  saveFormData();
+
+  setTimeout(function () {
+    Toastify({
+      text: "Form submitted successfully!",
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+    }).showToast();
+    document.getElementById("my-form").reset();
+    localStorage.removeItem("formData");
+  }, 1000);
+});
