@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const productRouter = require("./routes/productRoutes.js");
+const reservationRouter = require("./routes/reservationRoutes.js");
+const menuRouter = require("./routes/menuRoutes.js");
 
 require("dotenv").config();
 const app = express();
@@ -18,6 +20,8 @@ app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
+app.use("/reservations", reservationRouter);
+app.use("/menu", menuRouter);
 app.use("/products", productRouter);
 mongoose
   .connect(DB_URL)
