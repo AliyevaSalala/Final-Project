@@ -46,7 +46,11 @@ function drawMenu(data) {
                   <div class="item-left">
                     <div class="basket">
                       <p>$72.6</p>
-                      <i class="fa-regular fa-heart"></i>
+                      <i class="${
+                        favsProducts.some((item) => item.id === element._id)
+                          ? "fa-solid fa-heart"
+                          : "fa-regular fa-heart"
+                      }" onclick=addToFav("${element._id}",this)></i>
                     </div>
                   </div>
                 </div>
@@ -65,3 +69,36 @@ let categoryName = "starters";
 //     drawMenu(filtered);
 //   });
 // });
+
+// ADD TO-FAVORITE
+let favsProducts = getItemToLocalStorage();
+
+function addToFav(id, icon) {
+  icon.className === "fa-regular fa-heart"
+    ? (icon.className = "fa-solid fa-heart")
+    : (icon.className = "fa-regular fa-heart");
+
+  let favs = getItemToLocalStorage();
+
+  let bool = favs.find((item) => item._id == id);
+
+  let product = menus.find((item) => item._id === id);
+  // console.log(product);
+  if (bool) {
+    favs = favs.filter((item) => item._id !== id);
+  } else {
+    favs.push(product);
+  }
+
+  setItemToLocalStorage(favs);
+
+  // window.location.reload();
+}
+
+function setItemToLocalStorage(item) {
+  localStorage.setItem("favorite", JSON.stringify(item));
+}
+
+function getItemToLocalStorage(item) {
+  return JSON.parse(localStorage.getItem("favorite")) || [];
+}
