@@ -2,10 +2,25 @@ const tBody = document.querySelector("tbody");
 
 const totalPriceCount = document.querySelector(".total-price");
 const subTotalprice = document.querySelector(".subtotal-price");
-const basketCounter = document.querySelector(".basket-counter");
+const basketSearch = document.querySelector("#basket-search");
 
-let basket = getItemLocalStorage();
-basketCalculate();
+// const basketCounter = document.querySelector(".basket-counter");
+
+// let basket = getItemLocalStorage();
+// basketCalculate();
+
+let array = [];
+let productCopy = [];
+
+async function getAllData(endpoint) {
+  const res = await axios(`${DB_URL}/${endpoint}`);
+  // console.log(res.data);
+  array = res.data;
+  productCopy = structuredClone(array);
+}
+
+getAllData("products");
+
 function drawTable(data) {
   tBody.innerHTML = "";
   data.forEach((element) => {
@@ -97,14 +112,24 @@ function subTotalPrice() {
 }
 
 subTotalPrice();
-function setItemLocalStorage(item) {
-  localStorage.setItem("product", JSON.stringify(item));
-}
+// function setItemLocalStorage(item) {
+//   localStorage.setItem("product", JSON.stringify(item));
+// }
 
-function getItemLocalStorage() {
-  return JSON.parse(localStorage.getItem("product")) || [];
-}
+// function getItemLocalStorage() {
+//   return JSON.parse(localStorage.getItem("product")) || [];
+// }
 
-function basketCalculate() {
-  basketCounter.textContent = basket.reduce((acc, curr) => acc + curr.count, 0);
-}
+// function basketCalculate() {
+//   basketCounter.textContent = basket.reduce((acc, curr) => acc + curr.count, 0);
+// }
+
+// BASKET-SEARCH
+
+basketSearch.addEventListener("input", function (e) {
+  e.preventDefault();
+  let filtered = basket.filter((item) =>
+    item.title.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+  );
+  drawTable(filtered);
+});

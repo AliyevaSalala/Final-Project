@@ -3,7 +3,7 @@ const productSection = document.querySelector(".product-cards");
 const loadMoreBtn = document.querySelector(".load-more-btn");
 const inputSearch = document.querySelector("#search");
 const sortBtn = document.querySelector(".sort-btn");
-const basketCounter = document.querySelector(".basket-counter");
+// const basketCounter = document.querySelector(".basket-counter");
 
 categoryBtn.forEach((item) =>
   item.addEventListener("click", function () {
@@ -88,8 +88,7 @@ inputSearch.addEventListener("input", function (e) {
 
 // ADD-TO-BASKET
 
-let basket = getItemLocalStorage();
-basketCalculate();
+
 
 function addToBasket(id) {
   let basketProduct = array.find((item) => item._id === id);
@@ -106,14 +105,5 @@ function addToBasket(id) {
   basketCalculate();
 }
 
-function setItemLocalStorage(item) {
-  localStorage.setItem("product", JSON.stringify(item));
-}
 
-function getItemLocalStorage() {
-  return JSON.parse(localStorage.getItem("product")) || [];
-}
 
-function basketCalculate() {
-  basketCounter.textContent = basket.reduce((acc, curr) => acc + curr.count, 0);
-}

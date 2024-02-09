@@ -71,6 +71,23 @@ window.addEventListener("mousemove", function (e) {
   );
 });
 
+// BASKET
+const basketCounter = document.querySelector(".basket-counter");
+
+let basket = getItemLocalStorage();
+basketCalculate();
+
+function setItemLocalStorage(item) {
+  localStorage.setItem("product", JSON.stringify(item));
+}
+
+function getItemLocalStorage() {
+  return JSON.parse(localStorage.getItem("product")) || [];
+}
+function basketCalculate() {
+  basketCounter.textContent = basket.reduce((acc, curr) => acc + curr.count, 0);
+}
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   document.querySelector("#content").style.display = "none";
 

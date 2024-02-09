@@ -92,7 +92,7 @@
 
             <nav id="nav">
               <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html" class="active">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li>
                   <a href="./rooms.html"
@@ -109,11 +109,11 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="active"
+                  <a href="#"
                     >Shop <i class="fa-solid fa-chevron-down down"></i>
                     <div class="drop-down">
                       <ul class="dropdown">
-                        <li><a href="./basket.html">CART</a></li>
+                        <!-- <li><a href="./basket.html">CART</a></li> -->
                         <li><a href="./login.html">My Account</a></li>
                       </ul>
                     </div>
@@ -222,9 +222,12 @@
         <div class="basket-sec">
           <div class="input-btn">
             <form action="">
-              <input type="search" id="search" placeholder="Search...." />
+              <input
+                type="search"
+                id="basket-search"
+                placeholder="Search...."
+              />
             </form>
-            <button class="sort-btn">Ascending</button>
           </div>
           <table>
             <thead>
@@ -410,6 +413,7 @@
       <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/common.js"></script>
