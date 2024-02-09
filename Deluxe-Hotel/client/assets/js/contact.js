@@ -5,3 +5,5 @@
 //     showToast("Please fill in the form", "red");
 //   }
 // }
+
+AOS.init();

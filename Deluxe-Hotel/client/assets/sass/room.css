@@ -233,6 +233,19 @@ header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a {
 header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a:hover {
   color: #efa824;
 }
+header #header-bottom .header-bottom nav ul .basket-icon {
+  position: relative;
+  color: #fff;
+}
+header #header-bottom .header-bottom nav ul .basket-icon span {
+  position: absolute;
+  top: -15px;
+  padding: 3px 6px;
+  border-radius: 50%;
+  background-color: #7e7351;
+  color: #fff;
+  font-size: 13px;
+}
 header #header-bottom .header-bottom #menu-icon {
   display: none;
   font-size: 20px;
@@ -274,6 +287,9 @@ header #header-bottom .header-bottom .fa-xmark {
   header #header-bottom .header-bottom nav ul li a {
     color: #3d3931;
   }
+  header #header-bottom .header-bottom nav ul .basket-icon {
+    color: #3d3931;
+  }
   header #header-bottom .header-bottom nav.show {
     left: 0;
   }
@@ -307,6 +323,9 @@ header #header-bottom .header-bottom .fa-xmark {
     padding: 30px;
   }
   header #header-bottom .header-bottom nav ul li a {
+    color: #3d3931;
+  }
+  header #header-bottom .header-bottom nav ul .basket-icon {
     color: #3d3931;
   }
   header #header-bottom .header-bottom nav.show {

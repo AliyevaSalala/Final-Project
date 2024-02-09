@@ -153,6 +153,19 @@ header {
               }
             }
           }
+          .basket-icon {
+            position: relative;
+            color: #fff;
+            span {
+              position: absolute;
+              top: -15px;
+              padding: 3px 6px;
+              border-radius: 50%;
+              background-color: #7e7351;
+              color: #fff;
+              font-size: 13px;
+            }
+          }
         }
       }
       #menu-icon {
@@ -202,6 +215,9 @@ header {
                 color: $color-brown;
               }
             }
+            .basket-icon {
+              color: $color-brown;
+            }
           }
 
           &.show {
@@ -246,6 +262,9 @@ header {
               a {
                 color: $color-brown;
               }
+            }
+            .basket-icon {
+              color: $color-brown;
             }
           }
 
