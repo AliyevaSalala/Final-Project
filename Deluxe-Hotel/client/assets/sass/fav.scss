@@ -1,0 +1,32 @@
+@import "./base/reset";
+@import "./base/global";
+@import "./utilits/mixin";
+@import "./utilits/variables";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+#about {
+  background-image: url("../images/4-4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .empty {
+    padding: 100px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    .about-section {
+      text-align: center;
+      h1 {
+        padding-top: 70px;
+        font-size: 70px;
+        font-weight: 400;
+        font-family: "Forum", serif;
+        color: #fff;
+
+        @media screen and (max-width: 767px) {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}

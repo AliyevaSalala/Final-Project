@@ -57,29 +57,6 @@ body.show-account .acoount {
   pointer-events: none;
 }
 
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.loading-container .loading {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #c19d68;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .arrow-up {
   position: fixed;
   bottom: 10px;
@@ -823,20 +800,20 @@ footer .footer .footer-section .footer-bottom p:hover {
     font-size: 25px;
   }
 }
-#starters-sec .starters-sec .sec-left .menu-btn {
+#starters-sec .starters-sec .sec-left .menu-btns {
   display: flex;
   gap: 20px;
   padding-bottom: 10px;
 }
 @media screen and (max-width: 767px) {
-  #starters-sec .starters-sec .sec-left .menu-btn {
+  #starters-sec .starters-sec .sec-left .menu-btns {
     flex-direction: column;
   }
-  #starters-sec .starters-sec .sec-left .menu-btn button {
+  #starters-sec .starters-sec .sec-left .menu-btns button {
     width: 200px;
   }
 }
-#starters-sec .starters-sec .sec-left .menu-btn button {
+#starters-sec .starters-sec .sec-left .menu-btns button {
   padding: 10px 20px;
   border: 1px solid transparent;
   background-color: #9b804e;
@@ -844,7 +821,7 @@ footer .footer .footer-section .footer-bottom p:hover {
   cursor: pointer;
   transition: all 0.6s;
 }
-#starters-sec .starters-sec .sec-left .menu-btn button.active {
+#starters-sec .starters-sec .sec-left .menu-btns button.active {
   background-color: transparent;
   border: 1px solid #9b804e;
   color: #fff;

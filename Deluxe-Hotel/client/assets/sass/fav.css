@@ -703,251 +703,28 @@ footer .footer .footer-section .footer-bottom p:hover {
   }
 }
 
-#blog-home {
+#about {
   background-image: url("../images/4-4.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#blog-home .empty {
-  padding: 150px 0;
-  background-color: rgba(0, 0, 0, 0.5);
+#about .empty {
+  padding: 100px 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-#blog-home .empty .blog-section {
+#about .empty .about-section {
   text-align: center;
 }
-#blog-home .empty .blog-section h1 {
-  font-size: 50px;
+#about .empty .about-section h1 {
   padding-top: 70px;
+  font-size: 70px;
   font-weight: 400;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Forum", serif;
   color: #fff;
 }
 @media screen and (max-width: 767px) {
-  #blog-home .empty .blog-section h1 {
+  #about .empty .about-section h1 {
     font-size: 40px;
   }
-}
-
-#blog-about-sec {
-  padding: 3rem 0;
-  background-color: #f6f1f0;
-}
-#blog-about-sec .blog-about {
-  display: flex;
-  gap: 40px;
-}
-@media screen and (max-width: 1024px) {
-  #blog-about-sec .blog-about {
-    flex-direction: column;
-  }
-}
-#blog-about-sec .blog-about .blog-about-right {
-  width: 70%;
-}
-@media screen and (max-width: 1024px) {
-  #blog-about-sec .blog-about .blog-about-right {
-    width: 100%;
-  }
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-item {
-  position: relative;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-item img {
-  width: 100%;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-item button {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  padding: 10px 25px;
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body {
-  padding: 10px;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body h4 {
-  color: #aa8453;
-  font-weight: 300;
-  font-size: 12px;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body h1 {
-  padding: 10px 0;
-  color: #1b1b1b;
-  font-size: 32px;
-  font-weight: 400;
-  font-family: "Cormorant Garamond", serif;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body p {
-  color: #3b3b3b;
-  padding-bottom: 30px;
-  font-size: 15px;
-  font-weight: 300;
-  max-width: 600px;
-  line-height: 25px;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body a {
-  padding: 15px 25px;
-  background-color: #aa8453;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 300;
-  transition: all 0.5s;
-}
-#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body a:hover {
-  box-shadow: inset 10em 0 0 0 #000;
-}
-#blog-about-sec .blog-about .blog-about-left {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-left: 40px;
-  padding-top: 30px;
-}
-@media screen and (max-width: 1024px) {
-  #blog-about-sec .blog-about .blog-about-left {
-    width: 100%;
-  }
-}
-#blog-about-sec .blog-about .blog-about-left .input-box {
-  box-shadow: 5px 5px 25px #ddd;
-  padding: 20px 45px;
-  background-color: #fff;
-}
-#blog-about-sec .blog-about .blog-about-left .input-box input {
-  background-color: #f6f1f0;
-  padding: 10px 20px;
-  width: 100%;
-  border: 1px solid transparent;
-}
-#blog-about-sec .blog-about .blog-about-left .input-box input::-moz-placeholder {
-  color: #acacaa;
-}
-#blog-about-sec .blog-about .blog-about-left .input-box input::placeholder {
-  color: #acacaa;
-}
-#blog-about-sec .blog-about .blog-about-left .recent-posts {
-  box-shadow: 5px 5px 25px #ddd;
-  padding: 20px 45px;
-  background-color: #fff;
-}
-#blog-about-sec .blog-about .blog-about-left .recent-posts h3 {
-  color: #1b1b1b;
-  font-weight: 400;
-  font-size: 25px;
-  padding-bottom: 10px;
-  font-family: "Cormorant Garamond", serif;
-  border-bottom: 1px solid #acacaa;
-}
-#blog-about-sec .blog-about .blog-about-left .recent-posts .post-card {
-  padding: 20px 0;
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-@media screen and (max-width: 400px) {
-  #blog-about-sec .blog-about .blog-about-left .recent-posts .post-card {
-    flex-direction: column;
-    align-items: start;
-  }
-}
-#blog-about-sec .blog-about .blog-about-left .recent-posts .post-card .card-right img {
-  width: 70px;
-}
-#blog-about-sec .blog-about .blog-about-left .recent-posts .post-card .card-left p {
-  font-size: 15px;
-  color: #3b3b3b;
-}
-#blog-about-sec .blog-about .blog-about-left .archives {
-  box-shadow: 5px 5px 25px #ddd;
-  padding: 20px 45px;
-  background-color: #fff;
-}
-#blog-about-sec .blog-about .blog-about-left .archives h3 {
-  color: #1b1b1b;
-  font-weight: 400;
-  font-size: 25px;
-  font-family: "Cormorant Garamond", serif;
-  padding: 10px 0;
-  border-bottom: 1px solid #acacaa;
-}
-#blog-about-sec .blog-about .blog-about-left .archives p {
-  padding: 10px 0;
-  font-size: 15px;
-  color: #3b3b3b;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-#blog-about-sec .blog-about .blog-about-left .archives p:hover {
-  color: #aa8453;
-}
-#blog-about-sec .blog-about .blog-about-left .categories {
-  box-shadow: 5px 5px 25px #ddd;
-  padding: 30px 45px;
-  background-color: #fff;
-}
-#blog-about-sec .blog-about .blog-about-left .categories h3 {
-  color: #1b1b1b;
-  font-weight: 400;
-  font-size: 25px;
-  font-family: "Cormorant Garamond", serif;
-  padding: 10px 0;
-  border-bottom: 1px solid #acacaa;
-}
-#blog-about-sec .blog-about .blog-about-left .categories p {
-  padding: 10px 0;
-  font-size: 15px;
-  color: #3b3b3b;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-#blog-about-sec .blog-about .blog-about-left .categories p:hover {
-  color: #aa8453;
-}
-#blog-about-sec .blog-about .blog-about-left .tags {
-  box-shadow: 5px 5px 25px #ddd;
-  padding: 40px 45px;
-  background-color: #fff;
-}
-#blog-about-sec .blog-about .blog-about-left .tags h3 {
-  color: #1b1b1b;
-  font-weight: 400;
-  font-size: 25px;
-  font-family: "Cormorant Garamond", serif;
-  padding: 10px 0;
-  border-bottom: 1px solid #acacaa;
-}
-#blog-about-sec .blog-about .blog-about-left .tags .btn {
-  padding-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-#blog-about-sec .blog-about .blog-about-left .tags .btn button {
-  width: 80px;
-  padding: 10px 15px;
-  font-size: 15px;
-  border: 1px solid transparent;
-  background-color: #f6f1f0;
-  transition: all 0.6s;
-  cursor: pointer;
-  color: #6e6e6e;
-}
-#blog-about-sec .blog-about .blog-about-left .tags .btn button:hover {
-  background-color: #aa8453;
-  color: #fff;
-}/*# sourceMappingURL=blog.css.map */
+}/*# sourceMappingURL=fav.css.map */

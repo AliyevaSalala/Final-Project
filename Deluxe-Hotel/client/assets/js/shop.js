@@ -17,6 +17,7 @@ categoryBtn.forEach((item) =>
 let limit = 3;
 let array = [];
 let productCopy = [];
+let login = localStorage.getItem("login");
 
 async function getAllData(endpoint) {
   const res = await axios(`${DB_URL}/${endpoint}`);
@@ -88,22 +89,21 @@ inputSearch.addEventListener("input", function (e) {
 
 // ADD-TO-BASKET
 
-
-
 function addToBasket(id) {
-  let basketProduct = array.find((item) => item._id === id);
+  if (login === "true") {
+    let basketProduct = array.find((item) => item._id === id);
 
-  let index = basket.findIndex((item) => item._id === id);
+    let index = basket.findIndex((item) => item._id === id);
 
-  if (index > -1) {
-    basket[index].count = basket[index].count + 1;
+    if (index > -1) {
+      basket[index].count = basket[index].count + 1;
+    } else {
+      basket.push({ count: 1, ...basketProduct });
+    }
+
+    setItemLocalStorage(basket);
+    basketCalculate();
   } else {
-    basket.push({ count: 1, ...basketProduct });
+    window.location = "login.html";
   }
-
-  setItemLocalStorage(basket);
-  basketCalculate();
 }
-
-
-

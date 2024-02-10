@@ -1,12 +1,12 @@
 const menuSection = document.querySelector(".menu-content");
 const menuBtnCategoyr = document.querySelectorAll(".menu-btn");
 
-// menuBtnCategoyr.forEach((item) =>
-//   item.addEventListener("click", function () {
-//     document.querySelector(".menu-btn.active").classList.remove("active");
-//     this.classList.add("active");
-//   })
-// );
+menuBtnCategoyr.forEach((item) =>
+  item.addEventListener("click", function () {
+    document.querySelector(".menu-btn.active").classList.remove("active");
+    this.classList.add("active");
+  })
+);
 
 let menus = [];
 
@@ -15,7 +15,9 @@ async function getData(endpoint) {
   // console.log(res.data);
   // drawMenu(res.data);
   menus = res.data;
-  let filtered = menus.filter((item) => item.menuCategory === "starters");
+  let filtered = menus.filter(
+    (item) => item.menuCategory.toLocaleLowerCase() === "starters"
+  );
   drawMenu(filtered);
   // console.log(menus);
 }
@@ -61,14 +63,20 @@ function drawMenu(data) {
 
 let categoryName = "starters";
 
-// menuBtnCategoyr.forEach((item) => {
-//   item.addEventListener("click", function () {
-//     categoryName = this.innerText;
-//     let filtered = menus.filter((item) => item.menuCategory === categoryName);
+menuBtnCategoyr.forEach((item) => {
+  item.addEventListener("click", function () {
+    categoryName = this.textContent;
+    let filtered = menus.filter(
+      (item) =>
+        item.menuCategory.toLocaleLowerCase() ===
+        categoryName.toLocaleLowerCase()
+    );
 
-//     drawMenu(filtered);
-//   });
-// });
+    drawMenu(filtered);
+    // console.log(filtered);  
+    console.log(this);  
+  });
+});
 
 // ADD TO-FAVORITE
 let favsProducts = getItemToLocalStorage();

@@ -42,6 +42,7 @@ signInForm.addEventListener("submit", function (e) {
       backgroundColor: "linear-gradient(to right, #50C9C3, #96DEDA)",
     }).showToast();
     // window.location.href = "shop.html";
+    localStorage.setItem("login", true);
   } else {
     Toastify({
       text: "Wrong username or password!",
