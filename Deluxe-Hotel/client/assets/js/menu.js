@@ -9,6 +9,7 @@ menuBtnCategoyr.forEach((item) =>
 );
 
 let menus = [];
+let login = localStorage.getItem("login");
 
 async function getData(endpoint) {
   const res = await axios(`${DB_URL}/${endpoint}`);
@@ -73,40 +74,62 @@ menuBtnCategoyr.forEach((item) => {
     );
 
     drawMenu(filtered);
-    // console.log(filtered);  
-    console.log(this);  
+    // console.log(filtered);
+    console.log(this);
   });
 });
 
 // ADD TO-FAVORITE
 let favsProducts = getItemToLocalStorage();
 
+// function initializeFavorites() {
+//   const favIcons = document.querySelectorAll(".favorite-icon");
+//   favIcons.forEach((icon) => {
+//     const id = icon.getAttribute("data-id");
+//     if (favsProducts.some((item) => item.id === id)) {
+//       icon.classList.add("fa-solid");
+//     } else {
+//       icon.classList.remove("fa-solid");
+//     }
+//   });
+// }
+
 function addToFav(id, icon) {
-  icon.className === "fa-regular fa-heart"
-    ? (icon.className = "fa-solid fa-heart")
-    : (icon.className = "fa-regular fa-heart");
+  if (login === "true") {
+    if (icon.classList.contains("fa-regular")) {
+      icon.classList.remove("fa-regular");
+      icon.classList.add("fa-solid");
+    } else {
+      icon.classList.remove("fa-solid");
+      icon.classList.add("fa-regular");
+    }
 
-  let favs = getItemToLocalStorage();
+    // console.log(id);
 
-  let bool = favs.find((item) => item._id == id);
+    let favs = getItemToLocalStorage();
 
-  let product = menus.find((item) => item._id === id);
-  // console.log(product);
-  if (bool) {
-    favs = favs.filter((item) => item._id !== id);
+    let bool = favs.find((item) => item._id == id);
+
+    let product = menus.find((item) => item._id === id);
+    // console.log(product);
+    if (bool) {
+      favs = favs.filter((item) => item._id !== id);
+    } else {
+      favs.push(product);
+    }
+
+    setItemToLocalStorage(favs);
   } else {
-    favs.push(product);
+    window.location = "login.html";
   }
-
-  setItemToLocalStorage(favs);
-
-  // window.location.reload();
 }
 
-function setItemToLocalStorage(item) {
-  localStorage.setItem("favorite", JSON.stringify(item));
+function setItemToLocalStorage(data) {
+  localStorage.setItem("favorite", JSON.stringify(data));
 }
 
-function getItemToLocalStorage(item) {
+function getItemToLocalStorage() {
   return JSON.parse(localStorage.getItem("favorite")) || [];
 }
+
+// initializeFavorites();

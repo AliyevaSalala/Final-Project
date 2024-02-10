@@ -70,6 +70,7 @@
       border-collapse: collapse;
       tr {
         th {
+          width: 400px;
           padding: 10px 20px;
           border: 1px solid rgba(250, 242, 227, 0.1);
           color: #ffffffc1;
@@ -80,6 +81,8 @@
           }
         }
         td {
+          width: 400px;
+          text-align: center;
           padding: 10px 20px;
           border: 1px solid rgba(250, 242, 227, 0.1);
           &:nth-child(odd) {
@@ -107,6 +110,7 @@
           .btn {
             text-align: center;
             button {
+              width: 30px;
               padding: 5px 10px;
               background-color: #999999;
               border: 1px solid transparent;
@@ -114,6 +118,7 @@
             }
             span {
               color: #404044;
+              font-size: 15px;
             }
           }
 

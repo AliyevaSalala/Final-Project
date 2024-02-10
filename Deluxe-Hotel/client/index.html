@@ -103,7 +103,16 @@
 
               <nav id="nav">
                 <ul>
-                  <li><a href="./index.html" class="active">Home</a></li>
+                  <li>
+                    <a href="./index.html"
+                      >Home <i class="fa-solid fa-chevron-down down"></i>
+                      <div class="drop-down">
+                        <ul class="dropdown">
+                          <li><a href="./home.html">Home slide2</a></li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li>
                   <li><a href="./about.html">About</a></li>
                   <li>
                     <a href="./rooms.html"
@@ -464,15 +473,19 @@
             <h1>Check Availability</h1>
             <div class="check-aval">
               <div class="check-availibaility">
-                <form action="/reservations" method="POST" class="grid">
+                <form class="grid">
                   <div class="check-input">
                     <label for=""> Check In</label> <br />
-                    <input type="date" value="2024-03-24" required />
+                    <input type="date" value="2024-03-24" id="check-in-input" />
                   </div>
                   <div class="border-left"></div>
                   <div class="check-input">
                     <label for=""> Check Out</label> <br />
-                    <input type="date" value="2024-03-25" required />
+                    <input
+                      type="date"
+                      value="2024-03-25"
+                      id="check-out-input"
+                    />
                   </div>
                   <div class="border-left"></div>
                   <div class="check-input">
@@ -481,18 +494,17 @@
                       type="number"
                       min="1"
                       placeholder="01Rooms#22222"
-                      id="number"
-                      required
+                      id="number-input"
                     />
                   </div>
                   <div class="border-left"></div>
                   <div class="check-input">
                     <label for="">Guests</label> <br />
-                    <select name="" id="">
-                      <option value="1">01 Adult, 0 Child</option>
-                      <option value="2">02 Adult, 1 Child</option>
-                      <option value="3">02 Adult, 2 Child</option>
-                      <option value="4">02 Adult, 3 Child</option>
+                    <select name="" id="check-select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
                     </select>
                   </div>
                   <div class="border-left"></div>
@@ -846,7 +858,7 @@
             </div>
 
             <div class="btn">
-              <a href="./amenities.html">View All</a>
+              <a href="#">View All</a>
             </div>
           </div>
         </div>

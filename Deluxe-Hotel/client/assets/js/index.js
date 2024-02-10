@@ -55,6 +55,16 @@ const emailInput = document.querySelector("#email");
 const phoneInput = document.querySelector("#phone");
 const textareaInput = document.querySelector("#textarea");
 const myForm = document.querySelector("#my-form");
+const checkForm = document.querySelector(".grid");
+const checkInInput = document.querySelector("#check-in-input");
+const checkOutInput = document.querySelector("#check-out-input");
+const numberInput = document.querySelector("#number-input");
+
+const select = document.querySelector("#check-select");
+
+let authorName;
+
+
 
 function saveFormData() {
   const formData = {
@@ -117,4 +127,45 @@ myForm.addEventListener("submit", function (event) {
     document.getElementById("my-form").reset();
     localStorage.removeItem("formData");
   }, 1000);
+});
+
+let array = [];
+
+async function getAllData(endpoint) {
+  const res = await axios(`${DB_URL}/${endpoint}`);
+  // console.log(res.data);
+  array = res.data;
+  console.log(array);
+}
+
+getAllData("reservations");
+
+checkForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  let newObj = {
+    checkIn: checkInInput.value,
+    checkOut: checkOutInput.value,
+    rooms: numberInput.value,
+    guests: authorName,
+  };
+  if (
+    checkInInput.value != "" &&
+    checkOutInput.value != "" &&
+    numberInput.value != "" &&
+    select.value != ""
+  ) {
+    await axios.post(`${DB_URL}/reservations`, newObj);
+    // array.push(newObj);
+  } else {
+    alert("1111");
+  }
+  // console.log(checkInInput);
+  // console.log(checkOutInput);
+  // console.log(numberInput.value);
+  // console.log(select.value);
+});
+
+select.addEventListener("change", function (e) {
+  authorName = e.target.value;
+  console.log(authorName);
 });
