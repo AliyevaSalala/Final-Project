@@ -12,9 +12,7 @@ const faUser = document.querySelector(".fa-user");
 
 const DB_URL = "http://localhost:8000";
 
-window.addEventListener("scroll", function () {
-  toTop.classList.toggle("active", window.scrollY > 0);
-});
+
 
 menuIcon.addEventListener("click", function () {
   nav.classList.toggle("show");
@@ -97,3 +95,25 @@ function basketCalculate() {
 //     document.querySelector("#content").style.display = "block";
 //   }, 2500);
 // });
+
+let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrollValue = Math.round((pos * 100) / calcHeight);
+  if (pos > 100) {
+    scrollProgress.style.display = "grid";
+  } else {
+    scrollProgress.style.display = "none";
+  }
+  scrollProgress.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  scrollProgress.style.background = `conic-gradient(#c19d68 ${scrollValue}%, #fff ${scrollValue}%)`;
+};
+
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;

@@ -53,9 +53,25 @@ const addNewProductById = async (req, res) => {
   }
 };
 
+// update data, put
+
+const updateProductById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    await Products.findByIdAndUpdate(id, { ...req.body });
+    const updatedProduct = await Products.findById(id);
+    res.status(200).send({
+      message: "updated succesfully!",
+      data: updatedProduct,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
 module.exports = {
   getAllProducts,
   getProductById,
   deleteProductById,
   addNewProductById,
+  updateProductById,
 };

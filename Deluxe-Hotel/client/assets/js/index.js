@@ -55,16 +55,15 @@ const emailInput = document.querySelector("#email");
 const phoneInput = document.querySelector("#phone");
 const textareaInput = document.querySelector("#textarea");
 const myForm = document.querySelector("#my-form");
-const checkForm = document.querySelector(".grid");
+const checkForm = document.querySelector(".check-form");
 const checkInInput = document.querySelector("#check-in-input");
 const checkOutInput = document.querySelector("#check-out-input");
-const numberInput = document.querySelector("#number-input");
+// const numberInput = document.querySelector("#number-input");
 
-const select = document.querySelector("#check-select");
+const roomSelect = document.querySelector("#room-select");
+const guestsSelect = document.querySelector("#guests-select");
 
-let authorName;
-
-
+// let authorName;
 
 function saveFormData() {
   const formData = {
@@ -145,14 +144,14 @@ checkForm.addEventListener("submit", async function (e) {
   let newObj = {
     checkIn: checkInInput.value,
     checkOut: checkOutInput.value,
-    rooms: numberInput.value,
-    guests: authorName,
+    rooms: roomSelect.value,
+    guests: guestsSelect.value,
   };
   if (
     checkInInput.value != "" &&
     checkOutInput.value != "" &&
-    numberInput.value != "" &&
-    select.value != ""
+    roomSelect.value != "" &&
+    guestsSelect.value != ""
   ) {
     await axios.post(`${DB_URL}/reservations`, newObj);
     // array.push(newObj);
@@ -165,7 +164,7 @@ checkForm.addEventListener("submit", async function (e) {
   // console.log(select.value);
 });
 
-select.addEventListener("change", function (e) {
-  authorName = e.target.value;
-  console.log(authorName);
-});
+// select.addEventListener("change", function (e) {
+//   authorName = e.target.value;
+//   console.log(authorName);
+// });

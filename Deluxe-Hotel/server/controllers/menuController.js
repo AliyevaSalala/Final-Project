@@ -52,9 +52,23 @@ const addNewProductById = async (req, res) => {
   }
 };
 
+const updateProductById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    await Menu.findByIdAndUpdate(id, { ...req.body });
+    const updatedProduct = await Menu.findById(id);
+    res.status(200).send({
+      message: "updated succesfully!",
+      data: updatedProduct,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
 module.exports = {
   getAllDataMenu,
   getProductById,
   deleteProductById,
   addNewProductById,
+  updateProductById,
 };

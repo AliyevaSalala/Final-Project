@@ -6,8 +6,8 @@ const { Schema } = mongoose;
 const reservationSchema = new Schema({
   checkIn: Date,
   checkOut: Date,
-  rooms: Number,
-  guests: Number,
+  rooms: String,
+  guests: String,
 });
 
 const Reservation = mongoose.model("Reservation", reservationSchema);

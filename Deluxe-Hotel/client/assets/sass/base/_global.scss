@@ -82,24 +82,19 @@ body {
 //   }
 // }
 
-.arrow-up {
+#progress {
   position: fixed;
-  bottom: 10px;
-  right: 16px;
-  opacity: 0;
-  transition: all 0.7s;
-  z-index: 11211212;
-
-  a {
-    padding: 15px 20px;
-    font-size: 15px;
-    color: #fff;
-    background-color: #c19d68;
-    border-radius: 50%;
-  }
-
-  &.active {
-    opacity: 1;
-    bottom: 35px;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  #progress-value {
+    font-size: 20px;
+    color: #252423;
   }
 }

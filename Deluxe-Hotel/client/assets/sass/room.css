@@ -57,24 +57,20 @@ body.show-account .acoount {
   pointer-events: none;
 }
 
-.arrow-up {
+#progress {
   position: fixed;
-  bottom: 10px;
-  right: 16px;
-  opacity: 0;
-  transition: all 0.7s;
-  z-index: 11211212;
-}
-.arrow-up a {
-  padding: 15px 20px;
-  font-size: 15px;
-  color: #fff;
-  background-color: #c19d68;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
   border-radius: 50%;
+  cursor: pointer;
 }
-.arrow-up.active {
-  opacity: 1;
-  bottom: 35px;
+#progress #progress-value {
+  font-size: 20px;
+  color: #252423;
 }
 
 header {

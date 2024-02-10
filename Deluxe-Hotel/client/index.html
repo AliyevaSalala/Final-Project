@@ -109,14 +109,7 @@
               <nav id="nav">
                 <ul>
                   <li>
-                    <a href="./index.html"
-                      >Home <i class="fa-solid fa-chevron-down down"></i>
-                      <div class="drop-down">
-                        <ul class="dropdown">
-                          <li><a href="./home.html">Home slide2</a></li>
-                        </ul>
-                      </div>
-                    </a>
+                    <a href="./index.html">Home </a>
                   </li>
                   <li><a href="./about.html">About</a></li>
                   <li>
@@ -702,24 +695,34 @@
                   <h2>Hotel Booking Form</h2>
                   <form action="" class="check-form">
                     <div class="input-box">
-                      <input type="date"  value="2024-03-22" placeholder="Check In"/>
-                      <input type="date"  value="2024-03-23" placeholder="Check Out" />
+                      <input
+                        type="date"
+                        value="2024-03-22"
+                        placeholder="Check In"
+                        id="check-in-input"
+                      />
+                      <input
+                        type="date"
+                        value="2024-03-23"
+                        placeholder="Check Out"
+                        id="check-out-input"
+                      />
                     </div>
                     <div class="input-box">
-                      <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="5">5</option>
-                        <option value="7">7</option>
+                      <select name="Adult" id="guests-select">
+                        <option value="1">1 adult, 0 children</option>
+                        <option value="2">2 adult, 2 children</option>
+                        <option value="3">3 adult, 2 children</option>
+                        <option value="5">5 adult, 1 children</option>
+                        <option value="7">7 adult, 3 children</option>
                       </select>
 
-                      <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="5">5</option>
-                        <option value="7">7</option>
+                      <select name="" id="room-select">
+                        <option value="1">1 rooms</option>
+                        <option value="2">2 rooms</option>
+                        <option value="3">3 rooms</option>
+                        <option value="5">5 rooms</option>
+                        <option value="7">7 rooms</option>
                       </select>
                     </div>
                     <button>Check Availability</button>
@@ -1141,8 +1144,11 @@
           </div>
         </div>
       </footer>
-      <div class="arrow-up">
+      <!-- <div class="arrow-up">
         <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div> -->
+      <div id="progress">
+        <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>
       </div>
     </div>
 
