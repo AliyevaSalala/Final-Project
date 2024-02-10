@@ -12,8 +12,6 @@ const faUser = document.querySelector(".fa-user");
 
 const DB_URL = "http://localhost:8000";
 
-
-
 menuIcon.addEventListener("click", function () {
   nav.classList.toggle("show");
 
@@ -86,15 +84,17 @@ function basketCalculate() {
   basketCounter.textContent = basket.reduce((acc, curr) => acc + curr.count, 0);
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   document.querySelector("#content").style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector("#content").style.display = "none";
 
-//   setTimeout(function () {
-//     document.querySelector(".loading-container").style.display = "none";
+  setTimeout(function () {
+    document.querySelector(".loading-container").style.display = "none";
+    document.querySelector("#content").style.display = "block";
 
-//     document.querySelector("#content").style.display = "block";
-//   }, 2500);
-// });
+    // Initialize AOS after content is displayed
+    AOS.init();
+  }, 2500);
+});
 
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");
