@@ -985,57 +985,6 @@ footer .footer .footer-section .footer-bottom p:hover {
   }
 }
 
-#about-counter {
-  padding: 5rem 0;
-}
-#about-counter .about-counter {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-@media screen and (max-width: 1024px) {
-  #about-counter .about-counter {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 767px) {
-  #about-counter .about-counter {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-#about-counter .about-counter .counter-waiters {
-  box-shadow: 30px 15px 25px #ddd;
-  padding: 50px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-@media screen and (max-width: 480px) {
-  #about-counter .about-counter .counter-waiters {
-    flex-direction: column;
-  }
-}
-#about-counter .about-counter .counter-waiters .counter {
-  font-size: 50px;
-  color: #9a783a;
-  font-family: "Protest Riot", sans-serif;
-}
-#about-counter .about-counter .counter-waiters .texts {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#about-counter .about-counter .counter-waiters .texts h3 {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 20px;
-}
-#about-counter .about-counter .counter-waiters .texts p {
-  color: #6a6969;
-  font-size: 15px;
-  font-weight: 400;
-}
-
 #client-say {
   padding: 5rem 0;
   background-image: url("https://webredox.net/demo/wp/patara/wp-content/uploads/2023/10/18.jpg");
@@ -1123,88 +1072,55 @@ footer .footer .footer-section .footer-bottom p:hover {
   font-size: 15px;
 }
 
-#check-availibality {
+#about-counter {
   padding: 5rem 0;
 }
-#check-availibality .check-sec h1 {
-  text-align: center;
-  padding: 30px 0;
-  font-size: 40px;
-  font-weight: 400;
-  color: #5d3b0b;
-}
-#check-availibality .check-sec .check-aval {
-  border-top: 5px solid #e4a853;
-  border-bottom: 5px solid #e4a853;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1e1e1e;
-  padding: 50px 20px;
-}
-#check-availibality .check-sec .check-aval .check-availibaility .grid {
+#about-counter .about-counter {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 10px;
-}
-@media screen and (max-width: 1200px) {
-  #check-availibality .check-sec .check-aval .check-availibaility .grid {
-    grid-template-columns: repeat(8, 1fr);
-  }
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 @media screen and (max-width: 1024px) {
-  #check-availibality .check-sec .check-aval .check-availibaility .grid {
-    grid-template-columns: repeat(6, 1fr);
+  #about-counter .about-counter {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 767px) {
-  #check-availibality .check-sec .check-aval .check-availibaility .grid {
+  #about-counter .about-counter {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input label {
-  padding: 15px 20px;
-  color: #fff;
-  font-size: 14px;
-  color: #acacac;
-}
-#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input input {
-  border: 1px solid transparent;
-  background-color: transparent;
-  color: #fff;
+#about-counter .about-counter .counter-waiters {
+  box-shadow: 30px 15px 25px #ddd;
+  padding: 50px;
   display: flex;
-  gap: 15px;
-  padding: 10px 20px;
-  cursor: pointer;
+  gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  #about-counter .about-counter .counter-waiters {
+    flex-direction: column;
+  }
+}
+#about-counter .about-counter .counter-waiters .counter {
+  font-size: 50px;
+  color: #9a783a;
+  font-family: "Protest Riot", sans-serif;
+}
+#about-counter .about-counter .counter-waiters .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#about-counter .about-counter .counter-waiters .texts h3 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+}
+#about-counter .about-counter .counter-waiters .texts p {
+  color: #6a6969;
   font-size: 15px;
-}
-#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input input[type=date]::-webkit-calendar-picker-indicator {
-  padding: 5px;
-  background-color: white; /* Arka plan rengini beyaz yap */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  color: #333;
-  cursor: pointer;
-}
-#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input select {
-  margin-top: 10px;
-  padding: 5px 10px;
-  width: 150px;
-  background-color: transparent;
-  color: #fff;
-}
-#check-availibality .check-sec .check-aval .check-availibaility .grid .check-input select:hover {
-  color: #5d3b0b;
-}
-#check-availibality .check-sec .check-aval .check-availibaility .grid button {
-  margin-top: 20px;
-  padding: 10px 30px;
-  width: 150px;
-  border: 1px solid transparent;
-  background-color: #9b804e;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
+  font-weight: 400;
 }
 
 #elementar-section {
@@ -1445,6 +1361,147 @@ footer .footer .footer-section .footer-bottom p:hover {
   font-size: 20px;
   text-align: center;
   color: #414141;
+}
+
+#online-rezerv {
+  background-image: url("../images//slider2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#online-rezerv .empty {
+  padding: 200px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#online-rezerv .empty .online-rezerv {
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  #online-rezerv .empty .online-rezerv {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (max-width: 1024px) {
+  #online-rezerv .empty .online-rezerv .online-rezerv-left {
+    width: 100%;
+    align-items: center;
+  }
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left .icons {
+  display: flex;
+  gap: 8px;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left .icons i {
+  font-size: 20px;
+  color: #9a783a;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left h1 {
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 40px;
+  color: #ddd;
+}
+@media screen and (max-width: 481px) {
+  #online-rezerv .empty .online-rezerv .online-rezerv-left h1 {
+    font-size: 25px;
+  }
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left p {
+  max-width: 500px;
+  line-height: 30px;
+  color: #c7c7c7;
+  font-size: 15px;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left .texts {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left .texts i {
+  font-size: 35px;
+  color: #d19b38;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left .texts .card-body {
+  display: flex;
+  flex-direction: column;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left .texts .card-body a {
+  font-size: 17px;
+  color: #d19b38;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-left .texts .card-body p {
+  font-size: 15px;
+  color: #c7c7c7;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  #online-rezerv .empty .online-rezerv .online-rezerv-right {
+    width: 100%;
+  }
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec h3 {
+  font-size: 15px;
+  color: #dba765;
+  padding: 10px 0;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec h2 {
+  font-size: 30px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-family: "Forum", serif;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form .input-box {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 481px) {
+  #online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form .input-box {
+    flex-direction: column;
+  }
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form .input-box input {
+  width: 100%;
+  padding: 10px 15px;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form .input-box select {
+  width: 100%;
+  padding: 10px 15px;
+}
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form button {
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #d19b38;
+  color: #fff;
+  border: 1px solid transparent;
 }
 
 #services-sec {

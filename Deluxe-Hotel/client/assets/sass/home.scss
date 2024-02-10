@@ -343,58 +343,6 @@
     }
   }
 }
-// COUNTER
-#about-counter {
-  padding: 5rem 0;
-
-  .about-counter {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // gap: 100px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media screen and (max-width: 767px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .counter-waiters {
-      box-shadow: 30px 15px 25px #ddd;
-      padding: 50px;
-      // width: 60%;
-      // aspect-ratio: 2/1;
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      @media screen and (max-width: 480px) {
-        flex-direction: column;
-      }
-      .counter {
-        font-size: 50px;
-        color: #9a783a;
-        font-family: "Protest Riot", sans-serif;
-      }
-      .texts {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        h3 {
-          font-style: italic;
-          font-weight: 400;
-          font-size: 20px;
-        }
-        p {
-          color: #6a6969;
-          font-size: 15px;
-          font-weight: 400;
-        }
-      }
-    }
-  }
-}
 
 #client-say {
   padding: 5rem 0;
@@ -482,89 +430,53 @@
     }
   }
 }
-
-// check-availibaility
-
-#check-availibality {
+// COUNTER
+#about-counter {
   padding: 5rem 0;
-  .check-sec {
-    h1 {
-      text-align: center;
-      padding: 30px 0;
-      font-size: 40px;
-      font-weight: 400;
-      color: #5d3b0b;
+
+  .about-counter {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
     }
-    .check-aval {
-      border-top: 5px solid #e4a853;
-      border-bottom: 5px solid #e4a853;
-      @include flexbox(center);
-      background-color: #1e1e1e;
-      padding: 50px 20px;
-
-      .check-availibaility {
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(9, 1fr);
-          gap: 10px;
-
-          @media screen and (max-width: 1200px) {
-            grid-template-columns: repeat(8, 1fr);
-          }
-          @media screen and (max-width: 1024px) {
-            grid-template-columns: repeat(6, 1fr);
-          }
-          @media screen and (max-width: 767px) {
-            grid-template-columns: repeat(1, 1fr);
-          }
-          .check-input {
-            label {
-              padding: 15px 20px;
-              color: #fff;
-              font-size: 14px;
-              color: #acacac;
-            }
-            input {
-              border: 1px solid transparent;
-              background-color: transparent;
-              color: #fff;
-              display: flex;
-              gap: 15px;
-              padding: 10px 20px;
-              cursor: pointer;
-              font-size: 15px;
-            }
-            input[type="date"]::-webkit-calendar-picker-indicator {
-              padding: 5px;
-              background-color: white; /* Arka plan rengini beyaz yap */
-              border: 1px solid #ccc;
-              border-radius: 5px;
-              color: #333;
-              cursor: pointer;
-            }
-            select {
-              margin-top: 10px;
-              padding: 5px 10px;
-              width: 150px;
-              background-color: transparent;
-              color: #fff;
-
-              &:hover {
-                color: #5d3b0b;
-              }
-            }
-          }
-
-          button {
-            margin-top: 20px;
-            padding: 10px 30px;
-            width: 150px;
-            border: 1px solid transparent;
-            background-color: #9b804e;
-            border-radius: 5px;
-            color: #fff;
-            cursor: pointer;
-          }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .counter-waiters {
+      box-shadow: 30px 15px 25px #ddd;
+      padding: 50px;
+      // width: 60%;
+      // aspect-ratio: 2/1;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      @media screen and (max-width: 480px) {
+        flex-direction: column;
+      }
+      .counter {
+        font-size: 50px;
+        color: #9a783a;
+        font-family: "Protest Riot", sans-serif;
+      }
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h3 {
+          font-style: italic;
+          font-weight: 400;
+          font-size: 20px;
+        }
+        p {
+          color: #6a6969;
+          font-size: 15px;
+          font-weight: 400;
         }
       }
     }
@@ -877,6 +789,146 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// check-availibaility
+
+#online-rezerv {
+  // padding: 3rem 0;
+  background-image: url("../images//slider2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .empty {
+    padding: 200px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    .online-rezerv {
+      display: flex;
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+
+        gap: 20px;
+      }
+
+      .online-rezerv-left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          align-items: center;
+        }
+        .icons {
+          display: flex;
+          gap: 8px;
+          i {
+            font-size: 20px;
+            color: #9a783a;
+          }
+        }
+        h1 {
+          font-family: "Protest Revolution", sans-serif;
+          font-size: 40px;
+          color: #ddd;
+          @media screen and (max-width: 481px) {
+            font-size: 25px;
+          }
+        }
+        p {
+          max-width: 500px;
+          line-height: 30px;
+          color: #c7c7c7;
+          font-size: 15px;
+        }
+        .texts {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          i {
+            font-size: 35px;
+            color: #d19b38;
+          }
+          .card-body {
+            display: flex;
+            flex-direction: column;
+            a {
+              font-size: 17px;
+              color: #d19b38;
+            }
+            p {
+              font-size: 15px;
+              color: #c7c7c7;
+            }
+          }
+        }
+      }
+      .online-rezerv-right {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+
+        .check-form-sec {
+          width: 500px;
+          background-color: #fff;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          // align-items: center;
+          gap: 20px;
+          padding: 60px 20px;
+          h3 {
+            font-size: 15px;
+            color: #dba765;
+            padding: 10px 0;
+            font-weight: 400;
+            letter-spacing: 3px;
+          }
+          h2 {
+            font-size: 30px;
+            padding-bottom: 20px;
+            font-weight: 700;
+            font-family: "Forum", serif;
+          }
+          .check-form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .input-box {
+              display: flex;
+              gap: 10px;
+              // justify-content: space-between;
+              @media screen and (max-width: 481px) {
+                flex-direction: column;
+              }
+              input {
+                width: 100%;
+                padding: 10px 15px;
+              }
+              select {
+                width: 100%;
+                padding: 10px 15px;
+              }
+            }
+            button {
+              padding: 10px 15px;
+              width: 100%;
+              background-color: #d19b38;
+              color: #fff;
+              border: 1px solid transparent;
             }
           }
         }
