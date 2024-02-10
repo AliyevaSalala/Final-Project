@@ -805,6 +805,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
   .empty {
     padding: 200px 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -1110,6 +1111,7 @@
 #come-enjoy {
   padding: 2rem 0;
   background-color: #fcf9ef;
+  overflow: hidden;
   .amenities-intro {
     .info {
       padding: 30px 0;
@@ -1489,6 +1491,7 @@
 
 #home-contact {
   padding: 3rem 0;
+  overflow: hidden;
 
   .home-contact {
     display: flex;

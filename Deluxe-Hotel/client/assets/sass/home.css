@@ -1368,6 +1368,7 @@ footer .footer .footer-section .footer-bottom p:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 #online-rezerv .empty {
   padding: 200px 0;
@@ -1657,6 +1658,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 #come-enjoy {
   padding: 2rem 0;
   background-color: #fcf9ef;
+  overflow: hidden;
 }
 #come-enjoy .amenities-intro .info {
   padding: 30px 0;
@@ -1983,6 +1985,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 
 #home-contact {
   padding: 3rem 0;
+  overflow: hidden;
 }
 #home-contact .home-contact {
   display: flex;
