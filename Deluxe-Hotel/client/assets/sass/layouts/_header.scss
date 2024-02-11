@@ -16,19 +16,18 @@ header {
         gap: 20px;
         a {
           font-size: 14px;
-          color: $color-brown;
+          color: #ffffffaa;
           font-weight: 500;
           transition: all 0.6s;
-          color: #7e7351;
+
           &:hover {
             color: #9b804e;
           }
         }
         h5 {
           font-size: 15px;
-          color: $color-brown;
+          color: #ffffffaa;
           font-weight: 500;
-          color: #8a7c52;
         }
       }
       .header-top-left {
@@ -67,11 +66,11 @@ header {
             }
           }
         }
-        .my-account {
-          img {
-            width: 40px;
-          }
-        }
+        // .my-account {
+        //   img {
+        //     width: 40px;
+        //   }
+        // }
       }
     }
   }
@@ -82,7 +81,7 @@ header {
     .border-bottom {
       width: 90%;
       height: 1px;
-      background-color: #9b804e;
+      background-color: #ffffffaa;
     }
   }
 
@@ -92,8 +91,12 @@ header {
       @include flexbox();
       .logo {
         a {
+          // display: flex;
+          // align-items: center;
+          // color: #fff;
+          // font-family: "Protest Strike", sans-serif;
           img {
-            width: 80px;
+            width: 60px;
           }
         }
       }
@@ -153,6 +156,10 @@ header {
               }
             }
           }
+          .fa-user-plus {
+            color: #fff;
+            font-size: 15px;
+          }
           .basket-icon {
             position: relative;
             color: #fff;
@@ -210,6 +217,7 @@ header {
           ul {
             flex-direction: column;
             padding: 30px;
+
             li {
               a {
                 color: $color-brown;

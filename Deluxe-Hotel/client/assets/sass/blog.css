@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none !important;
   list-style: none;
   outline: none;
   font-family: "Lora", serif;
@@ -62,54 +62,55 @@ body.show-account .acoount {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #252423;
 }
-.loading-container .loading {
-  --dim: 3rem;
-  width: var(--dim);
-  height: var(--dim);
+.loading-container .loader {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 20px auto;
   position: relative;
-  animation: spin988 2s linear infinite;
+  background: radial-gradient(ellipse at center, #fff 69%, rgba(0, 0, 0, 0) 70%), linear-gradient(to right, rgba(0, 0, 0, 0) 47%, #fff 48%, #fff 52%, rgba(0, 0, 0, 0) 53%);
+  background-size: 20px 20px, 20px auto;
+  background-repeat: repeat-x;
+  background-position: center bottom, center -5px;
+  box-sizing: border-box;
 }
-.loading-container .loading .circle {
-  --color: #333;
-  --dim: 1.2rem;
-  width: var(--dim);
-  height: var(--dim);
-  background-color: var(--color);
-  border-radius: 50%;
+.loading-container .loader::before,
+.loading-container .loader::after {
+  content: "";
+  box-sizing: border-box;
   position: absolute;
-}
-.loading-container .loading .circle:nth-child(1) {
+  left: -20px;
   top: 0;
-  left: 0;
+  width: 20px;
+  height: 60px;
+  background: radial-gradient(ellipse at center, #fff 69%, rgba(0, 0, 0, 0) 70%), linear-gradient(to right, rgba(0, 0, 0, 0) 47%, #fff 48%, #fff 52%, rgba(0, 0, 0, 0) 53%);
+  background-size: 20px 20px, 20px auto;
+  background-repeat: no-repeat;
+  background-position: center bottom, center -5px;
+  transform: rotate(0deg);
+  transform-origin: 50% 0%;
+  animation: animPend 1s linear infinite alternate;
 }
-.loading-container .loading .circle:nth-child(2) {
-  top: 0;
-  right: 0;
+.loading-container .loader::after {
+  animation: animPend2 1s linear infinite alternate;
+  left: 100%;
 }
-.loading-container .loading .circle:nth-child(3) {
-  bottom: 0;
-  left: 0;
-}
-.loading-container .loading .circle:nth-child(4) {
-  bottom: 0;
-  right: 0;
-}
-@keyframes spin988 {
+@keyframes animPend {
   0% {
-    transform: scale(1) rotate(0);
+    transform: rotate(22deg);
   }
-  20%, 25% {
-    transform: scale(1.3) rotate(90deg);
+  50% {
+    transform: rotate(0deg);
   }
-  45%, 50% {
-    transform: scale(1) rotate(180deg);
+}
+@keyframes animPend2 {
+  0%, 55% {
+    transform: rotate(0deg);
   }
-  70%, 75% {
-    transform: scale(1.3) rotate(270deg);
-  }
-  95%, 100% {
-    transform: scale(1) rotate(360deg);
+  100% {
+    transform: rotate(-22deg);
   }
 }
 
@@ -149,19 +150,17 @@ header #header-top .header-top .header-top-right {
 }
 header #header-top .header-top .header-top-right a {
   font-size: 14px;
-  color: #3d3931;
+  color: rgba(255, 255, 255, 0.6666666667);
   font-weight: 500;
   transition: all 0.6s;
-  color: #7e7351;
 }
 header #header-top .header-top .header-top-right a:hover {
   color: #9b804e;
 }
 header #header-top .header-top .header-top-right h5 {
   font-size: 15px;
-  color: #3d3931;
+  color: rgba(255, 255, 255, 0.6666666667);
   font-weight: 500;
-  color: #8a7c52;
 }
 header #header-top .header-top .header-top-left {
   display: flex;
@@ -194,9 +193,6 @@ header #header-top .header-top .header-top-left .navbar-search .menu-circle:hove
 header #header-top .header-top .header-top-left .navbar-search .menu-circle:hover .circle-y {
   transform: translateY(-7.5px);
 }
-header #header-top .header-top .header-top-left .my-account img {
-  width: 40px;
-}
 header .elementar-section {
   display: flex;
   justify-content: center;
@@ -205,7 +201,7 @@ header .elementar-section {
 header .elementar-section .border-bottom {
   width: 90%;
   height: 1px;
-  background-color: #9b804e;
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 header #header-bottom {
   padding: 30px 0;
@@ -216,7 +212,7 @@ header #header-bottom .header-bottom {
   align-items: center;
 }
 header #header-bottom .header-bottom .logo a img {
-  width: 80px;
+  width: 60px;
 }
 header #header-bottom .header-bottom nav ul {
   display: flex;
@@ -261,6 +257,10 @@ header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a {
 }
 header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a:hover {
   color: #efa824;
+}
+header #header-bottom .header-bottom nav ul .fa-user-plus {
+  color: #fff;
+  font-size: 15px;
 }
 header #header-bottom .header-bottom nav ul .basket-icon {
   position: relative;

@@ -91,9 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".loading-container").style.display = "none";
     document.querySelector("#content").style.display = "block";
 
-    // Initialize AOS after content is displayed
     AOS.init();
-  }, 2500);
+  }, 500);
 });
 
 let calcScrollValue = () => {

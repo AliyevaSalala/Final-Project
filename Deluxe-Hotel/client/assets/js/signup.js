@@ -79,6 +79,7 @@ signUpForm.addEventListener("submit", async function (e) {
     username: userName.value,
     email: userEmail.value,
     password: userPassword.value,
+    isAdmin: false,
   };
 
   if (!userName.value || !userEmail.value || !userPassword.value) {
