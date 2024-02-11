@@ -95,33 +95,33 @@ let favsProducts = getItemToLocalStorage();
 // }
 
 function addToFav(id, icon) {
-  if (login === "true") {
-    if (icon.classList.contains("fa-regular")) {
-      icon.classList.remove("fa-regular");
-      icon.classList.add("fa-solid");
-    } else {
-      icon.classList.remove("fa-solid");
-      icon.classList.add("fa-regular");
-    }
-
-    // console.log(id);
-
-    let favs = getItemToLocalStorage();
-
-    let bool = favs.find((item) => item._id == id);
-
-    let product = menus.find((item) => item._id === id);
-    // console.log(product);
-    if (bool) {
-      favs = favs.filter((item) => item._id !== id);
-    } else {
-      favs.push(product);
-    }
-
-    setItemToLocalStorage(favs);
+  // if (login === "true") {
+  // } else {
+  //   window.location = "login.html";
+  // }
+  if (icon.classList.contains("fa-regular")) {
+    icon.classList.remove("fa-regular");
+    icon.classList.add("fa-solid");
   } else {
-    window.location = "login.html";
+    icon.classList.remove("fa-solid");
+    icon.classList.add("fa-regular");
   }
+
+  // console.log(id);
+
+  let favs = getItemToLocalStorage();
+
+  let bool = favs.find((item) => item._id == id);
+
+  let product = menus.find((item) => item._id === id);
+  // console.log(product);
+  if (bool) {
+    favs = favs.filter((item) => item._id !== id);
+  } else {
+    favs.push(product);
+  }
+
+  setItemToLocalStorage(favs);
 }
 
 function setItemToLocalStorage(data) {
@@ -133,5 +133,3 @@ function getItemToLocalStorage() {
 }
 
 // initializeFavorites();
-
-

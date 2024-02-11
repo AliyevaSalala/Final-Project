@@ -112,3 +112,10 @@ async function getDetailsData(endpoint) {
 }
 
 getDetailsData("products");
+
+const videoPlay = document.querySelector(".video-player");
+const myVideo = document.querySelector("my-video");
+
+function stopVideo() {
+  videoPlay.style.display = "none";
+}

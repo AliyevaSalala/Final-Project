@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const productRouter = require("./routes/productRoutes.js");
 const reservationRouter = require("./routes/reservationRoutes.js");
 const menuRouter = require("./routes/menuRoutes.js");
-const authRoutes = require("./routes/authRoutes");
+const authRoutes = require("./routes/authRoutes.js");
 
 require("dotenv").config();
 const app = express();
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use("/reservations", reservationRouter);
 app.use("/menu", menuRouter);
 app.use("/products", productRouter);
-app.use("/api/auth", authRoutes);
+app.use("/", authRoutes);
 mongoose
   .connect(DB)
   .then(() => {

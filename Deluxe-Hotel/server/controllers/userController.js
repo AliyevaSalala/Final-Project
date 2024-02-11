@@ -2,17 +2,17 @@
 
 const User = require("../models/user");
 
-exports.signup = async (req, res) => {
+const signup = async (req, res) => {
   const { username, email, password } = req.body;
 
   if (!username || !email || !password) {
-    return res.status(400).send({ message: "Please fill in all fields" });
+    res.status(400).send({ message: "Please fill in all fields" });
   }
 
   try {
-    const existingUser = await User.findOne({ email: email });
+    const existingUser = await User.findOne({ email: email, username: username });
     if (existingUser) {
-      return res.status(400).send({
+      res.status(400).send({
         message: "This email is already registered. Please use another email.",
       });
     }
@@ -24,29 +24,44 @@ exports.signup = async (req, res) => {
     });
 
     await newUser.save();
-    return res
+    res
       .status(201)
       .send({ message: "Your registration has been successfully created!" });
   } catch (error) {
-    return res.status(500).send({ message: "An error occurred" });
+    res.status(500).send({ message: "An error occurred" });
   }
 };
 
-exports.signin = async (req, res) => {
+const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find({});
+    res.send(users).status(200);
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
+
+const signin = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    return res.status(400).send({ message: "Please enter email and password" });
+    res.status(400).send({ message: "Please enter email and password" });
   }
 
   try {
     const user = await User.findOne({ email: email, password: password });
     if (!user) {
-      return res.status(400).send({ message: "Wrong email or password" });
+      res.status(400).send({ message: "Wrong email or password" });
     }
 
-    return res.status(200).send({ message: "Login successful!" });
+    res.status(200).send({ message: "Login successful!" });
   } catch (error) {
-    return res.status(500).send({ message: "An error occurred" });
+    res.status(500).send({ message: "An error occurred" });
   }
+};
+
+module.exports = {
+  signup,
+  signin,
+  getAllUsers,
 };
