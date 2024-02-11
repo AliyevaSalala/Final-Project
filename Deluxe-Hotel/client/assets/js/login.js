@@ -90,6 +90,8 @@ signInForm.addEventListener("submit", async function (e) {
           position: "right",
           backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
         }).showToast();
+
+        localStorage.setItem("login", true);
         return;
       }
     } catch (error) {
