@@ -9,15 +9,67 @@
 
 body {
   background-color: #f6f6f9;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 
-  @media screen and (max-width: 1199px) {
-    padding: 0 5%;
+  &.dark-mode {
+    background-color: #1a1a1a;
+    .content {
+      #sidebar-sec {
+        .sidebar {
+          background-color: #383839;
+          box-shadow: none;
+        }
+      }
+      .main-content {
+        .user-table-sec {
+          .user-search {
+            input {
+              box-shadow: none;
+              background-color: #383839;
+            }
+          }
+          table {
+            background-color: #383839;
+            box-shadow: none;
+          }
+        }
+      }
+
+      #right-sec {
+        .navbar {
+          .info {
+            .body {
+              h3 {
+                color: #677483;
+              }
+            }
+          }
+        }
+        .logo-icons {
+          .box {
+            background-color: #383839;
+            box-shadow: none;
+            img {
+              mix-blend-mode: color-burn;
+            }
+          }
+        }
+        .reminders {
+          .boxes {
+            .box {
+              background-color: #383839;
+              box-shadow: none;
+            }
+            .new-reminder {
+              background-color: #383839;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
+
 .content {
   display: flex;
   gap: 30px;

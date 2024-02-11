@@ -1,6 +1,26 @@
 const BASE_url = "http://localhost:8000";
 const userTbdody = document.querySelector(".user-tbody");
 const userSearch = document.querySelector("#user-search");
+const darkMode = document.querySelector(".dark-mode");
+const moonMode = document.querySelector(".dark-mode-moon");
+const body = document.querySelector("body");
+
+localStorage.getItem("dark-mode") === "true" && body.classList.add("dark-mode");
+
+darkMode.addEventListener("click", function () {
+  body.classList.add("dark-mode");
+
+  localStorage.getItem("dark-mode") === "true"
+    ? localStorage.setItem("dark-mode", false)
+    : localStorage.setItem("dark-mode", true);
+});
+moonMode.addEventListener("click", function () {
+  body.classList.remove("dark-mode");
+
+  localStorage.getItem("dark-mode") === "true"
+    ? localStorage.setItem("dark-mode", false)
+    : localStorage.setItem("dark-mode", true);
+});
 
 let user = [];
 
@@ -37,6 +57,26 @@ async function userDeletBtn(id, btn) {
     }
   }
 }
+
+// async function userDeletBtn(id, btn) {
+//   Swal.fire({
+//     title: "Are you sure?",
+//     text: "You won't be able to revert this!",
+//     icon: "warning",
+//     showCancelButton: true,
+//     confirmButtonColor: "#3085d6",
+//     cancelButtonColor: "#d33",
+//     confirmButtonText: "Yes, delete it!",
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       Swal.fire({
+//         title: "Deleted!",
+//         text: "Your file has been deleted.",
+//         icon: "success",
+//       });
+//     }
+//   });
+// }
 
 // USER-DATA-SEARCH
 

@@ -10,15 +10,38 @@
 body {
   background-color: #f6f6f9;
 }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+body.dark-mode {
+  background-color: #1a1a1a;
 }
-@media screen and (max-width: 1199px) {
-  .container {
-    padding: 0 5%;
-  }
+body.dark-mode .content #sidebar-sec .sidebar {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content .main-content .user-table-sec .user-search input {
+  box-shadow: none;
+  background-color: #383839;
+}
+body.dark-mode .content .main-content .user-table-sec table {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content #right-sec .navbar .info .body h3 {
+  color: #677483;
+}
+body.dark-mode .content #right-sec .logo-icons .box {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content #right-sec .logo-icons .box img {
+  mix-blend-mode: color-burn;
+}
+body.dark-mode .content #right-sec .reminders .boxes .box {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content #right-sec .reminders .boxes .new-reminder {
+  background-color: #383839;
+  box-shadow: none;
 }
 
 .content {
