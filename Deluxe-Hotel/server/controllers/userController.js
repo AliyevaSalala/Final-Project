@@ -7,6 +7,7 @@ const signup = async (req, res) => {
 
   if (!username || !email || !password) {
     res.status(400).send({ message: "Please fill in all fields" });
+    return;
   }
 
   try {
@@ -44,6 +45,21 @@ const getAllUsers = async (req, res) => {
   }
 };
 
+const deleteUsersById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const deletedUsers = await User.findByIdAndDelete(id);
+    const products = await User.find({});
+    res.status(200).json({
+      message: "success",
+      deletedUsers: deletedUsers,
+      allProducts: products,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
+
 const signin = async (req, res) => {
   const { email, password } = req.body;
 
@@ -67,4 +83,5 @@ module.exports = {
   signup,
   signin,
   getAllUsers,
+  deleteUsersById,
 };

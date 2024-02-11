@@ -81,15 +81,6 @@
 
       <!-- Main Content -->
       <section class="main-content">
-        <div class="form-sec">
-          <form action="">
-            <input type="text" placeholder="name" /> <br />
-            <input type="text" placeholder="name" /> <br />
-            <input type="text" placeholder="name" /> <br />
-            <input type="text" placeholder="name" /> <br />
-            <input type="text" placeholder="name" /> <br />
-          </form>
-        </div>
         <div class="user-table-sec">
           <h1>New Users</h1>
           <div class="user-search">
@@ -109,15 +100,15 @@
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody class="user-tbody">
+              <!-- <tr>
                 <td>Shalala</td>
                 <td>shalala@gmail.com</td>
                 <td>
                   <i class="fa-solid fa-trash"></i>
                   <i class="fa-solid fa-pen-to-square"></i>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
@@ -170,5 +161,8 @@
         </div>
       </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./admin.js"></script>
   </body>
 </html>

@@ -83,15 +83,20 @@ signUpForm.addEventListener("submit", async function (e) {
   };
 
   if (!userName.value || !userEmail.value || !userPassword.value) {
-    Toastify({
+    // Toastify({
+    //   text: "Please fill in all fields..",
+    //   duration: 3000,
+    //   close: true,
+    //   gravity: "top",
+    //   position: "right",
+    //   backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+    // }).showToast();
+    // return;
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
       text: "Please fill in all fields..",
-      duration: 3000,
-      close: true,
-      gravity: "top",
-      position: "right",
-      backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
-    }).showToast();
-    return;
+    });
   } else {
     try {
       const res = await axios.post(`${DB_URL}/signup`, newObj);

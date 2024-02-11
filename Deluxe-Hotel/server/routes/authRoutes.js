@@ -6,6 +6,7 @@ const authController = require("../controllers/userController");
 
 router.get("/users", authController.getAllUsers);
 router.post("/signup", authController.signup);
+router.delete("/:id", authController.deleteUsersById);
 router.post("/signin", authController.signin);
 
 module.exports = router;

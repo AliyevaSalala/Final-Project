@@ -114,18 +114,26 @@ myForm.addEventListener("submit", function (event) {
       backgroundColor: "linear-gradient(to right, #FF6E14, #FFB42A)",
     }).showToast();
     return;
+    //     Swal.fire({
+    //   icon: "error",
+    //   title: "Oops...",
+    //   text: "Something went wrong!",
+    //   footer: '<a href="#">Why do I have this issue?</a>'
+    // });
   }
 
   saveFormData();
+  Swal.fire({
+    title: "Good job!",
+    text: "Form submitted successfully!",
+    icon: "success",
+  });
 
-  setTimeout(function () {
-    Toastify({
-      text: "Form submitted successfully!",
-      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-    }).showToast();
-    document.getElementById("my-form").reset();
-    localStorage.removeItem("formData");
-  }, 1000);
+  firstNameInput.value = "";
+  lastNameInput.value = "";
+  emailInput.value = "";
+  phoneInput.value = "";
+  textareaInput.value = "";
 });
 
 let array = [];
