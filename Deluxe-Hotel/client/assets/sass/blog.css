@@ -275,6 +275,10 @@ header #header-bottom .header-bottom nav ul .basket-icon span {
   color: #fff;
   font-size: 13px;
 }
+header #header-bottom .header-bottom nav ul .logout-icon {
+  color: #fff;
+  font-size: 15px;
+}
 header #header-bottom .header-bottom #menu-icon {
   display: none;
   font-size: 20px;

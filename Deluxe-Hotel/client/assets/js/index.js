@@ -176,3 +176,19 @@ checkForm.addEventListener("submit", async function (e) {
 //   authorName = e.target.value;
 //   console.log(authorName);
 // });
+
+// LOGOUT
+
+const logOut = document.querySelector(".logout-icon");
+
+logOut.addEventListener("click", async function () {
+  try {
+    const res = await axios.post(`${DB_URL}/logout`);
+    if (res.status === 200) {
+      localStorage.removeItem("login");
+      window.location = "login.html";
+    }
+  } catch (error) {
+    console.error(error);
+  }
+});

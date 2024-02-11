@@ -79,9 +79,19 @@ const signin = async (req, res) => {
   }
 };
 
+const logout = async (req, res) => {
+  try {
+    res.status(200).send("Logout successful");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send(error.message);
+  }
+};
+
 module.exports = {
   signup,
   signin,
   getAllUsers,
   deleteUsersById,
+  logout,
 };
