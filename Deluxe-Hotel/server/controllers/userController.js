@@ -10,23 +10,26 @@ const signup = async (req, res) => {
   }
 
   try {
-    const existingUser = await User.findOne({ email: email, username: username });
+    const existingUser = await User.findOne({
+      email: email,
+    });
+    console.log(existingUser);
     if (existingUser) {
       res.status(400).send({
         message: "This email is already registered. Please use another email.",
       });
+    } else {
+      const newUser = new User({
+        username: username,
+        email: email,
+        password: password,
+      });
+      await newUser.save();
+      res.status(201).send({
+        message: "Your registration has been successfully created!",
+        user: newUser,
+      });
     }
-
-    const newUser = new User({
-      username: username,
-      email: email,
-      password: password,
-    });
-
-    await newUser.save();
-    res
-      .status(201)
-      .send({ message: "Your registration has been successfully created!" });
   } catch (error) {
     res.status(500).send({ message: "An error occurred" });
   }

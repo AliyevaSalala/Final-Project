@@ -57,3 +57,51 @@ faEye.addEventListener("click", function () {
 //   userEmail.value = "";
 //   userPassword.value = "";
 // });
+
+signInForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  let newObj = {
+    email: userEmail.value,
+    password: userPassword.value,
+  };
+
+  if (!userEmail.value || !userPassword.value) {
+    Toastify({
+      text: "Please enter email and password",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+    }).showToast();
+    return;
+  } else {
+    try {
+      const res = await axios.post(`${DB_URL}/signin`, newObj);
+      if (res.status === 200) {
+        userEmail.value = "";
+        userPassword.value = "";
+        Toastify({
+          text: "Login successful!",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        }).showToast();
+        return;
+      }
+    } catch (error) {
+      Toastify({
+        text: "Wrong email or password!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, red, #96c93d)",
+      }).showToast();
+      return;
+    }
+  }
+});
