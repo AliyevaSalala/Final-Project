@@ -135,7 +135,12 @@ html {
   background-color: #6c9bcf;
 }
 .content .sticky #sidebar-sec .sidebar .logout {
-  padding-top: 60px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding-top: 20px;
+  font-size: 15px;
+  color: #7d8da1;
+  cursor: pointer;
 }
 .content .main-content {
   width: 60%;
