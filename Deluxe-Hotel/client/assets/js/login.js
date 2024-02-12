@@ -38,9 +38,14 @@ signInForm.addEventListener("submit", async function (e) {
     try {
       const res = await axios.post(`${DB_URL}/signin`, newObj);
       if (res.status === 200) {
+        if (!res.data.userInfo.isAdmin) {
+          window.location.href = "../client/index.html";
+        } else {
+          localStorage.setItem("isAdmin", true);
+          window.location.href = "../client/admin/admin.html";
+        }
         userEmail.value = "";
         userPassword.value = "";
-
         Toastify({
           text: "Login successful!",
           duration: 3000,
@@ -51,7 +56,6 @@ signInForm.addEventListener("submit", async function (e) {
         }).showToast();
 
         localStorage.setItem("login", true);
-
         return;
       }
     } catch (error) {

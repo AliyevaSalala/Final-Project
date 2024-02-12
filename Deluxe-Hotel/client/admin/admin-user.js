@@ -1,30 +1,10 @@
-const BASE_url = "http://localhost:8000";
 const userTbdody = document.querySelector(".user-tbody");
 const userSearch = document.querySelector("#user-search");
-const darkMode = document.querySelector(".dark-mode");
-const moonMode = document.querySelector(".dark-mode-moon");
-const body = document.querySelector("body");
+
 const form = document.querySelector(".user-form");
 const userNameInput = document.querySelector("#user-name");
 const userEmailInput = document.querySelector("#user-email");
 const password = document.querySelector("#password");
-
-localStorage.getItem("dark-mode") === "true" && body.classList.add("dark-mode");
-
-darkMode.addEventListener("click", function () {
-  body.classList.add("dark-mode");
-
-  localStorage.getItem("dark-mode") === "true"
-    ? localStorage.setItem("dark-mode", false)
-    : localStorage.setItem("dark-mode", true);
-});
-moonMode.addEventListener("click", function () {
-  body.classList.remove("dark-mode");
-
-  localStorage.getItem("dark-mode") === "true"
-    ? localStorage.setItem("dark-mode", false)
-    : localStorage.setItem("dark-mode", true);
-});
 
 let user = [];
 
@@ -43,8 +23,11 @@ function userData(data) {
     trElement.innerHTML = `
     <td>${element.username}</td>
     <td>${element.email}</td>
+    <td>${element.isAdmin ? "Admin" : "User"}</td>
     <td>
-      <i class="fa-solid fa-trash" onclick=userDeletBtn("${element._id}",this)></i>
+      <i class="fa-solid fa-trash" onclick=userDeletBtn("${
+        element._id
+      }",this)></i>
     </td>`;
     userTbdody.append(trElement);
   });
@@ -110,7 +93,7 @@ form.addEventListener("submit", async function (e) {
     userEmailInput.value !== "" &&
     password.value !== ""
   ) {
-   const res= await axios.post(`${BASE_url}/users`, obj);
+    const res = await axios.post(`${BASE_url}/users`, obj);
     userData(res.data.allProducts);
     console.log(res);
   } else {

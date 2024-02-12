@@ -79,6 +79,7 @@ html {
   #sidebar-sec {
     padding: 2rem 0;
     width: 15%;
+
     .toggle {
       display: flex;
       align-items: center;
@@ -320,6 +321,92 @@ html {
       .product-search {
         input {
           width: 30%;
+          padding: 10px 15px;
+          background-color: #fff;
+          border: 1px solid transparent;
+          box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+      table {
+        width: 100%;
+        margin-top: 30px;
+        background-color: #fff;
+        box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+        padding: 10px 15px;
+        text-align: center;
+        border-radius: 20px;
+        &:hover {
+          box-shadow: none;
+        }
+        th {
+          width: 10%;
+          padding: 10px 15px;
+        }
+        td {
+          width: 10%;
+          padding: 10px 15px;
+          border-bottom: 1px solid rgba(132, 139, 200, 0.18);
+          color: #677483;
+          .fa-solid {
+            font-size: 15px;
+            cursor: pointer;
+            padding: 0 5px;
+          }
+          .fa-trash {
+            color: red;
+          }
+          .fa-pen-to-square {
+            color: green;
+          }
+          img {
+            width: 130px;
+            aspect-ratio: 1/1;
+          }
+        }
+      }
+    }
+    .menu-table-sec {
+      padding: 1rem 0;
+      h1 {
+        padding: 20px 0;
+        font-size: 25px;
+        color: #383839;
+      }
+      .form-sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 50px;
+        input {
+          margin-bottom: 20px;
+          padding: 10px 15px;
+          width: 400px;
+          background-color: #fff;
+          border: 1px solid transparent;
+          box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+      .menu-search {
+        input {
+          width: 30%;
+          padding: 10px 15px;
+          background-color: #fff;
+          border: 1px solid transparent;
+          box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        select {
+          width: 100%;
           padding: 10px 15px;
           background-color: #fff;
           border: 1px solid transparent;

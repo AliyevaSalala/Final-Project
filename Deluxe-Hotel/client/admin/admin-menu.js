@@ -1,33 +1,53 @@
+const BASE_url = "http://localhost:8000";
 const tbody = document.querySelector("tbody");
 const userSearch = document.querySelector("#user-search");
-
+const darkMode = document.querySelector(".dark-mode");
+const moonMode = document.querySelector(".dark-mode-moon");
+const body = document.querySelector("body");
 const form = document.querySelector(".form-sec");
-const typeInput = document.querySelector("#type-input");
-const titleInput = document.querySelector("#title");
+const titleInput = document.querySelector("#title-input");
 const priceInput = document.querySelector("#price");
-const descInput = document.querySelector("#desc");
+const descInput = document.querySelector("#desc-input");
 const photoInput = document.querySelector("#photo");
+const option = document.querySelector("select");
 
-let product = [];
+localStorage.getItem("dark-mode") === "true" && body.classList.add("dark-mode");
 
-async function getUsersData(endpoint) {
+darkMode.addEventListener("click", function () {
+  body.classList.add("dark-mode");
+
+  localStorage.getItem("dark-mode") === "true"
+    ? localStorage.setItem("dark-mode", false)
+    : localStorage.setItem("dark-mode", true);
+});
+moonMode.addEventListener("click", function () {
+  body.classList.remove("dark-mode");
+
+  localStorage.getItem("dark-mode") === "true"
+    ? localStorage.setItem("dark-mode", false)
+    : localStorage.setItem("dark-mode", true);
+});
+
+let menu = [];
+
+async function getAllData(endpoint) {
   const res = await axios(`${BASE_url}/${endpoint}`);
   console.log(res.data);
   product = res.data;
   drawTable(res.data);
 }
-getUsersData("products");
+getAllData("menu");
 
 function drawTable(data) {
   tbody.innerHTML = "";
   data.forEach((element) => {
     const trElement = document.createElement("tr");
     trElement.innerHTML = `
-    <td>${element.room_type}</td>
     <td>${element.title}</td>
+    <td><img src="${element.image}" alt="" /></td>
     <td>${element.price}</td>
     <td>${element.desc.slice(0, 20)}...</td>
-    <td><img src="${element.image}" alt="" /></td>
+    <td>${element.menuCategory}</td>
     <td>
       <i class="fa-solid fa-trash" onclick=userDeletBtn("${
         element._id
@@ -44,37 +64,17 @@ function drawTable(data) {
 
 async function userDeletBtn(id, btn) {
   if (confirm("are you sure delete??")) {
-    const res = await axios.delete(`${BASE_url}/products/${id}`);
+    const res = await axios.delete(`${BASE_url}/menu/${id}`);
     if (res.status === 200) {
       btn.closest("tr").remove();
     }
   }
 }
 
-// Swal.fire({
-//   title: "Are you sure?",
-//   text: "You won't be able to revert this!",
-//   icon: "warning",
-//   showCancelButton: true,
-//   confirmButtonColor: "#3085d6",
-//   cancelButtonColor: "#d33",
-//   confirmButtonText: "Yes, delete it!",
-// }).then((result) => {
-//   console.log("gh");
-//   if (result.isConfirmed) {
-//     Swal.fire({
-//       title: "Deleted!",
-//       text: "Your file has been deleted.",
-//       icon: "success",
-//     });
-//   }
-// });
-
 // USER-DATA-SEARCH
 
 userSearch.addEventListener("input", function (e) {
   e.preventDefault();
-
   let filtered = product.filter((item) =>
     item.title.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
   );
@@ -91,7 +91,6 @@ async function editBtn(id) {
   window.scrollTo(0, 0);
   const res = await axios(`${BASE_url}/products/${id}`);
 
-  typeInput.value = res.data.room_type;
   titleInput.value = res.data.title;
   priceInput.value = res.data.price;
   descInput.value = res.data.desc;

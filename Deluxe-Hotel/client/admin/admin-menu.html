@@ -80,17 +80,27 @@
 
       <!-- Main Content -->
       <section class="main-content">
-        <div class="user-table-sec">
-          <h1>New Users</h1>
+        <div class="menu-table-sec">
+          <h1>Restaurant</h1>
           <div class="form-sec">
             <form action="">
-              <input type="text" placeholder="User Name" /> <br />
-              <input type="email" placeholder="Email" /> <br />
+              <input type="text" placeholder="Title" id="title-input" /> <br />
+              <input type="text" placeholder="Desc"  id="desc-input"/> <br />
+              <input type="number" placeholder="Price" id="price" /> <br />
+              <input type="file" placeholder="Photo" id="photo" /> <br />
+              <select name="" id="">
+                <option value="starters">starters</option>
+                <option value="salads">salads</option>
+                <option value="Main Courses">Main Courses</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Drinks">Drinks</option>
+              </select>
+              <br />
               <input type="submit" value="Submit" />
             </form>
           </div>
 
-          <div class="user-search">
+          <div class="menu-search">
             <form action="">
               <input
                 type="search"
@@ -102,53 +112,27 @@
           <table>
             <thead>
               <tr>
-                <th>User Name</th>
-                <th>User Email</th>
+                <th>Name</th>
+                <th>Photo</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody class="user-tbody">
+            <tbody>
               <!-- <tr>
-                <td>Shalala</td>
-                <td>shalala@gmail.com</td>
+                <td>ksnkskd</td>
+                <td><img src="./images.jpeg" alt="" /></td>
+                <td>sknacaskn</td>
+                <td>sknacaskn</td>
+                <td>jjghjb</td>
                 <td>
                   <i class="fa-solid fa-trash"></i>
                   <i class="fa-solid fa-pen-to-square"></i>
                 </td>
               </tr> -->
             </tbody>
-          </table>
-        </div>
-        <div class="rezervation-table-sec">
-          <h1>Rezervations</h1>
-          <div class="form-sec">
-            <form action="">
-              <input type="date" placeholder="Check In" /> <br />
-              <input type="date" placeholder="Check Out" /> <br />
-              <input type="text" placeholder="Rooms" /> <br />
-              <input type="text" placeholder="Guests" /> <br />
-              <input type="submit" value="Submit" />
-            </form>
-          </div>
-
-          <div class="user-search">
-            <form action="">
-              <input
-                type="search"
-                placeholder="User Search..."
-                id="user-search"
-              />
-            </form>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>User Name</th>
-                <th>User Email</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody class="user-tbody"></tbody>
           </table>
         </div>
       </section>
@@ -203,6 +187,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./admin.js"></script>
+    <script src="./common.js"></script>
+    <script src="./admin-menu.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
 const User = require("../models/user");
 
 const addNewUsersById = async (req, res) => {
-  const newProduct = new User({ ...req.body });
+  const newProduct = new User({ ...req.body, isAdmin: false });
   try {
     await newProduct.save();
     const allProducts = await User.find({});
@@ -31,7 +31,7 @@ const signup = async (req, res) => {
     });
     console.log(existingUser);
     if (existingUser) {
-      res.status(400).send({
+      return res.status(400).send({
         message: "This email is already registered. Please use another email.",
       });
     } else {
@@ -39,6 +39,7 @@ const signup = async (req, res) => {
         username: username,
         email: email,
         password: password,
+        isAdmin: false,
       });
       await newUser.save();
       res.status(201).send({
@@ -86,9 +87,16 @@ const signin = async (req, res) => {
     const user = await User.findOne({ email: email, password: password });
     if (!user) {
       res.status(400).send({ message: "Wrong email or password" });
+      return;
     }
 
-    res.status(200).send({ message: "Login successful!" });
+    res.status(200).send({
+      message: "Login successful!",
+      userInfo: {
+        isAdmin: user.isAdmin,
+        userName: user.username,
+      },
+    });
   } catch (error) {
     res.status(500).send({ message: "An error occurred" });
   }
