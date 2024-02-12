@@ -117,14 +117,6 @@ body.dark-mode .content #right-sec .reminders .boxes .new-reminder {
   flex-direction: column;
   gap: 30px;
 }
-.content .main-content .form-sec {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.content .main-content .form-sec input {
-  margin-bottom: 10px;
-}
 .content .main-content .user-table-sec {
   padding: 1rem 0;
 }
@@ -133,8 +125,27 @@ body.dark-mode .content #right-sec .reminders .boxes .new-reminder {
   font-size: 25px;
   color: #383839;
 }
+.content .main-content .user-table-sec .form-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.content .main-content .user-table-sec .form-sec input {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .user-table-sec .form-sec input:hover {
+  box-shadow: none;
+}
 .content .main-content .user-table-sec .user-search input {
-  width: 50%;
+  width: 30%;
   padding: 10px 15px;
   background-color: #fff;
   border: 1px solid transparent;
@@ -171,9 +182,77 @@ body.dark-mode .content #right-sec .reminders .boxes .new-reminder {
   padding: 0 5px;
 }
 .content .main-content .user-table-sec table td .fa-trash {
+  color: red;
+}
+.content .main-content .rezervation-table-sec {
+  padding: 1rem 0;
+  display: none;
+}
+.content .main-content .rezervation-table-sec h1 {
+  padding: 20px 0;
+  font-size: 25px;
+  color: #383839;
+}
+.content .main-content .rezervation-table-sec .form-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.content .main-content .rezervation-table-sec .form-sec input {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .rezervation-table-sec .form-sec input:hover {
+  box-shadow: none;
+}
+.content .main-content .rezervation-table-sec .user-search input {
+  width: 30%;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .rezervation-table-sec .user-search input:hover {
+  box-shadow: none;
+}
+.content .main-content .rezervation-table-sec table {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 20px;
+}
+.content .main-content .rezervation-table-sec table:hover {
+  box-shadow: none;
+}
+.content .main-content .rezervation-table-sec table th {
+  width: 10%;
+  padding: 10px 15px;
+}
+.content .main-content .rezervation-table-sec table td {
+  width: 10%;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(132, 139, 200, 0.18);
+  color: #677483;
+}
+.content .main-content .rezervation-table-sec table td .fa-solid {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+.content .main-content .rezervation-table-sec table td .fa-trash {
   color: green;
 }
-.content .main-content .user-table-sec table td .fa-pen-to-square {
+.content .main-content .rezervation-table-sec table td .fa-pen-to-square {
   color: red;
 }
 .content #right-sec {

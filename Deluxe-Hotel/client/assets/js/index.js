@@ -146,36 +146,37 @@ async function getAllData(endpoint) {
 }
 
 getAllData("reservations");
+let login = localStorage.getItem("login");
 
 checkForm.addEventListener("submit", async function (e) {
   e.preventDefault();
-  let newObj = {
-    checkIn: checkInInput.value,
-    checkOut: checkOutInput.value,
-    rooms: roomSelect.value,
-    guests: guestsSelect.value,
-  };
-  if (
-    checkInInput.value != "" &&
-    checkOutInput.value != "" &&
-    roomSelect.value != "" &&
-    guestsSelect.value != ""
-  ) {
-    await axios.post(`${DB_URL}/reservations`, newObj);
-    // array.push(newObj);
+  if (login === "true") {
+    let newObj = {
+      checkIn: checkInInput.value,
+      checkOut: checkOutInput.value,
+      rooms: roomSelect.value,
+      guests: guestsSelect.value,
+    };
+    if (
+      checkInInput.value != "" &&
+      checkOutInput.value != "" &&
+      roomSelect.value != "" &&
+      guestsSelect.value != ""
+    ) {
+      await axios.post(`${DB_URL}/reservations`, newObj);
+      Toastify({
+        text: " successful!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      }).showToast();
+    }
   } else {
-    alert("1111");
+    window.location = "login.html";
   }
-  // console.log(checkInInput);
-  // console.log(checkOutInput);
-  // console.log(numberInput.value);
-  // console.log(select.value);
 });
-
-// select.addEventListener("change", function (e) {
-//   authorName = e.target.value;
-//   console.log(authorName);
-// });
 
 // LOGOUT
 

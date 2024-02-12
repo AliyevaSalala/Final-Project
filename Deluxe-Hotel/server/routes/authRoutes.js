@@ -5,9 +5,10 @@ const router = express.Router();
 const authController = require("../controllers/userController");
 
 router.get("/users", authController.getAllUsers);
+router.post("/users", authController.addNewUsersById);
 router.post("/signup", authController.signup);
-router.delete("/:id", authController.deleteUsersById);
+router.delete("/users/:id", authController.deleteUsersById);
 router.post("/signin", authController.signin);
-router.post('/logout', authController.logout);
+router.post("/logout", authController.logout);
 
 module.exports = router;

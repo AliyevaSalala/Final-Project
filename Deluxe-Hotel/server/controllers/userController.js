@@ -2,6 +2,19 @@
 
 const User = require("../models/user");
 
+const addNewUsersById = async (req, res) => {
+  const newProduct = new User({ ...req.body });
+  try {
+    await newProduct.save();
+    res.status(201).send({
+      message: "created succesfully!",
+      data: newProduct,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
+
 const signup = async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -89,6 +102,7 @@ const logout = async (req, res) => {
 };
 
 module.exports = {
+  addNewUsersById,
   signup,
   signin,
   getAllUsers,
