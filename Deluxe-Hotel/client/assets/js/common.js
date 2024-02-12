@@ -116,3 +116,26 @@ let calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+// LOGOUT
+
+const isLoggedIn = localStorage.getItem("login") !== null;
+const logOut = document.querySelector(".logout-icon");
+
+if (isLoggedIn) {
+  logOut.style.display = "block";
+} else {
+  logOut.style.display = "none";
+}
+
+logOut.addEventListener("click", async function () {
+  try {
+    const res = await axios.post(`${DB_URL}/logout`);
+    if (res.status === 200) {
+      localStorage.removeItem("login");
+      window.location = "login.html";
+    }
+  } catch (error) {
+    console.error(error);
+  }
+});

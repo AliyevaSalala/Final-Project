@@ -254,16 +254,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // LOGOUT
 
-const logOut = document.querySelector(".logout-icon");
+// const logOut = document.querySelector(".logout-icon");
 
-logOut.addEventListener("click", async function () {
-  try {
-    const res = await axios.post(`${DB_URL}/logout`);
-    if (res.status === 200) {
-      localStorage.removeItem("login");
-      window.location = "login.html";
-    }
-  } catch (error) {
-    console.error(error);
-  }
-});
+// logOut.addEventListener("click", async function () {
+//   try {
+//     const res = await axios.post(`${DB_URL}/logout`);
+//     if (res.status === 200) {
+//       localStorage.removeItem("login");
+//       window.location = "login.html";
+//     }
+//   } catch (error) {
+//     console.error(error);
+//   }
+// });
+
+
+
+
+
+
+
