@@ -42,13 +42,13 @@ function drawMenu(data) {
                   />
                   <div class="texts">
                     <h3>${element.title}</h3>
-                    <p>${element.desc}</p>
+                    <p>${element.desc.slice(0, 40)}..</p>
                   </div>
                 </div>
                 <div class="item-left">
                   <div class="item-left">
                     <div class="basket">
-                      <p>$72.6</p>
+                      <p>$ ${element.price}</p>
                       <i class="${
                         favsProducts.some((item) => item.id === element._id)
                           ? "fa-solid fa-heart"
