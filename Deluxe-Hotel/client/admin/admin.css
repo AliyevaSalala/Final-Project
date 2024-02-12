@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  text-decoration: none;
+  text-decoration: none !important;
   outline: none;
 }
 
@@ -42,6 +42,10 @@ body.dark-mode .content #right-sec .reminders .boxes .box {
 body.dark-mode .content #right-sec .reminders .boxes .new-reminder {
   background-color: #383839;
   box-shadow: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .content {
@@ -186,7 +190,6 @@ body.dark-mode .content #right-sec .reminders .boxes .new-reminder {
 }
 .content .main-content .rezervation-table-sec {
   padding: 1rem 0;
-  display: none;
 }
 .content .main-content .rezervation-table-sec h1 {
   padding: 20px 0;
@@ -250,10 +253,81 @@ body.dark-mode .content #right-sec .reminders .boxes .new-reminder {
   padding: 0 5px;
 }
 .content .main-content .rezervation-table-sec table td .fa-trash {
+  color: red;
+}
+.content .main-content .product-table-sec {
+  padding: 1rem 0;
+}
+.content .main-content .product-table-sec h1 {
+  padding: 20px 0;
+  font-size: 25px;
+  color: #383839;
+}
+.content .main-content .product-table-sec .form-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.content .main-content .product-table-sec .form-sec input {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .product-table-sec .form-sec input:hover {
+  box-shadow: none;
+}
+.content .main-content .product-table-sec .product-search input {
+  width: 30%;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .product-table-sec .product-search input:hover {
+  box-shadow: none;
+}
+.content .main-content .product-table-sec table {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 20px;
+}
+.content .main-content .product-table-sec table:hover {
+  box-shadow: none;
+}
+.content .main-content .product-table-sec table th {
+  width: 10%;
+  padding: 10px 15px;
+}
+.content .main-content .product-table-sec table td {
+  width: 10%;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(132, 139, 200, 0.18);
+  color: #677483;
+}
+.content .main-content .product-table-sec table td .fa-solid {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+.content .main-content .product-table-sec table td .fa-trash {
+  color: red;
+}
+.content .main-content .product-table-sec table td .fa-pen-to-square {
   color: green;
 }
-.content .main-content .rezervation-table-sec table td .fa-pen-to-square {
-  color: red;
+.content .main-content .product-table-sec table td img {
+  width: 130px;
+  aspect-ratio: 1/1;
 }
 .content #right-sec {
   width: 20%;

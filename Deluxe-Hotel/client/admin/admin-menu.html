@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.pinimg.com/originals/b3/26/bc/b326bcc3f37c99970d8b0224f0154006.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./admin.css" />
+    <title>Deluxe Hotel</title>
+  </head>
+  <body>
+    <!-- Sidebar Section -->
+    <div class="content">
+      <section id="sidebar-sec">
+        <div class="toggle">
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="./admin.html">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="./admin-user.html" class="new-user-icon">
+            <i class="fa-solid fa-user"></i>
+            <h3>Users</h3>
+          </a>
+          <a href="./admin-rezerv.html" class="new-rezerv-icon">
+            <i class="fa-solid fa-receipt"></i>
+            <h3>Rezervations</h3>
+          </a>
+          <a href="./admin-product.html">
+            <i class="fa-solid fa-house"></i>
+            <h3>Products</h3>
+          </a>
+          <a href="./admin-menu.html" class="active">
+            <i class="fa-solid fa-utensils"></i>
+            <h3>Menu</h3>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-list"></i>
+            <h3>Sale List</h3>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <h3>Reports</h3>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            <h3>Settings</h3>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-plus"></i>
+            <h3>New Login</h3>
+          </a>
+          <a href="#" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <section class="main-content">
+        <div class="user-table-sec">
+          <h1>New Users</h1>
+          <div class="form-sec">
+            <form action="">
+              <input type="text" placeholder="User Name" /> <br />
+              <input type="email" placeholder="Email" /> <br />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+
+          <div class="user-search">
+            <form action="">
+              <input
+                type="search"
+                placeholder="User Search..."
+                id="user-search"
+              />
+            </form>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody class="user-tbody">
+              <!-- <tr>
+                <td>Shalala</td>
+                <td>shalala@gmail.com</td>
+                <td>
+                  <i class="fa-solid fa-trash"></i>
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        <div class="rezervation-table-sec">
+          <h1>Rezervations</h1>
+          <div class="form-sec">
+            <form action="">
+              <input type="date" placeholder="Check In" /> <br />
+              <input type="date" placeholder="Check Out" /> <br />
+              <input type="text" placeholder="Rooms" /> <br />
+              <input type="text" placeholder="Guests" /> <br />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+
+          <div class="user-search">
+            <form action="">
+              <input
+                type="search"
+                placeholder="User Search..."
+                id="user-search"
+              />
+            </form>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody class="user-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- RIGHT-SECTION -->
+      <section id="right-sec">
+        <div class="navbar">
+          <div class="dark-icons">
+            <i class="fa-solid fa-sun dark-mode"></i>
+            <i class="fa-solid fa-moon dark-mode-moon"></i>
+          </div>
+          <div class="info">
+            <div class="body">
+              <h3>Hey, Shalala</h3>
+              <p>Admin</p>
+            </div>
+            <img src="./unsplash.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="logo-icons">
+          <div class="box">
+            <img src="./images.jpeg" alt="" />
+            <h2>Junior Developer</h2>
+          </div>
+        </div>
+
+        <div class="reminders">
+          <h1>Reminders</h1>
+          <div class="boxes">
+            <div class="box">
+              <i class="fa-solid fa-volume-high"></i>
+              <div class="box-body">
+                <h3>Workshop</h3>
+                <p>08:00AM - 12:00 PM</p>
+              </div>
+            </div>
+            <div class="box">
+              <i class="fa-solid fa-pen"></i>
+              <div class="box-body">
+                <h3>Workshop</h3>
+                <p>08:00AM - 12:00 PM</p>
+              </div>
+            </div>
+            <div class="new-reminder">
+              <a href="#"><i class="fa-solid fa-plus"></i>Add New Reminder</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

@@ -7,6 +7,7 @@ const body = document.querySelector("body");
 const form = document.querySelector(".user-form");
 const userNameInput = document.querySelector("#user-name");
 const userEmailInput = document.querySelector("#user-email");
+const password = document.querySelector("#password");
 
 localStorage.getItem("dark-mode") === "true" && body.classList.add("dark-mode");
 
@@ -101,14 +102,22 @@ form.addEventListener("submit", async function (e) {
   let obj = {
     username: userNameInput.value,
     email: userEmailInput.value,
+    password: password.value,
   };
 
-  if (userNameInput.value !== "" && userEmailInput.value !== "") {
-    await axios.post(`${BASE_url}/users`, obj);
+  if (
+    userNameInput.value !== "" &&
+    userEmailInput.value !== "" &&
+    password.value !== ""
+  ) {
+   const res= await axios.post(`${BASE_url}/users`, obj);
+    userData(res.data.allProducts);
+    console.log(res);
   } else {
     alert("!!!!!!!!");
   }
 
   userNameInput.value = "";
   userEmailInput.value = "";
+  password.value = "";
 });
