@@ -112,17 +112,7 @@ function subTotalPrice() {
 }
 
 subTotalPrice();
-// function setItemLocalStorage(item) {
-//   localStorage.setItem("product", JSON.stringify(item));
-// }
 
-// function getItemLocalStorage() {
-//   return JSON.parse(localStorage.getItem("product")) || [];
-// }
-
-// function basketCalculate() {
-//   basketCounter.textContent = basket.reduce((acc, curr) => acc + curr.count, 0);
-// }
 
 // BASKET-SEARCH
 

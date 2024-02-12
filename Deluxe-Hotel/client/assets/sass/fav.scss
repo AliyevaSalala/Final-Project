@@ -13,7 +13,7 @@
 
   .empty {
     padding: 100px 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     .about-section {
       text-align: center;
       h1 {
@@ -25,6 +25,79 @@
 
         @media screen and (max-width: 767px) {
           font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+#fav-sec {
+  padding: 3rem 0;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  .fav-sec {
+    padding-top: 60px;
+    .favs-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 40px;
+      row-gap: 70px;
+
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 481px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .fav-card {
+        box-shadow: 10px 25px 10px #ddd;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+        .fa-heart {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 25px;
+          color: red;
+          cursor: pointer;
+        }
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          transition: all 0.5s;
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px 20px;
+          h1 {
+            font-size: 30px;
+            font-family: "Protest Revolution", sans-serif;
+          }
+          p {
+            font-size: 15px;
+            color: #898989;
+          }
+          h5 {
+            font-size: 15px;
+            color: #5d5d5d;
+          }
         }
       }
     }

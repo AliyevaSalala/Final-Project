@@ -1,32 +1,11 @@
-const BASE_url = "http://localhost:8000";
 const tbody = document.querySelector("tbody");
 const userSearch = document.querySelector("#user-search");
-const darkMode = document.querySelector(".dark-mode");
-const moonMode = document.querySelector(".dark-mode-moon");
-const body = document.querySelector("body");
 const form = document.querySelector(".form-sec");
 const titleInput = document.querySelector("#title-input");
 const priceInput = document.querySelector("#price");
 const descInput = document.querySelector("#desc-input");
 const photoInput = document.querySelector("#photo");
 const option = document.querySelector("select");
-
-localStorage.getItem("dark-mode") === "true" && body.classList.add("dark-mode");
-
-darkMode.addEventListener("click", function () {
-  body.classList.add("dark-mode");
-
-  localStorage.getItem("dark-mode") === "true"
-    ? localStorage.setItem("dark-mode", false)
-    : localStorage.setItem("dark-mode", true);
-});
-moonMode.addEventListener("click", function () {
-  body.classList.remove("dark-mode");
-
-  localStorage.getItem("dark-mode") === "true"
-    ? localStorage.setItem("dark-mode", false)
-    : localStorage.setItem("dark-mode", true);
-});
 
 let menu = [];
 
@@ -89,7 +68,7 @@ let base64;
 async function editBtn(id) {
   editStatus = id;
   window.scrollTo(0, 0);
-  const res = await axios(`${BASE_url}/products/${id}`);
+  const res = await axios(`${BASE_url}/menu/${id}`);
 
   titleInput.value = res.data.title;
   priceInput.value = res.data.price;
@@ -100,24 +79,23 @@ form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
   let newObj = {
-    room_type: typeInput.value,
     title: titleInput.value,
     price: priceInput.value,
     desc: descInput.value,
+    menuCategory: option.value,
     image: base64,
   };
 
   if (!editStatus) {
     if (
-      typeInput.value &&
       titleInput.value &&
       photoInput.value &&
       descInput.value &&
       priceInput.value
     ) {
       try {
-        const res = await axios.post(`${BASE_url}/products`, newObj);
-        // drawTable(res.data.allProducts);
+        const res = await axios.post(`${BASE_url}/menu`, newObj);
+        drawTable(res.data.allProducts);
         console.log(res);
       } catch (error) {
         console.log(error);
@@ -126,10 +104,9 @@ form.addEventListener("submit", async function (e) {
       alert("!!!!!!");
     }
   } else {
-    await axios.patch(`${BASE_url}/products/${editStatus}`, newObj);
+    await axios.patch(`${BASE_url}/menu/${editStatus}`, newObj);
   }
 
-  typeInput.valu = "";
   titleInput.value = "";
   descInput.value = "";
   priceInput.value = "";
