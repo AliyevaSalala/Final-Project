@@ -59,6 +59,7 @@ const checkForm = document.querySelector(".check-form");
 const checkInInput = document.querySelector("#check-in-input");
 const checkOutInput = document.querySelector("#check-out-input");
 // const numberInput = document.querySelector("#number-input");
+// let date = document.getElementById("date");
 
 const roomSelect = document.querySelector("#room-select");
 const guestsSelect = document.querySelector("#guests-select");
@@ -138,6 +139,7 @@ myForm.addEventListener("submit", function (event) {
 
 let array = [];
 
+let login = localStorage.getItem("login");
 async function getAllData(endpoint) {
   const res = await axios(`${DB_URL}/${endpoint}`);
   // console.log(res.data);
@@ -146,7 +148,6 @@ async function getAllData(endpoint) {
 }
 
 getAllData("reservations");
-let login = localStorage.getItem("login");
 
 checkForm.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -176,6 +177,79 @@ checkForm.addEventListener("submit", async function (e) {
   } else {
     window.location = "login.html";
   }
+});
+
+// let login = localStorage.getItem("login");
+// async function checkReservation(date) {
+//   const reservations = await axios.get(`${DB_URL}/reservations`);
+//   const existingReservation = reservations.data.find(
+//     (reservation) => reservation.checkIn === date
+//   );
+//   return existingReservation !== undefined;
+// }
+
+// checkForm.addEventListener("submit", async function (e) {
+//   e.preventDefault();
+//   if (login === "true") {
+//     let newObj = {
+//       checkIn: checkInInput.value,
+//       checkOut: checkOutInput.value,
+//       rooms: roomSelect.value,
+//       guests: guestsSelect.value,
+//     };
+//     if (
+//       checkInInput.value != "" &&
+//       checkOutInput.value != "" &&
+//       roomSelect.value != "" &&
+//       guestsSelect.value != ""
+//     ) {
+//       const isReserved = await checkReservation(checkInInput.value);
+//       if (isReserved) {
+
+//         Toastify({
+//           text: "This date is already reserved!",
+//           duration: 3000,
+//           close: true,
+//           gravity: "top",
+//           position: "right",
+//           backgroundColor: "linear-gradient(to right, #FF0000, #FF6347)",
+//         }).showToast();
+//       } else {
+
+//         await axios.post(`${DB_URL}/reservations`, newObj);
+//         Toastify({
+//           text: "Reservation successful!",
+//           duration: 3000,
+//           close: true,
+//           gravity: "top",
+//           position: "right",
+//           backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+//         }).showToast();
+//       }
+//     }
+//   } else {
+//     window.location = "login.html";
+//   }
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1; // January is 0!
+  let yyyy = today.getFullYear();
+
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+
+  today = yyyy + "-" + mm + "-" + dd;
+
+  checkInInput.setAttribute("min", today);
+  checkOutInput.setAttribute("min", today);
 });
 
 // LOGOUT

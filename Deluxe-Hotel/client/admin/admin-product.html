@@ -27,56 +27,52 @@
   <body>
     <!-- Sidebar Section -->
     <div class="content">
-      <section id="sidebar-sec">
-        <div class="toggle">
-          <div class="close" id="close-btn">
-            <span class="material-icons-sharp"> close </span>
+      <div class="sticky">
+        <section id="sidebar-sec">
+          <div class="sidebar">
+            <a href="./admin.html">
+              <i class="fa-solid fa-layer-group"></i>
+              <h3>Dashboard</h3>
+            </a>
+            <a href="./admin-user.html" class="new-user-icon">
+              <i class="fa-solid fa-user"></i>
+              <h3>Users</h3>
+            </a>
+            <a href="./admin-rezerv.html" class="new-rezerv-icon">
+              <i class="fa-solid fa-receipt"></i>
+              <h3>Rezervations</h3>
+            </a>
+            <a href="./admin-product.html" class="active">
+              <i class="fa-solid fa-house"></i>
+              <h3>Products</h3>
+            </a>
+            <a href="./admin-menu.html">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Menu</h3>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-list"></i>
+              <h3>Sale List</h3>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <h3>Reports</h3>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-gear"></i>
+              <h3>Settings</h3>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-plus"></i>
+              <h3>New Login</h3>
+            </a>
+            <a href="#" class="logout">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <h3>Logout</h3>
+            </a>
           </div>
-        </div>
-
-        <div class="sidebar">
-          <a href="./admin.html">
-            <i class="fa-solid fa-layer-group"></i>
-            <h3>Dashboard</h3>
-          </a>
-          <a href="./admin-user.html" class="new-user-icon">
-            <i class="fa-solid fa-user"></i>
-            <h3>Users</h3>
-          </a>
-          <a href="./admin-rezerv.html" class="new-rezerv-icon">
-            <i class="fa-solid fa-receipt"></i>
-            <h3>Rezervations</h3>
-          </a>
-          <a href="./admin-product.html" class="active">
-            <i class="fa-solid fa-house"></i>
-            <h3>Products</h3>
-          </a>
-          <a href="./admin-menu.html">
-            <i class="fa-solid fa-utensils"></i>
-            <h3>Menu</h3>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-list"></i>
-            <h3>Sale List</h3>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <h3>Reports</h3>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-gear"></i>
-            <h3>Settings</h3>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-plus"></i>
-            <h3>New Login</h3>
-          </a>
-          <a href="#" class="logout">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <h3>Logout</h3>
-          </a>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <!-- Main Content -->
       <section class="main-content">
@@ -128,7 +124,9 @@
       </section>
 
       <!-- RIGHT-SECTION -->
-      <section id="right-sec">
+
+      <div class="sticky-2">
+          <section id="right-sec">
         <div class="navbar">
           <div class="dark-icons">
             <i class="fa-solid fa-sun dark-mode"></i>
@@ -173,6 +171,8 @@
           </div>
         </div>
       </section>
+      </div>
+    
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

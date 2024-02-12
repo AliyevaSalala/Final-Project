@@ -27,56 +27,52 @@
   <body>
     <!-- Sidebar Section -->
     <div class="content">
-      <section id="sidebar-sec">
-        <div class="toggle">
-          <div class="close" id="close-btn">
-            <span class="material-icons-sharp"> close </span>
+      <div class="sticky">
+        <section id="sidebar-sec">
+          <div class="sidebar">
+            <a href="./admin.html">
+              <i class="fa-solid fa-layer-group"></i>
+              <h3>Dashboard</h3>
+            </a>
+            <a href="./admin-user.html" class="new-user-icon">
+              <i class="fa-solid fa-user"></i>
+              <h3>Users</h3>
+            </a>
+            <a href="./admin-rezerv.html" class="new-rezerv-icon">
+              <i class="fa-solid fa-receipt"></i>
+              <h3>Rezervations</h3>
+            </a>
+            <a href="./admin-product.html">
+              <i class="fa-solid fa-house"></i>
+              <h3>Products</h3>
+            </a>
+            <a href="./admin-menu.html" class="active">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Menu</h3>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-list"></i>
+              <h3>Sale List</h3>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <h3>Reports</h3>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-gear"></i>
+              <h3>Settings</h3>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-plus"></i>
+              <h3>New Login</h3>
+            </a>
+            <a href="#" class="logout">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <h3>Logout</h3>
+            </a>
           </div>
-        </div>
-
-        <div class="sidebar">
-          <a href="./admin.html">
-            <i class="fa-solid fa-layer-group"></i>
-            <h3>Dashboard</h3>
-          </a>
-          <a href="./admin-user.html" class="new-user-icon">
-            <i class="fa-solid fa-user"></i>
-            <h3>Users</h3>
-          </a>
-          <a href="./admin-rezerv.html" class="new-rezerv-icon">
-            <i class="fa-solid fa-receipt"></i>
-            <h3>Rezervations</h3>
-          </a>
-          <a href="./admin-product.html">
-            <i class="fa-solid fa-house"></i>
-            <h3>Products</h3>
-          </a>
-          <a href="./admin-menu.html" class="active">
-            <i class="fa-solid fa-utensils"></i>
-            <h3>Menu</h3>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-list"></i>
-            <h3>Sale List</h3>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <h3>Reports</h3>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-gear"></i>
-            <h3>Settings</h3>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-plus"></i>
-            <h3>New Login</h3>
-          </a>
-          <a href="#" class="logout">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <h3>Logout</h3>
-          </a>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <!-- Main Content -->
       <section class="main-content">
@@ -85,7 +81,7 @@
           <div class="form-sec">
             <form action="">
               <input type="text" placeholder="Title" id="title-input" /> <br />
-              <input type="text" placeholder="Desc"  id="desc-input"/> <br />
+              <input type="text" placeholder="Desc" id="desc-input" /> <br />
               <input type="number" placeholder="Price" id="price" /> <br />
               <input type="file" placeholder="Photo" id="photo" /> <br />
               <select name="" id="">
@@ -102,11 +98,7 @@
 
           <div class="menu-search">
             <form action="">
-              <input
-                type="search"
-                placeholder=" Search..."
-                id="user-search"
-              />
+              <input type="search" placeholder=" Search..." id="user-search" />
             </form>
           </div>
           <table>
@@ -138,51 +130,53 @@
       </section>
 
       <!-- RIGHT-SECTION -->
-      <section id="right-sec">
-        <div class="navbar">
-          <div class="dark-icons">
-            <i class="fa-solid fa-sun dark-mode"></i>
-            <i class="fa-solid fa-moon dark-mode-moon"></i>
-          </div>
-          <div class="info">
-            <div class="body">
-              <h3>Hey, Shalala</h3>
-              <p>Admin</p>
+      <div class="sticky-2">
+        <section id="right-sec">
+          <div class="navbar">
+            <div class="dark-icons">
+              <i class="fa-solid fa-sun dark-mode"></i>
+              <i class="fa-solid fa-moon dark-mode-moon"></i>
             </div>
-            <img src="./unsplash.jpg" alt="" />
+            <div class="info">
+              <div class="body">
+                <h3>Hey, Shalala</h3>
+                <p>Admin</p>
+              </div>
+              <img src="./unsplash.jpg" alt="" />
+            </div>
           </div>
-        </div>
 
-        <div class="logo-icons">
-          <div class="box">
-            <img src="./images.jpeg" alt="" />
-            <h2>Junior Developer</h2>
-          </div>
-        </div>
-
-        <div class="reminders">
-          <h1>Reminders</h1>
-          <div class="boxes">
+          <div class="logo-icons">
             <div class="box">
-              <i class="fa-solid fa-volume-high"></i>
-              <div class="box-body">
-                <h3>Workshop</h3>
-                <p>08:00AM - 12:00 PM</p>
+              <img src="./images.jpeg" alt="" />
+              <h2>Junior Developer</h2>
+            </div>
+          </div>
+
+          <div class="reminders">
+            <h1>Reminders</h1>
+            <div class="boxes">
+              <div class="box">
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="box-body">
+                  <h3>Workshop</h3>
+                  <p>08:00AM - 12:00 PM</p>
+                </div>
+              </div>
+              <div class="box">
+                <i class="fa-solid fa-pen"></i>
+                <div class="box-body">
+                  <h3>Workshop</h3>
+                  <p>08:00AM - 12:00 PM</p>
+                </div>
+              </div>
+              <div class="new-reminder">
+                <a href="#"><i class="fa-solid fa-plus"></i>Add New Reminder</a>
               </div>
             </div>
-            <div class="box">
-              <i class="fa-solid fa-pen"></i>
-              <div class="box-body">
-                <h3>Workshop</h3>
-                <p>08:00AM - 12:00 PM</p>
-              </div>
-            </div>
-            <div class="new-reminder">
-              <a href="#"><i class="fa-solid fa-plus"></i>Add New Reminder</a>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

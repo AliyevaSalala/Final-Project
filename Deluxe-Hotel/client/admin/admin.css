@@ -80,21 +80,17 @@ html {
   display: flex;
   gap: 30px;
 }
-.content #sidebar-sec {
-  padding: 2rem 0;
+.content .sticky {
   width: 15%;
 }
-.content #sidebar-sec .toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1.4rem;
+.content .sticky #sidebar-sec {
+  padding: 2rem 0;
+  position: sticky;
+  top: 35px;
+  padding-top: inherit;
+  width: 100%;
 }
-.content #sidebar-sec .toggle .close {
-  padding-right: 1rem;
-  display: none;
-}
-.content #sidebar-sec .sidebar {
+.content .sticky #sidebar-sec .sidebar {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -110,10 +106,10 @@ html {
   left: 2rem;
   transition: all 0.3s ease;
 }
-.content #sidebar-sec .sidebar:hover {
+.content .sticky #sidebar-sec .sidebar:hover {
   box-shadow: none;
 }
-.content #sidebar-sec .sidebar a {
+.content .sticky #sidebar-sec .sidebar a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -121,24 +117,24 @@ html {
   color: #7d8da1;
   transition: all 0.5s;
 }
-.content #sidebar-sec .sidebar a:hover {
+.content .sticky #sidebar-sec .sidebar a:hover {
   color: #5487c2;
 }
-.content #sidebar-sec .sidebar a i {
+.content .sticky #sidebar-sec .sidebar a i {
   font-size: 22px;
 }
-.content #sidebar-sec .sidebar a.active {
+.content .sticky #sidebar-sec .sidebar a.active {
   color: #6c9bcf;
   width: 100%;
   margin-left: 0;
 }
-.content #sidebar-sec .sidebar a.active::before {
+.content .sticky #sidebar-sec .sidebar a.active::before {
   content: "";
   width: 6px;
   height: 18px;
   background-color: #6c9bcf;
 }
-.content #sidebar-sec .sidebar .logout {
+.content .sticky #sidebar-sec .sidebar .logout {
   padding-top: 60px;
 }
 .content .main-content {
@@ -462,64 +458,69 @@ html {
   width: 130px;
   aspect-ratio: 1/1;
 }
-.content #right-sec {
+.content .sticky-2 {
   width: 20%;
-  padding: 2rem 0;
 }
-.content #right-sec .navbar {
+.content .sticky-2 #right-sec {
+  position: sticky;
+  top: 10px;
+  padding-top: inherit;
+  width: 100%;
+}
+.content .sticky-2 #right-sec .navbar {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.content #right-sec .navbar .dark-icons {
+.content .sticky-2 #right-sec .navbar .dark-icons {
   display: flex;
 }
-.content #right-sec .navbar .dark-icons i {
+.content .sticky-2 #right-sec .navbar .dark-icons i {
   padding: 10px 13px;
   font-size: 15px;
   cursor: pointer;
 }
-.content #right-sec .navbar .dark-icons i:nth-child(1) {
+.content .sticky-2 #right-sec .navbar .dark-icons i:nth-child(1) {
   background-color: #5487c2;
   color: #fff;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.content #right-sec .navbar .dark-icons i:nth-child(2) {
+.content .sticky-2 #right-sec .navbar .dark-icons i:nth-child(2) {
   background-color: #9b9b9b;
   color: #fff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.content #right-sec .navbar .info {
+.content .sticky-2 #right-sec .navbar .info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.content #right-sec .navbar .info .body {
+.content .sticky-2 #right-sec .navbar .info .body {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.content #right-sec .navbar .info .body h3 {
+.content .sticky-2 #right-sec .navbar .info .body h3 {
   font-size: 15px;
   color: #1a1a1a;
 }
-.content #right-sec .navbar .info .body p {
+.content .sticky-2 #right-sec .navbar .info .body p {
   font-size: 14px;
   color: #7d8da1;
   font-style: italic;
 }
-.content #right-sec .navbar .info img {
+.content .sticky-2 #right-sec .navbar .info img {
   cursor: pointer;
   width: 60px;
   border-radius: 50%;
   aspect-ratio: 1/1;
 }
-.content #right-sec .logo-icons {
+.content .sticky-2 #right-sec .logo-icons {
   padding-top: 30px;
 }
-.content #right-sec .logo-icons .box {
+.content .sticky-2 #right-sec .logo-icons .box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -532,27 +533,27 @@ html {
   cursor: pointer;
   border-radius: 20px;
 }
-.content #right-sec .logo-icons .box h2 {
+.content .sticky-2 #right-sec .logo-icons .box h2 {
   font-size: 25px;
   font-family: "Protest Revolution", sans-serif;
 }
-.content #right-sec .logo-icons .box:hover {
+.content .sticky-2 #right-sec .logo-icons .box:hover {
   box-shadow: none;
 }
-.content #right-sec .reminders {
+.content .sticky-2 #right-sec .reminders {
   padding-top: 50px;
 }
-.content #right-sec .reminders h1 {
+.content .sticky-2 #right-sec .reminders h1 {
   padding: 20px 0;
   font-size: 25px;
   color: #1a1a1a;
 }
-.content #right-sec .reminders .boxes {
+.content .sticky-2 #right-sec .reminders .boxes {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.content #right-sec .reminders .boxes .box {
+.content .sticky-2 #right-sec .reminders .boxes .box {
   display: flex;
   align-items: center;
   box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
@@ -563,7 +564,7 @@ html {
   cursor: pointer;
   border-radius: 20px;
 }
-.content #right-sec .reminders .boxes .box .fa-solid {
+.content .sticky-2 #right-sec .reminders .boxes .box .fa-solid {
   font-size: 20px;
   color: #fff;
   background-color: #1b9c85;
@@ -571,26 +572,26 @@ html {
   border-radius: 15px;
   cursor: pointer;
 }
-.content #right-sec .reminders .boxes .box .fa-pen {
+.content .sticky-2 #right-sec .reminders .boxes .box .fa-pen {
   background-color: #ff0060;
 }
-.content #right-sec .reminders .boxes .box .box-body {
+.content .sticky-2 #right-sec .reminders .boxes .box .box-body {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.content #right-sec .reminders .boxes .box .box-body h3 {
+.content .sticky-2 #right-sec .reminders .boxes .box .box-body h3 {
   font-size: 20px;
   color: #1a1a1a;
 }
-.content #right-sec .reminders .boxes .box .box-body p {
+.content .sticky-2 #right-sec .reminders .boxes .box .box-body p {
   font-size: 15px;
   color: #677483;
 }
-.content #right-sec .reminders .boxes .box:hover {
+.content .sticky-2 #right-sec .reminders .boxes .box:hover {
   box-shadow: none;
 }
-.content #right-sec .reminders .boxes .new-reminder {
+.content .sticky-2 #right-sec .reminders .boxes .new-reminder {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -604,16 +605,16 @@ html {
   border: 3px dotted #77ace9;
   box-shadow: none;
 }
-.content #right-sec .reminders .boxes .new-reminder a {
+.content .sticky-2 #right-sec .reminders .boxes .new-reminder a {
   font-size: 15px;
   color: #5487c2;
 }
-.content #right-sec .reminders .boxes .new-reminder a i {
+.content .sticky-2 #right-sec .reminders .boxes .new-reminder a i {
   margin-right: 8px;
 }
-.content #right-sec .reminders .boxes .new-reminder:hover {
+.content .sticky-2 #right-sec .reminders .boxes .new-reminder:hover {
   background-color: #5487c2;
 }
-.content #right-sec .reminders .boxes .new-reminder:hover a {
+.content .sticky-2 #right-sec .reminders .boxes .new-reminder:hover a {
   color: #fff;
 }/*# sourceMappingURL=admin.css.map */
