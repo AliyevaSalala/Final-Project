@@ -189,6 +189,66 @@ html {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    .dashboard-main {
+      h1 {
+        padding-bottom: 40px;
+        font-size: 25px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: #1a1a1a;
+      }
+      .boxes {
+        // padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        .box {
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          box-shadow: 0 2rem 3rem rgba(95, 102, 161, 0.18);
+          background-color: #fff;
+          transition: all 0.5s;
+          cursor: pointer;
+          border-radius: 20px;
+          h3 {
+            padding-top: 10px;
+            color: #455a64;
+            font-size: 20px;
+          }
+          p {
+            color: #99abb4;
+            font-size: 15px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          }
+
+          i {
+            font-size: 40px;
+          }
+          .fa-users {
+            color: #ff9800;
+          }
+          .fa-cloud-arrow-down {
+            color: #009688;
+          }
+          .fa-comments {
+            color: #e91e63;
+          }
+          .fa-utensils {
+            color: #ff5722;
+          }
+          .fa-calendar-days {
+            color: #2196f3;
+          }
+
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+    }
 
     .user-table-sec {
       padding: 1rem 0;
