@@ -21,7 +21,35 @@ body.dark-mode .content .main-content .user-table-sec .user-search input {
   box-shadow: none;
   background-color: #383839;
 }
+body.dark-mode .content .main-content .user-table-sec .form-sec input {
+  background-color: #383839;
+  box-shadow: none;
+}
 body.dark-mode .content .main-content .user-table-sec table {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content .main-content .menu-table-sec h1 {
+  color: #c8c8c8;
+}
+body.dark-mode .content .main-content .menu-table-sec .user-search input {
+  box-shadow: none;
+  background-color: #383839;
+}
+body.dark-mode .content .main-content .menu-table-sec .form-sec input {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content .main-content .menu-table-sec .form-sec select {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content .main-content .menu-table-sec .menu-search input {
+  box-shadow: none;
+  background-color: #383839;
+  color: #fff;
+}
+body.dark-mode .content .main-content .menu-table-sec table {
   background-color: #383839;
   box-shadow: none;
 }
@@ -148,6 +176,10 @@ html {
 .content .main-content .user-table-sec .form-sec input:hover {
   box-shadow: none;
 }
+.content .main-content .user-table-sec .form-sec input:focus {
+  box-shadow: 0 0 5px rgb(81, 203, 238);
+  border: 1px solid rgb(81, 203, 238);
+}
 .content .main-content .user-table-sec .user-search input {
   width: 30%;
   padding: 10px 15px;
@@ -215,6 +247,10 @@ html {
 .content .main-content .rezervation-table-sec .form-sec input:hover {
   box-shadow: none;
 }
+.content .main-content .rezervation-table-sec .form-sec input:focus {
+  box-shadow: 0 0 5px rgb(81, 203, 238);
+  border: 1px solid rgb(81, 203, 238);
+}
 .content .main-content .rezervation-table-sec .user-search input {
   width: 30%;
   padding: 10px 15px;
@@ -281,6 +317,10 @@ html {
 }
 .content .main-content .product-table-sec .form-sec input:hover {
   box-shadow: none;
+}
+.content .main-content .product-table-sec .form-sec input:focus {
+  box-shadow: 0 0 5px rgb(81, 203, 238);
+  border: 1px solid rgb(81, 203, 238);
 }
 .content .main-content .product-table-sec .product-search input {
   width: 30%;
@@ -356,6 +396,25 @@ html {
 .content .main-content .menu-table-sec .form-sec input:hover {
   box-shadow: none;
 }
+.content .main-content .menu-table-sec .form-sec input:focus {
+  box-shadow: 0 0 5px rgb(81, 203, 238);
+  border: 1px solid rgb(81, 203, 238);
+}
+.content .main-content .menu-table-sec .form-sec select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .menu-table-sec .form-sec select:hover {
+  box-shadow: none;
+}
+.content .main-content .menu-table-sec .form-sec select:focus {
+  box-shadow: 0 0 5px rgb(81, 203, 238);
+  border: 1px solid rgb(81, 203, 238);
+}
 .content .main-content .menu-table-sec .menu-search input {
   width: 30%;
   padding: 10px 15px;
@@ -364,16 +423,6 @@ html {
   box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
 }
 .content .main-content .menu-table-sec .menu-search input:hover {
-  box-shadow: none;
-}
-.content .main-content .menu-table-sec .menu-search select {
-  width: 100%;
-  padding: 10px 15px;
-  background-color: #fff;
-  border: 1px solid transparent;
-  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
-}
-.content .main-content .menu-table-sec .menu-search select:hover {
   box-shadow: none;
 }
 .content .main-content .menu-table-sec table {

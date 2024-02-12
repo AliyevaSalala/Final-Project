@@ -27,6 +27,44 @@ body {
               background-color: #383839;
             }
           }
+          .form-sec {
+            input {
+              background-color: #383839;
+              box-shadow: none;
+            }
+          }
+          table {
+            background-color: #383839;
+            box-shadow: none;
+          }
+        }
+        .menu-table-sec {
+          h1 {
+            color: #c8c8c8;
+          }
+          .user-search {
+            input {
+              box-shadow: none;
+              background-color: #383839;
+            }
+          }
+          .form-sec {
+            input {
+              background-color: #383839;
+              box-shadow: none;
+            }
+            select {
+              background-color: #383839;
+              box-shadow: none;
+            }
+          }
+          .menu-search {
+            input {
+              box-shadow: none;
+              background-color: #383839;
+              color: #fff;
+            }
+          }
           table {
             background-color: #383839;
             box-shadow: none;
@@ -177,6 +215,10 @@ html {
           &:hover {
             box-shadow: none;
           }
+          &:focus {
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            border: 1px solid rgba(81, 203, 238, 1);
+          }
         }
       }
       .user-search {
@@ -247,6 +289,10 @@ html {
           &:hover {
             box-shadow: none;
           }
+          &:focus {
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            border: 1px solid rgba(81, 203, 238, 1);
+          }
         }
       }
       .user-search {
@@ -315,6 +361,10 @@ html {
           box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
           &:hover {
             box-shadow: none;
+          }
+          &:focus {
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            border: 1px solid rgba(81, 203, 238, 1);
           }
         }
       }
@@ -392,21 +442,30 @@ html {
           &:hover {
             box-shadow: none;
           }
+          &:focus {
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            border: 1px solid rgba(81, 203, 238, 1);
+          }
         }
-      }
-      .menu-search {
-        input {
-          width: 30%;
+        select {
+          width: 100%;
           padding: 10px 15px;
+          margin-bottom: 10px;
           background-color: #fff;
           border: 1px solid transparent;
           box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
           &:hover {
             box-shadow: none;
           }
+          &:focus {
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            border: 1px solid rgba(81, 203, 238, 1);
+          }
         }
-        select {
-          width: 100%;
+      }
+      .menu-search {
+        input {
+          width: 30%;
           padding: 10px 15px;
           background-color: #fff;
           border: 1px solid transparent;
