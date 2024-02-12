@@ -231,6 +231,12 @@ header {
             .basket-icon {
               color: $color-brown;
             }
+            .fa-user-plus {
+              color: $color-brown;
+            }
+            .logout-icon {
+              color: $color-brown;
+            }
           }
 
           &.show {
@@ -277,6 +283,12 @@ header {
               }
             }
             .basket-icon {
+              color: $color-brown;
+            }
+            .fa-user-plus {
+              color: $color-brown;
+            }
+            .logout-icon {
               color: $color-brown;
             }
           }

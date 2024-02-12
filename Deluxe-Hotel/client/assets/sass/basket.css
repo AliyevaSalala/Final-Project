@@ -324,6 +324,12 @@ header #header-bottom .header-bottom .fa-xmark {
   header #header-bottom .header-bottom nav ul .basket-icon {
     color: #3d3931;
   }
+  header #header-bottom .header-bottom nav ul .fa-user-plus {
+    color: #3d3931;
+  }
+  header #header-bottom .header-bottom nav ul .logout-icon {
+    color: #3d3931;
+  }
   header #header-bottom .header-bottom nav.show {
     left: 0;
   }
@@ -360,6 +366,12 @@ header #header-bottom .header-bottom .fa-xmark {
     color: #3d3931;
   }
   header #header-bottom .header-bottom nav ul .basket-icon {
+    color: #3d3931;
+  }
+  header #header-bottom .header-bottom nav ul .fa-user-plus {
+    color: #3d3931;
+  }
+  header #header-bottom .header-bottom nav ul .logout-icon {
     color: #3d3931;
   }
   header #header-bottom .header-bottom nav.show {
