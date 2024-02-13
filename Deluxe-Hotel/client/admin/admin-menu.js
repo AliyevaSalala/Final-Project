@@ -6,13 +6,16 @@ const priceInput = document.querySelector("#price");
 const descInput = document.querySelector("#desc-input");
 const photoInput = document.querySelector("#photo");
 const option = document.querySelector("select");
+const sortBtn = document.querySelector(".sort-btn");
 
 let menu = [];
+let menuCopy = [];
 
 async function getAllData(endpoint) {
   const res = await axios(`${BASE_url}/${endpoint}`);
   console.log(res.data);
-  product = res.data;
+  menu = res.data;
+  menuCopy = structuredClone(menu);
   drawTable(res.data);
 }
 getAllData("menu");
@@ -54,7 +57,7 @@ async function userDeletBtn(id, btn) {
 
 userSearch.addEventListener("input", function (e) {
   e.preventDefault();
-  let filtered = product.filter((item) =>
+  let filtered = menu.filter((item) =>
     item.title.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
   );
   drawTable(filtered);
@@ -95,8 +98,13 @@ form.addEventListener("submit", async function (e) {
     ) {
       try {
         const res = await axios.post(`${BASE_url}/menu`, newObj);
-        drawTable(res.data.allProducts);
+        // drawTable(res.data.allProducts);
         console.log(res);
+        Swal.fire({
+          title: "Good job!",
+          text: "You clicked the button!",
+          icon: "success",
+        });
       } catch (error) {
         console.log(error);
       }
@@ -144,3 +152,20 @@ const convertBase64 = async (file) => {
     };
   });
 };
+
+// SORT-BTN
+
+sortBtn.addEventListener("click", function () {
+  let sorted;
+  if (sortBtn.innerText === "Ascending") {
+    sortBtn.innerText = "Descending";
+    sorted = menu.sort((a, b) => a.price - b.price);
+  } else if (sortBtn.innerText === "Descending") {
+    sortBtn.innerText = "Deafult";
+    sorted = menu.sort((a, b) => b.price - a.price);
+  } else {
+    sortBtn.innerText = "Ascending";
+    sorted = menuCopy;
+  }
+  drawTable(sorted);
+});

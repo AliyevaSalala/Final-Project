@@ -322,6 +322,9 @@ html {
           .fa-trash {
             color: red;
           }
+          .fa-user-pen {
+            color: #009688;
+          }
         }
       }
     }
@@ -341,6 +344,21 @@ html {
         gap: 30px;
         padding-bottom: 50px;
         input {
+          margin-bottom: 20px;
+          padding: 10px 15px;
+          width: 400px;
+          background-color: #fff;
+          border: 1px solid transparent;
+          box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+          &:hover {
+            box-shadow: none;
+          }
+          &:focus {
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            border: 1px solid rgba(81, 203, 238, 1);
+          }
+        }
+        select {
           margin-bottom: 20px;
           padding: 10px 15px;
           width: 400px;
@@ -541,8 +559,24 @@ html {
         }
       }
       .menu-search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+          width: 150px;
+          padding: 10px 25px;
+          background-color: #fff;
+          border: 1px solid transparent;
+          box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+          cursor: pointer;
+          color: #1a1a1a;
+          font-size: 15px;
+          &:hover {
+            box-shadow: none;
+          }
+        }
         input {
-          width: 30%;
+          width: 300px;
           padding: 10px 15px;
           background-color: #fff;
           border: 1px solid transparent;

@@ -275,6 +275,9 @@ html {
 .content .main-content .user-table-sec table td .fa-trash {
   color: red;
 }
+.content .main-content .user-table-sec table td .fa-user-pen {
+  color: #009688;
+}
 .content .main-content .rezervation-table-sec {
   padding: 1rem 0;
 }
@@ -303,6 +306,21 @@ html {
   box-shadow: none;
 }
 .content .main-content .rezervation-table-sec .form-sec input:focus {
+  box-shadow: 0 0 5px rgb(81, 203, 238);
+  border: 1px solid rgb(81, 203, 238);
+}
+.content .main-content .rezervation-table-sec .form-sec select {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .rezervation-table-sec .form-sec select:hover {
+  box-shadow: none;
+}
+.content .main-content .rezervation-table-sec .form-sec select:focus {
   box-shadow: 0 0 5px rgb(81, 203, 238);
   border: 1px solid rgb(81, 203, 238);
 }
@@ -488,8 +506,26 @@ html {
   box-shadow: 0 0 5px rgb(81, 203, 238);
   border: 1px solid rgb(81, 203, 238);
 }
+.content .main-content .menu-table-sec .menu-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .main-content .menu-table-sec .menu-search button {
+  width: 150px;
+  padding: 10px 25px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  cursor: pointer;
+  color: #1a1a1a;
+  font-size: 15px;
+}
+.content .main-content .menu-table-sec .menu-search button:hover {
+  box-shadow: none;
+}
 .content .main-content .menu-table-sec .menu-search input {
-  width: 30%;
+  width: 300px;
   padding: 10px 15px;
   background-color: #fff;
   border: 1px solid transparent;

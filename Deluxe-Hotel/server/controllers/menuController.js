@@ -43,8 +43,10 @@ const addNewProductById = async (req, res) => {
   const newMenu = new Menu({ ...req.body });
   try {
     await newMenu.save();
+    const allProducts = await Menu.find({});
     res.status(201).send({
       message: "created succesfully!",
+      allProducts: allProducts,
       data: newMenu,
     });
   } catch (error) {

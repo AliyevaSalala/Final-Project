@@ -56,7 +56,7 @@ async function userDeletBtn(id, btn) {
 userSearch.addEventListener("input", function (e) {
   e.preventDefault();
 
-  let filtered = user.filter((item) =>
+  let filtered = users.filter((item) =>
     item.username
       .toLocaleLowerCase()
       .includes(e.target.value.toLocaleLowerCase())
