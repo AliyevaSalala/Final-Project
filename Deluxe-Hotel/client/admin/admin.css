@@ -377,8 +377,26 @@ html {
   box-shadow: 0 0 5px rgb(81, 203, 238);
   border: 1px solid rgb(81, 203, 238);
 }
+.content .main-content .product-table-sec .product-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .main-content .product-table-sec .product-search button {
+  width: 150px;
+  padding: 10px 25px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  cursor: pointer;
+  color: #1a1a1a;
+  font-size: 15px;
+}
+.content .main-content .product-table-sec .product-search button:hover {
+  box-shadow: none;
+}
 .content .main-content .product-table-sec .product-search input {
-  width: 30%;
+  width: 300px;
   padding: 10px 15px;
   background-color: #fff;
   border: 1px solid transparent;

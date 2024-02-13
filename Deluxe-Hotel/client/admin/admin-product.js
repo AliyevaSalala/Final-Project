@@ -7,13 +7,16 @@ const titleInput = document.querySelector("#title");
 const priceInput = document.querySelector("#price");
 const descInput = document.querySelector("#desc");
 const photoInput = document.querySelector("#photo");
+const sortBtn = document.querySelector(".sort-btn");
 
 let product = [];
+let productCopy = [];
 
 async function getUsersData(endpoint) {
   const res = await axios(`${BASE_url}/${endpoint}`);
   console.log(res.data);
   product = res.data;
+  productCopy = structuredClone(product);
   drawTable(res.data);
 }
 getUsersData("products");
@@ -130,7 +133,7 @@ form.addEventListener("submit", async function (e) {
     await axios.patch(`${BASE_url}/products/${editStatus}`, newObj);
   }
 
-  typeInput.valu = "";
+  typeInput.value = "";
   titleInput.value = "";
   descInput.value = "";
   priceInput.value = "";
@@ -164,3 +167,21 @@ const convertBase64 = async (file) => {
     };
   });
 };
+
+
+// SORT-BTN
+
+sortBtn.addEventListener("click", function () {
+  let sorted;
+  if (sortBtn.innerText === "Ascending") {
+    sortBtn.innerText = "Descending";
+    sorted = product.sort((a, b) => a.price - b.price);
+  } else if (sortBtn.innerText === "Descending") {
+    sortBtn.innerText = "Deafult";
+    sorted = product.sort((a, b) => b.price - a.price);
+  } else {
+    sortBtn.innerText = "Ascending";
+    sorted = productCopy;
+  }
+  drawTable(sorted);
+});
