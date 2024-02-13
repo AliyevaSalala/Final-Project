@@ -80,10 +80,25 @@
           <h1>Rezervations</h1>
           <div class="form-sec">
             <form action="">
-              <input type="date" placeholder="Check In" /> <br />
-              <input type="date" placeholder="Check Out" /> <br />
-              <input type="text" placeholder="Rooms" /> <br />
-              <input type="text" placeholder="Guests" /> <br />
+              <input type="date" placeholder="Check In" id="check-in" /> <br />
+              <input type="date" placeholder="Check Out" id="check-out" />
+              <br />
+              <select name="Adult" id="guests">
+                <option value="1 adult, 0 children">1 adult, 0 children</option>
+                <option value="2 adult, 2 children">2 adult, 2 children</option>
+                <option value="3 adult, 2 children">3 adult, 2 children</option>
+                <option value="5 adult, 1 children">5 adult, 1 children</option>
+                <option value="7 adult, 3 children">7 adult, 3 children</option>
+              </select>
+              <br />
+
+              <select name="" id="rooms">
+                <option value="1 rooms">1 rooms</option>
+                <option value="2 rooms">2 rooms</option>
+                <option value="3 rooms">3 rooms</option>
+                <option value="5 rooms">5 rooms</option>
+                <option value="7 rooms">7 rooms</option>
+              </select> <br>
               <input type="submit" value="Submit" />
             </form>
           </div>
@@ -157,6 +172,12 @@
         </section>
       </div>
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

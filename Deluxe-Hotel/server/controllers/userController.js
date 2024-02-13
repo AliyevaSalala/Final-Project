@@ -17,6 +17,20 @@ const addNewUsersById = async (req, res) => {
   }
 };
 
+const updateUsersById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    await User.findByIdAndUpdate(id, { ...req.body });
+    const updatedProduct = await User.findById(id);
+    res.status(200).send({
+      message: "updated succesfully!",
+      data: updatedProduct,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
+
 const signup = async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -113,6 +127,7 @@ const logout = async (req, res) => {
 
 module.exports = {
   addNewUsersById,
+  updateUsersById,
   signup,
   signin,
   getAllUsers,

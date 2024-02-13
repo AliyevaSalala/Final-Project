@@ -1,4 +1,4 @@
-const BASE_url = "http://localhost:8000";
+const BASE_url = "https://deluxe-back.onrender.com";
 const darkMode = document.querySelector(".dark-mode");
 const moonMode = document.querySelector(".dark-mode-moon");
 const body = document.querySelector("body");

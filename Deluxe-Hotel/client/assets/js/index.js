@@ -115,12 +115,6 @@ myForm.addEventListener("submit", function (event) {
       backgroundColor: "linear-gradient(to right, #FF6E14, #FFB42A)",
     }).showToast();
     return;
-    //     Swal.fire({
-    //   icon: "error",
-    //   title: "Oops...",
-    //   text: "Something went wrong!",
-    //   footer: '<a href="#">Why do I have this issue?</a>'
-    // });
   }
 
   saveFormData();
@@ -137,56 +131,19 @@ myForm.addEventListener("submit", function (event) {
   textareaInput.value = "";
 });
 
+// REZERVATION
+
 let array = [];
 
-let login = localStorage.getItem("login");
-async function getAllData(endpoint) {
-  const res = await axios(`${DB_URL}/${endpoint}`);
-  // console.log(res.data);
-  array = res.data;
-  console.log(array);
-}
-
-getAllData("reservations");
-
-checkForm.addEventListener("submit", async function (e) {
-  e.preventDefault();
-  if (login === "true") {
-    let newObj = {
-      checkIn: checkInInput.value,
-      checkOut: checkOutInput.value,
-      rooms: roomSelect.value,
-      guests: guestsSelect.value,
-    };
-    if (
-      checkInInput.value != "" &&
-      checkOutInput.value != "" &&
-      roomSelect.value != "" &&
-      guestsSelect.value != ""
-    ) {
-      await axios.post(`${DB_URL}/reservations`, newObj);
-      Toastify({
-        text: " successful!",
-        duration: 3000,
-        close: true,
-        gravity: "top",
-        position: "right",
-        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-      }).showToast();
-    }
-  } else {
-    window.location = "login.html";
-  }
-});
-
 // let login = localStorage.getItem("login");
-// async function checkReservation(date) {
-//   const reservations = await axios.get(`${DB_URL}/reservations`);
-//   const existingReservation = reservations.data.find(
-//     (reservation) => reservation.checkIn === date
-//   );
-//   return existingReservation !== undefined;
+// async function getAllData(endpoint) {
+//   const res = await axios(`${DB_URL}/${endpoint}`);
+//   // console.log(res.data);
+//   array = res.data;
+//   console.log(array);
 // }
+
+// getAllData("reservations");
 
 // checkForm.addEventListener("submit", async function (e) {
 //   e.preventDefault();
@@ -203,34 +160,76 @@ checkForm.addEventListener("submit", async function (e) {
 //       roomSelect.value != "" &&
 //       guestsSelect.value != ""
 //     ) {
-//       const isReserved = await checkReservation(checkInInput.value);
-//       if (isReserved) {
-
-//         Toastify({
-//           text: "This date is already reserved!",
-//           duration: 3000,
-//           close: true,
-//           gravity: "top",
-//           position: "right",
-//           backgroundColor: "linear-gradient(to right, #FF0000, #FF6347)",
-//         }).showToast();
-//       } else {
-
-//         await axios.post(`${DB_URL}/reservations`, newObj);
-//         Toastify({
-//           text: "Reservation successful!",
-//           duration: 3000,
-//           close: true,
-//           gravity: "top",
-//           position: "right",
-//           backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-//         }).showToast();
-//       }
+//       await axios.post(`${DB_URL}/reservations`, newObj);
+//       Toastify({
+//         text: " successful!",
+//         duration: 3000,
+//         close: true,
+//         gravity: "top",
+//         position: "right",
+//         backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+//       }).showToast();
 //     }
 //   } else {
 //     window.location = "login.html";
 //   }
 // });
+
+let login = localStorage.getItem("login");
+
+async function checkReservation(startDate, endDate) {
+  const reservations = await axios.get(`${DB_URL}/reservations`);
+  const existingReservation = reservations.data.find(
+    (reservation) =>
+      reservation.checkIn <= endDate && reservation.checkOut >= startDate
+  );
+  return existingReservation !== undefined;
+}
+
+checkForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  if (login === "true") {
+    let newObj = {
+      checkIn: checkInInput.value,
+      checkOut: checkOutInput.value,
+      rooms: roomSelect.value,
+      guests: guestsSelect.value,
+    };
+    if (
+      checkInInput.value != "" &&
+      checkOutInput.value != "" &&
+      roomSelect.value != "" &&
+      guestsSelect.value != ""
+    ) {
+      const isReserved = await checkReservation(
+        checkInInput.value,
+        checkOutInput.value
+      );
+      if (isReserved) {
+        Toastify({
+          text: "This date is already reserved!",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "linear-gradient(to right, #FF0000, #FF6347)",
+        }).showToast();
+      } else {
+        await axios.post(`${DB_URL}/reservations`, newObj);
+        Toastify({
+          text: "Reservation successful!",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        }).showToast();
+      }
+    }
+  } else {
+    window.location = "login.html";
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   let today = new Date();
@@ -251,26 +250,3 @@ document.addEventListener("DOMContentLoaded", function () {
   checkInInput.setAttribute("min", today);
   checkOutInput.setAttribute("min", today);
 });
-
-// LOGOUT
-
-// const logOut = document.querySelector(".logout-icon");
-
-// logOut.addEventListener("click", async function () {
-//   try {
-//     const res = await axios.post(`${DB_URL}/logout`);
-//     if (res.status === 200) {
-//       localStorage.removeItem("login");
-//       window.location = "login.html";
-//     }
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
-
-
-
-
-
-
-

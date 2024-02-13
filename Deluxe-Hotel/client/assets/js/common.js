@@ -10,7 +10,7 @@ const cursorOutline = document.querySelector("[data-cursor-outline]");
 const toTop = document.querySelector(".arrow-up");
 const faUser = document.querySelector(".fa-user");
 
-const DB_URL = "http://localhost:8000";
+const DB_URL = "https://deluxe-back.onrender.com";
 
 menuIcon.addEventListener("click", function () {
   nav.classList.toggle("show");
@@ -139,5 +139,3 @@ logOut.addEventListener("click", async function () {
     console.error(error);
   }
 });
-
-

@@ -6,13 +6,17 @@ const userNameInput = document.querySelector("#user-name");
 const userEmailInput = document.querySelector("#user-email");
 const password = document.querySelector("#password");
 
-let user = [];
+let users = [];
 
 async function getUsersData(endpoint) {
-  const res = await axios(`${BASE_url}/${endpoint}`);
-  console.log(res.data);
-  user = res.data;
-  userData(res.data);
+  try {
+    const res = await axios(`${BASE_url}/${endpoint}`);
+    users = res.data;
+    userData(res.data);
+    console.log(users);
+  } catch (error) {
+    console.error(error);
+  }
 }
 getUsersData("users");
 
@@ -28,6 +32,9 @@ function userData(data) {
       <i class="fa-solid fa-trash" onclick=userDeletBtn("${
         element._id
       }",this)></i>
+      <i class="fa-solid fa-user-pen" onclick="changeUserRole('${
+        element._id
+      }', ${!element.isAdmin})"></i>
     </td>`;
     userTbdody.append(trElement);
   });
@@ -44,25 +51,6 @@ async function userDeletBtn(id, btn) {
   }
 }
 
-// Swal.fire({
-//   title: "Are you sure?",
-//   text: "You won't be able to revert this!",
-//   icon: "warning",
-//   showCancelButton: true,
-//   confirmButtonColor: "#3085d6",
-//   cancelButtonColor: "#d33",
-//   confirmButtonText: "Yes, delete it!",
-// }).then((result) => {
-//   console.log("gh");
-//   if (result.isConfirmed) {
-//     Swal.fire({
-//       title: "Deleted!",
-//       text: "Your file has been deleted.",
-//       icon: "success",
-//     });
-//   }
-// });
-
 // USER-DATA-SEARCH
 
 userSearch.addEventListener("input", function (e) {
@@ -77,8 +65,6 @@ userSearch.addEventListener("input", function (e) {
 });
 
 // ADD NEW DATA
-
-// let editId = null;
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -108,3 +94,18 @@ form.addEventListener("submit", async function (e) {
   userEmailInput.value = "";
   password.value = "";
 });
+
+// Change user role
+
+async function changeUserRole(id, newRole) {
+  try {
+    const res = await axios.patch(`${BASE_url}/users/${id}`, {
+      isAdmin: newRole,
+    });
+    if (res.status === 200) {
+      getUsersData("users");
+    }
+  } catch (error) {
+    console.error("Error while changing user role:", error);
+  }
+}

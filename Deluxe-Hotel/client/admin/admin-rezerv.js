@@ -1,11 +1,10 @@
 const tbody = document.querySelector("tbody");
 const userSearch = document.querySelector("#user-search");
 const form = document.querySelector(".form-sec");
-const titleInput = document.querySelector("#title-input");
-const priceInput = document.querySelector("#price");
-const descInput = document.querySelector("#desc-input");
-const photoInput = document.querySelector("#photo");
-const option = document.querySelector("select");
+const checkIn = document.querySelector("#check-in");
+const checkOut = document.querySelector("#check-out");
+const rooms = document.querySelector("#rooms");
+const guests = document.querySelector("#guests");
 
 let menu = [];
 
@@ -43,7 +42,7 @@ function drawTable(data) {
 
 async function userDeletBtn(id, btn) {
   if (confirm("are you sure delete??")) {
-    const res = await axios.delete(`${BASE_url}/rezervations/${id}`);
+    const res = await axios.delete(`${BASE_url}/reservations/${id}`);
     if (res.status === 200) {
       btn.closest("tr").remove();
     }
@@ -68,35 +67,39 @@ let editStatus = null;
 
 async function editBtn(id) {
   editStatus = id;
+  // console.log(editStatus);
   window.scrollTo(0, 0);
-  const res = await axios(`${BASE_url}/menu/${id}`);
-
-  titleInput.value = res.data.title;
-  priceInput.value = res.data.price;
-  descInput.value = res.data.desc;
+  try {
+    const res = await axios(`${BASE_url}/reservations/${id}`);
+    // console.log(res.data);
+    if (res && res.data) {
+      checkIn.value = res.data.checkIn;
+      checkOut.value = res.data.checkOut;
+      rooms.value = res.data.rooms;
+      guests.value = res.data.guests;
+    } else {
+      console.log("Invalid response data:", res);
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
   let newObj = {
-    title: titleInput.value,
-    price: priceInput.value,
-    desc: descInput.value,
-    menuCategory: option.value,
-    image: base64,
+    checkIn: checkIn.value,
+    checkOut: checkOut.value,
+    rooms: rooms.value,
+    guests: guests.value,
   };
 
   if (!editStatus) {
-    if (
-      titleInput.value &&
-      photoInput.value &&
-      descInput.value &&
-      priceInput.value
-    ) {
+    if (checkIn.value && checkOut.value && rooms.value && guests.value) {
       try {
-        const res = await axios.post(`${BASE_url}/menu`, newObj);
-        drawTable(res.data.allProducts);
+        const res = await axios.post(`${BASE_url}/reservations`, newObj);
+        // drawTable(res.data.allProducts);
         console.log(res);
       } catch (error) {
         console.log(error);
@@ -109,10 +112,31 @@ form.addEventListener("submit", async function (e) {
       });
     }
   } else {
-    await axios.patch(`${BASE_url}/menu/${editStatus}`, newObj);
+    await axios.patch(`${BASE_url}/reservations/${editStatus}`, newObj);
   }
 
-  titleInput.value = "";
-  descInput.value = "";
-  priceInput.value = "";
+  checkIn.value = "";
+  checkOut.value = "";
+  rooms.value = "";
+  guests.value = "";
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1; // January is 0!
+  let yyyy = today.getFullYear();
+
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+
+  today = yyyy + "-" + mm + "-" + dd;
+
+  checkIn.setAttribute("min", today);
+  checkOut.setAttribute("min", today);
 });

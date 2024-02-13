@@ -9,6 +9,7 @@ menuBtnCategoyr.forEach((item) =>
 );
 
 let menus = [];
+let favsProducts = getItemToLocalStorage();
 let login = localStorage.getItem("login");
 
 async function getData(endpoint) {
@@ -80,7 +81,6 @@ menuBtnCategoyr.forEach((item) => {
 });
 
 // ADD TO-FAVORITE
-let favsProducts = getItemToLocalStorage();
 
 function addToFav(id, icon) {
   if (login === "true") {
@@ -117,5 +117,3 @@ function setItemToLocalStorage(data) {
 function getItemToLocalStorage() {
   return JSON.parse(localStorage.getItem("favorite")) || [];
 }
-
-// initializeFavorites();
