@@ -11,6 +11,11 @@ logOut.addEventListener("click", function () {
   // console.log("shalalal");
 });
 
+
+
+
+
+
 if (!localStorage.getItem("isAdmin")) {
   window.location.href = "../login.html";
 }

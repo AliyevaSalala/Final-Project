@@ -53,7 +53,7 @@ async function userDeletBtn(id, btn) {
     },
     buttonsStyling: false,
   });
-  
+
   swalWithBootstrapButtons
     .fire({
       title: "Are you sure?",
@@ -91,31 +91,6 @@ async function userDeletBtn(id, btn) {
       }
     });
 }
-
-// if (confirm("are you sure delete??")) {
-//   const res = await axios.delete(`${BASE_url}/products/${id}`);
-//   if (res.status === 200) {
-//     btn.closest("tr").remove();
-//   }
-// }
-// Swal.fire({
-//   title: "Are you sure?",
-//   text: "You won't be able to revert this!",
-//   icon: "warning",
-//   showCancelButton: true,
-//   confirmButtonColor: "#3085d6",
-//   cancelButtonColor: "#d33",
-//   confirmButtonText: "Yes, delete it!",
-// }).then((result) => {
-//   console.log("gh");
-//   if (result.isConfirmed) {
-//     Swal.fire({
-//       title: "Deleted!",
-//       text: "Your file has been deleted.",
-//       icon: "success",
-//     });
-//   }
-// });
 
 // USER-DATA-SEARCH
 
@@ -165,8 +140,12 @@ form.addEventListener("submit", async function (e) {
     ) {
       try {
         const res = await axios.post(`${BASE_url}/products`, newObj);
-        // drawTable(res.data.allProducts);
-        console.log(res);
+        Swal.fire({
+          title: "Good job!",
+          text: "You clicked the button!",
+          icon: "success",
+        });
+        // console.log(res);
       } catch (error) {
         console.log(error);
       }
@@ -185,6 +164,7 @@ form.addEventListener("submit", async function (e) {
   titleInput.value = "";
   descInput.value = "";
   priceInput.value = "";
+  photoInput.value = "";
 });
 
 photoInput.addEventListener("change", function (e) {

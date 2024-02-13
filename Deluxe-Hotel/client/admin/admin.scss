@@ -797,3 +797,23 @@ html {
     }
   }
 }
+
+.swal2-actions {
+  .swal2-cancel {
+    display: inline-block;
+    color: #fff;
+    background-color: red;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  .swal2-confirm {
+    display: inline-block;
+    color: #fff;
+    margin-left: 10px;
+    background-color: green;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+}
