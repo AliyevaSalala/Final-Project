@@ -97,7 +97,11 @@ form.addEventListener("submit", async function (e) {
     userData(res.data.allProducts);
     console.log(res);
   } else {
-    alert("!!!!!!!!");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please fill in all fields..",
+    });
   }
 
   userNameInput.value = "";

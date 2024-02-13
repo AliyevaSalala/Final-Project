@@ -101,7 +101,11 @@ form.addEventListener("submit", async function (e) {
         console.log(error);
       }
     } else {
-      alert("!!!!!!");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill in all fields..",
+      });
     }
   } else {
     await axios.patch(`${BASE_url}/menu/${editStatus}`, newObj);

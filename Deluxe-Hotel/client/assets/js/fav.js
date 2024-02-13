@@ -22,7 +22,7 @@ function drawCards(data) {
 drawCards(favsProducts);
 
 function removeFav(id, btn) {
-  favsProducts = favsProducts.filter((item) => item.id !== id);
+  favsProducts = favsProducts.filter((item) => item._id !== id);
 
   btn.closest(".fav-card").remove();
 

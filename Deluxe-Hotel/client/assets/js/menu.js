@@ -82,18 +82,6 @@ menuBtnCategoyr.forEach((item) => {
 // ADD TO-FAVORITE
 let favsProducts = getItemToLocalStorage();
 
-// function initializeFavorites() {
-//   const favIcons = document.querySelectorAll(".favorite-icon");
-//   favIcons.forEach((icon) => {
-//     const id = icon.getAttribute("data-id");
-//     if (favsProducts.some((item) => item.id === id)) {
-//       icon.classList.add("fa-solid");
-//     } else {
-//       icon.classList.remove("fa-solid");
-//     }
-//   });
-// }
-
 function addToFav(id, icon) {
   if (login === "true") {
     if (icon.classList.contains("fa-regular")) {

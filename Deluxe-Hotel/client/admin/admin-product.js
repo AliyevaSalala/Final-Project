@@ -46,14 +46,58 @@ function drawTable(data) {
 // USER DATA DELETE
 
 async function userDeletBtn(id, btn) {
-  if (confirm("are you sure delete??")) {
-    const res = await axios.delete(`${BASE_url}/products/${id}`);
-    if (res.status === 200) {
-      btn.closest("tr").remove();
-    }
-  }
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-danger",
+    },
+    buttonsStyling: false,
+  });
+  
+  swalWithBootstrapButtons
+    .fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, cancel!",
+      reverseButtons: true,
+    })
+    .then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          const res = await axios.delete(`${BASE_url}/products/${id}`);
+          if (res.status === 200) {
+            btn.closest("tr").remove();
+            swalWithBootstrapButtons.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire({
+          title: "Cancelled",
+          text: "Your imaginary file is safe :)",
+          icon: "error",
+        });
+      }
+    });
 }
 
+// if (confirm("are you sure delete??")) {
+//   const res = await axios.delete(`${BASE_url}/products/${id}`);
+//   if (res.status === 200) {
+//     btn.closest("tr").remove();
+//   }
+// }
 // Swal.fire({
 //   title: "Are you sure?",
 //   text: "You won't be able to revert this!",
@@ -127,7 +171,11 @@ form.addEventListener("submit", async function (e) {
         console.log(error);
       }
     } else {
-      alert("!!!!!!");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill in all fields..",
+      });
     }
   } else {
     await axios.patch(`${BASE_url}/products/${editStatus}`, newObj);
@@ -167,7 +215,6 @@ const convertBase64 = async (file) => {
     };
   });
 };
-
 
 // SORT-BTN
 
