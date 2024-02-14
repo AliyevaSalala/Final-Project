@@ -261,10 +261,18 @@ header #header-bottom .header-bottom nav ul li .drop-down .dropdown li a:hover {
 header #header-bottom .header-bottom nav ul .fa-user-plus {
   color: #fff;
   font-size: 15px;
+  transition: all 0.5s;
+}
+header #header-bottom .header-bottom nav ul .fa-user-plus:hover {
+  transform: scale(1.2);
 }
 header #header-bottom .header-bottom nav ul .basket-icon {
   position: relative;
   color: #fff;
+  transition: all 0.5s;
+}
+header #header-bottom .header-bottom nav ul .basket-icon:hover {
+  transform: scale(1.2);
 }
 header #header-bottom .header-bottom nav ul .basket-icon span {
   position: absolute;
@@ -279,6 +287,11 @@ header #header-bottom .header-bottom nav ul .logout-icon {
   color: #fff;
   font-size: 15px;
   padding-top: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+header #header-bottom .header-bottom nav ul .logout-icon:hover {
+  transform: scale(1.2);
 }
 header #header-bottom .header-bottom #menu-icon {
   display: none;

@@ -104,6 +104,13 @@ form.addEventListener("submit", async function (e) {
       try {
         const res = await axios.post(`${BASE_url}/reservations`, newObj);
         // drawTable(res.data.allProducts);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Reservation successful!!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
         console.log(res);
       } catch (error) {
         console.log(error);

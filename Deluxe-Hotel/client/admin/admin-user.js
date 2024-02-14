@@ -82,6 +82,13 @@ form.addEventListener("submit", async function (e) {
     const res = await axios.post(`${BASE_url}/users`, obj);
     userData(res.data.allProducts);
     console.log(res);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "new user created successfully",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   } else {
     Swal.fire({
       icon: "error",

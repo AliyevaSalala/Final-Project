@@ -91,10 +91,6 @@ header {
       @include flexbox();
       .logo {
         a {
-          // display: flex;
-          // align-items: center;
-          // color: #fff;
-          // font-family: "Protest Strike", sans-serif;
           img {
             width: 60px;
           }
@@ -159,10 +155,20 @@ header {
           .fa-user-plus {
             color: #fff;
             font-size: 15px;
+            transition: all 0.5s;
+
+            &:hover {
+              transform: scale(1.2);
+            }
           }
           .basket-icon {
             position: relative;
             color: #fff;
+            transition: all 0.5s;
+
+            &:hover {
+              transform: scale(1.2);
+            }
             span {
               position: absolute;
               top: -15px;
@@ -177,6 +183,12 @@ header {
             color: #fff;
             font-size: 15px;
             padding-top: 5px;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover {
+              transform: scale(1.2);
+            }
           }
         }
       }

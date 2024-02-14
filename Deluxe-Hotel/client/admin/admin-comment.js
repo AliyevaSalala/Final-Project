@@ -77,6 +77,14 @@ form.addEventListener("submit", async function (e) {
     const res = await axios.post(`${BASE_url}/reviews/submit`, obj);
     // drawTable(res.data);
     console.log(res);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Created successfully!!!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
   } else {
     Swal.fire({
       icon: "error",

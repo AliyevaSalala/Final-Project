@@ -32,14 +32,6 @@ closeIcon?.addEventListener("click", function () {
   document.body.classList.toggle("show-menu");
 });
 
-// headerSearch.addEventListener("click", function () {
-//   document.body.classList.toggle("show-search");
-// });
-
-// navbarSearch.addEventListener("click", function () {
-//   document.body.classList.toggle("show-search");
-// });
-
 window.addEventListener("scroll", function () {
   if (window.scrollY > 0) {
     header.classList.add("header-scroll");
@@ -84,16 +76,16 @@ function basketCalculate() {
   basketCounter.textContent = basket.reduce((acc, curr) => acc + curr.count, 0);
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   document.querySelector("#content").style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector("#content").style.display = "none";
 
-//   setTimeout(function () {
-//     document.querySelector(".loading-container").style.display = "none";
-//     document.querySelector("#content").style.display = "block";
+  setTimeout(function () {
+    document.querySelector(".loading-container").style.display = "none";
+    document.querySelector("#content").style.display = "block";
 
-//     AOS.init();
-//   }, 500);
-// });
+    AOS.init();
+  }, 2000);
+});
 
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");
