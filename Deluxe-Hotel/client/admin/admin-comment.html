@@ -29,12 +29,8 @@
     <div class="content">
       <div class="sticky">
         <section id="sidebar-sec">
-          <!-- <img
-              src="./admin-support-blue-rgb-color-260nw-1679846353.webp"
-              alt=""
-            /> -->
           <div class="sidebar">
-            <a href="./admin.html" class="active">
+            <a href="./admin.html">
               <i class="fa-solid fa-layer-group"></i>
               <h3>Dashboard</h3>
             </a>
@@ -54,7 +50,7 @@
               <i class="fa-solid fa-utensils"></i>
               <h3>Menu</h3>
             </a>
-            <a href="./admin-comment.html">
+            <a href="#" class="active">
               <i class="fa-solid fa-comment"></i>
               <h3>Comments</h3>
             </a>
@@ -80,35 +76,46 @@
 
       <!-- Main Content -->
       <section class="main-content">
-        <div class="dashboard-main">
-          <h1>Dashboard</h1>
-          <div class="boxes">
-            <div class="box">
-              <i class="fa-solid fa-users"></i>
-              <h3>2500</h3>
-              <p>Welcome</p>
-            </div>
-            <div class="box">
-              <i class="fa-solid fa-cloud-arrow-down"></i>
-              <h3>1,805</h3>
-              <p>Collections</p>
-            </div>
-            <div class="box">
-              <i class="fa-regular fa-comments"></i>
-              <h3>1400</h3>
-              <p>Comments</p>
-            </div>
-            <div class="box">
-              <i class="fa-solid fa-utensils"></i>
-              <h3>2500</h3>
-              <p>Restaurant</p>
-            </div>
-            <div class="box">
-              <i class="fa-solid fa-calendar-days"></i>
-              <h3>2500</h3>
-              <p>Calendar Days</p>
-            </div>
+        <div class="comment-table-sec">
+          <h1>Comments</h1>
+          <div class="form-sec">
+            <form action="" class="user-form">
+              <input type="text" placeholder="Name" id="user-name" />
+              <br />
+              <input type="email" placeholder="Email" id="user-email" /> <br />
+              <textarea name="" id="textarea" cols="30" rows="5"></textarea> <br />
+              <input type="submit" value="Submit" />
+            </form>
           </div>
+
+          <div class="user-search">
+            <form action="">
+              <input
+                type="search"
+                placeholder="User Search..."
+                id="user-search"
+              />
+            </form>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Textarea</th>
+              </tr>
+            </thead>
+            <tbody class="comment-tbody">
+              <!-- <tr>
+                  <td>Shalala</td>
+                  <td>shalala@gmail.com</td>
+                  <td>
+                    <i class="fa-solid fa-trash"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </td>
+                </tr> -->
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -165,6 +172,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./common.js"></script>
-    <script src="./admin.js"></script>
+    <script src="./admin-comment.js"></script>
   </body>
 </html>

@@ -637,6 +637,95 @@ html {
   width: 130px;
   aspect-ratio: 1/1;
 }
+.content .main-content .comment-table-sec {
+  padding: 1rem 0;
+}
+.content .main-content .comment-table-sec h1 {
+  padding: 20px 0;
+  font-size: 25px;
+  color: #383839;
+}
+.content .main-content .comment-table-sec .form-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.content .main-content .comment-table-sec .form-sec input {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .comment-table-sec .form-sec input:hover {
+  box-shadow: none;
+}
+.content .main-content .comment-table-sec .form-sec input:focus {
+  box-shadow: 0 0 5px rgb(81, 203, 238);
+  border: 1px solid rgb(81, 203, 238);
+}
+.content .main-content .comment-table-sec .form-sec textarea {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .comment-table-sec .form-sec textarea:hover {
+  box-shadow: none;
+}
+.content .main-content .comment-table-sec .form-sec textarea:focus {
+  box-shadow: 0 0 5px rgb(81, 203, 238);
+  border: 1px solid rgb(81, 203, 238);
+}
+.content .main-content .comment-table-sec .user-search input {
+  width: 30%;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+.content .main-content .comment-table-sec .user-search input:hover {
+  box-shadow: none;
+}
+.content .main-content .comment-table-sec table {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 20px;
+}
+.content .main-content .comment-table-sec table:hover {
+  box-shadow: none;
+}
+.content .main-content .comment-table-sec table th {
+  width: 10%;
+  padding: 10px 15px;
+}
+.content .main-content .comment-table-sec table td {
+  width: 10%;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(132, 139, 200, 0.18);
+  color: #677483;
+}
+.content .main-content .comment-table-sec table td .fa-solid {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+.content .main-content .comment-table-sec table td .fa-trash {
+  color: red;
+}
+.content .main-content .comment-table-sec table td .fa-user-pen {
+  color: #009688;
+}
 .content .sticky-2 {
   width: 20%;
 }
