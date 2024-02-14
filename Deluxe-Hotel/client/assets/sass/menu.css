@@ -833,6 +833,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 #starters-sec {
   padding: 4.5rem 0;
   background-color: #1b1b1b;
+  overflow: hidden;
 }
 #starters-sec .starters-sec {
   display: grid;
@@ -970,6 +971,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 #our-chef-sec {
   padding: 3rem 0;
   background-color: #1b1b1b;
+  overflow: hidden;
 }
 #our-chef-sec .our-chef .info {
   display: flex;

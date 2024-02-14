@@ -71,6 +71,7 @@
 #starters-sec {
   padding: 4.5rem 0;
   background-color: #1b1b1b;
+  overflow: hidden;
   .starters-sec {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -230,6 +231,7 @@
 #our-chef-sec {
   padding: 3rem 0;
   background-color: #1b1b1b;
+  overflow: hidden;
 
   .our-chef {
     .info {

@@ -799,6 +799,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 
 #products-section {
   padding: 3rem 0;
+  overflow: hidden;
 }
 #products-section .products-section .products-cards {
   display: grid;

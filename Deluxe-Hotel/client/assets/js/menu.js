@@ -1,3 +1,5 @@
+
+AOS.init();
 const menuSection = document.querySelector(".menu-content");
 const menuBtnCategoyr = document.querySelectorAll(".menu-btn");
 

@@ -877,6 +877,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 #luxury-section {
   padding: 2rem 0;
   background-color: #fbf6e8;
+  overflow: hidden;
 }
 #luxury-section .luxury-section .luxury-info {
   padding: 30px 0;
@@ -1574,6 +1575,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 
 #services-sec {
   padding: 3rem 0;
+  overflow: hidden;
 }
 #services-sec .services-sec .info {
   padding: 30px 0;
