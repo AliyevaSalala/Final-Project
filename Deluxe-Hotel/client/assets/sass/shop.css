@@ -801,6 +801,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 #cart-about-sec {
   padding: 3rem 0;
   background-color: #f6f1f0;
+  overflow: hidden;
 }
 #cart-about-sec .cart-about {
   display: flex;

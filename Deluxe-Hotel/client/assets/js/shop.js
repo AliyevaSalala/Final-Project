@@ -1,3 +1,5 @@
+AOS.init();
+
 const categoryBtn = document.querySelectorAll(".categorybtn");
 const productSection = document.querySelector(".product-cards");
 const loadMoreBtn = document.querySelector(".load-more-btn");
