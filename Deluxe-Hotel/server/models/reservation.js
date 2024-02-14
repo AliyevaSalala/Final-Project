@@ -8,7 +8,8 @@ const reservationSchema = new Schema(
     checkIn: Date,
     checkOut: Date,
     rooms: Number,
-    guests: Number,
+    adult: Number,
+    children: Number,
   },
   { timestamps: true }
 );

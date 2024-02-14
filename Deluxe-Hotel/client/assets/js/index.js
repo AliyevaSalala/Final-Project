@@ -58,11 +58,9 @@ const myForm = document.querySelector("#my-form");
 const checkForm = document.querySelector(".check-form");
 const checkInInput = document.querySelector("#check-in-input");
 const checkOutInput = document.querySelector("#check-out-input");
-// const numberInput = document.querySelector("#number-input");
-// let date = document.getElementById("date");
-
-const roomSelect = document.querySelector("#room-select");
-const guestsSelect = document.querySelector("#guests-select");
+const adult = document.querySelector("#adult");
+const rooms = document.querySelector("#rooms");
+const children = document.querySelector("#children");
 
 // let authorName;
 
@@ -135,46 +133,6 @@ myForm.addEventListener("submit", function (event) {
 
 let array = [];
 
-// let login = localStorage.getItem("login");
-// async function getAllData(endpoint) {
-//   const res = await axios(`${DB_URL}/${endpoint}`);
-//   // console.log(res.data);
-//   array = res.data;
-//   console.log(array);
-// }
-
-// getAllData("reservations");
-
-// checkForm.addEventListener("submit", async function (e) {
-//   e.preventDefault();
-//   if (login === "true") {
-//     let newObj = {
-//       checkIn: checkInInput.value,
-//       checkOut: checkOutInput.value,
-//       rooms: roomSelect.value,
-//       guests: guestsSelect.value,
-//     };
-//     if (
-//       checkInInput.value != "" &&
-//       checkOutInput.value != "" &&
-//       roomSelect.value != "" &&
-//       guestsSelect.value != ""
-//     ) {
-//       await axios.post(`${DB_URL}/reservations`, newObj);
-//       Toastify({
-//         text: " successful!",
-//         duration: 3000,
-//         close: true,
-//         gravity: "top",
-//         position: "right",
-//         backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-//       }).showToast();
-//     }
-//   } else {
-//     window.location = "login.html";
-//   }
-// });
-
 let login = localStorage.getItem("login");
 
 async function checkReservation(startDate, endDate) {
@@ -192,14 +150,16 @@ checkForm.addEventListener("submit", async function (e) {
     let newObj = {
       checkIn: checkInInput.value,
       checkOut: checkOutInput.value,
-      rooms: roomSelect.value,
-      guests: guestsSelect.value,
+      rooms: rooms.value,
+      adult: adult.value,
+      children: children.value,
     };
     if (
       checkInInput.value != "" &&
       checkOutInput.value != "" &&
-      roomSelect.value != "" &&
-      guestsSelect.value != ""
+      rooms.value != "" &&
+      children.value != "" &&
+      adult.value != ""
     ) {
       const isReserved = await checkReservation(
         checkInInput.value,

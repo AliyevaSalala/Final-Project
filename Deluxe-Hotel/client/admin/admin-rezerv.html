@@ -83,22 +83,18 @@
               <input type="date" placeholder="Check In" id="check-in" /> <br />
               <input type="date" placeholder="Check Out" id="check-out" />
               <br />
-              <select name="Adult" id="guests">
-                <option value="1 adult, 0 children">1 adult, 0 children</option>
-                <option value="2 adult, 2 children">2 adult, 2 children</option>
-                <option value="3 adult, 2 children">3 adult, 2 children</option>
-                <option value="5 adult, 1 children">5 adult, 1 children</option>
-                <option value="7 adult, 3 children">7 adult, 3 children</option>
-              </select>
+              <input type="number" placeholder="Rooms" min="1" id="rooms" />
               <br />
+              <input
+                type="number"
+                placeholder="Children"
+                min="0"
+                id="children"
+              />
+              <br />
+              <input type="number" placeholder="adults" min="0" id="adults" />
 
-              <select name="" id="rooms">
-                <option value="1 rooms">1 rooms</option>
-                <option value="2 rooms">2 rooms</option>
-                <option value="3 rooms">3 rooms</option>
-                <option value="5 rooms">5 rooms</option>
-                <option value="7 rooms">7 rooms</option>
-              </select> <br>
+              <br />
               <input type="submit" value="Submit" />
             </form>
           </div>
@@ -114,7 +110,8 @@
                 <th>Check In</th>
                 <th>Check Out</th>
                 <th>Rooms</th>
-                <th>Guests</th>
+                <th>Adult</th>
+                <th>Children</th>
                 <th>Actions</th>
               </tr>
             </thead>

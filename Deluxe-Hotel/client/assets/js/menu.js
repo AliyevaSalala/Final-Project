@@ -10,18 +10,16 @@ menuBtnCategoyr.forEach((item) =>
 
 let menus = [];
 let favsProducts = getItemToLocalStorage();
+// let favorites = getFavoritesFromLocaleStorages();
 let login = localStorage.getItem("login");
 
 async function getData(endpoint) {
   const res = await axios(`${DB_URL}/${endpoint}`);
-  // console.log(res.data);
-  // drawMenu(res.data);
   menus = res.data;
   let filtered = menus.filter(
     (item) => item.menuCategory.toLocaleLowerCase() === "starters"
   );
   drawMenu(filtered);
-  // console.log(menus);
 }
 
 getData("menu");
@@ -63,6 +61,80 @@ function drawMenu(data) {
   });
 }
 
+// function drawMenu(data) {
+//   menuSection.innerHTML = "";
+
+//   data.forEach((element) => {
+//     const productCardElement = document.createElement("div");
+//     productCardElement.className = "item-menu";
+//     const productImageElement = document.createElement("img");
+//     productImageElement.src = element.image;
+//     const productTitleDivElement = document.createElement("div");
+
+//     productTitleDivElement.className = "item-right";
+//     const productImageElement2 = document.createElement("img");
+//     productImageElement2.src = element.image;
+
+//     const textElement = document.createElement("div");
+//     textElement.className = "texts";
+//     const productTitleElement = document.createElement("h3");
+//     productTitleElement.textContent = element.title;
+//     const productDescriptionElement = document.createElement("p");
+//     productDescriptionElement.textContent = element.desc;
+
+//     const itemLeftElem = document.createElement("div");
+//     itemLeftElem.className = "item-left";
+//     const itemleftelem2 = document.createElement("div");
+//     itemleftelem2.className = "item-left";
+//     const productPriceElement = document.createElement("p");
+//     productPriceElement.textContent = element.price;
+//     const favIconElement = document.createElement("i");
+
+//     const bool = favorites.find((item) => item.id === element._id);
+
+//     favIconElement.className = !bool
+//       ? "fa-regular fa-heart"
+//       : "fa-solid fa-heart";
+//     console.log(element);
+
+//     favIconElement.addEventListener("click", function () {
+//       this.className === "fa-regular fa-heart"
+//         ? (this.className = "fa-solid fa-heart")
+//         : (this.className = "fa-regular fa-heart");
+
+//       console.log(element);
+
+//       let favoriteProducts = getFavoritesFromLocaleStorages();
+
+//       const favIndex = favoriteProducts.findIndex(
+//         (item) => item.id === element._id
+//       );
+
+//       if (favIndex === -1) {
+//         favoriteProducts.push(element);
+//       } else {
+//         favoriteProducts.splice(favIndex, 1);
+//       }
+
+//       setProductToLocaleStorage(favoriteProducts);
+//     });
+
+//     productTitleDivElement.append(productImageElement2, textElement);
+//     textElement.append(productTitleElement, productDescriptionElement);
+//     itemleftelem2.append(productPriceElement, favIconElement);
+//     itemLeftElem.append(itemleftelem2);
+//     productCardElement.append(productImageElement, textElement, itemleftelem2);
+//     menuSection.append(productCardElement);
+//   });
+// }
+
+// function setProductToLocaleStorage(products) {
+//   localStorage.setItem("favs", JSON.stringify(products));
+// }
+
+// function getFavoritesFromLocaleStorages() {
+//   return JSON.parse(localStorage.getItem("favs")) ?? [];
+// }
 let categoryName = "starters";
 
 menuBtnCategoyr.forEach((item) => {

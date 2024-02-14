@@ -1532,7 +1532,7 @@ footer .footer .footer-section .footer-bottom p:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   padding: 60px 20px;
 }
 #online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec h3 {
@@ -1551,27 +1551,21 @@ footer .footer .footer-section .footer-bottom p:hover {
 #online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-}
-#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form .input-box {
-  display: flex;
   gap: 10px;
 }
-@media screen and (max-width: 481px) {
-  #online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form .input-box {
-    flex-direction: column;
-  }
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form label {
+  font-size: 20px;
+  color: #3d3931;
 }
-#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form .input-box input {
+#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form input {
   width: 100%;
   padding: 10px 15px;
-}
-#online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form .input-box select {
-  width: 100%;
-  padding: 10px 15px;
+  cursor: pointer;
 }
 #online-rezerv .empty .online-rezerv .online-rezerv-right .check-form-sec .check-form button {
-  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 13px 15px;
   width: 100%;
   background-color: #d19b38;
   color: #fff;

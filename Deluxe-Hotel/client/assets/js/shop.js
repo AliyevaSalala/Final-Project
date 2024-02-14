@@ -18,6 +18,7 @@ let limit = 3;
 let array = [];
 let productCopy = [];
 let login = localStorage.getItem("login");
+// let favsProducts = getItemToLocalStorage();
 
 async function getAllData(endpoint) {
   const res = await axios(`${DB_URL}/${endpoint}`);
@@ -107,3 +108,39 @@ function addToBasket(id) {
     window.location = "login.html";
   }
 }
+
+// function addToFav(id, icon) {
+//   if (login === "true") {
+//     if (icon.classList.contains("fa-regular")) {
+//       icon.classList.remove("fa-regular");
+//       icon.classList.add("fa-solid");
+//     } else {
+//       icon.classList.remove("fa-solid");
+//       icon.classList.add("fa-regular");
+//     }
+
+//     let favs = getItemToLocalStorage();
+
+//     let bool = favs.find((item) => item._id == id);
+
+//     let product = array.find((item) => item._id === id);
+
+//     if (bool) {
+//       favs = favs.filter((item) => item._id !== id);
+//     } else {
+//       favs.push(product);
+//     }
+
+//     setItemToLocalStorage(favs);
+//   } else {
+//     window.location = "login.html";
+//   }
+// }
+
+// function setItemToLocalStorage(data) {
+//   localStorage.setItem("favs", JSON.stringify(data));
+// }
+
+// function getItemToLocalStorage() {
+//   return JSON.parse(localStorage.getItem("favs")) || [];
+// }

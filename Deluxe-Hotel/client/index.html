@@ -690,47 +690,27 @@
                   <h3>ROOMS & SUITES</h3>
                   <h2>Hotel Booking Form</h2>
                   <form action="" class="check-form">
-                    <div class="input-box">
-                      <input
-                        type="date"
-                        value="2024-03-22"
-                        placeholder="Check In"
-                        id="check-in-input"
-                      />
-                      <input
-                        type="date"
-                        value="2024-03-23"
-                        placeholder="Check Out"
-                        id="check-out-input"
-                      />
-                    </div>
-                    <div class="input-box">
-                      <select name="Adult" id="guests-select">
-                        <option value="1 adult, 0 children">
-                          1 adult, 0 children
-                        </option>
-                        <option value="2 adult, 2 children">
-                          2 adult, 2 children
-                        </option>
-                        <option value="3 adult, 2 children">
-                          3 adult, 2 children
-                        </option>
-                        <option value="5 adult, 1 children">
-                          5 adult, 1 children
-                        </option>
-                        <option value="7 adult, 3 children">
-                          7 adult, 3 children
-                        </option>
-                      </select>
+                    <label for="check-in">Check In</label>
+                    <input
+                      type="date"
+                      value="2024-03-22"
+                      placeholder="Check In"
+                      id="check-in-input"
+                    />
+                    <label for="check-in">Check Out</label>
+                    <input
+                      type="date"
+                      value="2024-03-23"
+                      placeholder="Check Out"
+                      id="check-out-input"
+                    />
+                    <label for="adult">adult</label>
+                    <input type="number" min="0" id="adult" />
+                    <label for="children">children</label>
+                    <input type="number" min="0" id="children" />
+                    <label for="rooms">Rooms</label>
+                    <input type="number" min="1" id="rooms" />
 
-                      <select name="" id="room-select">
-                        <option value="1 rooms">1 rooms</option>
-                        <option value="2 rooms">2 rooms</option>
-                        <option value="3 rooms">3 rooms</option>
-                        <option value="5 rooms">5 rooms</option>
-                        <option value="7 rooms">7 rooms</option>
-                      </select>
-                    </div>
                     <button>Check Availability</button>
                   </form>
                 </div>

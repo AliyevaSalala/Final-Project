@@ -4,7 +4,8 @@ const form = document.querySelector(".form-sec");
 const checkIn = document.querySelector("#check-in");
 const checkOut = document.querySelector("#check-out");
 const rooms = document.querySelector("#rooms");
-const guests = document.querySelector("#guests");
+const adults = document.querySelector("#adults");
+const children = document.querySelector("#children");
 
 let menu = [];
 
@@ -24,7 +25,8 @@ function drawTable(data) {
   <td>${element.checkIn.slice(0, 10)}</td>
   <td>${element.checkOut.slice(0, 10)}</td>
   <td>${element.rooms}</td>
-  <td>${element.guests}</td>
+  <td>${element.children}</td>
+  <td>${element.adult}</td>
   <td>
       <i class="fa-solid fa-trash" onclick=userDeletBtn("${
         element._id
@@ -49,7 +51,7 @@ async function userDeletBtn(id, btn) {
   }
 }
 
-// USER-DATA-SEARCH
+// reserv-DATA-SEARCH
 
 userSearch.addEventListener("input", function (e) {
   e.preventDefault();
@@ -76,7 +78,8 @@ async function editBtn(id) {
       checkIn.value = res.data.checkIn;
       checkOut.value = res.data.checkOut;
       rooms.value = res.data.rooms;
-      guests.value = res.data.guests;
+      adults.value = res.data.adult;
+      children.value = res.data.children;
     } else {
       console.log("Invalid response data:", res);
     }
@@ -92,11 +95,12 @@ form.addEventListener("submit", async function (e) {
     checkIn: checkIn.value,
     checkOut: checkOut.value,
     rooms: rooms.value,
-    guests: guests.value,
+    adult: adults.value,
+    children: children.value,
   };
 
   if (!editStatus) {
-    if (checkIn.value && checkOut.value && rooms.value && guests.value) {
+    if (checkIn.value && checkOut.value && rooms.value && adults.value) {
       try {
         const res = await axios.post(`${BASE_url}/reservations`, newObj);
         // drawTable(res.data.allProducts);
@@ -118,7 +122,8 @@ form.addEventListener("submit", async function (e) {
   checkIn.value = "";
   checkOut.value = "";
   rooms.value = "";
-  guests.value = "";
+  adults.value = "";
+  children.value = "";
 });
 
 document.addEventListener("DOMContentLoaded", function () {

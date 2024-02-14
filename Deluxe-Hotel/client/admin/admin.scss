@@ -20,6 +20,17 @@ body {
         }
       }
       .main-content {
+        .dashboard-main {
+          h1 {
+            color: #c8c8c8;
+          }
+          .boxes {
+            .box {
+              background-color: #383839;
+              box-shadow: none;
+            }
+          }
+        }
         .user-table-sec {
           .user-search {
             input {
@@ -63,6 +74,80 @@ body {
               box-shadow: none;
               background-color: #383839;
               color: #fff;
+            }
+            button {
+              box-shadow: none;
+              background-color: #383839;
+              color: #757575;
+            }
+          }
+          table {
+            background-color: #383839;
+            box-shadow: none;
+          }
+        }
+        .product-table-sec {
+          h1 {
+            color: #c8c8c8;
+          }
+          .product-search {
+            input {
+              box-shadow: none;
+              background-color: #383839;
+            }
+          }
+          .form-sec {
+            input {
+              background-color: #383839;
+              box-shadow: none;
+            }
+            select {
+              background-color: #383839;
+              box-shadow: none;
+            }
+          }
+          .product-search {
+            input {
+              box-shadow: none;
+              background-color: #383839;
+              color: #fff;
+            }
+            button {
+              box-shadow: none;
+              background-color: #383839;
+              color: #757575;
+            }
+          }
+          table {
+            background-color: #383839;
+            box-shadow: none;
+          }
+        }
+        .rezervation-table-sec {
+          h1 {
+            color: #c8c8c8;
+          }
+
+          .form-sec {
+            input {
+              background-color: #383839;
+              box-shadow: none;
+            }
+            select {
+              background-color: #383839;
+              box-shadow: none;
+            }
+          }
+          .user-search {
+            input {
+              box-shadow: none;
+              background-color: #383839;
+              color: #fff;
+            }
+            button {
+              box-shadow: none;
+              background-color: #383839;
+              color: #757575;
             }
           }
           table {
