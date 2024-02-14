@@ -13,10 +13,7 @@ $(document).ready(function () {
     items: 1,
   });
 
-  // add animate.css class(es) to the elements to be animated
   function setAnimation(_elem, _InOut) {
-    // Store all animationend event name in a string.
-    // cf animate.css documentation
     var animationEndEvent =
       "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
@@ -25,12 +22,11 @@ $(document).ready(function () {
       var $animationType = "animated " + $elem.data("animation-" + _InOut);
 
       $elem.addClass($animationType).one(animationEndEvent, function () {
-        $elem.removeClass($animationType); // remove animate.css Class at the end of the animations
+        $elem.removeClass($animationType);
       });
     });
   }
 
-  // Fired before current slide change
   owl.on("change.owl.carousel", function (event) {
     var $currentItem = $(".owl-item", owl).eq(event.item.index);
     var $elemsToanim = $currentItem.find("[data-animation-out]");
@@ -119,3 +115,48 @@ const myVideo = document.querySelector("my-video");
 function stopVideo() {
   videoPlay.style.display = "none";
 }
+
+// review section
+const reviewForm = document.querySelector(".review-form");
+const reviewTextArea = document.querySelector("#textarea");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+
+async function submitReview(event) {
+  event.preventDefault();
+
+  const reviewText = reviewTextArea.value;
+  const name = nameInput.value;
+  const email = emailInput.value;
+
+  try {
+    if (!reviewText || !name || !email) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill in all fields!",
+        footer: '<a href="#">Why do I have this issue?</a>',
+      });
+      return; // !!!!!
+    }
+
+    const res = await axios.post(`${DB_URL}/reviews/submit`, {
+      reviewText,
+      name,
+      email,
+    });
+    Swal.fire({
+      title: "Good job!",
+      text: "YReview submitted successfully!",
+      icon: "success",
+    });
+    reviewTextArea.value = "";
+    nameInput.value = "";
+    emailInput.value = "";
+  } catch (error) {
+    console.error(error);
+    alert("Failed to submit review");
+  }
+}
+
+reviewForm.addEventListener("submit", submitReview);
