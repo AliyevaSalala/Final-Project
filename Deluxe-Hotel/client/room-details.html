@@ -334,21 +334,7 @@
           </div>
           <div class="desc-bottom">
             <div class="bottom-right">
-              <div class="details-section">
-                <!-- <div class="texts">
-                  <div class="icons">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h1>Queen Room</h1>
-                </div>
-                <div class="details-img">
-                  <img src="./assets/images/14.jpg" alt="" />
-                </div> -->
-              </div>
+              <div class="details-section"></div>
               <p
                 class="lorem"
                 data-aos="fade-right"
@@ -523,16 +509,34 @@
                     <form action="" class="grid">
                       <input
                         type="date"
-                        placeholder="Araival Date"
-                        value="2024-07-22"
+                        value="2024-03-22"
+                        placeholder="Check In"
+                        id="check-in-input"
                       />
                       <input
                         type="date"
-                        placeholder="Departure Date"
-                        value="2024-08-22"
+                        value="2024-03-23"
+                        placeholder="Check Out"
+                        id="check-out-input"
                       />
-                      <input type="number" placeholder="Adults" min="1" />
-                      <input type="number" placeholder="Children" min="1" />
+                      <input
+                        type="number"
+                        placeholder="Adults"
+                        min="0"
+                        id="adult"
+                      />
+                      <input
+                        type="number"
+                        placeholder="Children"
+                        min="0"
+                        id="children"
+                      />
+                      <input
+                        type="number"
+                        min="1"
+                        id="rooms"
+                        placeholder="rooms"
+                      />
                       <input
                         type="submit"
                         value="CHECK AVAILIABILITY"

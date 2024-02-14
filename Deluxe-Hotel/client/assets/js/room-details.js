@@ -160,3 +160,89 @@ async function submitReview(event) {
 }
 
 reviewForm.addEventListener("submit", submitReview);
+
+// CHECK AVAILABILITY
+
+const checkForm = document.querySelector(".grid");
+const checkInInput = document.querySelector("#check-in-input");
+const checkOutInput = document.querySelector("#check-out-input");
+const adult = document.querySelector("#adult");
+const rooms = document.querySelector("#rooms");
+const children = document.querySelector("#children");
+
+let array = [];
+
+let login = localStorage.getItem("login");
+
+async function checkReservation(startDate, endDate) {
+  const reservations = await axios.get(`${DB_URL}/reservations`);
+  const existingReservation = reservations.data.find(
+    (reservation) =>
+      reservation.checkIn <= endDate && reservation.checkOut >= startDate
+  );
+  return existingReservation !== undefined;
+}
+
+checkForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  if (login === "true") {
+    let newObj = {
+      checkIn: checkInInput.value,
+      checkOut: checkOutInput.value,
+      rooms: rooms.value,
+      adult: adult.value,
+      children: children.value,
+    };
+    if (
+      checkInInput.value != "" &&
+      checkOutInput.value != "" &&
+      rooms.value != "" &&
+      children.value != "" &&
+      adult.value != ""
+    ) {
+      const isReserved = await checkReservation(
+        checkInInput.value,
+        checkOutInput.value
+      );
+      if (isReserved) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "This date is already reserved!",
+          footer: '<a href="#">Why do I have this issue?</a>',
+        });
+      } else {
+        await axios.post(`${DB_URL}/reservations`, newObj);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Reservation successful!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    }
+  } else {
+    window.location = "login.html";
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1; // January is 0!
+  let yyyy = today.getFullYear();
+
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+
+  today = yyyy + "-" + mm + "-" + dd;
+
+  checkInInput.setAttribute("min", today);
+  checkOutInput.setAttribute("min", today);
+});

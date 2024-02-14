@@ -4,11 +4,6 @@ const menuCounter = document.querySelector(".menu-counter");
 const productCounter = document.querySelector(".product-counter");
 const userCounter = document.querySelector(".user-counter");
 
-
-
-
-
-
 async function updateCounters() {
   try {
     const res = await axios(`${BASE_url}/reviews`);
@@ -28,7 +23,7 @@ async function updateCounters() {
     const menuData = menu.data;
     menuCounter.textContent = menuData.length;
 
-    const user = await axios(`${BASE_url}/menu`);
+    const user = await axios(`${BASE_url}/users`);
     // console.log(user.data);
     const userData = user.data;
     userCounter.textContent = userData.length;
