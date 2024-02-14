@@ -119,6 +119,25 @@ body.dark-mode .content .main-content .rezervation-table-sec table {
   background-color: #383839;
   box-shadow: none;
 }
+body.dark-mode .content .main-content .comment-table-sec h1 {
+  color: #c8c8c8;
+}
+body.dark-mode .content .main-content .comment-table-sec .form-sec input {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content .main-content .comment-table-sec .form-sec textarea {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content .main-content .comment-table-sec .user-search input {
+  background-color: #383839;
+  box-shadow: none;
+}
+body.dark-mode .content .main-content .comment-table-sec table {
+  background-color: #383839;
+  box-shadow: none;
+}
 body.dark-mode .content #right-sec .navbar .info .body h3 {
   color: #677483;
 }

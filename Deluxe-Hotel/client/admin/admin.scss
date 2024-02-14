@@ -155,6 +155,31 @@ body {
             box-shadow: none;
           }
         }
+        .comment-table-sec {
+          h1 {
+            color: #c8c8c8;
+          }
+          .form-sec {
+            input {
+              background-color: #383839;
+              box-shadow: none;
+            }
+            textarea {
+              background-color: #383839;
+              box-shadow: none;
+            }
+          }
+          .user-search {
+            input {
+              background-color: #383839;
+              box-shadow: none;
+            }
+          }
+          table {
+            background-color: #383839;
+            box-shadow: none;
+          }
+        }
       }
 
       #right-sec {
