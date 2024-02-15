@@ -23,6 +23,18 @@ const addNewRezervations = async (req, res) => {
   }
 };
 
+// BY ID
+
+const getReservationById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const product = await Reservation.findById(id);
+    res.send(product).status(200);
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
+
 // DELETE
 
 const deleteProductById = async (req, res) => {
@@ -59,4 +71,5 @@ module.exports = {
   addNewRezervations,
   deleteProductById,
   updateProductById,
+  getReservationById,
 };

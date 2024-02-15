@@ -39,10 +39,10 @@ signInForm.addEventListener("submit", async function (e) {
       const res = await axios.post(`${DB_URL}/signin`, newObj);
       if (res.status === 200) {
         if (!res.data.userInfo.isAdmin) {
-          window.location.href = "../client/index.html";
+          window.location.href = "./index.html";
         } else {
           localStorage.setItem("isAdmin", true);
-          window.location.href = "../client/admin/admin.html";
+          window.location.href = "./admin/admin.html";
         }
         userEmail.value = "";
         userPassword.value = "";
