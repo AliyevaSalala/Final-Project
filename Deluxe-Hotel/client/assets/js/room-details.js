@@ -84,6 +84,8 @@ desSecBtn.addEventListener("click", function () {
   reviwSecBtn.classList.remove("brown-color");
 });
 
+let login = localStorage.getItem("login");
+
 async function getDetailsData(endpoint) {
   const res = await axios(`${DB_URL}/${endpoint}/${id}`);
   // console.log(res.data);
@@ -130,6 +132,17 @@ async function submitReview(event) {
   const email = emailInput.value;
 
   try {
+    if (!login) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please log in to submit a review!",
+        footer: '<a href="#">Why do I have this issue?</a>',
+      }).then(() => {
+        window.location.href = "login.html";
+      });
+      return;
+    }
     if (!reviewText || !name || !email) {
       Swal.fire({
         icon: "error",
@@ -171,8 +184,6 @@ const rooms = document.querySelector("#rooms");
 const children = document.querySelector("#children");
 
 let array = [];
-
-let login = localStorage.getItem("login");
 
 async function checkReservation(startDate, endDate) {
   const reservations = await axios.get(`${DB_URL}/reservations`);

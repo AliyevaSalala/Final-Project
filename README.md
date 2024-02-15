@@ -15,6 +15,24 @@ This project aims to create a hotel website. It allows users to make hotel room 
 - Getting information about the hotel
 - Accessing contact information
 
+## Additional Features
+
+### Online Reservation Management
+
+- A comprehensive admin panel for managing online room reservations..
+
+### Multilingual Support
+
+- Multilingual support to cater to users from different linguistic backgrounds. Our website is available in English, Rus.
+
+### Local Area Guide
+
+- Explore the surroundings with our local area guide, providing information on nearby attractions, restaurants, and activities.
+
+### User Reviews and Ratings
+
+- Read user reviews and ratings to get insights into the hotel experience. Users can share their feedback and rate their stay.
+
 ## Used technologies
 
 - FRONTEND
