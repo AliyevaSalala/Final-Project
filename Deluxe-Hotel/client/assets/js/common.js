@@ -76,16 +76,6 @@ function basketCalculate() {
   basketCounter.textContent = basket.reduce((acc, curr) => acc + curr.count, 0);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("#content").style.display = "none";
-
-  setTimeout(function () {
-    document.querySelector(".loading-container").style.display = "none";
-    document.querySelector("#content").style.display = "block";
-
-    AOS.init();
-  }, 2000);
-});
 
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");

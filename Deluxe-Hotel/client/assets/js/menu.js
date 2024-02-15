@@ -27,6 +27,7 @@ async function getData(endpoint) {
 getData("menu");
 
 function drawMenu(data) {
+  console.log(favsProducts);
   menuSection.innerHTML = "";
   data.forEach((element) => {
     menuSection.innerHTML += `
@@ -51,7 +52,7 @@ function drawMenu(data) {
                     <div class="basket">
                       <p>$ ${element.price}</p>
                       <i class="${
-                        favsProducts.some((item) => item.id === element._id)
+                        favsProducts.some((item) => item._id === element._id)
                           ? "fa-solid fa-heart"
                           : "fa-regular fa-heart"
                       }" onclick=addToFav("${element._id}",this)></i>
@@ -168,7 +169,7 @@ function addToFav(id, icon) {
 
     let favs = getItemToLocalStorage();
 
-    let bool = favs.find((item) => item._id == id);
+    let bool = favs.find((item) => item._id === id);
 
     let product = menus.find((item) => item._id === id);
 
