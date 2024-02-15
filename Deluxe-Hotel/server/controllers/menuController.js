@@ -4,7 +4,7 @@ const Menu = require("../models/menuModels");
 const getAllDataMenu = async (req, res) => {
   try {
     const menus = await Menu.find({});
-    res.send(menus).set(200);
+    res.send(menus).status(200);
   } catch (error) {
     res.status(500).send({ message: error.message });
   }

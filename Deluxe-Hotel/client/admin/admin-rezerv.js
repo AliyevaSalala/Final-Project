@@ -73,16 +73,12 @@ async function editBtn(id) {
   window.scrollTo(0, 0);
   try {
     const res = await axios(`${BASE_url}/reservations/${id}`);
-    // console.log(res.data);
-    if (res && res.data) {
-      checkIn.value = res.data.checkIn;
-      checkOut.value = res.data.checkOut;
-      rooms.value = res.data.rooms;
-      adults.value = res.data.adult;
-      children.value = res.data.children;
-    } else {
-      console.log("Invalid response data:", res);
-    }
+    console.log(res.data);
+    checkIn.value = res.data.checkIn;
+    checkOut.value = res.data.checkOut;
+    rooms.value = res.data.rooms;
+    adults.value = res.data.adult;
+    children.value = res.data.children;
   } catch (error) {
     console.log(error);
   }
@@ -100,7 +96,13 @@ form.addEventListener("submit", async function (e) {
   };
 
   if (!editStatus) {
-    if (checkIn.value && checkOut.value && rooms.value && adults.value) {
+    if (
+      checkIn.value &&
+      checkOut.value &&
+      rooms.value &&
+      adults.value &&
+      children.value
+    ) {
       try {
         const res = await axios.post(`${BASE_url}/reservations`, newObj);
         // drawTable(res.data.allProducts);

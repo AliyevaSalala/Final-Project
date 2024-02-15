@@ -111,12 +111,16 @@ let base64;
 async function editBtn(id) {
   editStatus = id;
   window.scrollTo(0, 0);
-  const res = await axios(`${BASE_url}/products/${id}`);
-
-  typeInput.value = res.data.room_type;
-  titleInput.value = res.data.title;
-  priceInput.value = res.data.price;
-  descInput.value = res.data.desc;
+  try {
+    const res = await axios(`${BASE_url}/products/${id}`);
+    console.log(res.data);
+    typeInput.value = res.data.room_type;
+    titleInput.value = res.data.title;
+    priceInput.value = res.data.price;
+    descInput.value = res.data.desc;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 form.addEventListener("submit", async function (e) {
