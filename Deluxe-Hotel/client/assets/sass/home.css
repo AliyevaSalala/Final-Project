@@ -193,6 +193,20 @@ header #header-top .header-top .header-top-left .navbar-search .menu-circle:hove
 header #header-top .header-top .header-top-left .navbar-search .menu-circle:hover .circle-y {
   transform: translateY(-7.5px);
 }
+header #header-top .header-top .header-top-left .navbar-search select {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+}
+header #header-top .header-top .header-top-left .navbar-search select option {
+  margin: 40px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
 header .elementar-section {
   display: flex;
   justify-content: center;
@@ -787,7 +801,7 @@ footer .footer .footer-section .footer-bottom p:hover {
 
 #hero-banner-sec {
   overflow: hidden;
-  padding: 230px 0;
+  padding: 260px 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 1100px) {

@@ -48,16 +48,16 @@ $(".counter").each(function () {
   );
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("#content").style.display = "none";
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.querySelector("#content").style.display = "none";
 
-  setTimeout(function () {
-    document.querySelector(".loading-container").style.display = "none";
-    document.querySelector("#content").style.display = "block";
+//   setTimeout(function () {
+//     document.querySelector(".loading-container").style.display = "none";
+//     document.querySelector("#content").style.display = "block";
 
-    AOS.init();
-  }, 2000);
-});
+//     AOS.init();
+//   }, 2000);
+// });
 
 // contact-form
 const firstNameInput = document.querySelector("#first-name");

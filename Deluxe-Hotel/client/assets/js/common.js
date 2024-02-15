@@ -12,6 +12,14 @@ const faUser = document.querySelector(".fa-user");
 
 const DB_URL = "https://deluxe-back.onrender.com";
 
+
+document.getElementById("redirectSelect").addEventListener("change", function() {
+  var selectedOption = this.options[this.selectedIndex].value;
+  if (selectedOption) {
+    window.location.href = selectedOption;
+  }
+});
+
 menuIcon.addEventListener("click", function () {
   nav.classList.toggle("show");
 
