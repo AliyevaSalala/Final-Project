@@ -1,32 +1,5 @@
 const Reservation = require("../models/reservation");
 
-// const createReservation = async (req, res) => {
-//   try {
-//     const { checkIn, checkOut } = req.body;
-//     const existingReservation = await Reservation.findOne({
-//       $or: [
-//         { checkIn: { $lte: checkIn }, checkOut: { $gte: checkIn } },
-//         { checkIn: { $lte: checkOut }, checkOut: { $gte: checkOut } },
-//       ],
-//     });
-
-//     if (existingReservation) {
-//       return res
-//         .status(400)
-//         .json({
-//           message: "Bu tarihler arasında başka bir rezervasyon bulunmaktadır.",
-//         });
-//     }
-
-//     const newReservation = new Reservation(req.body);
-//     await newReservation.save();
-//     res.status(201).json({ message: "Rezervasyon başarıyla oluşturuldu." });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: "Bir hata oluştu." });
-//   }
-// };
-
 const getAllReservations = async (req, res) => {
   try {
     const reservations = await Reservation.find({});

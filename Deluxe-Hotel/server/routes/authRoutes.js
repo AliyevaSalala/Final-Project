@@ -6,7 +6,7 @@ const authController = require("../controllers/userController");
 
 router.get("/users", authController.getAllUsers);
 router.post("/users", authController.addNewUsersById);
-router.patch("/:id", authController.updateUsersById);
+router.patch("/users/:id", authController.updateUsersById);
 router.post("/signup", authController.signup);
 router.delete("/users/:id", authController.deleteUsersById);
 router.post("/signin", authController.signin);
