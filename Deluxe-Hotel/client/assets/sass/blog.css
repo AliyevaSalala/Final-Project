@@ -118,8 +118,8 @@ body.show-account .acoount {
   position: fixed;
   bottom: 20px;
   right: 10px;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   display: none;
   place-items: center;
   border-radius: 50%;
@@ -894,6 +894,9 @@ footer .footer .footer-section .footer-bottom p:hover {
   max-width: 600px;
   line-height: 25px;
 }
+#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body .full-text {
+  display: none;
+}
 #blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body a {
   padding: 15px 25px;
   background-color: #aa8453;
@@ -904,6 +907,15 @@ footer .footer .footer-section .footer-bottom p:hover {
 }
 #blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body a:hover {
   box-shadow: inset 10em 0 0 0 #000;
+}
+#blog-about-sec .blog-about .blog-about-right .blog-cards .blog-card .card-body button {
+  padding: 15px 25px;
+  color: #aa8453;
+  font-size: 15px;
+  font-weight: 300;
+  transition: all 0.5s;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 #blog-about-sec .blog-about .blog-about-left {
   width: 30%;

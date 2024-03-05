@@ -27,8 +27,6 @@ async function getAllData(endpoint) {
   console.log(res.data);
   array = res.data;
   productCopy = structuredClone(array);
-  // drawCards(res.data);
-  //   drawCards(array.slice(0, limit));
   let filtered = array.filter(
     (item) => item.room_type.toLocaleLowerCase() === "deluxe"
   );
@@ -74,10 +72,31 @@ let typeName = "deluxe";
 //   drawCards(array.slice(0, limit));
 // });
 
+// categoryBtn.forEach((room) => {
+//   room.addEventListener("click", function () {
+//     typeName = this.innerText;
+//     let filtered = array.filter((item) => item.room_type === typeName);
+//     drawCards(filtered);
+//   });
+// });
+
 categoryBtn.forEach((room) => {
   room.addEventListener("click", function () {
-    typeName = this.innerText;
-    let filtered = array.filter((item) => item.room_type === typeName);
+    typeName = this.innerText.toLocaleLowerCase();
+    let filtered;
+    if (
+      typeName === "deluxe" ||
+      typeName === "king" ||
+      typeName === "queen" ||
+      typeName === "suit" ||
+      typeName === "standart"
+    ) {
+      filtered = array.filter(
+        (item) => item.room_type.toLocaleLowerCase() === typeName
+      );
+    } else {
+      filtered = array;
+    }
     drawCards(filtered);
   });
 });
@@ -89,6 +108,43 @@ inputSearch.addEventListener("input", function (e) {
   );
   drawCards(filtered);
 });
+
+// SORT
+sortBtn.addEventListener("click", function () {
+  let sorted;
+  if (sortBtn.innerText === "Low to High") {
+    sortBtn.innerText = "High to Low";
+    sorted = array
+      .filter((item) => item.room_type.toLowerCase() === typeName)
+      .sort((a, b) => a.price - b.price);
+  } else if (sortBtn.innerText === "High to Low") {
+    sortBtn.innerText = "Default";
+    sorted = array
+      .filter((item) => item.room_type.toLowerCase() === typeName)
+      .sort((a, b) => b.price - a.price);
+  } else {
+    sortBtn.innerText = "Low to High";
+    sorted = productCopy.filter(
+      (item) => item.room_type.toLowerCase() === typeName
+    );
+  }
+  drawCards(sorted);
+});
+
+// sortBtn.addEventListener("click", function () {
+//   let sorted;
+//   if (sortBtn.innerText === "Low to High") {
+//     sortBtn.innerText = "High to Low";
+//     sorted = array.sort((a, b) => a.price - b.price);
+//   } else if (sortBtn.innerText === "High to Low") {
+//     sortBtn.innerText = "Deafult";
+//     sorted = array.sort((a, b) => b.price - a.price);
+//   } else {
+//     sortBtn.innerText = "Low to High";
+//     sorted = productCopy;
+//   }
+//   drawCards(sorted);
+// });
 
 // ADD-TO-BASKET
 

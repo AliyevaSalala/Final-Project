@@ -43,7 +43,7 @@
       href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/sass/fav.css" />
+    <link rel="stylesheet" href="./assets/sass/faq.css" />
     <title>Deluxe Hotel</title>
     <link
       rel="icon"
@@ -52,6 +52,10 @@
     />
   </head>
   <body>
+    <!-- <div class="loading-container">
+      <span class="loader"></span>
+    </div> -->
+
     <div id="content">
       <!--======= Cursor -->
       <div class="cursor">
@@ -61,7 +65,6 @@
 
       <!-- HEADER-SECTION -->
 
-   
       <header>
         <div id="header-top">
           <div class="container">
@@ -213,37 +216,169 @@
           </div>
         </div>
       </div>
-      <!-- WISHLIST-BANNER-SECTION -->
 
-      <section id="about">
+      <!-- FAQ-SECTION -->
+
+      <section id="faq">
         <div class="empty">
           <div class="container">
-            <div class="about-section">
-              <h1>Wishlist</h1>
+            <div class="faq-section">
+              <h5>POPULAR QUESTIONS</h5>
+              <h1 data-aos="fade-up" data-aos-duration="3000">F.A.Qs</h1>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FAVORITE -->
-      <section id="fav-sec">
+      <!-- FAQ-ACCORDION -->
+      <section id="faq-accordion">
         <div class="container">
-          <div class="fav-sec">
-            <div class="favs-cards">
-              <div class="fav-card">
-                <i class="fa-solid fa-heart"></i>
-                <img src="./assets/images/blog-2.webp" alt="menu" />
-                <div class="card-body">
-                  <h1>Title</h1>
-                  <p>description</p>
-                  <h4>Price</h4>
+          <div class="faq-accrodion">
+            <div
+              class="right-text"
+              data-aos="fade-right"
+              data-aos-duration="3000"
+            >
+              <div class="content">
+                <div class="accordion">
+                  <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                      <span class="accordion-title"
+                        >How can I confirm that you have received my
+                        reservation?</span
+                      ><span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                      <p>
+                        Lorem ut nisl quam nestibulum ac quam nec odio elementum
+                        sceisue the aucan ligula orci varius natoque penatibus
+                        et magnis dis arturient onte nascete ridiculus mus
+                        nellentesu habitant morbine velite.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-2" aria-expanded="false">
+                      <span class="accordion-title"
+                        >Up to what age are they considered children?</span
+                      ><span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Elementum sagittis vitae et leo duis ut.
+                        Ut tortor pretium viverra suspendisse potenti.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-3" aria-expanded="false">
+                      <span class="accordion-title"
+                        >Do you have any discount code?</span
+                      ><span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Elementum sagittis vitae et leo duis ut.
+                        Ut tortor pretium viverra suspendisse potenti.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-4" aria-expanded="false">
+                      <span class="accordion-title"
+                        >How can I get in touch with my hotel?</span
+                      ><span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Elementum sagittis vitae et leo duis ut.
+                        Ut tortor pretium viverra suspendisse potenti.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-5" aria-expanded="false">
+                      <span class="accordion-title"
+                        >On the last day, can I leave the room later?</span
+                      ><span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Elementum sagittis vitae et leo duis ut.
+                        Ut tortor pretium viverra suspendisse potenti.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-5" aria-expanded="false">
+                      <span class="accordion-title"
+                        >Do you have hotels with a spa?</span
+                      ><span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Elementum sagittis vitae et leo duis ut.
+                        Ut tortor pretium viverra suspendisse potenti.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-5" aria-expanded="false">
+                      <span class="accordion-title"
+                        >Can I cancel my reservation?</span
+                      ><span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Elementum sagittis vitae et leo duis ut.
+                        Ut tortor pretium viverra suspendisse potenti.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div
+              class="left-text"
+              data-aos="fade-left"
+              data-aos-duration="3000"
+            >
+              <div class="text-top">
+                <img
+                  src="https://webredox.net/demo/wp/patara/wp-content/uploads/2023/10/about-1.jpg"
+                  alt=""
+                />
+                <img
+                  src="https://webredox.net/demo/wp/patara/wp-content/uploads/2023/10/about-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="text-bottom">
+                <img
+                  src="https://webredox.net/demo/wp/patara/wp-content/uploads/2023/10/about-3.jpg"
+                  alt=""
+                />
+                <img
+                  src="https://webredox.net/demo/wp/patara/wp-content/uploads/2023/10/about-4.jpg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <!-- FOOTER-SECTION -->
 
       <footer>
@@ -359,13 +494,18 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/fav.js"></script>
+    <script src="./assets/js/faq.js"></script>
   </body>
 </html>

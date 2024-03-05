@@ -97,6 +97,9 @@
               max-width: 600px;
               line-height: 25px;
             }
+            .full-text {
+              display: none;
+            }
             a {
               padding: 15px 25px;
               background-color: #aa8453;
@@ -108,6 +111,16 @@
               &:hover {
                 box-shadow: inset 10em 0 0 0 #000;
               }
+            }
+            button {
+              padding: 15px 25px;
+              // background-color: #aa8453;
+              color: #aa8453;
+              font-size: 15px;
+              font-weight: 300;
+              transition: all 0.5s;
+              border: 1px solid transparent;
+              cursor: pointer;
             }
           }
         }
